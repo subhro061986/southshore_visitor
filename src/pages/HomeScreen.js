@@ -1,10 +1,20 @@
-import React, { useEffect, useState, } from "react";
+import React from "react";
+import { Header } from "../components/Header";
+import logoLink from '../assets/images/logo.svg';
+import NavBarSouthsore from "../components/NavBarSouthshore";
 
 
 const HomeScreen = () => {
 
     return(
-        <h1>HELLLOOO===HOME</h1>
+        <div class="container">
+            <Header
+            logoLink={logoLink}
+            logoWidth={55}
+            logoHeight={54}
+            />
+            <NavBarSouthsore />
+        </div>
     )
 }
 
