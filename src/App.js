@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './css/style.css';
 import AppRouter from './AppRouter';
 
 const App=()=> {

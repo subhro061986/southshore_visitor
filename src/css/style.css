@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+
+.banner {
+    background-image: url("../assets/images/bg_southsore.png");
+    background-size: cover;
+    border: 1px solid black;
+}
+
+.s_f_logo_col {
+    margin-left: 0%;
+    margin-bottom: 0%;
+}
+
+.remove-dots {
+    list-style: none;
+
+}
+
+.s_f_mar_bot {
+    margin-bottom: 0%;
+    padding-left: 0% !important;
+}
+
+.custom-footer-Header {
+    margin-bottom: 10px;
+    color: #26252C;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 128%
+}
+
+.custom-footer-li {
+    /* font-size: 0.9rem; */
+    margin-bottom: 8px;
+    color: #64646F;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .south_key {
+    color: #26252C;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 143%;
+  }
+  
+  .south_val {
+    color: #097EDA;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 143%;
+  }
+
+  .pos_rel {
+    position: relative;
+  }
+
+  .newsletter_email {
+    width: 217px;
+    height: 37px;
+    border-radius: 8px;
+    border: 1px solid #3F4556;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  
+  .arrow_pos {
+    position: absolute;
+    top: 7px;
+    right: 17px;
+  }
+
+  .footer-note {
+    background-color: #191A1C;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
+
+  .follow {
+    color: #6E7279;
+    font-size: 0.8rem;
+    font-family: 'Roboto';
+    font-weight: 600;
+    line-height: 18px;
+  }
