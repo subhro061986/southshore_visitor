@@ -1,0 +1,23 @@
+.person-card {
+    width: 460px;
+    height: 677px !important;
+    border-radius: 36px !important;
+    box-shadow: 0px 40px 60px 0px rgba(111, 122, 159, 0.29);
+    padding: 10px;
+}
+
+.person-image-div {
+    min-height: 300px;
+    max-height: 300px;
+}
+
+.person-image-rounded {
+    width: 200px;
+    height: auto;
+    clip-path: circle();
+}
+
+.person-card-body {
+    text-align: center;
+    min-height: 250px;
+}
