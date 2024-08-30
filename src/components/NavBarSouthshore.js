@@ -27,7 +27,12 @@ const NavBarSouthsore = () => {
         },
         {
             text: "Leadership",
-            children: []
+            children: [
+                {
+                    text: "Management",
+                    link: "/leadership/management"
+                }
+            ]
         },
         {
             text: "Juris Press",
@@ -162,9 +167,9 @@ const NavBarSouthsore = () => {
                                                         item.children.length > 0 && item.children?.map(
                                                             (data, index) => (
                                                                 data.isactive === 1 &&
-                                                                <Accordion.Body key={index} value={data.id}
-                                                                    onClick={() => get_pub_data_mobile(data.id)}>
-                                                                    {data.name}
+                                                                <Accordion.Body key={index} value={data?.link}
+                                                                    onClick={() => navigate(data?.link)}>
+                                                                    {data.text}
                                                                 </Accordion.Body>
                                                             )
                                                         )
@@ -188,7 +193,7 @@ const NavBarSouthsore = () => {
                                     if (!item.children) {
                                         return (
                                             <li className="nav-item">
-                                                <HashLink smooth className="nav-link" to='/#head_banner' >{item.text}</HashLink>
+                                                <HashLink smooth className="nav-link" to={item?.link} >{item.text}</HashLink>
                                             </li>
                                         );
                                     }
@@ -198,15 +203,14 @@ const NavBarSouthsore = () => {
                                                 <select className="cat_dropdown"
                                                     // style={{ width: '121px' }}
                                                     name="cars" id="cars"
-                                                // onChange={(e) => { cat_dropdown_nav(e) }}
-                                                defaultValue={"0"}
+                                                    onChange={(e) => { navigate(e.target.value) }}
                                                 >
-                                                    <option value={"0"} selected>{item.text}</option>
+                                                    <option value={item.link} selected>{item.text}</option>
 
                                                     {item?.children?.map((data, index) => (
-                                                        data.isactive === 1 && (
+                                                        (
 
-                                                            <option style={{ backgroundColor: "#E4E8F3" }} key={index} value={data.id}>{data.name}</option>
+                                                            <option style={{ backgroundColor: "#E4E8F3" }} key={index} value={data?.link}>{data?.text}</option>
 
                                                         )
                                                     ))}
