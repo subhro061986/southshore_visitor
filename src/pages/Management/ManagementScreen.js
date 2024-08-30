@@ -46,7 +46,7 @@ const ManagementScreen = () => {
                 <div className="d-flex justify-content-center mt-3">
                     <h1>Management</h1>
                 </div>
-                <div className="d-flex person-list align-items-center gap-3">
+                <div className="d-flex person-list align-items-center gap-5">
                     {
                         managementPeopleDetails.map((person, index) => {
                             return (
