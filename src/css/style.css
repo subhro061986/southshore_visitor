@@ -156,3 +156,15 @@
     background-size: 100% 100%;
     background-image: url("../assets/images/leftArrow.png");
   } */
+
+  .border_style {
+    /* border: 1px solid; */
+    /* border-image-source: linear-gradient(138.9deg, #C5D1EB 5.79%, #FFFFFF 88.61%); */
+    /* border-image-slice: 30; */
+    height: 600px;
+    box-shadow: inset rgba(169, 170, 182, 0.25) 10px -1px 10px 3px, rgba(169, 170, 182, 0.25) 0px -1px 5px
+  }
+
+  .grey_div {
+    background-color: #a9aab640;
+  }

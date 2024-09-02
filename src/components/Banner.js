@@ -21,7 +21,11 @@ const Banner = () => {
             // interval={null}
             >
                 <Carousel.Item>
-                    <img className="d-block w-100" src={bg_southshore} height={600} style={{ boxShadow: '0px 10px 5px rgba(169, 170, 182, 0.25), 0px -1px 5px rgba(169, 170, 182, 0.25)' }} />
+                    {/* <img className="d-block w-100" src={bg_southshore} height={600}  /> */}
+                    <div className="row border_style">
+                        <div className="col-md-5 grey_div"></div>
+                        <div className="col-md-7"></div>
+                    </div>
                     <Carousel.Caption style={{ right: '6%', left: '6%' }}>
                         {/* <div className="position-relative">
                                 <img src={slide_img} width={650} height={450} style={{position:'absolute', bottom:'0px', left:'-40px'}}/>
@@ -37,7 +41,7 @@ const Banner = () => {
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
                                 <div className="d-flex mt-5 position-relative">
-                                    <button className="explore_btn">Explore Now</button>
+                                    <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
                                 </div>
                             </div>
@@ -45,7 +49,11 @@ const Banner = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100" src={bg_southshore} height={600} style={{ boxShadow: '0px 10px 5px rgba(169, 170, 182, 0.25), 0px -1px 5px rgba(169, 170, 182, 0.25)' }} />
+                    {/* <img className="d-block w-100" src={bg_southshore} height={600}  /> */}
+                    <div className="row border_style">
+                        <div className="col-md-5 grey_div"></div>
+                        <div className="col-md-7"></div>
+                    </div>
                     <Carousel.Caption style={{ right: '6%', left: '6%' }}>
                         {/* <div className="position-relative">
                                 <img src={slide_img} width={650} height={450} style={{position:'absolute', bottom:'0px', left:'-40px'}}/>
@@ -61,7 +69,7 @@ const Banner = () => {
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
                                 <div className="d-flex mt-5 position-relative">
-                                    <button className="explore_btn">Explore Now</button>
+                                    <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
                                 </div>
                             </div>
@@ -69,7 +77,11 @@ const Banner = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className="d-block w-100" src={bg_southshore} height={600} style={{ boxShadow: '0px 10px 5px rgba(169, 170, 182, 0.25), 0px -1px 5px rgba(169, 170, 182, 0.25)' }} />
+                    {/* <img className="d-block w-100" src={bg_southshore} height={600}  /> */}
+                    <div className="row border_style">
+                        <div className="col-md-5 grey_div"></div>
+                        <div className="col-md-7"></div>
+                    </div>
                     <Carousel.Caption style={{ right: '6%', left: '6%' }}>
                         {/* <div className="position-relative">
                                 <img src={slide_img} width={650} height={450} style={{position:'absolute', bottom:'0px', left:'-40px'}}/>
@@ -85,7 +97,7 @@ const Banner = () => {
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
                                 <div className="d-flex mt-5 position-relative">
-                                    <button className="explore_btn">Explore Now</button>
+                                    <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
                                 </div>
                             </div>
