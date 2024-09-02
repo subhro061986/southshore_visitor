@@ -11,7 +11,7 @@ const HomeScreen = () => {
 
     return(
         <>
-        <div class="container">
+        <div className="container">
             <Header
             logoLink={logoLink}
             logoWidth={55}
