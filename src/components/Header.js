@@ -1,18 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 
 
 export const Header = (props) => {
     const defaultLogoWidth = 55;
     const defaultLogoHeight = 54;
+    const navigate = useNavigate();
 
     return (
         <div>
             <div className="d-flex align-items-center py-2 bottom-border">
-                <img
+                <img style={{'cursor': 'pointer'}}
                     src={props?.logoLink}
                     alt="Logo"
                     width={props?.logoWidth || defaultLogoWidth}
                     height={props?.logoHeight || defaultLogoHeight}
+                    onClick={() => {navigate("/")}}
                 />
                 <div className="d-flex align-items-center ms-auto">
                     <div>

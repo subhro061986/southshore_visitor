@@ -24,6 +24,7 @@ const NavBarSouthsore = () => {
     const navItems = [
         {
             text: "Home",
+            link: "/"
         },
         {
             text: "Leadership",
