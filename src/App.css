@@ -211,6 +211,11 @@ input:focus {
 }
 
 /* Footer  */
+
+.footerstyle {
+   background-image: linear-gradient(to top,#ffffff 90%,#f1f3f4,#C6CDD275);
+   
+}
 .footer-note {
   background-color: #0e283f;
   color: #fff;

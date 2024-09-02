@@ -20,7 +20,7 @@ const FooterSouthsore = () => {
 
 
     return (
-        <div className="mt-5">
+        <div className="mt-3 pt-5 footerstyle">
 
             <div className="container my-2">
                 <div className="row">
