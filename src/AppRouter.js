@@ -8,7 +8,7 @@ useEffect
 import HomeScreen from './pages/HomeScreen';
 import DefaultPage from './admin/DefaultPage';
 import ManagementScreen from './pages/Management/ManagementScreen';
-
+import AdvisoryScreen from './pages/Advisory/AdvisoryScreen';
 const AppRouter=()=> {
 
   return (
@@ -16,6 +16,8 @@ const AppRouter=()=> {
         <Routes>
             <Route exact path="/" Component={HomeScreen} />
             <Route exact path="/leadership/management" Component={ManagementScreen} />
+            <Route exact path="/leadership/advisory" Component={AdvisoryScreen} />
+
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
     </Router>
