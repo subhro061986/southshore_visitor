@@ -42,13 +42,13 @@ const JurisAbout = () => {
                     </p>
                 </div>
                 <div className="row mb-5 mt-3">
-                    <div className="col-12 col-lg-6 mb-3" style={{alignContent: 'center'}}>
+                    <div className="col-12 col-lg-7">
                         <div className="image-container">
                             <img src={about_juris_img_1} className="about-image"></img>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6">
-                        <div className="d-flex flex-column gap-3">
+                    <div className="col-12 col-lg-5">
+                        <div className="d-flex h-100 flex-column justify-content-between">
                             <div className="image-container">
                                 <img src={about_juris_img_2} className="about-image"></img>
                             </div>
