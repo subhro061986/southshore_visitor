@@ -10,6 +10,7 @@ import DefaultPage from './admin/DefaultPage';
 import ManagementScreen from './pages/Management/ManagementScreen';
 import AdvisoryScreen from './pages/Advisory/AdvisoryScreen';
 import JurisAbout from './pages/JurisAbout/JurisAbout';
+import PublishedTitlesScreen from './pages/PublishedTitlesScreen';
 const AppRouter=()=> {
 
   return (
@@ -20,6 +21,7 @@ const AppRouter=()=> {
             <Route exact path="/leadership/advisory" Component={AdvisoryScreen} />
             <Route exact path="/juris/about" Component={JurisAbout} />
 
+            <Route exact path="/leadership/publishedtitle" Component={PublishedTitlesScreen} />
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
     </Router>
