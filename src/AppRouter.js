@@ -9,6 +9,7 @@ import HomeScreen from './pages/HomeScreen';
 import DefaultPage from './admin/DefaultPage';
 import ManagementScreen from './pages/Management/ManagementScreen';
 import AdvisoryScreen from './pages/Advisory/AdvisoryScreen';
+import JurisAbout from './pages/JurisAbout/JurisAbout';
 const AppRouter=()=> {
 
   return (
@@ -17,6 +18,7 @@ const AppRouter=()=> {
             <Route exact path="/" Component={HomeScreen} />
             <Route exact path="/leadership/management" Component={ManagementScreen} />
             <Route exact path="/leadership/advisory" Component={AdvisoryScreen} />
+            <Route exact path="/juris/about" Component={JurisAbout} />
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
