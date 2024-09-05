@@ -9,145 +9,145 @@
 
 
 .banner {
-    background-image: url("../assets/images/bg_southsore.png");
-    background-size: cover;
-    border: 1px solid black;
+  background-image: url("../assets/images/bg_southsore.png");
+  background-size: cover;
+  border: 1px solid black;
 }
 
 .s_f_logo_col {
-    margin-left: 0%;
-    margin-bottom: 0%;
+  margin-left: 0%;
+  margin-bottom: 0%;
 }
 
 .remove-dots {
-    list-style: none;
+  list-style: none;
 
 }
 
 .s_f_mar_bot {
-    margin-bottom: 0%;
-    padding-left: 0% !important;
+  margin-bottom: 0%;
+  padding-left: 0% !important;
 }
 
 .custom-footer-Header {
-    margin-bottom: 10px;
-    color: #26252C;
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 128%
+  margin-bottom: 10px;
+  color: #26252C;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 128%
 }
 
 .custom-footer-li {
-    /* font-size: 0.9rem; */
-    margin-bottom: 8px;
-    color: #64646F;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-  }
+  /* font-size: 0.9rem; */
+  margin-bottom: 8px;
+  color: #64646F;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
 
-  .south_key {
-    color: #26252C;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 143%;
-  }
-  
-  .south_val {
-    color: #097EDA;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 143%;
-  }
+.south_key {
+  color: #26252C;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 143%;
+}
 
-  .pos_rel {
-    position: relative;
-  }
+.south_val {
+  color: #097EDA;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 143%;
+}
 
-  .newsletter_email {
-    width: 217px;
-    height: 37px;
-    border-radius: 8px;
-    border: 1px solid #3F4556;
-    padding-left: 10px;
-    font-size: 14px;
-  }
-  
-  .arrow_pos {
-    position: absolute;
-    top: 7px;
-    right: 17px;
-  }
+.pos_rel {
+  position: relative;
+}
 
-  .footer-note {
-    background-color: #191A1C;
-    color: #fff;
-    font-size: 1rem;
-    font-family: 'Roboto';
-    font-weight: 400;
-  }
+.newsletter_email {
+  width: 217px;
+  height: 37px;
+  border-radius: 8px;
+  border: 1px solid #3F4556;
+  padding-left: 10px;
+  font-size: 14px;
+}
 
-  .follow {
-    color: #6E7279;
-    font-size: 0.8rem;
-    font-family: 'Roboto';
-    font-weight: 600;
-    line-height: 18px;
-  }
+.arrow_pos {
+  position: absolute;
+  top: 7px;
+  right: 17px;
+}
 
-  .slide_txt_head {
-    font-family: 'Ubuntu';
-    font-weight: 700;
-    font-size: 51px;
-    line-height: 58px;
-    color: #011539;
-    text-align: left;
-  }
+.footer-note {
+  background-color: #191A1C;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
 
-  .slide_txt_description {
-    font-family: 'Roboto';
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
-    color: #535861;
-    text-align: left;
-  }
+.follow {
+  color: #6E7279;
+  font-size: 0.8rem;
+  font-family: 'Roboto';
+  font-weight: 600;
+  line-height: 18px;
+}
 
-  .explore_btn {
-    width: 180px;
-    height: 54px;
-    border: none;
-    border-radius: 12px;
-    background: #4D39F1;
-    font-family: 'Ubuntu';
-    font-size:16px ;
-    font-weight: 500;
-    color: #ffffff;
-    text-align: left;
-    padding-left: 5%;
-  }
+.slide_txt_head {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 58px;
+  color: #011539;
+  text-align: left;
+}
 
-  .rightarrow {
-    height: 54px;
-    width: 54px;
-    background: #160982;
-    border-radius: 12px;
-    position: absolute;
-    left: 34%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.slide_txt_description {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #535861;
+  text-align: left;
+}
 
-  /* .carousel-control-prev-icon {
+.explore_btn {
+  width: 180px;
+  height: 54px;
+  border: none;
+  border-radius: 12px;
+  background: #4D39F1;
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.rightarrow {
+  height: 54px;
+  width: 54px;
+  background: #160982;
+  border-radius: 12px;
+  position: absolute;
+  left: 34%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .carousel-control-prev-icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -157,14 +157,72 @@
     background-image: url("../assets/images/leftArrow.png");
   } */
 
-  .border_style {
-    /* border: 1px solid; */
-    /* border-image-source: linear-gradient(138.9deg, #C5D1EB 5.79%, #FFFFFF 88.61%); */
-    /* border-image-slice: 30; */
-    height: 600px;
-    box-shadow: inset rgba(169, 170, 182, 0.25) 10px -1px 10px 3px, rgba(169, 170, 182, 0.25) 0px -1px 5px
-  }
+.border_style {
+  /* border: 1px solid; */
+  /* border-image-source: linear-gradient(138.9deg, #C5D1EB 5.79%, #FFFFFF 88.61%); */
+  /* border-image-slice: 30; */
+  height: 600px;
+  box-shadow: inset rgba(169, 170, 182, 0.25) 10px -1px 10px 3px, rgba(169, 170, 182, 0.25) 0px -1px 5px
+}
 
-  .grey_div {
-    background-color: #a9aab640;
-  }
+.grey_div {
+  background-color: #a9aab640;
+}
+
+.screen_head {
+  font-family: 'Ubuntu';
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 68px;
+  text-align: center;
+  color: #011539;
+}
+
+.screen_sub_head {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  color: #535861;
+}
+
+.card_style {
+  border: 1px solid #B1BEC9 !important;
+  border-radius: 36px !important;
+}
+
+.img_div_style {
+  background-color: #EAEBEF;
+  border-radius: 36px;
+  height: 260px;
+}
+
+.card_head {
+  font-family: 'Ubuntu';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #011539;
+}
+
+.card_author {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 13px;
+  text-align: center;
+  color: #535861;
+}
+
+.card_btn {
+  border: 1px solid #4D39F1;
+  border-radius: 12px;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  color: #4D39F1;
+}

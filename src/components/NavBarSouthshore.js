@@ -37,7 +37,20 @@ const NavBarSouthsore = () => {
         },
         {
             text: "Juris Press",
-            children: []
+            children: [
+                {
+                    text: "About Juris Press",
+                    // link: "/leadership/publishedtitle"
+                },
+                {
+                    text: "Titles published",
+                    link: "/leadership/publishedtitle"
+                },
+                {
+                    text: "Publish with Juris",
+                    // link: "/leadership/publishedtitle"
+                }
+            ]
         },
         {
             text: "Thomson Reuters",
