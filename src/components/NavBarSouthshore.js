@@ -40,7 +40,7 @@ const NavBarSouthsore = () => {
             children: [
                 {
                     text: "About Juris Press",
-                    // link: "/leadership/publishedtitle"
+                    link: "/juris/about"
                 },
                 {
                     text: "Titles published",
@@ -48,7 +48,7 @@ const NavBarSouthsore = () => {
                 },
                 {
                     text: "Publish with Juris",
-                    // link: "/leadership/publishedtitle"
+                    link: "#"
                 }
             ]
         },
