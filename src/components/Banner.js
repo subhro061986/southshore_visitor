@@ -35,10 +35,10 @@ const Banner = () => {
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
-                                <div className="d-flex mt-5 position-relative">
+                                {/* <div className="d-flex mt-5 position-relative">
                                     <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </Carousel.Caption>
@@ -58,10 +58,10 @@ const Banner = () => {
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
-                                <div className="d-flex mt-5 position-relative">
+                                {/* <div className="d-flex mt-5 position-relative">
                                     <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </Carousel.Caption>
@@ -81,10 +81,10 @@ const Banner = () => {
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern</div>
-                                <div className="d-flex mt-5 position-relative">
+                                {/* <div className="d-flex mt-5 position-relative">
                                     <button className="explore_btn">Explore No</button>
                                     <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </Carousel.Caption>

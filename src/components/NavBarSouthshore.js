@@ -48,7 +48,7 @@ const NavBarSouthsore = () => {
                 },
                 {
                     text: "Publish with Juris",
-                    link: "#"
+                    link: "/leadership/publishwithjuris"
                 }
             ]
         },
