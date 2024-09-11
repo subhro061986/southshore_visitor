@@ -7,7 +7,7 @@ import NavBarSouthsore from "../components/NavBarSouthshore";
 
 
 
-const PublishWithJuris = () => {
+const PublishWithUs = () => {
 
 
 
@@ -24,13 +24,13 @@ const PublishWithJuris = () => {
 
                 <div className="margin-x">
                     <div className="text-center mt-3">
-                        <div className="screen_head">Publish with Juris Press</div>
+                        <div className="screen_head">Publish with Us</div>
                         <div className="screen_sub_head mt-1">Reach out to us if you have an idea for a book or if you have a manuscript ready for publishing. Please write to us at <span style={{ fontWeight: '700' }}>Email ID</span> with the following information and we will reach out to you at the earliest.</div>
                     </div>
                     <form className="row g-3 my-5">
                         <div className="col-md-6">
                             <div className="mb-4">
-                                <label className="form-label label_font mb-2">Name<span style={{color:'red'}}>*</span></label>
+                                <label className="form-label label_font mb-2">Name</label>
                                 <input type="text" className="form-control input_style" placeholder="Your user name" />
                             </div>
                             <div className="mb-4">
@@ -58,7 +58,7 @@ const PublishWithJuris = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="mb-4">
-                                <label className="form-label label_font mb-2">Email ID<span style={{color:'red'}}>*</span></label>
+                                <label className="form-label label_font mb-2">Email ID</label>
                                 <input type="email" className="form-control input_style" placeholder="Email ID" />
                             </div>
                             <div className="mb-4">
@@ -96,4 +96,4 @@ const PublishWithJuris = () => {
     )
 }
 
-export default PublishWithJuris;
+export default PublishWithUs;

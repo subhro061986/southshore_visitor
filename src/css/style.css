@@ -255,6 +255,14 @@
   color: #191A1C;
 }
 
+.label_font > span {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #7D828A;
+}
+
 .input_style {
   border: 0.5px solid #a8a8a2 !important;
   border-radius: 12px !important;

@@ -44,17 +44,26 @@ const NavBarSouthsore = () => {
                 },
                 {
                     text: "Titles published",
-                    link: "/leadership/publishedtitle"
+                    link: "/juris/publishedtitle"
                 },
                 {
                     text: "Publish with Juris",
-                    link: "/leadership/publishwithjuris"
+                    link: "/juris/publishwithjuris"
                 }
             ]
         },
         {
             text: "Thomson Reuters",
-            children: []
+            children: [
+                {
+                    text: "About Thomson Reuters",
+                    // link: "/thomson/about"
+                },
+                {
+                    text: "Publish with Us",
+                    link: "/thomson/publishwithus"
+                }
+            ]
         },
         {
             text: "Representation",
