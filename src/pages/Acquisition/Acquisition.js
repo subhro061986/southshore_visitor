@@ -10,7 +10,7 @@ import management_person_3 from "../../assets/images/management_person_3.png";
 import { PersonCard } from "../../components/PersonCard/PersonCard";
 
 
-const ManagementScreen = () => {
+const  AcquisitionScreen = () => {
 
     const managementPeopleDetails = [
         {
@@ -30,7 +30,25 @@ const ManagementScreen = () => {
             about: "Integer venenatis facilisi bibendum ante enim nascetur. Vitae ipsum rutrum varius sollicitudin gravida ridiculus. Quis id duis metus vel dignissim mollis aliquam. Auctor porta vivamus enim rhoncus lacus eget. Eros facilisis convallis etiam nisi semper tristique. Pretium velit platea venenatis molestie mauris mollis. Placerat libero ad Inceptos nunc suscipit penatibus hac tincidunt lorem arcu",
             linkedinLink: "#",
             imageLink: management_person_3
-        }
+        },
+        {
+            name: "Nehemiah Berry",
+            about: "Viverra cursus ante penatibus euismod gravida suscipit. Eu mus vel posuere; nullam nam ultricies accumsan. Euismod adipiscing tristique aenean nunc maximus litora. Porttitor mauris bibendum, efficitur parturient sodales mus donec suspendisse. Felis nibh donec lacus nisi lobortis mollis potenti. Elit leo lectus inceptos tristique",
+            linkedinLink: "#",
+            imageLink: management_person_2
+        },
+        {
+            name: "Madisyn Andersen",
+            about: "Integer venenatis facilisi bibendum ante enim nascetur. Vitae ipsum rutrum varius sollicitudin gravida ridiculus. Quis id duis metus vel dignissim mollis aliquam. Auctor porta vivamus enim rhoncus lacus eget. Eros facilisis convallis etiam nisi semper tristique. Pretium velit platea venenatis molestie mauris mollis. Placerat libero ad Inceptos nunc suscipit penatibus hac tincidunt lorem arcu",
+            linkedinLink: "#",
+            imageLink: management_person_3
+        },
+        {
+            name: "Nehemiah Berry",
+            about: "Viverra cursus ante penatibus euismod gravida suscipit. Eu mus vel posuere; nullam nam ultricies accumsan. Euismod adipiscing tristique aenean nunc maximus litora. Porttitor mauris bibendum, efficitur parturient sodales mus donec suspendisse. Felis nibh donec lacus nisi lobortis mollis potenti. Elit leo lectus inceptos tristique",
+            linkedinLink: "#",
+            imageLink: management_person_2
+        },
     ]
 
     return (
@@ -44,24 +62,25 @@ const ManagementScreen = () => {
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
-                    <h1>Management</h1>
+                    <h1>Acquisition & Commissioning</h1>
                 </div>
                 <div className="row">
-                    {
-                        managementPeopleDetails.map((person, index) => {
-                            return (
-                                <div key={index} className="col-12 col-md-6 col-xl-4 mt-2 mb-2">
-                                    <PersonCard
-                                        name={person?.name}
-                                        about={person?.about}
-                                        imageLink={person?.imageLink}
-                                    />
-                                </div>
-                            )
+                        {
+                            managementPeopleDetails.map((person, index) => {
+                                return (
+                                    <div key={index} className="col-12 col-md-6 col-xl-3 mt-2 mb-2">
+                                        <PersonCard
+                                            name={person?.name}
+                                            about={person?.about}
+                                            imageLink={person?.imageLink}
+                                        />
+                                    </div>
+                                )
 
-                        })
-                    }
+                            })
+                        }
                 </div>
+                   
             </div>
 
             <FooterSouthsore />
@@ -69,4 +88,4 @@ const ManagementScreen = () => {
     )
 }
 
-export default ManagementScreen;
+export default AcquisitionScreen;

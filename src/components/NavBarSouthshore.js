@@ -32,6 +32,10 @@ const NavBarSouthsore = () => {
                 {
                     text: "Management",
                     link: "/leadership/management"
+                },
+                {
+                    text: "Acquisition & Commissioning",
+                    link: "/leadership/acquisition"
                 }
             ]
         },
@@ -200,42 +204,45 @@ const NavBarSouthsore = () => {
             }
             {
                 drawerStat == false && (
-                    <nav className="navbar navbar-expand-lg top-nav nav_padding_y">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 bar_menu">
-                            {
-                                navItems?.map((item) => {
-                                    if (!item.children) {
-                                        return (
-                                            <li className="nav-item">
-                                                <HashLink smooth className="nav-link" to={item?.link} >{item.text}</HashLink>
-                                            </li>
-                                        );
-                                    }
-                                    else {
-                                        return (
-                                            <li className="nav-item dropdown mt-3 me-3">
-                                                <select className="cat_dropdown"
-                                                    // style={{ width: '121px' }}
-                                                    name="cars" id="cars"
-                                                    onChange={(e) => { navigate(e.target.value) }}
-                                                >
-                                                    <option value={item.link} selected>{item.text}</option>
+                    <div className="d-flex">
+                        <nav className="navbar navbar-expand-lg top-nav nav_padding_y">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 bar_menu">
+                                {
+                                    navItems?.map((item) => {
+                                        if (!item.children) {
+                                            return (
+                                                <li className="nav-item">
+                                                    <HashLink smooth className="nav-link" to={item?.link} >{item.text}</HashLink>
+                                                </li>
+                                            );
+                                        }
+                                        else {
+                                            return (
+                                                <li className="nav-item dropdown mt-3 me-3">
+                                                    <select className="cat_dropdown"
+                                                        style={{ maxWidth: '150px' }}
+                                                        name="cars" id="cars"
+                                                        onChange={(e) => { navigate(e.target.value) }}
+                                                    >
+                                                        <option value={item.link} selected>{item.text}</option>
 
-                                                    {item?.children?.map((data, index) => (
-                                                        (
+                                                        {item?.children?.map((data, index) => (
+                                                            (
 
-                                                            <option style={{ backgroundColor: "#E4E8F3" }} key={index} value={data?.link}>{data?.text}</option>
+                                                                <option style={{ backgroundColor: "#E4E8F3" }} key={index} value={data?.link}>{data?.text}</option>
 
-                                                        )
-                                                    ))}
-                                                </select>
-                                            </li>
-                                        );
-                                    }
-                                })
-                            }
-                        </ul>
-                    </nav >
+                                                            )
+                                                        ))}
+                                                    </select>
+                                                </li>
+                                            );
+                                        }
+                                    })
+                                }
+                            </ul>
+                        </nav >
+                        {/* <Link to={"tel: +1 (650) 555-0111"}>+1 (650) 555-0111</Link> */}
+                    </div>
                 )
             }
         </>
