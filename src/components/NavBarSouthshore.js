@@ -67,13 +67,31 @@ const NavBarSouthsore = () => {
         },
         {
             text: "Representation",
-            children: []
+            children: [
+                {
+                    text: "Brill",
+                    // link: "/representation/brill"
+                },
+                {
+                    text: "MyJove",
+                    // link: "/representation/myjove"
+                },
+                {
+                    text: "Writeful",
+                    // link: "/representation/writeful"
+                },
+                {
+                    text: "enquiry",
+                    link: "/representation/enquiry"
+                }
+            ]
         },
         {
             text: "Platform",
         },
         {
             text: "Open Access",
+            link: "/openaccess"
         },
         {
             text: "Resources",

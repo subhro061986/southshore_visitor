@@ -13,6 +13,8 @@ import JurisAbout from './pages/JurisAbout/JurisAbout';
 import PublishedTitlesScreen from './pages/PublishedTitlesScreen';
 import PublishWithJuris from './pages/PublishWithJuris';
 import PublishWithUs from './pages/PublishWithUs';
+import Enquiry from './pages/Enquiry';
+import OpenAccess from './pages/OpenAccess';
 const AppRouter=()=> {
 
   return (
@@ -27,6 +29,10 @@ const AppRouter=()=> {
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
 
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
+
+            <Route exact path="/representation/enquiry" Component={Enquiry} />
+
+            <Route exact path="/openaccess" Component={OpenAccess} />
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
