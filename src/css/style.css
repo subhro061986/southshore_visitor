@@ -256,6 +256,14 @@
   color: #191A1C;
 }
 
+.label_font > span {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #7D828A;
+}
+
 .input_style {
   border: 0.5px solid #a8a8a2 !important;
   border-radius: 12px !important;
@@ -264,7 +272,7 @@
 }
 
 .input_style ::placeholder {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 15px;
   font-weight: 400;
   line-height: 14px;
@@ -306,4 +314,24 @@
   background-color: #363232;
   border-color: white;
   color: white;
+}
+
+.download_head {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: #011539;
+}
+
+.download_head > span {
+  font-weight: 700;
+}
+
+.pdf_btn_style {
+  height: 30px;
+  width: 30px;
+  top: 12%;
+  right: 5%;
 }
