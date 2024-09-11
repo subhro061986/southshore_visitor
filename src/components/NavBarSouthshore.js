@@ -99,6 +99,7 @@ const NavBarSouthsore = () => {
         },
         {
             text: "Resources",
+            link: "/resources"
         }
     ]
 

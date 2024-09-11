@@ -16,6 +16,7 @@ import AcquisitionScreen from './pages/Acquisition/Acquisition';
 import PublishWithUs from './pages/PublishWithUs';
 import Enquiry from './pages/Enquiry';
 import OpenAccess from './pages/OpenAccess';
+import Resources from './pages/Resources';
 
 const AppRouter=()=> {
 
@@ -32,6 +33,7 @@ const AppRouter=()=> {
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
             <Route exact path="/representation/enquiry" Component={Enquiry} />
             <Route exact path="/openaccess" Component={OpenAccess} />
+            <Route exact path="/resources" Component={Resources} />
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
