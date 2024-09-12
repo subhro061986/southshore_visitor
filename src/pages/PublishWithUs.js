@@ -1,7 +1,6 @@
 import React, { useEffect, useState, } from "react";
 import FooterSouthsore from "../components/FooterSouthsore";
 import { Header } from "../components/Header";
-import logoLink from '../assets/images/logo.svg';
 import arrow_right from '../assets/images/arrow-right.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
 
@@ -15,11 +14,7 @@ const PublishWithUs = () => {
     return (
         <>
             <div className="container">
-                <Header
-                    logoLink={logoLink}
-                    logoWidth={55}
-                    logoHeight={54}
-                />
+                <Header/>
                 <NavBarSouthsore />
 
                 <div className="margin-x">

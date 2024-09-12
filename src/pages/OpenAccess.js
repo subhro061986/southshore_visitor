@@ -1,7 +1,6 @@
 import React, { useEffect, useState, } from "react";
 import FooterSouthsore from "../components/FooterSouthsore";
 import { Header } from "../components/Header";
-import logoLink from '../assets/images/logo.svg';
 import book1 from '../assets/images/book1.png';
 import book2 from '../assets/images/book2.png';
 import book3 from '../assets/images/book3.png';
@@ -51,11 +50,7 @@ const OpenAccess = () => {
     return (
         <>
             <div className="container">
-                <Header
-                    logoLink={logoLink}
-                    logoWidth={55}
-                    logoHeight={54}
-                />
+                <Header/>
                 <NavBarSouthsore />
 
                 <div className="mt-3">

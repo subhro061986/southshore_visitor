@@ -2,7 +2,6 @@ import React, { useEffect, useState, } from "react";
 import Banner from "../../components/Banner";
 import FooterSouthsore from "../../components/FooterSouthsore";
 import { Header } from "../../components/Header";
-import logoLink from '../../assets/images/logo.svg';
 import NavBarSouthsore from "../../components/NavBarSouthshore";
 import management_person_1 from "../../assets/images/management_person_1.png";
 import management_person_2 from "../../assets/images/management_person_2.png";
@@ -48,11 +47,7 @@ const AdvisoryScreen = () => {
     return (
         <>
             <div class="container">
-                <Header
-                    logoLink={logoLink}
-                    logoWidth={55}
-                    logoHeight={54}
-                />
+                <Header />
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
