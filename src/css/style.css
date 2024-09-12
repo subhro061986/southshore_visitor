@@ -28,7 +28,7 @@
 
 .s_f_mar_bot {
   margin-bottom: 0%;
-  padding-left: 0% !important;
+  /* padding-left: 0% !important; */
 }
 
 .custom-footer-Header {
@@ -50,6 +50,10 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+
+.margin_l_footer {
+  margin-left: 2.5rem;
 }
 
 .south_key {

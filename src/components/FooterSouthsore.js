@@ -1,5 +1,5 @@
 import publisher_logo from "../assets/images/publisher_demo.png";
-import admin_logo from "../assets/images/southshore_logo.png";
+import admin_logo from "../assets/images/southshore_new_logo.png";
 import facebook_logo from "../assets/images/Facebook-icon.png";
 import x from "../assets/images/x.png";
 import sms from "../assets/images/sms.png";
@@ -24,12 +24,41 @@ const FooterSouthsore = () => {
 
             <div className="container my-2">
                 <div className="row">
-                    <div className="col-md-2 s_f_logo_col" style={{ width: 'fit-content' }}>
-                        <img src={admin_logo} width={80}
+                    <div className="col-md-3 s_f_logo_col">
+                        <img src={admin_logo}
+                            width={180}
                             // onClick={imgNavHome} 
                             style={{ cursor: 'pointer' }} />
+                        <div className="d-flex flex-row mt-5">
+                            <div className="">
+                                <ul className="remove-dots margin_l_footer" >
+                                    {/* <div className="custom-footer-Header">Southshore Innovations Pvt. Ltd</div> */}
+                                    <div className="follow mb-2">
+                                        Follow Us on
+                                    </div>
+
+                                    <div className="d-inline pe-2">
+                                        <img src={facebook_logo} width={20} />
+                                    </div>
+                                    <div className="d-inline pe-2">
+                                        <img src={instagram_logo} width={23} />
+                                    </div>
+                                    <div className="d-inline pe-2">
+                                        <img src={x} width={20} />
+                                    </div>
+                                    <div className="d-inline">
+                                        <img src={linkedin_logo} width={20} />
+                                    </div>
+
+
+
+                                </ul>
+                            </div>
+
+
+                        </div>
                     </div>
-                    <div className="col-md-2 s_f_mar_bot">
+                    {/* <div className="col-md-2 s_f_mar_bot">
                         <div className="d-flex flex-row">
                             <div className="">
                                 <ul className="remove-dots" >
@@ -58,7 +87,7 @@ const FooterSouthsore = () => {
 
 
                         </div>
-                    </div>
+                    </div> */}
                     <div className="col-md-2 s_f_mar_bot">
                         <div className="d-flex flex-row">
                             <div className="">
@@ -123,7 +152,7 @@ const FooterSouthsore = () => {
                     </div>
 
 
-                    <div className="col-md-2 s_f_mar_bot">
+                    <div className="col-md-3 s_f_mar_bot">
                         <ul className="remove-dots">
                             <div className="custom-footer-Header">Southshore Innovations Pvt. Ltd</div>
 
