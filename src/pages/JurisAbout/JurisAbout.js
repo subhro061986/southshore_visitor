@@ -1,7 +1,6 @@
 import React from "react";
 import FooterSouthsore from "../../components/FooterSouthsore";
 import { Header } from "../../components/Header";
-import logoLink from '../../assets/images/logo.svg';
 import NavBarSouthsore from "../../components/NavBarSouthshore";
 import { Link } from "react-router-dom";
 import about_juris_img_1 from "../../assets/images/about_juris_img_1.png";
@@ -14,11 +13,7 @@ const JurisAbout = () => {
     return (
         <>
             <div class="container">
-                <Header
-                    logoLink={logoLink}
-                    logoWidth={55}
-                    logoHeight={54}
-                />
+                <Header />
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-start mt-3">
