@@ -1,8 +1,6 @@
 import React, { useEffect, useState, } from "react";
-import Banner from "../../components/Banner";
 import FooterSouthsore from "../../components/FooterSouthsore";
 import { Header } from "../../components/Header";
-import logoLink from '../../assets/images/logo.svg';
 import NavBarSouthsore from "../../components/NavBarSouthshore";
 import management_person_1 from "../../assets/images/management_person_1.png";
 import management_person_2 from "../../assets/images/management_person_2.png";
@@ -54,11 +52,7 @@ const  AcquisitionScreen = () => {
     return (
         <>
             <div class="container">
-                <Header
-                    logoLink={logoLink}
-                    logoWidth={55}
-                    logoHeight={54}
-                />
+                <Header />
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
@@ -68,7 +62,7 @@ const  AcquisitionScreen = () => {
                         {
                             managementPeopleDetails.map((person, index) => {
                                 return (
-                                    <div key={index} className="col-12 col-md-6 col-xl-3 mt-2 mb-2">
+                                    <div key={index} className="col-12 col-md-6 col-lg-4 mt-2 mb-2">
                                         <PersonCard
                                             name={person?.name}
                                             about={person?.about}

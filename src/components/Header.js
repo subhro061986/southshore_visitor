@@ -1,26 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
+import logo from '../assets/images/southshore_logo_alt.svg';
 
 
 export const Header = (props) => {
-    const defaultLogoWidth = 55;
-    const defaultLogoHeight = 54;
+    const defaultLogoWidth = 192;
+    const defaultLogoHeight = 52;
     const navigate = useNavigate();
 
     return (
         <div>
             <div className="d-flex align-items-center py-2 bottom-border">
                 <img style={{'cursor': 'pointer'}}
-                    src={props?.logoLink}
+                    src={logo}
                     alt="Logo"
                     width={props?.logoWidth || defaultLogoWidth}
                     height={props?.logoHeight || defaultLogoHeight}
                     onClick={() => {navigate("/")}}
                 />
                 <div className="d-flex align-items-center ms-auto">
-                    <div>
+                    {/* <div>
                         <SearchBar />
-                    </div>
+                    </div> */}
                     <div>
                         <button className="btn southshore-blue-1 border-radius-10 color-white ms-2" >
                             Contact Us
