@@ -17,13 +17,13 @@ const AboutSouthshore = () => {
                 <div className="col-md-4">
                     <div className="about-southshore-header d-flex justify-content-end">
                         <div className="card card-design">
-                            <div className="card-body d-flex justify-content-center align-items-center">
+                            <div className="card-body d-flex justify-content-center align-items-center text-center">
                                 <div className="d-flex-column justify-content-center align-items-center text-details">
 
                                     <div className="cert">Certificate No</div>
                                     <p className="title mt-2 ">DIPP145487</p>
                                     <img src={startupLogo} width={190} height={60} />
-                                    <div style={{ marginLeft: '26%', marginTop: '12%' }}><span className="small-date-text ">Date of issue:</span> <span className="small-date ">11-09-2023</span></div>
+                                    <div style={{ marginTop: '4%' }}><span className="small-date-text ">Date of issue:</span> <span className="small-date ">11-09-2023</span></div>
                                 </div>
                             </div>
                         </div>

@@ -65,30 +65,48 @@ const Resources = () => {
                 </div>
 
                 <nav className="navbar">
-                    <ul className="navbar-list">
+                    <ul className="navbar-list nav_border">
                         <li
-                            className={`navbar-item ${activeTab === "home" ? "active" : ""}`}
-                            onClick={() => setActiveTab("home")}
+                            className={`navbar-item ${activeTab === "jurispress" ? "active" : ""}`}
+                            onClick={() => setActiveTab("jurispress")}
                         >
-                            Home
+                            Juris Press
                         </li>
                         <li
-                            className={`navbar-item ${activeTab === "about" ? "active" : ""}`}
-                            onClick={() => setActiveTab("about")}
+                            className={`navbar-item ${activeTab === "thompson" ? "active" : ""}`}
+                            onClick={() => setActiveTab("thompson")}
                         >
-                            About
+                            Thomson Reuters
                         </li>
                         <li
-                            className={`navbar-item ${activeTab === "services" ? "active" : ""}`}
-                            onClick={() => setActiveTab("services")}
+                            className={`navbar-item ${activeTab === "brill" ? "active" : ""}`}
+                            onClick={() => setActiveTab("brill")}
                         >
-                            Services
+                            Brill
                         </li>
                         <li
-                            className={`navbar-item ${activeTab === "contact" ? "active" : ""}`}
-                            onClick={() => setActiveTab("contact")}
+                            className={`navbar-item ${activeTab === "myjove" ? "active" : ""}`}
+                            onClick={() => setActiveTab("myjove")}
                         >
-                            Contact
+                            MyJove
+                        </li>
+                        <li
+                            className={`navbar-item ${activeTab === "writefuls" ? "active" : ""}`}
+                            onClick={() => setActiveTab("writefuls")}
+                        >
+                            Writefuls
+                        </li>
+                        <li
+                            className={`navbar-item ${activeTab === "ebooksjunction" ? "active" : ""}`}
+                            onClick={() => setActiveTab("ebooksjunction")}
+                        >
+                            ebooksjunction
+                        </li>
+                        <li
+                            className={`navbar-item ${activeTab === "bookscentral" ? "active" : ""}`}
+                            onClick={() => setActiveTab("bookscentral")}
+                        >
+                            bookscentral
                         </li>
                     </ul>
                 </nav>
