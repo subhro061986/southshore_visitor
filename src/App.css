@@ -520,8 +520,8 @@ input:focus {
   background-color: #F4F4F4 !important;
   border-radius: 24px !important;
   width: 100% !important;
-  height: 115px !important;
-  max-height: 115px !important;
+  height: 135px !important;
+  /* max-height: 115px !important; */
 }
 .card-body-list{
   width: auto;

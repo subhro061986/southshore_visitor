@@ -118,6 +118,10 @@
   text-align: left;
 }
 
+.slide_txt_head > span {
+  font-size: 61px;
+}
+
 .slide_txt_description {
   font-family: 'Roboto';
   font-size: 16px;
@@ -181,7 +185,7 @@
   /* border: 1px solid; */
   /* border-image-source: linear-gradient(138.9deg, #C5D1EB 5.79%, #FFFFFF 88.61%); */
   /* border-image-slice: 30; */
-  height: 600px;
+  height: 540px;
   box-shadow: inset rgba(169, 170, 182, 0.25) 10px -1px 10px 3px, rgba(169, 170, 182, 0.25) 0px -1px 5px
 }
 
@@ -225,14 +229,14 @@
 .img_div_style {
   background-color: #EAEBEF;
   border-radius: 36px;
-  height: 260px;
+  height: 214px;
 }
 
 .card_head {
   font-family: 'Ubuntu';
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 12px;
   text-align: center;
   color: #011539;
 }
@@ -240,7 +244,7 @@
 .card_author {
   font-family: 'Roboto';
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 13px;
   text-align: center;
   color: #535861;
