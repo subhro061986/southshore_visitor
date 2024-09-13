@@ -74,7 +74,7 @@ const NavBarSouthsore = () => {
             children: [
                 {
                     text: "Brill",
-                    // link: "/representation/brill"
+                    link: "/representation/brill"
                 },
                 {
                     text: "MyJove",

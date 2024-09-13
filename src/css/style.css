@@ -201,6 +201,16 @@
   text-align: center;
   color: #011539;
 }
+ 
+.screen_heading
+{
+  font-family: 'Ubuntu';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  color: #011539;
+}
 
 .screen_sub_head {
   font-family: 'Roboto';

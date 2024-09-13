@@ -523,7 +523,35 @@ input:focus {
   height: 135px !important;
   /* max-height: 115px !important; */
 }
+.card-body-list{
+  width: auto;
+height: 500px;
+border-radius: 30px;
+background: #F4F4F4;
 
+}
+.card-body-list>.title_width>.title{
+  font-family: Ubuntu;
+font-size: 32px;
+font-weight: 700;
+line-height: 24px;
+text-align: left;
+
+}
+
+
+.card-body-list>ul {
+  font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+
+}
+.card-body-list>ul>li::marker {
+  color:  #4D39F194;
+  font-size: 30px;
+}
 .grey-card>.card-body>ul {
   font-size: 120%;
 }
@@ -5123,3 +5151,7 @@ body.active-modal {
 /* .container {
   max-width: 1600px;
 } */
+
+.title_width{
+  width: 38%;
+}
