@@ -17,6 +17,7 @@ import PublishWithUs from './pages/PublishWithUs';
 import Enquiry from './pages/Enquiry';
 import OpenAccess from './pages/OpenAccess';
 import Resources from './pages/Resources';
+import Brills from './pages/Brills';
 
 const AppRouter=()=> {
 
@@ -31,9 +32,11 @@ const AppRouter=()=> {
             <Route exact path="/juris/publishedtitle" Component={PublishedTitlesScreen} />
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
+            <Route exact path="/representation/brill" Component={Brills} />
             <Route exact path="/representation/enquiry" Component={Enquiry} />
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
+            
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
