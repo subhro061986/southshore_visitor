@@ -6,6 +6,7 @@ useState,
 useEffect
 } from "react";
 import LoginPage from './pages/LoginPage';
+import ManageBanner from './pages/ManageBanner';
 
 const NavigationPage=()=> {
 
@@ -13,6 +14,7 @@ const NavigationPage=()=> {
 
         <Routes>
             <Route exact path="/" Component={LoginPage}/>
+            <Route exact path="/managebanner" Component={ManageBanner}/>
         </Routes>
     
   );
