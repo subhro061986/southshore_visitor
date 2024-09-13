@@ -25902,6 +25902,11 @@ dl li {
   background: transparent;
 }
 
+.title_header {
+  font-size: 26px;
+  font-weight: 700;
+}
+
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
   .sidebar-offcanvas {
