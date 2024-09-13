@@ -3,7 +3,8 @@ import FooterSouthsore from "../components/FooterSouthsore";
 import { Header } from "../components/Header";
 import NavBarSouthsore from "../components/NavBarSouthshore";
 import newspaper from "../assets/images/newspaper.png";
-
+import book from "../assets/images/book.png";
+import dollar from "../assets/images/dollar-circle.png";
 const Brills = () => {
 
 
@@ -47,9 +48,12 @@ const Brills = () => {
                         </div>
                         <div className="col-sm-6">
                         <div className="card">
-                                <div className="card-body-list">
-                                    <h5 className="title">Journals</h5>
-                                    <ul className>
+                                <div className="card-body-list p-5">
+                                    <div className="d-flex justify-content-between title_width">
+                                        <img src={book} height={25} width={25}/>
+                                    <div className="title">Books and E-Books</div>
+                                    </div>
+                                    <ul className="ms-2">
                                         <li className="marker">Publishing approximately 1,200 new monograph/series titles annually</li>
                                         <li className="marker">Pick and Choose a model(s) for purchasing</li>
                                         <li className="marker">Perpetual access rights with one-off purchases</li>
@@ -63,6 +67,26 @@ const Brills = () => {
                                     
                                 </div>
                             </div>
+                        </div>
+                        <div className="row mt-5">
+                        <div className="col-sm-6">
+                        <div className="card">
+                                <div className="card-body-list p-5">
+                                    <div className="d-flex justify-content-between title_width">
+                                        <img src={dollar} height={25} width={25}/>
+                                    <div className="title">Purchase Models</div>
+                                    </div>
+                                    <ul className="ms-2">
+                                        <li className="marker">Pick and Choose</li>
+                                        <li className="marker">Annual Collections</li>
+                                        <li className="marker">Evidence-Based Acquisition (EBA) Model</li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
