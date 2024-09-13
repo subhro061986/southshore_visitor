@@ -5,7 +5,7 @@ const AboutSouthshore = () => {
 
     return (
         <div className="container mt-5">
-            <div className="row ">
+            <div className="row">
                 <div className="col-md-8 about-southshore-header">
 
                     <div className="heading-text">
@@ -96,6 +96,7 @@ const AboutSouthshore = () => {
                                     <p>Owning and operating <a href="https://ebooksjunction.com/" style={{ color: '#4D39F1' }}>ebooksjunction.com</a>, a marketplace for publishers to display and sell their digital content</p>
 
                                 </li>
+                               
                             </ul>
                         </div>
 

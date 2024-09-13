@@ -219,14 +219,14 @@
 .img_div_style {
   background-color: #EAEBEF;
   border-radius: 36px;
-  height: 260px;
+  height: 214px;
 }
 
 .card_head {
   font-family: 'Ubuntu';
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 12px;
   text-align: center;
   color: #011539;
 }
@@ -234,7 +234,7 @@
 .card_author {
   font-family: 'Roboto';
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 13px;
   text-align: center;
   color: #535861;

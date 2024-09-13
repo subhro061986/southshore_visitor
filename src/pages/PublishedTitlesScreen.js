@@ -59,14 +59,14 @@ const PublishedTitlesScreen = () => {
                 <div className="row d-flex justify-content-between" style={{marginBottom:'15%'}}>
                     {TitleArray.map((data, index) => (
                         <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
-                            <div className="card card_style" style={{ width: '17rem' }}>
+                            <div className="card card_style" style={{width:'100%'}}>
                                 <div className="d-flex justify-content-center img_div_style">
-                                    <img src={data.image} className="mt-4" />
+                                    <img src={data.image} className="mt-4" width={160} height={200} />
                                 </div>
                                 <div className="card-body">
                                     <div className="card_head">{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>
-                                    <div className="card_author my-3">Author: <span style={{ fontWeight: '500' }}>{data.author}</span></div>
-                                    <button className="card_btn bg-white px-3 py-2 my-2">Buy on book central</button>
+                                    <div className="card_author my-3">{data.author}</div>
+                                    <button className="card_btn bg-white px-3 py-2 mt-2">Buy on book central</button>
                                 </div>
                             </div>
                         </div>
