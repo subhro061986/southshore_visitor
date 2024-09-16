@@ -24083,7 +24083,7 @@ dl li {
 .table td img {
   width: 36px;
   height: 36px;
-  border-radius: 100%;
+  /* border-radius: 100%; */
 }
 .table th img.img-45-30,
 .table td img.img-45-30 {
@@ -25836,6 +25836,11 @@ dl li {
   color: #b66dff;
   background: transparent;
 }
+
+.sidebar .nav.sub-menu .nav-item .nav-link.active::after{
+  color: #b66dff;
+  background: transparent;
+}
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
   color: #555555;
 }
@@ -26291,6 +26296,25 @@ dl li {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
+
+.card_body_height{
+  min-height: fit-content;
+}
+
+.admin_modal > .form-control{
+  padding: 0px !important;
+}
+
+/* .form-check-input{
+  background-color: #f5f5f5 !important;
+  border-color: #9a55ff !important;
+} */
+
+.form-check-input:checked {
+    background-color: #9a55ff !important;
+    border-color: #9a55ff !important;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
 
 /*-----Slider-----*/
