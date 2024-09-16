@@ -78,7 +78,7 @@ const NavBarSouthsore = () => {
                 },
                 {
                     text: "MyJove",
-                    // link: "/representation/myjove"
+                    link: "/representation/jove"
                 },
                 {
                     text: "Writeful",

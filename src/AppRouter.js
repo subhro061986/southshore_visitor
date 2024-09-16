@@ -18,6 +18,7 @@ import Enquiry from './pages/Enquiry';
 import OpenAccess from './pages/OpenAccess';
 import Resources from './pages/Resources';
 import Brills from './pages/Brills';
+import Jove from './pages/Jove';
 
 const AppRouter=()=> {
 
@@ -33,6 +34,7 @@ const AppRouter=()=> {
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
             <Route exact path="/representation/brill" Component={Brills} />
+            <Route exact path="/representation/jove" Component={Jove} />
             <Route exact path="/representation/enquiry" Component={Enquiry} />
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
