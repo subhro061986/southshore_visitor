@@ -552,6 +552,12 @@ text-align: left;
   color:  #4D39F194;
   font-size: 30px;
 }
+
+.blue-bulleted-list > li::marker {
+  color:  #4D39F194;
+  font-size: 30px;
+}
+
 .grey-card>.card-body>ul {
   font-size: 120%;
 }

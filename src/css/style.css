@@ -454,3 +454,9 @@
   
   } */
 }
+
+@media screen and (min-width: 767.67px) {
+  .rotate-on-big-screen {
+    transform: rotate(90deg);
+  }
+}
