@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import companyLogo from '../assets/images/logo.svg';
+import companyLogo from '../assets/images/southshore_logo_alt.svg';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {

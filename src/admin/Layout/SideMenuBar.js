@@ -54,6 +54,66 @@ const SideMenuBar = () => {
                         </Link>
 
                     </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "managetr" ? "active" : ""}`}
+                        onClick={() => setActiveTab("managetr")}>
+                        <Link className="nav-link" 
+                        // to="/admin/managebanner"
+                        >
+                            <span className="menu-title">Manage TR</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "manageresources" ? "active" : ""}`}
+                        onClick={() => setActiveTab("manageresources")}>
+                        <Link className="nav-link" 
+                        // to="/admin/managebanner"
+                        >
+                            <span className="menu-title">Manage Resources</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "manageleadership" ? "active" : ""}`}
+                        onClick={() => setActiveTab("manageleadership")}>
+                        <Link className="nav-link" 
+                        // to="/admin/managebanner"
+                        >
+                            <span className="menu-title">Manage Leadership</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "managerepresentation" ? "active" : ""}`}
+                        onClick={() => setActiveTab("managerepresentation")}>
+                        <Link className="nav-link" 
+                        // to="/admin/managebanner"
+                        >
+                            <span className="menu-title">Manage Representation</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "manageopenaccess" ? "active" : ""}`}
+                        onClick={() => setActiveTab("manageopenaccess")}>
+                        <Link className="nav-link" 
+                        to="/admin/manageopenaccess"
+                        >
+                            <span className="menu-title">Manage Open Access</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
                     
                 </ul>
             </nav>
