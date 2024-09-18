@@ -8,6 +8,7 @@ useEffect
 import LoginPage from './pages/LoginPage';
 import ManageBanner from './pages/ManageBanner';
 import ManageOpenAccess from './pages/ManageOpenAccess';
+import ManagePublishedTitles from './pages/ManagePublishedTitles';
 
 const NavigationPage=()=> {
 
@@ -17,6 +18,7 @@ const NavigationPage=()=> {
             <Route exact path="/" Component={LoginPage}/>
             <Route exact path="/managebanner" Component={ManageBanner}/>
             <Route exact path="/manageopenaccess" Component={ManageOpenAccess}/>
+            <Route exact path="/managpublishedtitles" Component={ManagePublishedTitles}/>
         </Routes>
     
   );

@@ -51,13 +51,13 @@ const AdvisoryScreen = () => {
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
-                    <h1>Management</h1>
+                    <h1>Advisory Board</h1>
                 </div>
                 <div className="row">
                         {
                             managementPeopleDetails.map((person, index) => {
                                 return (
-                                    <div key={index} className="col-12 col-md-6 col-xl-3">
+                                    <div key={index} className="col-12 col-md-6 col-lg-4 mt-2 mb-2">
                                         <PersonCard
                                             name={person?.name}
                                             about={person?.about}

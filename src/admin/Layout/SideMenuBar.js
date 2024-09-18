@@ -8,7 +8,7 @@ const SideMenuBar = () => {
 
     return (
         <>
-            <nav className="sidebar sidebar-offcanvas" id="sidebar">
+            <nav className="sidebar sidebar-offcanvas sidebar_submenu_fonts" id="sidebar">
                 <ul className="nav">
 
                     <li
@@ -20,30 +20,30 @@ const SideMenuBar = () => {
                             <i className="mdi mdi-home menu-icon"></i>
                         </Link>
                     </li>
-                    <li className={`nav-item ${activeTab === "basicui" ? "active" : ""}`}
-                        onClick={() => setActiveTab("basicui")}
+                    <li className={`nav-item ${activeTab === "managepublishers" ? "active" : ""}`}
+                        onClick={() => setActiveTab("managepublishers")}
                     >
                         <a className="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span className="menu-title">Basic UI Elements</span>
+                            <span className="menu-title">Manage Publishers</span>
                             {/* <i className="menu-arrow"></i> */}
                             {/* <i className="mdi mdi-crosshairs-gps menu-icon"></i> */}
                         </a>
                         <div className="collapse" id="ui-basic">
                             <ul className="nav flex-column sub-menu">
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="">Buttons</Link>
+                                <li className="nav-item text-wrap">
+                                    <Link className="nav-link" to="/admin/managpublishedtitles">Manage Published Titles</Link>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <Link className="nav-link" to="">Dropdowns</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="">Typography</Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </li>
 
-                    <li
+                    {/* <li
                         className={`nav-item ${activeTab === "managejuris" ? "active" : ""}`}
                         onClick={() => setActiveTab("managejuris")}>
                         <Link className="nav-link" 
@@ -53,19 +53,8 @@ const SideMenuBar = () => {
                             <i className="mdi mdi-format-list-bulleted menu-icon"></i>
                         </Link>
 
-                    </li>
+                    </li> */}
 
-                    <li
-                        className={`nav-item ${activeTab === "managetr" ? "active" : ""}`}
-                        onClick={() => setActiveTab("managetr")}>
-                        <Link className="nav-link" 
-                        // to="/admin/managebanner"
-                        >
-                            <span className="menu-title">Manage TR</span>
-                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
-                        </Link>
-
-                    </li>
 
                     <li
                         className={`nav-item ${activeTab === "manageresources" ? "active" : ""}`}

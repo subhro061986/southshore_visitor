@@ -8,10 +8,10 @@ import { Modal } from "react-bootstrap";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 
-const ManageOpenAccess = () => {
+const ManagePublishedTitles = () => {
     const [addModal, setAddModal] = useState(false);
 
-    const openAddAddressModal = () => {
+    const openAddModal = () => {
         setAddModal(true)
 
     }
@@ -23,7 +23,7 @@ const ManageOpenAccess = () => {
     return (
         <>
             <div className="container-scroller">
-                <Header title="Manage Open Access" />
+                <Header title="Manage Published Titles" />
                 <div className="container-fluid page-body-wrapper">
                     <SideMenuBar />
                     <div className="main-panel">
@@ -31,23 +31,23 @@ const ManageOpenAccess = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={openAddAddressModal}>Add Open Access</button>
+                                    <button className="btn btn-primary" onClick={openAddModal}>Add Published Titles</button>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-12 grid-margin">
                                     <div className="card">
                                         <div className="card-body">
-                                            <h4 className="card-title">Open Access Details</h4>
+                                            <h4 className="card-title">Published Titles Details</h4>
                                             <div className="table-responsive">
                                                 <table className="table">
                                                     <thead>
                                                         <tr>
                                                             <th> Book Cover </th>
-                                                            <th> Title </th>
-                                                            <th> Type </th>
-                                                            <th> Epdf Link </th>
-                                                            <th> Epub Link </th>
+                                                            <th> Name </th>
+                                                            <th> Author Name </th>
+                                                            <th> Publisher Name </th>
+                                                            <th> Buy Link </th>
                                                             <th> Status </th>
                                                             <th>Action</th>
                                                         </tr>
@@ -125,33 +125,36 @@ const ManageOpenAccess = () => {
                 backdrop="static"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Add Open Access</Modal.Title>
+                    <Modal.Title>Add Published Titles</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row admin_modal">
-                        <div class="col-12 stretch-card">
+                        <div className="col-12 stretch-card">
                             <div className="card">
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
                                             <label for="exampleInputName1">Title</label>
-                                            <input type="text" className="form-control" id="exampleInputName1" placeholder="Name" />
+                                            <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" />
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputEmail3">Type</label>
-                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Email" />
+                                            <label for="exampleInputEmail3">Author Name</label>
+                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Author Name" />
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload epdf</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple />
+                                            <label>Upload Book Cover</label>
+                                            <input className="form-control" type="file" id="formFileMultiple" multiple />
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload epub</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple />
+                                            <label>Select Publisher</label>
+                                            <select className="form-select" aria-label="Default select example">
+                                                <option value="AL">Juris Press</option>
+                                                <option value="WY">Thomson Reuters</option>
+                                            </select>
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload book cover</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple />
+                                            <label for="exampleInputEmail3">Buy Link</label>
+                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Buy Link" />
                                         </div>
                                     </form>
                                 </div>
@@ -173,4 +176,4 @@ const ManageOpenAccess = () => {
     )
 }
 
-export default ManageOpenAccess;
+export default ManagePublishedTitles;

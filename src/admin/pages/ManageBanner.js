@@ -6,6 +6,7 @@ import Footer from "../Layout/Footer";
 import face1 from "../assets/images/faces/face1.jpg"
 import { Modal } from "react-bootstrap";
 import { MdOutlineEdit } from "react-icons/md";
+import { MdDeleteForever } from "react-icons/md";
 
 const ManageBanner = () => {
     const [addModal, setAddModal] = useState(false);
@@ -62,15 +63,16 @@ const ManageBanner = () => {
                                                             <td> Dec 5, 2017 </td>
                                                             <td> <label className="badge badge-gradient-success">Active</label> </td>
                                                             <td>
-                                                                <div className="d-flex align-items-center gap-5">
-                                                                    <MdOutlineEdit />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5 }} >
+                                                                <div className="d-flex align-items-center">
+                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
+                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                         <input
                                                                             // checked={data.isactive === 1 ? true : false} 
                                                                             className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
                                                                         // onChange={(e) => act_inact_dist(data.isactive, data.id)}
                                                                         />
                                                                     </div>
+                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -85,15 +87,16 @@ const ManageBanner = () => {
                                                             <td> Dec 5, 2017 </td>
                                                             <td> <label className="badge badge-gradient-danger">Inactive</label> </td>
                                                             <td>
-                                                                <div className="d-flex align-items-center gap-5">
-                                                                    <MdOutlineEdit />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5 }} >
+                                                                <div className="d-flex align-items-center">
+                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
+                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                         <input
                                                                             // checked={data.isactive === 1 ? true : false} 
                                                                             className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
                                                                         // onChange={(e) => act_inact_dist(data.isactive, data.id)}
                                                                         />
                                                                     </div>
+                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
                                                                 </div>
                                                             </td>
                                                         </tr>

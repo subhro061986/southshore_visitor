@@ -36,6 +36,10 @@ const NavBarSouthsore = () => {
                 {
                     text: "Acquisition & Commissioning",
                     link: "/leadership/acquisition"
+                },
+                {
+                    text: "Advisory Board",
+                    link: "/leadership/advisory"
                 }
             ]
         },
