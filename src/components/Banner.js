@@ -4,9 +4,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
 // import 'react-multi-carousel/lib/styles.css';
 import bg_southshore from '../assets/images/bg_southsore.png'
 import slide_img from '../assets/images/slide_img.png'
+import banner from '../assets/images/Banner_1.png'
 import arrow_right from '../assets/images/arrow-right.png'
 import Carousel from 'react-bootstrap/Carousel';
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
+import about_juris_img_1 from "../assets/images/about_juris_img_1.png";
 
 
 
@@ -20,20 +22,23 @@ const Banner = () => {
         <>
             <Carousel
                 // interval={null}
-                prevIcon={<CiCircleChevLeft size={40}  style={{color:'#878990F0'}}/>} // Custom Previous icon
-                nextIcon={<CiCircleChevRight size={40} style={{color:'#878990F0'}} />} // Custom Next icon
+                prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }} />} // Custom Previous icon
+                nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
             >
                 <Carousel.Item>
                     <div className="row border_style">
                         <div className="col-md-5 grey_div"></div>
                         <div className="col-md-7"></div>
                     </div>
-                    <Carousel.Caption style={{ right: '10%', left: '6%' }}>
+                    <Carousel.Caption style={{ right: '15%', left: '10%', bottom:'2.50rem' }}>
                         <div className="row">
                             <div className="col-md-8">
-                                <img src={slide_img} width={650} height={450} />
+                                <div className="slide_img_div" >
+                                    <img src={about_juris_img_1} width={550} height={410} style={{borderRadius:'25px'}}/>
+                                </div>
+
                             </div>
-                            <div className="col-md-4" style={{paddingLeft:'0px'}}>
+                            <div className="col-md-4" style={{ paddingLeft: '0px' }}>
                                 <div className="slide_txt_head mt-5"><span>Transparency</span> is Our Priority</div>
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
@@ -51,12 +56,15 @@ const Banner = () => {
                         <div className="col-md-5 grey_div"></div>
                         <div className="col-md-7"></div>
                     </div>
-                    <Carousel.Caption style={{ right: '10%', left: '6%' }}>
+                    <Carousel.Caption style={{ right: '15%', left: '10%', bottom:'2.50rem' }}>
                         <div className="row">
                             <div className="col-md-8">
-                                <img src={slide_img} width={650} height={450} />
+                                <div className="slide_img_div" >
+                                    <img src={banner} width={550} height={410} style={{borderRadius:'25px'}}/>
+                                </div>
+
                             </div>
-                            <div className="col-md-4" style={{paddingLeft:'0px'}}>
+                            <div className="col-md-4" style={{ paddingLeft: '0px' }}>
                                 <div className="slide_txt_head mt-5"><span>Transparency</span> is Our Priority</div>
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
@@ -74,12 +82,15 @@ const Banner = () => {
                         <div className="col-md-5 grey_div"></div>
                         <div className="col-md-7"></div>
                     </div>
-                    <Carousel.Caption style={{ right: '10%', left: '6%' }}>
+                    <Carousel.Caption style={{ right: '15%', left: '10%', bottom:'2.50rem' }}>
                         <div className="row">
                             <div className="col-md-8">
-                                <img src={slide_img} width={650} height={450} />
+                                <div className="slide_img_div" >
+                                    <img src={banner} width={550} height={410} style={{borderRadius:'25px'}}/>
+                                </div>
+
                             </div>
-                            <div className="col-md-4" style={{paddingLeft:'0px'}}>
+                            <div className="col-md-4" style={{ paddingLeft: '0px' }}>
                                 <div className="slide_txt_head mt-5"><span>Transparency</span> is Our Priority</div>
                                 <div className="slide_txt_description mt-4"><span style={{ fontWeight: '600' }}>We operate with full transparency</span>,
                                     ensuring that your experience is secure, straightforward,
