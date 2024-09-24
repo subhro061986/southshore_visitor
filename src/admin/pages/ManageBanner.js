@@ -7,17 +7,46 @@ import face1 from "../assets/images/faces/face1.jpg"
 import { Modal } from "react-bootstrap";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
+import { AdminProfile } from "../Context/Admincontext";
 
 const ManageBanner = () => {
+    // From context
+    const { createBanner } = AdminProfile();
+    // State for modal close/open
     const [addModal, setAddModal] = useState(false);
+    // States for modal inputs
+    const [addModalTitle, setAddModalTitle] = useState("");
+    const [addModalSubTitle, setAddModalSubTitle] = useState("");
+    const [addModalSequenceNumber, setAddModalSequenceNumber] = useState(-1);
+    const [addModalRedirectionURL, setAddModalRedirectionURL] = useState("#");
+    const [addModalImage, setAddModalImage] = useState(null);
 
     const openAddAddressModal = () => {
-        setAddModal(true)
-
+        setAddModal(true);
     }
 
     const closeAddModal = () => {
-        setAddModal(false)
+        setAddModal(false);
+    }
+
+    const handleFormSubmission = async () => {
+        let formData = new FormData();
+
+        formData.append("title", addModalTitle);
+        formData.append("subTitle", addModalSubTitle);
+        formData.append("sequenceNumber", addModalSequenceNumber);
+        formData.append("redirectURL", addModalRedirectionURL);
+        formData.append("image", addModalImage);
+
+        await createBanner(formData)
+        
+        closeAddModal();
+    }
+
+    const handleImageUpload = (e) => {
+        console.log("uploaded image", e.target.files[0]);
+        console.log("event", e);
+        setAddModalImage(e.target.files[0]);
     }
 
     return (
@@ -131,20 +160,24 @@ const ManageBanner = () => {
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
-                                            <label for="exampleInputName1">Title</label>
-                                            <input type="text" className="form-control" id="exampleInputName1" placeholder="Name" />
+                                            <label for="title">Title</label>
+                                            <input type="text" className="form-control" id="title" placeholder="Name" value={addModalTitle} onChange={(e) => {setAddModalTitle(e.target.value)}} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputEmail3">Sub Title</label>
-                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Email" />
+                                            <label for="subTitle">Sub Title</label>
+                                            <input type="text" className="form-control" id="subTitle" placeholder="Email" value={addModalSubTitle} onChange={(e) => {setAddModalSubTitle(e.target.value)}} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputPassword4">Redirection Url</label>
-                                            <input type="text" className="form-control" id="exampleInputPassword4" placeholder="Password" />
+                                            <label for="sequenceNumber">Sequence Number</label>
+                                            <input type="number" className="form-control" id="sequenceNumber" placeholder="Sequence Number" value={addModalSequenceNumber} onChange={(e) => {setAddModalSequenceNumber(e.target.value)}} />
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload Banner</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple />
+                                            <label for="redirectionURL">Redirection Url</label>
+                                            <input type="text" className="form-control" id="redirectionURL" placeholder="Redirect Link" value={addModalRedirectionURL} onChange={(e) => {setAddModalRedirectionURL(e.target.value)}}/>
+                                        </div>
+                                        <div className="form-group">
+                                            <label for="formFileMutiple">Upload Banner</label>
+                                            <input class="form-control" accept=".jpg, .png, .jpeg, .svg" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
                                         </div>
                                     </form>
                                 </div>
@@ -155,7 +188,7 @@ const ManageBanner = () => {
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
                     <button className="btn btn-gradient-primary"
-                    // onClick={saveShipping}
+                    onClick={() => { handleFormSubmission() }}
                     // style={{ width: '20%' }}
                     >
                         Save
