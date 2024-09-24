@@ -4,10 +4,16 @@ import './css/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import AppRouter from './AppRouter';
+import { AuthProvider } from './Context/Authcontext';
+import { UserProvider } from './Context/Usercontext';
 
 const App=()=> {
   return (
-    <AppRouter/>
+    <AuthProvider>
+      <UserProvider>
+          <AppRouter/> 
+      </UserProvider>
+    </AuthProvider>
   );
 }
 

@@ -1,5 +1,9 @@
 {
     "API_URL" : "http://localhost:5000/",
-    "CREATE_BANNER": "banner/create"
+    "CREATE_BANNER": "banner/create",
+    "GET_ALL_BANNER":"banner",
+    "BANNER_URL" : "banners/",
+    "GET_BANNER_BY_ID": "banner",
+    "EDIT_BANNER":"banner/update"
 }
   

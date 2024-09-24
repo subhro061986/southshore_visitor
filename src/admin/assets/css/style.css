@@ -24079,9 +24079,10 @@ dl li {
   white-space: nowrap;
   padding: 0.9375rem;
 }
+/* changed width from 36 to 56 */
 .table th img,
 .table td img {
-  width: 36px;
+  width: 56px;
   height: 36px;
   /* border-radius: 100%; */
 }

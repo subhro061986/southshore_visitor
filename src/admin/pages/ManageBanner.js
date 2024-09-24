@@ -8,10 +8,11 @@ import { Modal } from "react-bootstrap";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 import { AdminProfile } from "../Context/Admincontext";
+import Config from "../Config/Config.json";
 
 const ManageBanner = () => {
     // From context
-    const { createBanner } = AdminProfile();
+    const { createBanner, allBanner, getBannerById, editBanner } = AdminProfile();
     // State for modal close/open
     const [addModal, setAddModal] = useState(false);
     // States for modal inputs
@@ -21,8 +22,25 @@ const ManageBanner = () => {
     const [addModalRedirectionURL, setAddModalRedirectionURL] = useState("#");
     const [addModalImage, setAddModalImage] = useState(null);
 
-    const openAddAddressModal = () => {
+    const [existingId, setExistingId] = useState(0)
+    const [modalTitle, setModalTitle] = useState('')
+
+    const openAddAddressModal = (id) => {
         setAddModal(true);
+        if (id === 0) {
+            setExistingId(0)
+            setModalTitle("Add Banner")
+            setAddModalTitle('')
+            setAddModalSubTitle('')
+            setAddModalSequenceNumber(-1)
+            setAddModalRedirectionURL('#')
+            setAddModalImage(null)
+        }
+        else {
+            setExistingId(id)
+            setModalTitle("Edit Banner")
+            getBannersById(id)
+        }
     }
 
     const closeAddModal = () => {
@@ -30,23 +48,69 @@ const ManageBanner = () => {
     }
 
     const handleFormSubmission = async () => {
-        let formData = new FormData();
+        if (existingId === 0) {
+            let formData = new FormData();
 
-        formData.append("title", addModalTitle);
-        formData.append("subTitle", addModalSubTitle);
-        formData.append("sequenceNumber", addModalSequenceNumber);
-        formData.append("redirectURL", addModalRedirectionURL);
-        formData.append("image", addModalImage);
+            formData.append("title", addModalTitle);
+            formData.append("subTitle", addModalSubTitle);
+            formData.append("sequenceNumber", addModalSequenceNumber);
+            formData.append("redirectURL", addModalRedirectionURL);
+            formData.append("image", addModalImage);
 
-        await createBanner(formData)
-        
+            await createBanner(formData)
+            
+        }
+        else {
+            let formData = new FormData();
+            formData.append("title", addModalTitle);
+            formData.append("subTitle", addModalSubTitle);
+            formData.append("sequenceNumber", addModalSequenceNumber);
+            formData.append("redirectURL", addModalRedirectionURL);
+            formData.append("image", addModalImage);
+
+            await editBanner(existingId, formData)
+            
+        }
+
         closeAddModal();
+
+        
     }
 
     const handleImageUpload = (e) => {
         console.log("uploaded image", e.target.files[0]);
         console.log("event", e);
         setAddModalImage(e.target.files[0]);
+    }
+
+    // get banner by id
+
+    const getBannersById = async (id) => {
+        const response = await getBannerById(id);
+        let banner = response.data.output;
+        console.log("Banner by id : ", banner);
+        setAddModalTitle(banner.title)
+        setAddModalSubTitle(banner.subTitle)
+        setAddModalSequenceNumber(banner.sequenceNumber)
+        setAddModalRedirectionURL(banner.redirectURL)
+        setAddModalImage(banner.imgLink)
+
+    }
+
+    const act_inact_banner = async (evt,id) => {
+        if (evt.target.checked === true) {
+            //call restore
+            let resp = await editBanner(id, {isActive:1});
+          }
+          else {
+            //call delete
+            if (window.confirm("Do you want to deactivate the banner?") == true) {
+              // console.log("You pressed OK!");
+              let resp = await editBanner(id, {isActive:0});
+            }
+      
+          }
+
     }
 
     return (
@@ -60,7 +124,7 @@ const ManageBanner = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={openAddAddressModal}>Add Banner</button>
+                                    <button className="btn btn-primary" onClick={() => openAddAddressModal(0)}>Add Banner</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -81,54 +145,34 @@ const ManageBanner = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <img src={face1} height={36} width={36} className="me-2" alt="image" />
-                                                            </td>
-                                                            <td> Fund is not recieved </td>
-                                                            <td>
-                                                                WD-12345
-                                                            </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> <label className="badge badge-gradient-success">Active</label> </td>
-                                                            <td>
-                                                                <div className="d-flex align-items-center">
-                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                        <input
-                                                                            // checked={data.isactive === 1 ? true : false} 
-                                                                            className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                        // onChange={(e) => act_inact_dist(data.isactive, data.id)}
+                                                        {allBanner.map((data, index) => (
+                                                            <tr key={index}>
+                                                                <td>
+                                                                    <img src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
+                                                                </td>
+                                                                <td> {data.title} </td>
+                                                                <td>
+                                                                    {data.subTitle}
+                                                                </td>
+                                                                <td> {data.redirectURL} </td>
+                                                                <td> <label className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}>{data.isActive === 1 ? 'Active' : 'Inactive'}</label> </td>
+                                                                <td>
+                                                                    <div className="d-flex align-items-center">
+                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20}
+                                                                            onClick={() => openAddAddressModal(data.id)}
                                                                         />
+                                                                        <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
+                                                                            <input
+                                                                                checked={data.isActive === 1 ? true : false}
+                                                                                className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                                                                onChange={(e) => act_inact_banner(e, data.id)}
+                                                                            />
+                                                                        </div>
+                                                                        {/* <MdDeleteForever style={{ color: '#9a55ff' }} size={20} /> */}
                                                                     </div>
-                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <img src={face1} height={36} width={36} className="me-2" alt="image" />
-                                                            </td>
-                                                            <td> Fund is not recieved </td>
-                                                            <td>
-                                                                WD-12345
-                                                            </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> <label className="badge badge-gradient-danger">Inactive</label> </td>
-                                                            <td>
-                                                                <div className="d-flex align-items-center">
-                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                        <input
-                                                                            // checked={data.isactive === 1 ? true : false} 
-                                                                            className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                        // onChange={(e) => act_inact_dist(data.isactive, data.id)}
-                                                                        />
-                                                                    </div>
-                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
-                                                                </div>
-                                                            </td>
-                                                        </tr>
+                                                                </td>
+                                                            </tr>
+                                                        ))}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -143,7 +187,7 @@ const ManageBanner = () => {
                 </div>
             </div>
 
-            {/* Add Banner */}
+            {/* Add/Edit Banner */}
 
             <Modal
                 show={addModal}
@@ -151,7 +195,7 @@ const ManageBanner = () => {
                 backdrop="static"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Add Banner</Modal.Title>
+                    <Modal.Title>{modalTitle}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row admin_modal">
@@ -161,19 +205,19 @@ const ManageBanner = () => {
                                     <form className="forms-sample">
                                         <div className="form-group">
                                             <label for="title">Title</label>
-                                            <input type="text" className="form-control" id="title" placeholder="Name" value={addModalTitle} onChange={(e) => {setAddModalTitle(e.target.value)}} />
+                                            <input type="text" className="form-control" id="title" placeholder="Name" value={addModalTitle} onChange={(e) => { setAddModalTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
                                             <label for="subTitle">Sub Title</label>
-                                            <input type="text" className="form-control" id="subTitle" placeholder="Email" value={addModalSubTitle} onChange={(e) => {setAddModalSubTitle(e.target.value)}} />
+                                            <input type="text" className="form-control" id="subTitle" placeholder="Sub Title" value={addModalSubTitle} onChange={(e) => { setAddModalSubTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
                                             <label for="sequenceNumber">Sequence Number</label>
-                                            <input type="number" className="form-control" id="sequenceNumber" placeholder="Sequence Number" value={addModalSequenceNumber} onChange={(e) => {setAddModalSequenceNumber(e.target.value)}} />
+                                            <input type="number" className="form-control" id="sequenceNumber" placeholder="Sequence Number" value={addModalSequenceNumber} onChange={(e) => { setAddModalSequenceNumber(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
                                             <label for="redirectionURL">Redirection Url</label>
-                                            <input type="text" className="form-control" id="redirectionURL" placeholder="Redirect Link" value={addModalRedirectionURL} onChange={(e) => {setAddModalRedirectionURL(e.target.value)}}/>
+                                            <input type="text" className="form-control" id="redirectionURL" placeholder="Redirect Link" value={addModalRedirectionURL} onChange={(e) => { setAddModalRedirectionURL(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
                                             <label for="formFileMutiple">Upload Banner</label>
@@ -188,13 +232,15 @@ const ManageBanner = () => {
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
                     <button className="btn btn-gradient-primary"
-                    onClick={() => { handleFormSubmission() }}
+                        onClick={() => { handleFormSubmission() }}
                     // style={{ width: '20%' }}
                     >
                         Save
                     </button>
                 </Modal.Footer>
             </Modal>
+
+
         </>
     )
 }
