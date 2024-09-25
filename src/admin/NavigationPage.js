@@ -9,6 +9,7 @@ import LoginPage from './pages/LoginPage';
 import ManageBanner from './pages/ManageBanner';
 import ManageOpenAccess from './pages/ManageOpenAccess';
 import ManagePublishedTitles from './pages/ManagePublishedTitles';
+import ManageLeadership from './pages/ManageLeadership';
 
 const NavigationPage=()=> {
 
@@ -19,6 +20,7 @@ const NavigationPage=()=> {
             <Route exact path="/managebanner" Component={ManageBanner}/>
             <Route exact path="/manageopenaccess" Component={ManageOpenAccess}/>
             <Route exact path="/managpublishedtitles" Component={ManagePublishedTitles}/>
+            <Route exact path="/manageleadership" Component={ManageLeadership}/>
         </Routes>
     
   );

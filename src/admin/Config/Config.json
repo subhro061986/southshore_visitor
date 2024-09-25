@@ -4,6 +4,11 @@
     "GET_ALL_BANNER":"banner",
     "BANNER_URL" : "banners/",
     "GET_BANNER_BY_ID": "banner",
-    "EDIT_BANNER":"banner/update"
+    "EDIT_BANNER":"banner/update",
+    "GET_ALL_LEADER":"leadership",
+    "LEADER_IMAGE_URL" : "leaders/",
+    "CREATE_LEADER":"leadership/create",
+    "EDIT_LEADER" : "leadership/update",
+    "GET_LEADER_BY_ID": "leadership"
 }
   
