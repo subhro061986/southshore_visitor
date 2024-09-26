@@ -15,10 +15,14 @@ const AdminProvider = ({ children }) => {
 
   const [allBanner, setAllBanner] = useState([])
   const [allLeader, setAllLeader] = useState([])
+  const [allPublishedTitle, setAllPublishedTitle] = useState([])
+  const [allPublisher, setAllPublisher] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
     Get_All_Leader();
+    Get_All_Published_Title();
+    Get_All_Publisher();
   }, []);
 
   // Banner
@@ -167,6 +171,62 @@ const AdminProvider = ({ children }) => {
     }
   }
 
+  // Published Title
+
+  const Get_All_Published_Title = async () => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHED_TITLE ,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All Published Title response", response);
+      setAllPublishedTitle(response.data);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Published Title CONTEXT ERROR: ", error);
+    }
+  }
+
+  const Get_All_Publisher = async () => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHER ,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All Publisher response", response);
+      setAllPublisher(response.data);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Publisher CONTEXT ERROR: ", error);
+    }
+  }
+
+  const createPublishedTitle = async (formData) => {
+    try {
+      const response = await axios.post(Config.API_URL + Config.CREATE_PUBLISHED_TITLE, formData ,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+      
+      console.log("Published Title create response", response);
+      Get_All_Published_Title();
+      return response;
+    }
+    catch (error) {
+      console.log("Published Title CONTEXT ERROR: ", error);
+    }
+  }
+
   return (
     <AdminContext.Provider
       value={{
@@ -179,7 +239,12 @@ const AdminProvider = ({ children }) => {
         allLeader,
         createLeader,
         editLeader,
-        getLeaderById
+        getLeaderById,
+        Get_All_Published_Title,
+        allPublishedTitle,
+        Get_All_Publisher,
+        allPublisher,
+        createPublishedTitle
       }}
     >
       {/* <LoadingOverlay

@@ -200,7 +200,7 @@ const ManageLeadership = () => {
                                                                 <td>
                                                                     <img
                                                                         src={Config.API_URL + Config.LEADER_IMAGE_URL + "/" + data.imgLink + '?d=' + new Date()}
-                                                                        height={36} width={56} className="me-2" alt="image" />
+                                                                        height={36} width={56} className="me-2" alt="image" style={{width:'36px'}} />
                                                                 </td>
                                                                 <td>
                                                                     {data.personName}

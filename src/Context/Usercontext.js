@@ -14,9 +14,11 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
 
   const [allBanner, setAllBanner] = useState([])
+  const [allLeader, setAllLeader] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
+    Get_All_Leader();
   }, []);
 
   // Banner
@@ -40,13 +42,35 @@ const UserProvider = ({ children }) => {
     }
   }
 
+  // Leadership
+
+  const Get_All_Leader = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_LEADER + "?onlyActive=" + 0,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All Leader response", response);
+      setAllLeader(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Leader CONTEXT ERROR: ", error);
+    }
+  }
+
   
 
   return (
     <UserContext.Provider
       value={{
         Get_All_Banner,
-        allBanner
+        allBanner,
+        Get_All_Leader,
+        allLeader
       }}
     >
       {/* <LoadingOverlay

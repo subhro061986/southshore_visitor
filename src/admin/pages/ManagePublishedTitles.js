@@ -7,17 +7,149 @@ import face1 from "../assets/images/faces/face1.jpg"
 import { Modal } from "react-bootstrap";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
+import { AdminProfile } from "../Context/Admincontext";
+import Config from "../Config/Config.json";
 
 const ManagePublishedTitles = () => {
+    // From context
+    const { createPublishedTitle, allPublishedTitle, allPublisher, getLeaderById, editLeader } = AdminProfile();
+    // State for modal close/open
     const [addModal, setAddModal] = useState(false);
+    // States for modal inputs
+    const [title, setTitle] = useState("");
+    const [author, setAuthor] = useState("");
+    const [buyLink, setBuyLink] = useState("");
+    const [publisher, setPublisher] = useState(0);
+    const [image, setImage] = useState(null);
+
+    const [existingId, setExistingId] = useState(0)
+    const [modalTitle, setModalTitle] = useState('')
+
+    const [selectedMainOption, setSelectedMainOption] = useState('');
+    const [isTeamSelected, setIsTeamSelected] = useState(false);
+    const [selectedSubOption, setSelectedSubOption] = useState('');
+
+    const handleMainDropdownChange = (e) => {
+        const value = e.target.value;
+        setSelectedMainOption(value);
+
+        // Open the secondary dropdown only if "Team" is selected
+        if (value === '3') {
+            setIsTeamSelected(true);
+        } else {
+            setIsTeamSelected(false);
+        }
+    };
+
+    const handleSubDropdownChange = (e) => {
+        const value = e.target.value;
+        console.log("handleSubDropdownChange", value);
+        setSelectedSubOption(value);
+    };
 
     const openAddModal = () => {
-        setAddModal(true)
-
+        setAddModal(true);
+        //  if (id === 0) {
+        //  setExistingId(0)
+        setModalTitle("Add Leadership")
+        setTitle('')
+        setBuyLink('')
+        setPublisher('')
+        setAuthor('')
+        setImage(null)
+        //  }
+        //  else {
+        //      setExistingId(id)
+        //      setModalTitle("Edit Banner")
+        //      getLeadersById(id)
+        //  }
     }
 
     const closeAddModal = () => {
-        setAddModal(false)
+        setAddModal(false);
+    }
+
+    const handleFormSubmission = async () => {
+        //  if (existingId === 0) {
+        let formData = new FormData();
+
+        formData.append("title", title);
+        formData.append("authorName", author);
+        formData.append("linkedin", buyLink);
+        formData.append("publisherId", publisher);
+        formData.append("image", image);
+
+        // console.log("formData", formData.entries);
+
+        const resp = await createPublishedTitle(formData)
+        // alert(resp.data.message);
+
+        //  }
+        //  else {
+        //      let formData = new FormData();
+        //      formData.append("personName", title);
+        //      formData.append("author", author);
+        //      formData.append("linkedin", buyLink);
+        //      formData.append("publisher", publisher);
+        //      formData.append("leadershipCategoryId", selectedMainOption);
+        //      formData.append("teamCategoryId", selectedSubOption);
+        //      formData.append("image", image);
+        //      formData.append("imgFileExtension", imgFileExtension);
+
+
+        //      const resp = await editLeader(existingId, formData)
+
+        //      alert(resp.data.message);
+
+        //  }
+
+        closeAddModal();
+
+
+    }
+
+    const handleImageUpload = (e) => {
+        console.log("uploaded image", e.target.files[0]);
+        console.log("event", e);
+        setImage(e.target.files[0]);
+        //  setImgFileExtension(e.target.files[0].title.split('.').pop());
+    }
+
+    // get banner by id
+
+    const getLeadersById = async (id) => {
+        const response = await getLeaderById(id);
+        let banner = response.data.output;
+        console.log("Banner by id : ", banner);
+        setTitle(banner.personName)
+        setBuyLink(banner.linkedin)
+        setAuthor(banner.author)
+        setPublisher(banner.publisher)
+        setImage(banner.imgLink)
+        setSelectedMainOption(banner.leadershipCategoryId)
+        setSelectedSubOption(banner.teamCategoryId)
+        if (selectedMainOption === 3) {
+            setIsTeamSelected(true);
+        } else {
+            setIsTeamSelected(false);
+        }
+
+    }
+
+    const act_inact_banner = async (evt, id) => {
+        if (evt.target.checked === true) {
+            //call restore
+            let resp = await editLeader(id, { isActive: 1 });
+        }
+        else {
+            //call delete
+            if (window.confirm("Do you want to deactivate the leader?") == true) {
+                // console.log("You pressed OK!");
+                let resp = await editLeader(id, { isActive: 0 });
+            }
+
+        }
+
     }
 
     return (
@@ -31,7 +163,7 @@ const ManagePublishedTitles = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={openAddModal}>Add Published Titles</button>
+                                    <button className="btn btn-primary" onClick={() => openAddModal()}>Add Published Titles</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -53,56 +185,37 @@ const ManagePublishedTitles = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <img src={face1} height={36} width={36} className="me-2" alt="image" />
-                                                            </td>
-                                                            <td> Fund is not recieved </td>
-                                                            <td>
-                                                                WD-12345
-                                                            </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> <label className="badge badge-gradient-success">Active</label> </td>
-                                                            <td>
-                                                                <div className="d-flex align-items-center">
-                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                        <input
-                                                                            // checked={data.isactive === 1 ? true : false} 
-                                                                            className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                        // onChange={(e) => act_inact_dist(data.isactive, data.id)}
-                                                                        />
+                                                        {allPublishedTitle.map((data, index) => (
+                                                            <tr>
+                                                                <td>
+                                                                    <img src={face1} height={36} width={36} className="me-2" alt="image" />
+                                                                </td>
+                                                                <td> {data?.title} </td>
+                                                                <td>
+                                                                    {data?.authorName}
+                                                                </td>
+                                                                <td> {data?.publisherName} </td>
+                                                                <td> {data.buyLink} </td>
+                                                                <td> <label
+                                                                    className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
+                                                                >
+                                                                    {data.isActive === 1 ? 'Active' : 'Inactive'}
+                                                                </label> </td>
+                                                                <td>
+                                                                    <div className="d-flex align-items-center">
+                                                                        <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
+                                                                        <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
+                                                                            <input
+                                                                                checked={data.isactive === 1 ? true : false}
+                                                                                className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                                                                            // onChange={(e) => act_inact_dist(data.isactive, data.id)}
+                                                                            />
+                                                                        </div>
+                                                                        {/* <MdDeleteForever style={{ color: '#9a55ff' }} size={20} /> */}
                                                                     </div>
-                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <img src={face1} height={36} width={36} className="me-2" alt="image" />
-                                                            </td>
-                                                            <td> Fund is not recieved </td>
-                                                            <td>
-                                                                WD-12345
-                                                            </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> Dec 5, 2017 </td>
-                                                            <td> <label className="badge badge-gradient-danger">Inactive</label> </td>
-                                                            <td>
-                                                                <div className="d-flex align-items-center">
-                                                                    <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
-                                                                    <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                        <input
-                                                                            // checked={data.isactive === 1 ? true : false} 
-                                                                            className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                        // onChange={(e) => act_inact_dist(data.isactive, data.id)}
-                                                                        />
-                                                                    </div>
-                                                                    <MdDeleteForever style={{ color: '#9a55ff' }} size={20} />
-                                                                </div>
-                                                            </td>
-                                                        </tr>
+                                                                </td>
+                                                            </tr>
+                                                        ))}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -125,7 +238,7 @@ const ManagePublishedTitles = () => {
                 backdrop="static"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Add Published Titles</Modal.Title>
+                    <Modal.Title>{modalTitle}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row admin_modal">
@@ -134,27 +247,35 @@ const ManagePublishedTitles = () => {
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
-                                            <label for="exampleInputName1">Title</label>
-                                            <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" />
-                                        </div>
-                                        <div className="form-group">
-                                            <label for="exampleInputEmail3">Author Name</label>
-                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Author Name" />
-                                        </div>
-                                        <div className="form-group">
-                                            <label>Upload Book Cover</label>
-                                            <input className="form-control" type="file" id="formFileMultiple" multiple />
-                                        </div>
-                                        <div className="form-group">
                                             <label>Select Publisher</label>
-                                            <select className="form-select" aria-label="Default select example">
-                                                <option value="AL">Juris Press</option>
-                                                <option value="WY">Thomson Reuters</option>
+                                            <select className="form-select" aria-label="Default select example" onChange={(e) => setPublisher(e.target.value)}>
+                                            <option disabled selected>--Select--</option>
+                                                {
+                                                    allPublisher.map((data, index) => (
+                                                            <option value={data.id} key={index} 
+                                                            selected={publisher === data.id ? true : false}
+                                                            >{data.publisherName}</option>
+                                                        
+                                                    ))
+                                                }
                                             </select>
                                         </div>
                                         <div className="form-group">
+                                            <label for="exampleInputName1">Title</label>
+                                            <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
+                                        </div>
+                                        <div className="form-group">
+                                            <label for="exampleInputEmail3">Author Name</label>
+                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Author Name" value={author} onChange={(e) => { setAuthor(e.target.value) }} />
+                                        </div>
+                                        <div className="form-group">
+                                            <label>Upload Book Cover</label>
+                                            <input className="form-control" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
+                                        </div>
+
+                                        <div className="form-group">
                                             <label for="exampleInputEmail3">Buy Link</label>
-                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Buy Link" />
+                                            <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Buy Link" value={buyLink} onChange={(e) => { setBuyLink(e.target.value) }} />
                                         </div>
                                     </form>
                                 </div>
@@ -165,7 +286,7 @@ const ManagePublishedTitles = () => {
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
                     <button className="btn btn-gradient-primary"
-                    // onClick={saveShipping}
+                    onClick={handleFormSubmission}
                     // style={{ width: '20%' }}
                     >
                         Save

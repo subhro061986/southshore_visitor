@@ -9,6 +9,9 @@
     "LEADER_IMAGE_URL" : "leaders/",
     "CREATE_LEADER":"leadership/create",
     "EDIT_LEADER" : "leadership/update",
-    "GET_LEADER_BY_ID": "leadership"
+    "GET_LEADER_BY_ID": "leadership",
+    "GET_ALL_PUBLISHED_TITLE":"published-titles",
+    "GET_ALL_PUBLISHER":"published-titles/publisher",
+    "CREATE_PUBLISHED_TITLE":"published-titles"
 }
   

@@ -1,6 +1,7 @@
 {
     "API_URL" : "http://localhost:5000/",
     "GET_ALL_BANNER":"banner",
-    "BANNER_URL" : "banners/"
+    "BANNER_URL" : "banners/",
+    "GET_ALL_LEADER":"leadership"
 }
   
