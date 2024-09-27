@@ -12,7 +12,7 @@ import Config from "../Config/Config.json";
 
 const ManagePublishedTitles = () => {
     // From context
-    const { createPublishedTitle, allPublishedTitle, allPublisher, getLeaderById, editLeader } = AdminProfile();
+    const { createPublishedTitle, allPublishedTitle, allPublisher, editPublishedTitle, getPublishedTitleById } = AdminProfile();
     // State for modal close/open
     const [addModal, setAddModal] = useState(false);
     // States for modal inputs
@@ -47,22 +47,29 @@ const ManagePublishedTitles = () => {
         setSelectedSubOption(value);
     };
 
-    const openAddModal = () => {
-        setAddModal(true);
-        //  if (id === 0) {
-        //  setExistingId(0)
-        setModalTitle("Add Leadership")
-        setTitle('')
-        setBuyLink('')
-        setPublisher('')
-        setAuthor('')
-        setImage(null)
-        //  }
-        //  else {
-        //      setExistingId(id)
-        //      setModalTitle("Edit Banner")
-        //      getLeadersById(id)
-        //  }
+    const openAddModal = (id) => {
+        // setAddModal(true);
+        if (id === 0) {
+            setExistingId(0)
+            setModalTitle("Add Leadership")
+            setTitle('')
+            setBuyLink('')
+            setPublisher('')
+            setAuthor('')
+            setImage(null)
+            setAddModal(true);
+         }
+         else {
+            setExistingId(id);
+            setModalTitle("Edit Banner");
+            setPublishedTitleDetails(id);
+            // setTitle(response?.title);
+            // setBuyLink(response?.buyLink);
+            // setPublisher(response?.publisherId);
+            // setAuthor(response?.authorName);
+            // setImage(response?.imgLink);
+            setAddModal(true);
+         }
     }
 
     const closeAddModal = () => {
@@ -70,38 +77,35 @@ const ManagePublishedTitles = () => {
     }
 
     const handleFormSubmission = async () => {
-        //  if (existingId === 0) {
-        let formData = new FormData();
+        if (existingId === 0) {
+            let formData = new FormData();
 
-        formData.append("title", title);
-        formData.append("authorName", author);
-        formData.append("linkedin", buyLink);
-        formData.append("publisherId", publisher);
-        formData.append("image", image);
+            formData.append("title", title);
+            formData.append("authorName", author);
+            formData.append("buyLink", buyLink);
+            formData.append("publisherId", publisher);
+            formData.append("image", image);
 
-        // console.log("formData", formData.entries);
+            // console.log("formData", formData.entries);
 
-        const resp = await createPublishedTitle(formData)
-        // alert(resp.data.message);
+            const resp = await createPublishedTitle(formData)
+            // alert(resp.data.message);
 
-        //  }
-        //  else {
-        //      let formData = new FormData();
-        //      formData.append("personName", title);
-        //      formData.append("author", author);
-        //      formData.append("linkedin", buyLink);
-        //      formData.append("publisher", publisher);
-        //      formData.append("leadershipCategoryId", selectedMainOption);
-        //      formData.append("teamCategoryId", selectedSubOption);
-        //      formData.append("image", image);
-        //      formData.append("imgFileExtension", imgFileExtension);
+         }
+         else {
+            let formData = new FormData();
+            formData.append("title", title);
+            formData.append("authorName", author);
+            formData.append("buyLink", buyLink);
+            formData.append("publisherId", publisher);
+            formData.append("image", image);
 
 
-        //      const resp = await editLeader(existingId, formData)
+            const resp = await editPublishedTitle(existingId, formData)
 
-        //      alert(resp.data.message);
+            // alert(resp.data.message);
 
-        //  }
+         }
 
         closeAddModal();
 
@@ -117,35 +121,28 @@ const ManagePublishedTitles = () => {
 
     // get banner by id
 
-    const getLeadersById = async (id) => {
-        const response = await getLeaderById(id);
-        let banner = response.data.output;
-        console.log("Banner by id : ", banner);
-        setTitle(banner.personName)
-        setBuyLink(banner.linkedin)
-        setAuthor(banner.author)
-        setPublisher(banner.publisher)
-        setImage(banner.imgLink)
-        setSelectedMainOption(banner.leadershipCategoryId)
-        setSelectedSubOption(banner.teamCategoryId)
-        if (selectedMainOption === 3) {
-            setIsTeamSelected(true);
-        } else {
-            setIsTeamSelected(false);
-        }
-
+    const setPublishedTitleDetails = async (id) => {
+        const response = await getPublishedTitleById(id);
+        let publishedTitle = response?.data;
+        console.log("published title=", publishedTitle);
+        setExistingId(publishedTitle?.id);
+        setTitle(publishedTitle?.title);
+        setBuyLink(publishedTitle?.buyLink);
+        setAuthor(publishedTitle?.authorName);
+        setPublisher(publishedTitle?.publisherId);
+        setImage(publishedTitle?.imgLink);
     }
 
-    const act_inact_banner = async (evt, id) => {
+    const act_inact_pub_title = async (evt, id) => {
         if (evt.target.checked === true) {
             //call restore
-            let resp = await editLeader(id, { isActive: 1 });
+            let resp = await editPublishedTitle(id, { title, author, buyLink, publisher, image, isActive: 1 });
         }
         else {
             //call delete
-            if (window.confirm("Do you want to deactivate the leader?") == true) {
+            if (window.confirm("Do you want to deactivate the published title?") == true) {
                 // console.log("You pressed OK!");
-                let resp = await editLeader(id, { isActive: 0 });
+                let resp = await editPublishedTitle(id, { title, author, buyLink, publisher, image, isActive: 0 });
             }
 
         }
@@ -185,30 +182,30 @@ const ManagePublishedTitles = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allPublishedTitle.map((data, index) => (
+                                                        {allPublishedTitle?.map((data, index) => (
                                                             <tr>
                                                                 <td>
-                                                                    <img src={face1} height={36} width={36} className="me-2" alt="image" />
+                                                                <img src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
                                                                 </td>
                                                                 <td> {data?.title} </td>
                                                                 <td>
                                                                     {data?.authorName}
                                                                 </td>
                                                                 <td> {data?.publisherName} </td>
-                                                                <td> {data.buyLink} </td>
+                                                                <td> {data?.buyLink} </td>
                                                                 <td> <label
                                                                     className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
                                                                 >
-                                                                    {data.isActive === 1 ? 'Active' : 'Inactive'}
+                                                                    {data?.isActive === 1 ? 'Active' : 'Inactive'}
                                                                 </label> </td>
                                                                 <td>
                                                                     <div className="d-flex align-items-center">
-                                                                        <MdOutlineEdit style={{ color: '#9a55ff' }} size={20} />
+                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20} onClick={() => {openAddModal(data?.id)}}/> 
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                            <input
+                                                                            <input style={{cursor: 'pointer'}}
                                                                                 checked={data.isactive === 1 ? true : false}
                                                                                 className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                            // onChange={(e) => act_inact_dist(data.isactive, data.id)}
+                                                                                onChange={(e) => act_inact_pub_title(e, data.id)}
                                                                             />
                                                                         </div>
                                                                         {/* <MdDeleteForever style={{ color: '#9a55ff' }} size={20} /> */}
@@ -251,7 +248,7 @@ const ManagePublishedTitles = () => {
                                             <select className="form-select" aria-label="Default select example" onChange={(e) => setPublisher(e.target.value)}>
                                             <option disabled selected>--Select--</option>
                                                 {
-                                                    allPublisher.map((data, index) => (
+                                                    allPublisher?.map((data, index) => (
                                                             <option value={data.id} key={index} 
                                                             selected={publisher === data.id ? true : false}
                                                             >{data.publisherName}</option>

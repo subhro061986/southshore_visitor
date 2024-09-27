@@ -12,6 +12,8 @@
     "GET_LEADER_BY_ID": "leadership",
     "GET_ALL_PUBLISHED_TITLE":"published-titles",
     "GET_ALL_PUBLISHER":"published-titles/publisher",
-    "CREATE_PUBLISHED_TITLE":"published-titles"
+    "CREATE_PUBLISHED_TITLE":"published-titles",
+    "PUBLISHED_TITLES_URL": "publishedTitles/",
+    "EDIT_PUBLISHED_TITLE": "published-titles"
 }
   

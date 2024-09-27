@@ -26,7 +26,7 @@ const Banner = () => {
                 prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }} />} // Custom Previous icon
                 nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
             >
-                { allBanner.map((data, index) => (
+                { allBanner?.map((data, index) => (
                 <Carousel.Item key={index}>
                     <div className="row border_style">
                         <div className="col-md-5 grey_div"></div>

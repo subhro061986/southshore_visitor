@@ -193,7 +193,7 @@ const ManageLeadership = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allLeader.map((data, index) => (
+                                                        {allLeader?.map((data, index) => (
                                                             <tr
                                                                 key={index}
                                                             >

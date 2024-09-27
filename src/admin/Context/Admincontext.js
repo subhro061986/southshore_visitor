@@ -227,6 +227,41 @@ const AdminProvider = ({ children }) => {
     }
   }
 
+  const editPublishedTitle = async (id, args) => {
+    // console.log("Args :", args);
+    // console.log("Id :", id);
+    try {
+      const response = await axios.put(Config.API_URL + Config.EDIT_PUBLISHED_TITLE + "/" + id, args,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+      Get_All_Published_Title();
+      console.log("EDIT Published Title RESPONSE : ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("EDIT_Published_Title_Error : ", error)
+    }
+  }
+
+  const getPublishedTitleById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + "published-titles/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      console.log("GET Published title  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_published_title_by_id_error : ", error);
+    }
+  }
+
   return (
     <AdminContext.Provider
       value={{
@@ -244,7 +279,9 @@ const AdminProvider = ({ children }) => {
         allPublishedTitle,
         Get_All_Publisher,
         allPublisher,
-        createPublishedTitle
+        createPublishedTitle,
+        editPublishedTitle,
+        getPublishedTitleById
       }}
     >
       {/* <LoadingOverlay
