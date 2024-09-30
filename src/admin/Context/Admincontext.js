@@ -17,12 +17,16 @@ const AdminProvider = ({ children }) => {
   const [allLeader, setAllLeader] = useState([])
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
   const [allPublisher, setAllPublisher] = useState([])
+  const [allResources, setAllResources] = useState([])
+  const [allPublisherResources, setAllPublisherResources] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
     Get_All_Leader();
     Get_All_Published_Title();
     Get_All_Publisher();
+    Get_All_Resources();
+    Get_All_Publishers_Resources();
   }, []);
 
   // Banner
@@ -262,6 +266,62 @@ const AdminProvider = ({ children }) => {
     }
   }
 
+   // Resources
+
+   const Get_All_Resources = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "?onlyActive=" + 0 ,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All Resources response", response);
+      setAllResources(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Resources CONTEXT ERROR: ", error);
+    }
+  }
+
+  const Get_All_Publishers_Resources = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL__PUBLISHER_RESOURCES + "?onlyActive=" + 0 ,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All Publishers Resources response", response);
+      setAllPublisherResources(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Publishers Resources CONTEXT ERROR: ", error);
+    }
+  }
+
+  const createResource = async (formData) => {
+    try {
+      const response = await axios.post(Config.API_URL + Config.CREATE_RESOURCE, formData ,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+      
+      console.log("Resource create response", response);
+      Get_All_Resources();
+      return response;
+    }
+    catch (error) {
+      console.log("Resource CONTEXT ERROR: ", error);
+    }
+  }
+
   return (
     <AdminContext.Provider
       value={{
@@ -281,7 +341,12 @@ const AdminProvider = ({ children }) => {
         allPublisher,
         createPublishedTitle,
         editPublishedTitle,
-        getPublishedTitleById
+        getPublishedTitleById,
+        Get_All_Resources,
+        allResources,
+        Get_All_Publishers_Resources,
+        createResource,
+        allPublisherResources
       }}
     >
       {/* <LoadingOverlay

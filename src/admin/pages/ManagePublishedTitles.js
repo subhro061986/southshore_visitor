@@ -25,27 +25,7 @@ const ManagePublishedTitles = () => {
     const [existingId, setExistingId] = useState(0)
     const [modalTitle, setModalTitle] = useState('')
 
-    const [selectedMainOption, setSelectedMainOption] = useState('');
-    const [isTeamSelected, setIsTeamSelected] = useState(false);
-    const [selectedSubOption, setSelectedSubOption] = useState('');
-
-    const handleMainDropdownChange = (e) => {
-        const value = e.target.value;
-        setSelectedMainOption(value);
-
-        // Open the secondary dropdown only if "Team" is selected
-        if (value === '3') {
-            setIsTeamSelected(true);
-        } else {
-            setIsTeamSelected(false);
-        }
-    };
-
-    const handleSubDropdownChange = (e) => {
-        const value = e.target.value;
-        console.log("handleSubDropdownChange", value);
-        setSelectedSubOption(value);
-    };
+    
 
     const openAddModal = (id) => {
         // setAddModal(true);
@@ -203,7 +183,7 @@ const ManagePublishedTitles = () => {
                                                                         <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20} onClick={() => {openAddModal(data?.id)}}/> 
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                             <input style={{cursor: 'pointer'}}
-                                                                                checked={data.isactive === 1 ? true : false}
+                                                                                checked={data.isActive === 1 ? true : false}
                                                                                 className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
                                                                                 onChange={(e) => act_inact_pub_title(e, data.id)}
                                                                             />

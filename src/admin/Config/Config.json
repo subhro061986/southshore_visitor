@@ -14,6 +14,10 @@
     "GET_ALL_PUBLISHER":"published-titles/publisher",
     "CREATE_PUBLISHED_TITLE":"published-titles",
     "PUBLISHED_TITLES_URL": "publishedTitles/",
-    "EDIT_PUBLISHED_TITLE": "published-titles"
+    "EDIT_PUBLISHED_TITLE": "published-titles",
+    "GET_ALL_RESOURCES":"resources",
+    "RESOURCE_IMAGE_URL" : "resources/",
+    "CREATE_RESOURCE":"resources/create",
+    "GET_ALL__PUBLISHER_RESOURCES":"resources/publishers"
 }
   
