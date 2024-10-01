@@ -74,6 +74,7 @@ const ManageLeadership = () => {
     }
 
     const handleFormSubmission = async () => {
+        
         if (existingId === 0) {
             let formData = new FormData();
 
@@ -206,8 +207,8 @@ const ManageLeadership = () => {
                                                                     {data.personName}
                                                                 </td>
                                                                 <td>{data.email}</td>
-                                                                <td>
-                                                                    {data.description}
+                                                                <td style={{textWrap:'wrap'}}>
+                                                                    {data?.description}
                                                                 </td>
                                                                 <td>
                                                                     {data.leadershipCategoryName}

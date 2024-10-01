@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import linkedin_icon_full from '../../assets/images/linkedin_icon_full.png';
 
 export const PersonCard = (person) => {
+    const absolutelinkedinurl = person?.linkedinLink?.startsWith('https://') ? person?.linkedinLink : 'https://' + person?.linkedinLink
     return (
         <div class="card person-card">
             <div className='d-flex justify-content-center person-image-div'>
@@ -12,7 +13,7 @@ export const PersonCard = (person) => {
                 <p class="card-text">{person?.about}</p>
             </div>
             <div className='d-flex justify-content-center'>
-                <Link to={person?.linkedinLink} >
+                <Link to={absolutelinkedinurl} target='_blank' >
                     <img src={linkedin_icon_full} width={98} height={'auto'} />
                 </Link>
             </div>

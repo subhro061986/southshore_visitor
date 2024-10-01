@@ -46,7 +46,7 @@ const UserProvider = ({ children }) => {
 
   const Get_All_Leader = async (onlyActive) => {
     try {
-      const response = await axios.get(Config.API_URL + Config.GET_ALL_LEADER + "?onlyActive=" + 0,
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_LEADER + "?onlyActive=" + 1,
         {
           headers: {
             'Content-Type': 'application/json',

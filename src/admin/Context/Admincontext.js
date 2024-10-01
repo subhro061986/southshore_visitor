@@ -19,7 +19,8 @@ const AdminProvider = ({ children }) => {
   const [allPublisher, setAllPublisher] = useState([])
   const [allResources, setAllResources] = useState([])
   const [allPublisherResources, setAllPublisherResources] = useState([])
-  
+  const [allOpenAccess, setAllOpenAccess] = useState([])
+
   useEffect(() => {
     Get_All_Banner();
     Get_All_Leader();
@@ -27,20 +28,21 @@ const AdminProvider = ({ children }) => {
     Get_All_Publisher();
     Get_All_Resources();
     Get_All_Publishers_Resources();
+    Get_All_Open_Access();
   }, []);
 
   // Banner
 
   const createBanner = async (formData) => {
     try {
-      const response = await axios.post(Config.API_URL + Config.CREATE_BANNER, formData ,
+      const response = await axios.post(Config.API_URL + Config.CREATE_BANNER, formData,
         {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         })
-      
-      console.log("Banner create response", response);
+
+      // console.log("Banner create response", response);
       Get_All_Banner();
       return response;
     }
@@ -57,8 +59,8 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Banner response", response);
+
+      // console.log("Get All Banner response", response);
       setAllBanner(response.data.output);
       return response;
     }
@@ -75,7 +77,7 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      console.log("GET Banner BY ID: ", response);
+      // console.log("GET Banner BY ID: ", response);
       return response;
     }
     catch (error) {
@@ -94,7 +96,7 @@ const AdminProvider = ({ children }) => {
           },
         })
       Get_All_Banner();
-      console.log("EDIT Banner RESPONSE : ", response);
+      // console.log("EDIT Banner RESPONSE : ", response);
       return response;
     }
     catch (error) {
@@ -112,8 +114,8 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Leader response", response);
+
+      // console.log("Get All Leader response", response);
       setAllLeader(response.data.output);
       return response;
     }
@@ -124,14 +126,14 @@ const AdminProvider = ({ children }) => {
 
   const createLeader = async (formData) => {
     try {
-      const response = await axios.post(Config.API_URL + Config.CREATE_LEADER, formData ,
+      const response = await axios.post(Config.API_URL + Config.CREATE_LEADER, formData,
         {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         })
-      
-      console.log("Leader create response", response);
+
+      // console.log("Leader create response", response);
       Get_All_Leader();
       return response;
     }
@@ -148,7 +150,7 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      console.log("GET Leader BY ID: ", response);
+      // console.log("GET Leader BY ID: ", response);
       return response;
     }
     catch (error) {
@@ -167,7 +169,7 @@ const AdminProvider = ({ children }) => {
           },
         })
       Get_All_Leader();
-      console.log("EDIT Leader RESPONSE : ", response);
+      // console.log("EDIT Leader RESPONSE : ", response);
       return response;
     }
     catch (error) {
@@ -179,14 +181,14 @@ const AdminProvider = ({ children }) => {
 
   const Get_All_Published_Title = async () => {
     try {
-      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHED_TITLE ,
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHED_TITLE,
         {
           headers: {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Published Title response", response);
+
+      // console.log("Get All Published Title response", response);
       setAllPublishedTitle(response.data);
       return response;
     }
@@ -197,14 +199,14 @@ const AdminProvider = ({ children }) => {
 
   const Get_All_Publisher = async () => {
     try {
-      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHER ,
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHER,
         {
           headers: {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Publisher response", response);
+
+      // console.log("Get All Publisher response", response);
       setAllPublisher(response.data);
       return response;
     }
@@ -215,14 +217,14 @@ const AdminProvider = ({ children }) => {
 
   const createPublishedTitle = async (formData) => {
     try {
-      const response = await axios.post(Config.API_URL + Config.CREATE_PUBLISHED_TITLE, formData ,
+      const response = await axios.post(Config.API_URL + Config.CREATE_PUBLISHED_TITLE, formData,
         {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         })
-      
-      console.log("Published Title create response", response);
+
+      // console.log("Published Title create response", response);
       Get_All_Published_Title();
       return response;
     }
@@ -242,7 +244,7 @@ const AdminProvider = ({ children }) => {
           },
         })
       Get_All_Published_Title();
-      console.log("EDIT Published Title RESPONSE : ", response);
+      // console.log("EDIT Published Title RESPONSE : ", response);
       return response;
     }
     catch (error) {
@@ -258,7 +260,7 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      console.log("GET Published title  BY ID: ", response);
+      // console.log("GET Published title  BY ID: ", response);
       return response;
     }
     catch (error) {
@@ -266,18 +268,18 @@ const AdminProvider = ({ children }) => {
     }
   }
 
-   // Resources
+  // Resources
 
-   const Get_All_Resources = async (onlyActive) => {
+  const Get_All_Resources = async (onlyActive) => {
     try {
-      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "?onlyActive=" + 0 ,
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "?onlyActive=" + 0,
         {
           headers: {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Resources response", response);
+
+      // console.log("Get All Resources response", response);
       setAllResources(response.data.output);
       return response;
     }
@@ -288,14 +290,14 @@ const AdminProvider = ({ children }) => {
 
   const Get_All_Publishers_Resources = async (onlyActive) => {
     try {
-      const response = await axios.get(Config.API_URL + Config.GET_ALL__PUBLISHER_RESOURCES + "?onlyActive=" + 0 ,
+      const response = await axios.get(Config.API_URL + Config.GET_ALL__PUBLISHER_RESOURCES + "?onlyActive=" + 0,
         {
           headers: {
             'Content-Type': 'application/json',
           },
         })
-      
-      console.log("Get All Publishers Resources response", response);
+
+      // console.log("Get All Publishers Resources response", response);
       setAllPublisherResources(response.data.output);
       return response;
     }
@@ -306,19 +308,127 @@ const AdminProvider = ({ children }) => {
 
   const createResource = async (formData) => {
     try {
-      const response = await axios.post(Config.API_URL + Config.CREATE_RESOURCE, formData ,
+      const response = await axios.post(Config.API_URL + Config.CREATE_RESOURCE, formData,
         {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
         })
-      
-      console.log("Resource create response", response);
+
+      // console.log("Resource create response", response);
       Get_All_Resources();
       return response;
     }
     catch (error) {
       console.log("Resource CONTEXT ERROR: ", error);
+    }
+  }
+
+  const editResource = async (id, args) => {
+    // console.log("Args :", args);
+    // console.log("Id :", id);
+    try {
+      const response = await axios.post(Config.API_URL + Config.EDIT_RESOURCE + "/" + id, args,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+      Get_All_Resources();
+      // console.log("EDIT Resource RESPONSE : ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("EDIT_Resource_Error : ", error)
+    }
+  }
+
+  const getResourceById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      // console.log("GET Resource  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_Resource_by_id_error : ", error);
+    }
+  }
+
+  //Open Access
+
+  const Get_All_Open_Access = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_OPEN_ACCESS + "?onlyActive=" + 0,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      console.log("Get All Open_Access response", response);
+      setAllOpenAccess(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Open_Access CONTEXT ERROR: ", error);
+    }
+  }
+
+  const createOpen_Access = async (formData) => {
+    try {
+      const response = await axios.post(Config.API_URL + Config.CREATE_OPEN_ACCESS, formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+
+      console.log("Resource create response", response);
+      Get_All_Open_Access();
+      return response;
+    }
+    catch (error) {
+      console.log("Resource CONTEXT ERROR: ", error);
+    }
+  }
+
+  const editOpenAccess = async (id, args) => {
+    // console.log("Args :", args);
+    // console.log("Id :", id);
+    try {
+      const response = await axios.post(Config.API_URL + Config.EDIT_OPEN_ACCESS + "/" + id, args,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+        Get_All_Open_Access();
+      console.log("EDIT Open Access RESPONSE : ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("EDIT_Open_Access_Error : ", error)
+    }
+  }
+
+  const getOpenAccessById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_OPEN_ACCESS + "/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      console.log("GET Open Access  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_Open_Access_by_id_error : ", error);
     }
   }
 
@@ -346,7 +456,14 @@ const AdminProvider = ({ children }) => {
         allResources,
         Get_All_Publishers_Resources,
         createResource,
-        allPublisherResources
+        allPublisherResources,
+        editResource,
+        getResourceById,
+        Get_All_Open_Access,
+        allOpenAccess,
+        createOpen_Access,
+        editOpenAccess,
+        getOpenAccessById
       }}
     >
       {/* <LoadingOverlay
