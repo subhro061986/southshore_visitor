@@ -140,7 +140,7 @@ const ManagePublishedTitles = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddModal()}>Add Published Titles</button>
+                                    <button className="btn btn-primary" onClick={() => openAddModal(0)}>Add Published Titles</button>
                                 </div>
                             </div>
                             <div className="row">

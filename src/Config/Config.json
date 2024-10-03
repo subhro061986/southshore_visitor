@@ -3,6 +3,11 @@
     "GET_ALL_BANNER":"banner",
     "BANNER_URL" : "banners/",
     "GET_ALL_LEADER":"leadership",
-    "LEADER_IMAGE_URL" : "leaders/"
+    "LEADER_IMAGE_URL" : "leaders/",
+    "GET_ALL__PUBLISHER_RESOURCES":"resources/publishers",
+    "GET_ALL_RESOURCES":"resources",
+    "RESOURCE_IMAGE_URL" : "resources/covers/",
+    "GET_ALL_PUBLISHED_TITLE":"published-titles",
+    "PUBLISHED_TITLES_URL": "publishedTitles/"
 }
   

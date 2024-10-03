@@ -1,4 +1,5 @@
 import React, { useEffect, useState, } from "react";
+import { useNavigate, Link } from 'react-router-dom';
 import FooterSouthsore from "../components/FooterSouthsore";
 import { Header } from "../components/Header";
 import book1 from '../assets/images/book1.png';
@@ -8,45 +9,43 @@ import book4 from '../assets/images/book4.png';
 import download from '../assets/images/download.png';
 import pdf from '../assets/images/pdf.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
+import { UserProfile } from "../Context/Usercontext";
+import Config from "../Config/Config.json"
 
 
 
 const Resources = () => {
 
-    const TitleArray = [
-        {
-            title: "Attitude Is Everything",
-            author: "Jeff Keller",
-            image: book1,
+    const { allPublisherResources, allResources } = UserProfile()
 
-        },
-        {
-            title: "Pride & Prejudice",
-            author: "Jeff Keller",
-            image: book2,
+    // const [activeTab, setActiveTab] = useState("");
 
-        },
-        {
-            title: "Three Thousand Stitches",
-            author: "Jeff Keller",
-            image: book3,
 
-        },
-        {
-            title: "How to Talk to Anyone",
-            author: "Jeff Keller",
-            image: book4,
 
-        },
-        {
-            title: "How to Talk to Anyone",
-            author: "Jeff Keller",
-            image: book1,
+    // const handleTabClick = (tab) => {
+    //     setActiveTab(tab);
+    //     console.log('Tab changed to:', tab);
+    // };
 
-        }
-    ]
+    // useEffect(() => {
+    //     allPublisherResources
+    // }, []);
 
-    const [activeTab, setActiveTab] = useState("home");
+    const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
+
+    // Handle tab click to set the active publisher
+    const handleTabClick = (publisherId) => {
+        setActivePublisherId(publisherId);
+    };
+
+    // Filter books by active publisher
+    const filteredBooks = allResources.filter(
+        (book) => book.publisherId === activePublisherId && book.isActive
+    );
+
+    
+
+
 
     return (
         <>
@@ -61,73 +60,56 @@ const Resources = () => {
 
                 <nav className="navbar">
                     <ul className="navbar-list nav_border">
-                        <li
-                            className={`navbar-item ${activeTab === "jurispress" ? "active" : ""}`}
-                            onClick={() => setActiveTab("jurispress")}
-                        >
-                            Juris Press
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "thompson" ? "active" : ""}`}
-                            onClick={() => setActiveTab("thompson")}
-                        >
-                            Thomson Reuters
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "brill" ? "active" : ""}`}
-                            onClick={() => setActiveTab("brill")}
-                        >
-                            Brill
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "myjove" ? "active" : ""}`}
-                            onClick={() => setActiveTab("myjove")}
-                        >
-                            MyJove
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "writefuls" ? "active" : ""}`}
-                            onClick={() => setActiveTab("writefuls")}
-                        >
-                            Writefuls
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "ebooksjunction" ? "active" : ""}`}
-                            onClick={() => setActiveTab("ebooksjunction")}
-                        >
-                            ebooksjunction
-                        </li>
-                        <li
-                            className={`navbar-item ${activeTab === "bookscentral" ? "active" : ""}`}
-                            onClick={() => setActiveTab("bookscentral")}
-                        >
-                            bookscentral
-                        </li>
+                        {allPublisherResources.map((publisher, index) => (
+                            <li
+                                key={publisher.id}
+                                className={`navbar-item ${activePublisherId === publisher.id ? "active" : ""}`}
+                                // onClick={() => setActiveTab(tab.publisherName)}
+                                onClick={() => handleTabClick(publisher.id)}
+                            >
+                                {publisher.publisherName}
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
                 <div className="download_head mt-5">Download the listed <span> PDF Books</span></div>
                 <div className="row d-flex justify-content-between" style={{ marginBottom: '15%' }}>
-                    {TitleArray.map((data, index) => (
-                        <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
-                            <div className="card card_style" style={{ width: '17rem' }}>
-                                <div className="d-flex justify-content-center img_div_style position-relative">
-                                    <button className="border border-white bg-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
-                                        <img src={pdf} height={20} width={20} />
-                                    </button>
-                                    <img src={data.image} className="mt-4" />
-                                </div>
-                                <div className="card-body">
-                                    <div className="card_head">{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>
-                                    {/* <div className="card_author my-3">Author: <span style={{ fontWeight: '500' }}>{data.author}</span></div> */}
-                                    <div className="d-flex justify-content-center mt-3 position-relative">
-                                        <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%' }}>Download PDF</button>
-                                        <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
+                    {
+                        filteredBooks?.length > 0 ? (
+                            filteredBooks.map((book) => (
+                                <div className="col-md-3 mt-5 d-flex justify-content-center" key={book.id}>
+                                    <div className="card card_style" style={{ width: '17rem' }}>
+                                        <div className="d-flex justify-content-center img_div_style position-relative">
+                                            <button className="border border-white bg-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
+                                                <img src={pdf} height={20} width={20} />
+                                            </button>
+                                            <img
+                                                // src={data.image}
+                                                height={170}
+                                                width={150} 
+                                                src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + book.coverImageLink + '?d=' + new Date()}
+                                                className="mt-4" />
+                                        </div>
+                                        <div className="card-body">
+                                            <div className="card_head">{book?.bookTitle?.length > 15 ? book?.bookTitle?.substring(0, 15) + ".." : book?.bookTitle}</div>
+                                            {/* <div className="card_author my-3">Author: <span style={{ fontWeight: '500' }}>{data.author}</span></div> */}
+                                            {/* <a  */}
+                                            {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
+                                            {/* > */}
+                                                <div className="d-flex justify-content-center mt-3 position-relative">
+                                                    <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%' }}>Download PDF</button>
+                                                    <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
+                                                </div>
+                                            {/* </a> */}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    ))}
+                            ))
+                        ) : (
+                            <p style={{ textAlign: 'center' }}>No books available for this publisher.</p>
+                        )
+                    }
 
                 </div>
 

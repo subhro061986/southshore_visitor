@@ -15,10 +15,16 @@ const UserProvider = ({ children }) => {
 
   const [allBanner, setAllBanner] = useState([])
   const [allLeader, setAllLeader] = useState([])
+  const [allPublisherResources, setAllPublisherResources] = useState([])
+  const [allResources, setAllResources] = useState([])
+  const [allPublishedTitle, setAllPublishedTitle] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
     Get_All_Leader();
+    Get_All_Publishers_Resources();
+    Get_All_Resources();
+    Get_All_Published_Title();
   }, []);
 
   // Banner
@@ -62,7 +68,65 @@ const UserProvider = ({ children }) => {
     }
   }
 
-  
+  // Publishers
+
+  const Get_All_Publishers_Resources = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL__PUBLISHER_RESOURCES + "?onlyActive=" + 0,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      // console.log("Get All Publishers Resources response", response);
+      setAllPublisherResources(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Publishers Resources CONTEXT ERROR: ", error);
+    }
+  }
+
+  // Resources
+
+  const Get_All_Resources = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "?onlyActive=" + 1,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      // console.log("Get All Resources response", response);
+      setAllResources(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Resources CONTEXT ERROR: ", error);
+    }
+  }
+
+  // Published Title
+
+  const Get_All_Published_Title = async () => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PUBLISHED_TITLE,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      // console.log("Get All Published Title response", response);
+      setAllPublishedTitle(response.data);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Published Title CONTEXT ERROR: ", error);
+    }
+  }
 
   return (
     <UserContext.Provider
@@ -70,7 +134,13 @@ const UserProvider = ({ children }) => {
         Get_All_Banner,
         allBanner,
         Get_All_Leader,
-        allLeader
+        allLeader,
+        Get_All_Publishers_Resources,
+        allPublisherResources,
+        Get_All_Resources,
+        allResources,
+        Get_All_Published_Title,
+        allPublishedTitle
       }}
     >
       {/* <LoadingOverlay
