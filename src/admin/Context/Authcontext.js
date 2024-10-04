@@ -13,10 +13,103 @@ import Cookies from "js-cookie";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
+  const [authData, setAuthData] = useState(''); // token
+  const [authDeatils, setAuthDeatils] = useState('');
+
+  useEffect(() => {
+    getDataFromStorage();
+    
+  }, [authData])
+  useEffect(() => {
+  }, [authDeatils])
+
+  const getDataFromStorage = async () => {
+    let token = localStorage.getItem("token");
+
+    if (authData === '') {
+      // console.log("AUthdata is Null")
+      if (token === null || token === '' || token === undefined) {
+        console.log("No token available please login");
+      }
+      else {
+        setAuthData(token);
+        setAuthDeatils(jwtDecode(token));
+        // console.log("Token is present",token)
+        // setAuthUsername(name)
+      }
+    }
+    else {
+      console.log("Authdata is not null");
+    }
+  }
+
+  const logIn = async (arg) => {
+    // console.log("Arguments passed to login : ", arg)
+    try {
+      // const response = await axios.post('https://ebooksjunction.com/api/account/login', arg,
+      const response = await axios.post(Config.API_URL + Config.LOGIN_API, arg,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+        });
+
+      // console.log("Response frm login context: ", response);
+      const token = response?.data?.token;
+
+      if (response?.status === 200) {
+        setAuthData(token);
+        localStorage.setItem("token", token);
+        setAuthDeatils(jwtDecode(token));
+        return response.data
+        // console.log("Response : ", response);
+        // console.log("token : ",token);
+        // console.log("auth deatils : ", jwtDecode(token));
+
+      }
+      else {
+        setAuthData('');
+        setAuthDeatils('');
+        localStorage.setItem("token", '');
+      }
+      // return response.data
+
+    } catch (error) {
+      console.log("Error :", error);
+    }
+  }
+
+  const logOut = () => {
+    setAuthData('');
+    setAuthDeatils('');
+    localStorage.setItem("token", '');
+    return 'success';
+  }
+
+  // const forgot_password = async (args) => {
+  //   try {
+  //     const response = await axios.post(Config.API_URL + Config.FORGOT_PASSWORD, args,
+  //       {
+  //         headers: {
+  //           'Content-Type': 'application/json'
+  //         },
+  //       })
+  //     // console.log("ForgotPassword_resp: ", response.data.message);
+  //     return response.data.message;
+  //   }
+  //   catch (error) {
+  //     console.log("ForgotPassword_error : ", error)
+  //   }
+  // }
 
   return (
     <AuthContext.Provider
-      value={{}}
+      value={{
+        logIn,
+        logOut,
+        authData,
+        authDeatils
+      }}
     >
       {children}
       {/* <ActivityLoader isLoaderShow ={loaderOn}/> */}
