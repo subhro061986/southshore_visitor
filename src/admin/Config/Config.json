@@ -23,6 +23,7 @@
     "GET_ALL_OPEN_ACCESS":"openaccess",
     "Open_Access_URL":"openaccess/covers",
     "CREATE_OPEN_ACCESS":"openaccess/create",
-    "EDIT_OPEN_ACCESS":"openaccess/update"
+    "EDIT_OPEN_ACCESS":"openaccess/update",
+    "LOGIN_API": "account/login"
 }
   
