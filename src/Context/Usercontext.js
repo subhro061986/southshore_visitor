@@ -18,6 +18,7 @@ const UserProvider = ({ children }) => {
   const [allPublisherResources, setAllPublisherResources] = useState([])
   const [allResources, setAllResources] = useState([])
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
+  const [allOpenAccess, setAllOpenAccess] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
@@ -25,6 +26,7 @@ const UserProvider = ({ children }) => {
     Get_All_Publishers_Resources();
     Get_All_Resources();
     Get_All_Published_Title();
+    Get_All_Open_Access();
   }, []);
 
   // Banner
@@ -39,7 +41,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      console.log("Get All Banner response", response);
+      // console.log("Get All Banner response", response);
       setAllBanner(response.data.output);
       return response;
     }
@@ -59,7 +61,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      console.log("Get All Leader response", response);
+      // console.log("Get All Leader response", response);
       setAllLeader(response.data.output);
       return response;
     }
@@ -108,6 +110,22 @@ const UserProvider = ({ children }) => {
     }
   }
 
+  const getResourceById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_RESOURCES + "/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      // console.log("GET Resource  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_Resource_by_id_error : ", error);
+    }
+  }
+
   // Published Title
 
   const Get_All_Published_Title = async () => {
@@ -128,6 +146,42 @@ const UserProvider = ({ children }) => {
     }
   }
 
+   //Open Access
+
+   const Get_All_Open_Access = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_OPEN_ACCESS + "?onlyActive=" + 1,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      console.log("Get All Open_Access response", response);
+      setAllOpenAccess(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Open_Access CONTEXT ERROR: ", error);
+    }
+  }
+
+  const getOpenAccessById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_OPEN_ACCESS + "/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      console.log("GET Open Access  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_Open_Access_by_id_error : ", error);
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -140,7 +194,11 @@ const UserProvider = ({ children }) => {
         Get_All_Resources,
         allResources,
         Get_All_Published_Title,
-        allPublishedTitle
+        allPublishedTitle,
+        getResourceById,
+        Get_All_Open_Access,
+        allOpenAccess,
+        getOpenAccessById
       }}
     >
       {/* <LoadingOverlay

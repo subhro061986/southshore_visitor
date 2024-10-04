@@ -71,7 +71,7 @@ const ManageResources = () => {
         }
         else {
             let formData = new FormData();
-            formData.append("title", title);
+            formData.append("bookTitle", title);
             formData.append("authorName", description);
             formData.append("buyLink", buyLink);
             formData.append("publisherId", publisher);

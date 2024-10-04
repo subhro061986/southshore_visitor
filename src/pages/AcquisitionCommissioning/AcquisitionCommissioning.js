@@ -6,9 +6,12 @@ import management_person_1 from "../../assets/images/management_person_1.png";
 import management_person_2 from "../../assets/images/management_person_2.png";
 import management_person_3 from "../../assets/images/management_person_3.png";
 import { PersonCard } from "../../components/PersonCard/PersonCard";
+import {UserProfile} from "../../Context/Usercontext";
+import Config from "../../Config/Config.json";
 
+const AcquisitionCommissioning = () => {
 
-const  AcquisitionScreen = () => {
+    const {allLeader} = UserProfile()
 
     const managementPeopleDetails = [
         {
@@ -28,25 +31,7 @@ const  AcquisitionScreen = () => {
             about: "Integer venenatis facilisi bibendum ante enim nascetur. Vitae ipsum rutrum varius sollicitudin gravida ridiculus. Quis id duis metus vel dignissim mollis aliquam. Auctor porta vivamus enim rhoncus lacus eget. Eros facilisis convallis etiam nisi semper tristique. Pretium velit platea venenatis molestie mauris mollis. Placerat libero ad Inceptos nunc suscipit penatibus hac tincidunt lorem arcu",
             linkedinLink: "#",
             imageLink: management_person_3
-        },
-        {
-            name: "Nehemiah Berry",
-            about: "Viverra cursus ante penatibus euismod gravida suscipit. Eu mus vel posuere; nullam nam ultricies accumsan. Euismod adipiscing tristique aenean nunc maximus litora. Porttitor mauris bibendum, efficitur parturient sodales mus donec suspendisse. Felis nibh donec lacus nisi lobortis mollis potenti. Elit leo lectus inceptos tristique",
-            linkedinLink: "#",
-            imageLink: management_person_2
-        },
-        {
-            name: "Madisyn Andersen",
-            about: "Integer venenatis facilisi bibendum ante enim nascetur. Vitae ipsum rutrum varius sollicitudin gravida ridiculus. Quis id duis metus vel dignissim mollis aliquam. Auctor porta vivamus enim rhoncus lacus eget. Eros facilisis convallis etiam nisi semper tristique. Pretium velit platea venenatis molestie mauris mollis. Placerat libero ad Inceptos nunc suscipit penatibus hac tincidunt lorem arcu",
-            linkedinLink: "#",
-            imageLink: management_person_3
-        },
-        {
-            name: "Nehemiah Berry",
-            about: "Viverra cursus ante penatibus euismod gravida suscipit. Eu mus vel posuere; nullam nam ultricies accumsan. Euismod adipiscing tristique aenean nunc maximus litora. Porttitor mauris bibendum, efficitur parturient sodales mus donec suspendisse. Felis nibh donec lacus nisi lobortis mollis potenti. Elit leo lectus inceptos tristique",
-            linkedinLink: "#",
-            imageLink: management_person_2
-        },
+        }
     ]
 
     return (
@@ -59,22 +44,25 @@ const  AcquisitionScreen = () => {
                     <h1>Acquisition & Commissioning</h1>
                 </div>
                 <div className="row">
-                        {
-                            managementPeopleDetails.map((person, index) => {
-                                return (
-                                    <div key={index} className="col-12 col-md-6 col-lg-4 mt-2 mb-2">
-                                        <PersonCard
-                                            name={person?.name}
-                                            about={person?.about}
-                                            imageLink={person?.imageLink}
-                                        />
-                                    </div>
+                    {
+                        allLeader.map((person, index) => {
+                            return (
+                                person.leadershipCategoryId === 3  && person.teamCategoryId === 2 && (
+                                <div key={index} className="col-12 col-md-6 col-xl-4 mt-2 mb-2">
+                                    <PersonCard
+                                        name={person?.personName}
+                                        about={person?.description}
+                                        imageLink={Config.API_URL + Config.LEADER_IMAGE_URL + "/" + person.imgLink + '?d=' + new Date()}
+                                        // {person?.imageLink}
+                                        linkedinLink={person?.linkedin}
+                                    />
+                                </div>
                                 )
+                            )
 
-                            })
-                        }
+                        })
+                    }
                 </div>
-                   
             </div>
 
             <FooterSouthsore />
@@ -82,4 +70,4 @@ const  AcquisitionScreen = () => {
     )
 }
 
-export default AcquisitionScreen;
+export default AcquisitionCommissioning;

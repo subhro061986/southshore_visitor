@@ -9,16 +9,20 @@ import HomeScreen from './pages/HomeScreen';
 import DefaultPage from './admin/DefaultPage';
 import ManagementScreen from './pages/Management/ManagementScreen';
 import AdvisoryScreen from './pages/Advisory/AdvisoryScreen';
+import Sales from './pages/Sales/Sales';
 import JurisAbout from './pages/JurisAbout/JurisAbout';
 import PublishedTitlesScreen from './pages/PublishedTitlesScreen';
 import PublishWithJuris from './pages/PublishWithJuris';
-import AcquisitionScreen from './pages/Acquisition/Acquisition';
 import PublishWithUs from './pages/PublishWithUs';
 import Enquiry from './pages/Enquiry';
 import OpenAccess from './pages/OpenAccess';
 import Resources from './pages/Resources';
 import Brills from './pages/Brills';
 import Jove from './pages/Jove';
+import AcquisitionCommissioning from './pages/AcquisitionCommissioning/AcquisitionCommissioning';
+import EditorialProduction from './pages/EditorialProduction/EditorialProduction';
+import Marketing from './pages/Marketing/Marketing';
+import SalesSupport from './pages/SalesSupport/SalesSupport';
 
 const AppRouter=()=> {
 
@@ -28,7 +32,11 @@ const AppRouter=()=> {
             <Route exact path="/" Component={HomeScreen} />
             <Route exact path="/leadership/management" Component={ManagementScreen} />
             <Route exact path="/leadership/advisory" Component={AdvisoryScreen} />
-            <Route exact path="/leadership/acquisition" Component={AcquisitionScreen} />
+            <Route exact path="/leadership/acquisition" Component={AcquisitionCommissioning} />
+            <Route exact path="/leadership/editorial" Component={EditorialProduction} />
+            <Route exact path="/leadership/sales" Component={Sales} />
+            <Route exact path="/leadership/marketing" Component={Marketing} />
+            <Route exact path="/leadership/salessupport" Component={SalesSupport} />
             <Route exact path="/juris/about" Component={JurisAbout} />
             <Route exact path="/juris/publishedtitle" Component={PublishedTitlesScreen} />
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />

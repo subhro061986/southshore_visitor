@@ -16,9 +16,9 @@ import Config from "../Config/Config.json"
 
 const Resources = () => {
 
-    const { allPublisherResources, allResources } = UserProfile()
+    const { allPublisherResources, allResources, getResourceById } = UserProfile()
 
-    // const [activeTab, setActiveTab] = useState("");
+    // const [resourceByIdResp, setResourceByIdResp] = useState(null);
 
 
 
@@ -27,9 +27,9 @@ const Resources = () => {
     //     console.log('Tab changed to:', tab);
     // };
 
-    // useEffect(() => {
-    //     allPublisherResources
-    // }, []);
+    useEffect(() => {
+        // getDownLoadLinks();
+    }, []);
 
     const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
 
@@ -43,7 +43,12 @@ const Resources = () => {
         (book) => book.publisherId === activePublisherId && book.isActive
     );
 
-    
+    const getDownLoadLinks =async(id)=>{
+        const resp = await getResourceById(id);
+        const ResourceByIdResp = resp.data.output
+        console.log("download resp", ResourceByIdResp);
+        window.open(Config.API_URL + Config.RESOURCE_PDF_URL + "/" + ResourceByIdResp.downloadLink + '?d=' + new Date())
+    }
 
 
 
@@ -98,7 +103,7 @@ const Resources = () => {
                                             {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
                                             {/* > */}
                                                 <div className="d-flex justify-content-center mt-3 position-relative">
-                                                    <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%' }}>Download PDF</button>
+                                                    <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%' }} onClick={()=>getDownLoadLinks(book.id)}>Download PDF</button>
                                                     <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
                                                 </div>
                                             {/* </a> */}
