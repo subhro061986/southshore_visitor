@@ -63,7 +63,7 @@ const LoginPage = () => {
         // console.log("Auth details received : ", authDeatils);
         const result = jwtDecode(resp.token)
         if (result) {
-          navigate('/admin/banner');
+          navigate('/admin/managebanner');
         }
         // else if (result.role === "Publisher Admin" || result.role === "Publisher User") {
         //     navigate('/admin/booklistpub');

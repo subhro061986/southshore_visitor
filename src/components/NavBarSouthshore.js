@@ -34,12 +34,28 @@ const NavBarSouthsore = () => {
                     link: "/leadership/management"
                 },
                 {
-                    text: "Acquisition & Commissioning",
-                    // link: "/leadership/acquisition"
-                },
-                {
                     text: "Advisory Board",
                     link: "/leadership/advisory"
+                },
+                {
+                    text: "Team - Editorial & Production",
+                    link: "/leadership/editorial"
+                },
+                {
+                    text: "Team - Acquisition & Commissioning",
+                    link: "/leadership/acquisition"
+                },
+                {
+                    text: "Team - Marketing",
+                    link: "/leadership/marketing"
+                },
+                {
+                    text: "Team - Sales",
+                    link: "/leadership/sales"
+                },
+                {
+                    text: "Team - Sales support",
+                    link: "/leadership/salessupport"
                 }
             ]
         },
