@@ -23,6 +23,7 @@ import AcquisitionCommissioning from './pages/AcquisitionCommissioning/Acquisiti
 import EditorialProduction from './pages/EditorialProduction/EditorialProduction';
 import Marketing from './pages/Marketing/Marketing';
 import SalesSupport from './pages/SalesSupport/SalesSupport';
+import Writefulls from './pages/Writefull';
 
 const AppRouter=()=> {
 
@@ -42,6 +43,7 @@ const AppRouter=()=> {
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
             <Route exact path="/representation/brill" Component={Brills} />
+            <Route exact path="/representation/writefull" Component={Writefulls} />
             <Route exact path="/representation/jove" Component={Jove} />
             <Route exact path="/representation/enquiry" Component={Enquiry} />
             <Route exact path="/openaccess" Component={OpenAccess} />

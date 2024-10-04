@@ -102,7 +102,7 @@ const NavBarSouthsore = () => {
                 },
                 {
                     text: "Writeful",
-                    // link: "/representation/writeful"
+                    link: "/representation/writefull"
                 },
                 {
                     text: "enquiry",

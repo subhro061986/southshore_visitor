@@ -549,12 +549,14 @@ text-align: left;
 
 }
 .card-body-list>ul>li::marker {
-  color:  #4D39F194;
+  /* color:  #4D39F194; */
+  color: #4D39F1;
   font-size: 30px;
 }
 
 .blue-bulleted-list > li::marker {
   color:  #4D39F194;
+  /* color: #4D39F1; */
   font-size: 30px;
 }
 
@@ -564,6 +566,7 @@ text-align: left;
 
 .grey-card>.card-body>ul>li::marker {
   color: #4D39F194;
+  /* color: #4D39F1; */
 }
 
 .grey-card>.card-body>ul>li>p {
