@@ -112,6 +112,18 @@ const NavBarSouthsore = () => {
         },
         {
             text: "Platform",
+            children: [
+                {
+                    text: "Ebooksjunction",
+                    link: `https://ebooksjunction.com/`,
+                    absolute: true
+                },
+                {
+                    text: "Bookscentral",
+                    link: `https://bookscentral.in/`,
+                    absolute: true
+                }
+            ]
         },
         {
             text: "Open Access",
@@ -270,7 +282,7 @@ const NavBarSouthsore = () => {
                                                     <select className="cat_dropdown"
                                                         style={{ maxWidth: '150px' }}
                                                         name="cars" id="cars"
-                                                        onChange={(e) => { navigate(e.target.value) }}
+                                                        onChange={(e) => { window.open(e.target.value, e.target.value?.startsWith("https")? "_blank" : "_parent") }}
                                                     >
                                                         <option value={item.link} selected>{item.text}</option>
 
