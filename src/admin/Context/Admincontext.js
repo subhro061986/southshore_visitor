@@ -13,6 +13,8 @@ const AdminContext = createContext();
 
 const AdminProvider = ({ children }) => {
 
+  const { authData } = useAuth();
+
   const [allBanner, setAllBanner] = useState([])
   const [allLeader, setAllLeader] = useState([])
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
@@ -39,6 +41,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
 
@@ -93,6 +96,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
       Get_All_Banner();
@@ -130,6 +134,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
 
@@ -166,6 +171,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
       Get_All_Leader();
@@ -221,6 +227,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
 
@@ -241,6 +248,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
       Get_All_Published_Title();
@@ -258,6 +266,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authData
           },
         })
       // console.log("GET Published title  BY ID: ", response);
@@ -312,6 +321,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
 
@@ -332,6 +342,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
       Get_All_Resources();
@@ -385,6 +396,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
 
@@ -405,6 +417,7 @@ const AdminProvider = ({ children }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
           },
         })
         Get_All_Open_Access();

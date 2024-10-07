@@ -163,7 +163,7 @@ const ManagePublishedTitles = () => {
                                                     </thead>
                                                     <tbody>
                                                         {allPublishedTitle?.map((data, index) => (
-                                                            <tr>
+                                                            <tr key={index}>
                                                                 <td>
                                                                 <img src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
                                                                 </td>
