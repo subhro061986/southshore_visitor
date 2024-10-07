@@ -1,0 +1,33 @@
+.about-juris-title {
+    font-family: Ubuntu;
+    font-weight: 700;
+}
+
+p.about-juris-subtitle {
+    font-family: Ubuntu;
+    font-weight: 400;
+}
+
+p.about-juris-subtitle > span {
+    font-weight: 500;
+}
+
+.link {
+    font-family: Roboto;
+    font-weight: 700;
+    color: black;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.image-container > img {
+    width: inherit;
+    height: auto;
+}
+
+.about-image {
+    object-fit: cover;
+    border-radius: 40px;
+}

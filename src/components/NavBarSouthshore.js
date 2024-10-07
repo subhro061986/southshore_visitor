@@ -81,7 +81,7 @@ const NavBarSouthsore = () => {
             children: [
                 {
                     text: "About Thomson Reuters",
-                    // link: "/thomson/about"
+                    link: "/thomson/about"
                 },
                 {
                     text: "Publish with Us",

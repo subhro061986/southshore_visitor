@@ -24,6 +24,7 @@ import EditorialProduction from './pages/EditorialProduction/EditorialProduction
 import Marketing from './pages/Marketing/Marketing';
 import SalesSupport from './pages/SalesSupport/SalesSupport';
 import Writefulls from './pages/Writefull';
+import ThomsonAbout from './pages/ThomsonAbout/ThomsonAbout';
 
 const AppRouter=()=> {
 
@@ -41,6 +42,7 @@ const AppRouter=()=> {
             <Route exact path="/juris/about" Component={JurisAbout} />
             <Route exact path="/juris/publishedtitle" Component={PublishedTitlesScreen} />
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
+            <Route exact path="/thomson/about" Component={ThomsonAbout} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
             <Route exact path="/representation/brill" Component={Brills} />
             <Route exact path="/representation/writefull" Component={Writefulls} />
