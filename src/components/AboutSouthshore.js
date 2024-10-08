@@ -136,7 +136,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Traditional publishing through its imprint, Juris Press</li>
+                                <li>Publishing for Thomson Reuters as its in-country partner in the SAARC region</li>
                             </ul>
                         </div>
                     </div>
@@ -145,7 +145,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Traditional publishing through its imprint, Juris Press</li>
+                                <li>Representing international publishers such as Brill and MyJove, and application providers like Writefull</li>
                             </ul>
                         </div>
                     </div>

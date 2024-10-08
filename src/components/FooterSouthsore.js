@@ -29,7 +29,7 @@ const FooterSouthsore = () => {
                             width={180}
                             // onClick={imgNavHome} 
                             style={{ cursor: 'pointer' }} />
-                        <div className="d-flex flex-row mt-5">
+                        <div className="d-flex flex-row mt-4">
                             <div className="">
                                 <ul className="remove-dots margin_l_footer" >
                                     {/* <div className="custom-footer-Header">Southshore Innovations Pvt. Ltd</div> */}
@@ -163,8 +163,8 @@ const FooterSouthsore = () => {
                                 ><b>Mail Us </b>: sales@southshore.in </p> */}
                             </li>
                             <li className="custom-footer-li">
-                                <div className="south_val"><span className="south_key">CIN No:</span> U22219TN2022PTC151260</div>
-                                <div className="south_val"><span className="south_key">GSTIN:</span> 33ABICS2457D1ZI</div>
+                                <div className="south_key">CIN No : <span className="south_val">U22219TN2022PTC151260</span> </div>
+                                <div className="south_key">GSTIN : <span className="south_val">33ABICS2457D1ZI</span></div>
                             </li>
                         </ul>
                     </div>
@@ -179,7 +179,7 @@ const FooterSouthsore = () => {
                                     <div>sales@southshore.in</div>
                                 </div>
                                 <div className="d-flex justify-content-between p-2" style={{ width: '163px' }}>
-                                    <img src={call} />
+                                    <img src={call} height={20} />
                                     <div>+1 (650) 555-0111</div>
                                 </div>
                                 {/* <div className="d-inline p-2">
