@@ -28,10 +28,10 @@ const ThomsonAbout = () => {
                     <p className="about-juris-description">
                     For the Indian market, Thomson Reuters South Asia Private Limited has partnered with Southshore Innovations Private Limited to undertake all publishing in the legal print space on their behalf. Southshore thus contracts/commissions authors and publishes their content as books. Southshore undertakes the printing, warehousing, and sales and distribution of all Thomson Reuters legal titles.
                     </p>
-                    <p>
+                    <p className="about-juris-description">
                     In addition, as Thomson Reuters’ in-country partner, Southshore reprints specific titles from Sweet and Maxwell UK for the SAARC region, and imports titles from Sweet and Maxwell UK and sells them to customers in India.
                     </p>
-                    <p>
+                    <p className="about-juris-description">
                     Southshore also manages Thomson Reuters’ digital content sales of titles from Sweet and Maxwell UK and from within India. All sales are meant exclusively for the SAARC region. With over 350 Indian titles, 250 reprint titles and 1,000 titles from Sweet and Maxwell UK, Southshore brings to its customers a large repository of legal content. The titles are listed on our proprietary platform <Link className="link" to={`https://www.bookscentral.in`} target="_blank">Books Central</Link>. With a view to increasing the availability of good legal content, Southshore is constantly on the lookout for new authors and ideas. We invite aspiring and established authors to publish with us. Click here (link to form) to reach out to us about your book.
                     </p>
                 </div>
