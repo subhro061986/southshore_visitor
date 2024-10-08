@@ -14,7 +14,8 @@
 
 .person-image-rounded {
     width: 200px !important;
-    height: auto;
+    height: 200px !important;
+    object-fit: cover;
     clip-path: circle();
 }
 

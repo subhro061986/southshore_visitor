@@ -1,11 +1,15 @@
 .about-juris-title {
     font-family: Ubuntu;
     font-weight: 700;
+    font-size: 50px;
+    color: #011539;
 }
 
 p.about-juris-subtitle {
     font-family: Ubuntu;
     font-weight: 400;
+    font-size: 28px;
+    color: #535861;
 }
 
 p.about-juris-subtitle > span {
@@ -30,4 +34,12 @@ p.about-juris-subtitle > span {
 .about-image {
     object-fit: cover;
     border-radius: 40px;
+}
+
+.about-juris-description {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 20px;
+    color: #535861;
+    line-height: 32px;
 }
