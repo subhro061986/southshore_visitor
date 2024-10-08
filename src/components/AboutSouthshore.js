@@ -1,5 +1,6 @@
 import React, { useEffect, useState, } from "react";
 import startupLogo from "../assets/images/startup india logo.png";
+import { useNavigate, Link } from 'react-router-dom';
 
 const AboutSouthshore = () => {
 
@@ -8,7 +9,9 @@ const AboutSouthshore = () => {
             <div className="row">
                 <div className="col-md-8 about-southshore-header">
 
-                    <div className="heading-text">
+                    <div
+                        // className="heading-text"
+                    >
 
                         <h1>About Southshore Innovations</h1>
                         <p> <span>Southshore Innovations Private Limited</span>, Chennai, is a publishing company promoted by techno-functional professionals with deep domain experience in the different aspects of book publishing, customer experience, sales and distribution.</p>
@@ -39,10 +42,10 @@ const AboutSouthshore = () => {
                     </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="col-md-4" style={{marginTop:'1%'}}>
+            {/* <div className="row">
+                <div className="col-md-4" style={{ marginTop: '1%' }}>
 
-                    <div className="card grey-card" style={{marginLeft:'40px'}}>
+                    <div className="card grey-card" style={{ marginLeft: '40px' }}>
                         <div className="card-body">
                             <ul>
                                 <li>
@@ -55,9 +58,9 @@ const AboutSouthshore = () => {
                     </div>
 
                 </div>
-                <div className="col-md-4" style={{marginTop:'1%'}}>
+                <div className="col-md-4" style={{ marginTop: '1%' }}>
 
-                    <div className="card grey-card" style={{marginLeft:'20px'}}>
+                    <div className="card grey-card" style={{ marginLeft: '20px' }}>
                         <div className="card-body">
                             <ul>
                                 <li>
@@ -70,7 +73,7 @@ const AboutSouthshore = () => {
                     </div>
 
                 </div>
-                <div className="col-md-4" style={{marginTop:'1%'}}>
+                <div className="col-md-4" style={{ marginTop: '1%' }}>
 
                     <div className="card grey-card">
                         <div className="card-body">
@@ -87,25 +90,25 @@ const AboutSouthshore = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-5" style={{marginTop:'1%'}}>
+                <div className="col-md-5" style={{ marginTop: '1%' }}>
 
-                    <div className="card grey-card" style={{marginLeft:'40px'}}>
+                    <div className="card grey-card" style={{ marginLeft: '40px' }}>
                         <div className="card-body">
                             <ul>
                                 <li>
                                     <p>Owning and operating <a href="https://ebooksjunction.com/" style={{ color: '#4D39F1' }}>ebooksjunction.com</a>, a marketplace for publishers to display and sell their digital content</p>
 
                                 </li>
-                               
+
                             </ul>
                         </div>
 
                     </div>
 
                 </div>
-                <div className="col-md-7" style={{marginTop:'1%'}}>
+                <div className="col-md-7" style={{ marginTop: '1%' }}>
 
-                    <div className="card grey-card" style={{marginLeft:'20px'}}>
+                    <div className="card grey-card" style={{ marginLeft: '20px' }}>
                         <div className="card-body">
                             <ul>
                                 <li>
@@ -118,10 +121,61 @@ const AboutSouthshore = () => {
                     </div>
 
                 </div>
+            </div> */}
+            <div className="row">
+                <div className="col-md-4 pr" style={{ paddingRight: '10px' }}>
+                    <div className="card card_style_1 px-4">
+                        <div className="">
+                            <ul>
+                                <li>Traditional publishing through its imprint, <Link style={{ color: '#4D39F1' }}>Juris Press</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-4 pr" style={{ paddingRight: '10px' }}>
+                    <div className="card card_style_1 px-4">
+                        <div className="">
+                            <ul>
+                                <li>Traditional publishing through its imprint, Juris Press</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-4">
+                    <div className="card card_style_1 px-4">
+                        <div className="">
+                            <ul>
+                                <li>Traditional publishing through its imprint, Juris Press</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="row mt-4">
+                <div className="col-md-5 pr" style={{ paddingRight: '10px' }}>
+                    <div className="card card_style_1 px-4">
+                        <div className="">
+                            <ul>
+                                <li>Owning and operating <Link style={{ color: '#4D39F1' }}>ebooksjunction.com</Link>, a marketplace for publishers to display and sell their digital content</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-7">
+                    <div className="card card_style_1 px-4">
+                        <div className="">
+                            <ul>
+                                <li>Owning and operating <Link style={{ color: '#4D39F1' }}>Books Central</Link>, an e-commerce platform to display and sell print books for Thomson Reuters and Juris Press</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className="row mt-5 mb-5">
                 <div className="col-md-9 about-southshore-header">
-                    <div className="footer-text">
+                    <div 
+                    // className="footer-text"
+                    >
 
                         <p>The publishing industry in India has traditionally been fragmented and the use of technology has caught on slowly. With its experience in building applications and products, Southshore aims to provide solutions to the publishing industry to improve efficiency and provide a better experience for the end users.</p>
                         <p>Southshore is a startup registered with the Department for Promotion of Industry and Internal Trade.</p>

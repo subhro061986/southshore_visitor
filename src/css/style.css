@@ -17,8 +17,9 @@
   border: 1px solid black;
 }
 
-.slide_img_div{
-  height: 430px;
+.slide_img_div {
+  /* height: 430px; */
+  height: 340px;
   width: 570px;
   border-radius: 25px;
   background: #ffffff;
@@ -130,7 +131,7 @@
   text-align: left;
 }
 
-.slide_txt_head > span {
+.slide_txt_head>span {
   font-size: 61px;
 }
 
@@ -197,7 +198,8 @@
   /* border: 1px solid; */
   /* border-image-source: linear-gradient(138.9deg, #C5D1EB 5.79%, #FFFFFF 88.61%); */
   /* border-image-slice: 30; */
-  height: 540px;
+  /* height: 540px; */
+  height: 482px;
   box-shadow: inset rgba(169, 170, 182, 0.25) 10px -1px 10px 3px, rgba(169, 170, 182, 0.25) 0px -1px 5px
 }
 
@@ -213,9 +215,8 @@
   text-align: center;
   color: #011539;
 }
- 
-.screen_heading
-{
+
+.screen_heading {
   font-family: 'Ubuntu';
   font-size: 32px;
   font-weight: 500;
@@ -420,6 +421,33 @@
   background-color: #4D39F1;
   color: #4D39F1;
   border-radius: 3px;
+}
+
+.card_style_1 {
+  background-color: #F4F4F4 !important;
+  border-radius: 24px !important;
+  height: 152px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_style_1>div>ul>li::marker {
+  color: #4D39F194 !important;
+  font-size: 30px !important;
+}
+
+.card_style_1>div>ul>li {
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  color: #191A1C;
+}
+
+pr {
+  padding-right: 10px !important;
 }
 
 @media screen and (max-width: 436px)and (min-width: 377px) {
