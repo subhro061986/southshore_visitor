@@ -550,8 +550,8 @@ text-align: left;
 }
 .card-body-list>ul>li::marker {
   /* color:  #4D39F194; */
-  color: #4D39F1;
-  font-size: 30px;
+  color: #4D39F1 !important;
+  font-size: 30px !important;
 }
 
 .blue-bulleted-list > li::marker {
@@ -698,7 +698,7 @@ text-align: left;
 }
 
 .card-body {
-  min-height: 185px;
+  /* min-height: 185px; */
 }
 
 /* Testimonials*/
