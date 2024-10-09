@@ -9,6 +9,8 @@ import NavCard from './NavCard';
 import { FaChevronDown } from 'react-icons/fa';
 import useWindowDimensions from '../hooks/windowDimensions';
 import Config from "../Config/Config.json";
+import iconCall from "../assets/images/icon-call.svg";
+import { Link } from 'react-router-dom';
 
 function NavbarSouthshore() {
     // const currentLocation = window.location;
@@ -146,10 +148,25 @@ function NavbarSouthshore() {
     ];
     return (
         <>
-            <Navbar key={"lg"} expand={"lg"} className="mb-3">
-                <Container fluid className='p-0'>
+            <Navbar key={"lg"} expand={"lg"} className="mb-3"
+                // style={{
+                //     overflowX: "scroll",
+                //     overflowY: "visible",
+                //     scrollBehavior: "smooth",
+                //     scrollbarWidth: "none",
+                //     whiteSpace: "nowrap"
+                // }}
+            >
+                <Container fluid className='p-0'
+                    style={{
+                        // overflowX: "scroll",
+                        // scrollBehavior: "smooth",
+                        // scrollbarWidth: "none",
+                        // whiteSpace: "nowrap"
+                    }}
+                >
                     {/* <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand> */}
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} style={{border: 'none'}}/>
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} style={{ border: 'none' }} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-lg`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
@@ -161,7 +178,7 @@ function NavbarSouthshore() {
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav className={`d-flex justify-content-start ${isMobileScreen? 'align-content-center': 'align-items-center'} flex-grow-1 pe-3`}>
+                            <Nav className={`d-flex justify-content-start ${isMobileScreen ? 'align-content-center' : 'align-items-center'} flex-grow-1 pe-3`}>
                                 {
                                     navItems.map((navItem, index) => {
                                         if (!navItem?.children) {
@@ -210,8 +227,21 @@ function NavbarSouthshore() {
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
-                </Container>
-            </Navbar>
+                    {/* <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
+                        <img src={iconCall} width={28} height={28} />
+                        <Link className='ms-2' type='tel'
+                            style={{
+                                fontFamily: "Roboto",
+                                fontSize: "16px",
+                                fontWeight: 500,
+                                color: "#535861"
+                            }}
+                        >
+                            +1 (650) 555-0111
+                        </Link>
+                    </div> */}
+            </Container>
+        </Navbar >
         </>
     );
 }

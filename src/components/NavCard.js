@@ -28,8 +28,8 @@ const NavCard = (props) => {
             width: "max-content",
             height: "max-content",
             padding: "10px",
-            // border: "1px solid black",
-            boxShadow: "0px 40px 60px 0px rgba(111, 122, 159, 0.25);"
+            // border: `${!isMobileScreen ? '0.5px solid black' : 'none'}`,
+            boxShadow: `${!isMobileScreen ? '0px 40px 60px 0px rgba(111, 122, 159, 0.25);' : ''}`
         }}>
             <div className="row">
                 {/* Main column */}
@@ -37,7 +37,7 @@ const NavCard = (props) => {
                     <ul>
                         {navItems?.map((navElem, index) => {
                             return (
-                                <li style={{ listStyleType: "none" }} key={index} onClick={(e) => { setSelectedNavItem(navElem) }}>
+                                <li style={{ listStyleType: "none", whiteSpace: "nowrap" }} key={index} onClick={(e) => { setSelectedNavItem(navElem) }}>
                                     <Nav.Link href={navElem?.link}>
                                         <span style={{
                                             fontFamily: 'Ubuntu',
