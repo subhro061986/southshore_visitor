@@ -9,6 +9,7 @@
 @import url('../pages/JurisAbout/JurisAbout.css');
 @import url('../pages/AcquisitionCommissioning/AcquisitionCommissioning.css');
 @import url('../pages/Marketing/Marketing.css');
+@import url('../pages/Advisory/AdvisoryScreen.css');
 
 
 .banner {
@@ -515,5 +516,11 @@ pr {
 @media screen and (min-width: 767.67px) {
   .rotate-on-big-screen {
     transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .border_style {
+    height: 950px;
   }
 }
