@@ -10,11 +10,11 @@ const AboutSouthshore = () => {
                 <div className="col-md-8 about-southshore-header">
 
                     <div
-                    // className="heading-text"
+                    className=""
                     >
 
                         <h1>About Southshore Innovations</h1>
-                        <p> <span>Southshore Innovations Private Limited</span>, Chennai, is a publishing company promoted by techno-functional professionals with deep domain experience in the different aspects of book publishing, customer experience, sales and distribution.</p>
+                        <p className="about_southshore_footer mt-3" style={{fontSize:'20px'}}> <span style={{fontWeight:'600'}}>Southshore Innovations Private Limited</span>, Chennai, is a publishing company promoted by techno-functional professionals with deep domain experience in the different aspects of book publishing, customer experience, sales and distribution.</p>
                     </div>
                 </div>
                 <div className="col-md-4">
@@ -123,7 +123,7 @@ const AboutSouthshore = () => {
                 </div>
             </div> */}
             <div className="row">
-                <div className="col-md-4 pr" style={{ paddingRight: '10px' }}>
+                <div className="col-md-4 mb col-12" style={{ paddingRight: '10px' }}>
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
@@ -132,7 +132,7 @@ const AboutSouthshore = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4 pr" style={{ paddingRight: '10px' }}>
+                <div className="col-md-4 mb col-12" style={{ paddingRight: '10px' }}>
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
@@ -141,7 +141,7 @@ const AboutSouthshore = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 col-12">
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
@@ -152,7 +152,7 @@ const AboutSouthshore = () => {
                 </div>
             </div>
             <div className="row mt-4">
-                <div className="col-md-5 pr" style={{ paddingRight: '10px' }}>
+                <div className="col-md-5 mb" style={{ paddingRight: '10px' }}>
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
@@ -172,13 +172,13 @@ const AboutSouthshore = () => {
                 </div>
             </div>
             <div className="row mt-5 mb-5">
-                <div className="col-md-9 about-southshore-header">
+                <div className="col-12 about-southshore-header">
                     <div
                     // className="footer-text"
                     >
 
-                        <p>The publishing industry in India has traditionally been fragmented and the use of technology has caught on slowly. With its experience in building applications and products, Southshore aims to provide solutions to the publishing industry to improve efficiency and provide a better experience for the end users.</p>
-                        <p>Southshore is a startup registered with the Department for Promotion of Industry and Internal Trade.</p>
+                        <p className="about_southshore_footer">The publishing industry in India has traditionally been fragmented and the use of technology has caught on slowly. With its experience in building applications and products, Southshore aims to provide solutions to the publishing industry to improve efficiency and provide a better experience for the end users.</p>
+                        <p className="about_southshore_footer">Southshore is a startup registered with the Department for Promotion of Industry and Internal Trade.</p>
                     </div>
                 </div>
             </div>

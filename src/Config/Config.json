@@ -12,6 +12,7 @@
     "PUBLISHED_TITLES_URL": "publishedTitles/",
     "GET_ALL_OPEN_ACCESS":"openaccess",
     "Open_Access_URL":"openaccess/covers",
-    "Open_Access_PDF_URL":"openaccess/pdfs"
+    "Open_Access_PDF_URL":"openaccess/pdfs",
+    "MOBILE_SCREEN_MIN_WIDTH": 500
 }
   

@@ -54,8 +54,8 @@ const AdvisoryScreen = () => {
                 <Header />
                 <NavBarSouthsore />
 
-                <div className="d-flex justify-content-center mt-3">
-                    <h1>Advisory Board</h1>
+                <div className="d-flex justify-content-center mt-4">
+                    <h1 className="title">Advisory Board</h1>
                 </div>
                 <div className="row">
                     {
