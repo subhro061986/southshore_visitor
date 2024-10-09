@@ -1,10 +1,16 @@
 import { useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import { FaChevronDown } from "react-icons/fa";
+import useWindowDimensions from "../hooks/windowDimensions";
+import Config from "../Config/Config.json"
 
 const NavCard = (props) => {
     const navItems = props?.navItems;
     const [selectedNavItem, setSelectedNavItem] = useState(null);
+
+    const windowDimensions = useWindowDimensions();
+
+    const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
 
     const isThisPageActive = (link) => {
         console.log("window.location", window.location);
@@ -27,7 +33,7 @@ const NavCard = (props) => {
         }}>
             <div className="row">
                 {/* Main column */}
-                <div className="col-6">
+                <div className={`col-6 ${isMobileScreen ? 'p-2': ''}`}>
                     <ul>
                         {navItems?.map((navElem, index) => {
                             return (
@@ -38,7 +44,8 @@ const NavCard = (props) => {
                                             fontWeight: 500,
                                             fontSize: "16px",
                                             color: isThisPageActive(navElem?.link) ? "#4D39F1" : "#535861",
-                                            whiteSpace: "nowrap"
+                                            whiteSpace: "nowrap",
+                                            paddingBottom: isMobileScreen? "1px" : ""
                                         }}>
                                             {navElem?.text}
                                         </span>
@@ -50,7 +57,7 @@ const NavCard = (props) => {
                     </ul>
                 </div>
                 {/* Sub column */}
-                <div className="col-6">
+                <div className={`col-6 ${isMobileScreen ? 'p-0': ''}`}>
                     <ul>
                         {selectedNavItem && selectedNavItem?.children && selectedNavItem?.children?.map((navElem, index) => {
                             return (
@@ -60,7 +67,9 @@ const NavCard = (props) => {
                                             fontFamily: 'Ubuntu',
                                             fontWeight: isThisPageActive(navElem?.link) ? 500 : 400,
                                             fontSize: "15px",
-                                            color: isThisPageActive(navElem?.link) ? "#4D39F1" : "#7D828A"
+                                            color: isThisPageActive(navElem?.link) ? "#4D39F1" : "#7D828A",
+                                            overflow: "auto",
+                                            whiteSpace: "wrap"
                                         }}>
                                             {navElem?.text}
                                         </span>
