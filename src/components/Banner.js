@@ -117,7 +117,7 @@ const Banner = () => {
                                             </div>
 
                                         </div>
-                                        <div className="col-12 mt-5">
+                                        <div className="col-12 mt-2">
                                             <div className="slide_txt_head mt-5"
                                             >
                                                 {/* <span>Transparency</span>  */}

@@ -212,7 +212,7 @@
   font-family: 'Ubuntu';
   font-size: 44px;
   font-weight: 700;
-  line-height: 68px;
+  line-height: 50px;
   text-align: center;
   color: #011539;
 }
@@ -526,5 +526,10 @@ pr {
 @media screen and (max-width: 500px) {
   .border_style {
     height: 950px;
+  }
+
+  .margin-x {
+    margin-left: 5%;
+    margin-right: 0;
   }
 }

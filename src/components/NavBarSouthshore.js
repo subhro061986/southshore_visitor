@@ -147,9 +147,9 @@ function NavbarSouthshore() {
     return (
         <>
             <Navbar key={"lg"} expand={"lg"} className="mb-3">
-                <Container fluid>
+                <Container fluid className='p-0'>
                     {/* <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand> */}
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} style={{border: 'none'}}/>
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-lg`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
