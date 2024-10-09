@@ -7,9 +7,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import NavCard from './NavCard';
 import { FaChevronDown } from 'react-icons/fa';
+import useWindowDimensions from '../hooks/windowDimensions';
+import Config from "../Config/Config.json";
 
 function NavbarSouthshore() {
     // const currentLocation = window.location;
+    const windowDimensions = useWindowDimensions();
+
+    const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
 
     const isThisPageActive = (link) => {
         console.log("window.location", window.location);
@@ -156,7 +161,7 @@ function NavbarSouthshore() {
                             </Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
-                            <Nav className="justify-content-start align-items-center flex-grow-1 pe-3">
+                            <Nav className={`d-flex justify-content-start ${isMobileScreen? 'align-content-center': 'align-items-center'} flex-grow-1 pe-3`}>
                                 {
                                     navItems.map((navItem, index) => {
                                         if (!navItem?.children) {
