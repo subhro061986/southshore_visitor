@@ -29,8 +29,11 @@ const Brills = () => {
                             <div className="card">
                                 <div className="card-body-list p-5">
                                     <div className=" d-flex justify-content-between title_width">
-                                        <img className="me-3" src={newspaper} height={25} width={25} />
-                                        <div className="brill_title">Journals</div>
+                                        <img className="me-3" src={newspaper}
+                                        // height={25}
+                                        // width={25}
+                                        />
+                                        <div className="brill_title mt-1">Journals</div>
                                     </div>
                                     <ul className="ms-2">
                                         <li className="marker">Over <span style={{ fontWeight: '700' }}>300+</span> journals published annually</li>
@@ -50,8 +53,11 @@ const Brills = () => {
                             <div className="card heighgt:400">
                                 <div className="card-body-list p-5">
                                     <div className="d-flex ">
-                                        <img className="me-3" src={book} height={25} width={25} />
-                                        <div className="brill_title">Books and E-Books</div>
+                                        <img className="me-3" src={book}
+                                        // height={25}
+                                        // width={25}
+                                        />
+                                        <div className="brill_title mt-1">Books and E-Books</div>
                                     </div>
                                     <ul className="ms-2">
                                         <li className="marker">Publishing approximately 1,200 new monograph/series titles annually</li>
@@ -73,8 +79,11 @@ const Brills = () => {
                                 <div className="card">
                                     <div className="card-body-list p-5">
                                         <div className="d-flex title">
-                                            <img className="me-3" src={dollar} height={25} width={25} />
-                                            <div className="brill_title">Purchase Models</div>
+                                            <img className="me-3" src={dollar}
+                                                // height={25}
+                                                // width={25}
+                                            />
+                                            <div className="brill_title mt-1">Purchase Models</div>
                                         </div>
                                         <ul className="ms-2">
                                             <li className="marker">Pick and Choose</li>

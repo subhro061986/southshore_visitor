@@ -238,6 +238,7 @@
 .card_style {
   border: 0.5px solid #B1BEC9 !important;
   border-radius: 36px !important;
+  width: 100%;
 }
 
 .img_div_style {
@@ -463,7 +464,7 @@ pr {
     border-radius: 12px;
     position: absolute;
     /* left: 34%; */
-    right: 24%;
+    right: 28%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -531,5 +532,11 @@ pr {
   .margin-x {
     margin-left: 5%;
     margin-right: 0;
+  }
+
+  .card_style {
+    border: 0.5px solid #B1BEC9 !important;
+    border-radius: 36px !important;
+    width: 66%;
   }
 }

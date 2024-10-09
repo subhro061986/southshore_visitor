@@ -43,3 +43,10 @@ p.about-juris-subtitle > span {
     color: #535861;
     line-height: 32px;
 }
+
+@media screen and (max-width: 436px)and (min-width: 377px) {
+    .image-container {
+        width: 100%;
+        margin-top: 4%;
+    }
+}
