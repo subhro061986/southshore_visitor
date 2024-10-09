@@ -79,9 +79,9 @@ const Brills = () => {
                                 <div className="card">
                                     <div className="card-body-list p-5">
                                         <div className="d-flex title">
-                                            <img className="me-3" src={dollar}
-                                                // height={25}
-                                                // width={25}
+                                            <img className="me-1" src={dollar}
+                                                height={39}
+                                                width={39}
                                             />
                                             <div className="brill_title mt-1">Purchase Models</div>
                                         </div>
@@ -96,6 +96,7 @@ const Brills = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="col-sm-6"></div>
                         </div>
                     </div>
                 </div>
