@@ -10,7 +10,7 @@ const AboutSouthshore = () => {
                 <div className="col-md-8 about-southshore-header">
 
                     <div
-                        // className="heading-text"
+                    // className="heading-text"
                     >
 
                         <h1>About Southshore Innovations</h1>
@@ -18,7 +18,7 @@ const AboutSouthshore = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="about-southshore-header d-flex justify-content-end">
+                    <div className="about-southshore-header">
                         <div className="card card-design">
                             <div className="card-body d-flex justify-content-center align-items-center text-center">
                                 <div className="d-flex-column justify-content-center align-items-center text-details">
@@ -35,7 +35,7 @@ const AboutSouthshore = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-12 about-southshore-header">
+                <div className="col-md-12">
                     <div className="heading-text">
 
                         <p>Southshore has multiple lines of <b>activity in the publishing space</b></p>
@@ -173,7 +173,7 @@ const AboutSouthshore = () => {
             </div>
             <div className="row mt-5 mb-5">
                 <div className="col-md-9 about-southshore-header">
-                    <div 
+                    <div
                     // className="footer-text"
                     >
 
