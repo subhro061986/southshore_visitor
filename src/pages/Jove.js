@@ -21,7 +21,7 @@ const Jove = () => {
                         display: "flex",
                         flexDirection: "column",
                         gap: "20px",
-                        marginTop: "30px",
+                        marginTop: "35px",
                         marginBottom: "30px"
                     }}
                 >

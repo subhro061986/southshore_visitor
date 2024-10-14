@@ -11,6 +11,10 @@
   margin-top: 0%;
 }
 
+.card > .card-body-list > ul > li {
+  line-height: 1.6 !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -4272,7 +4276,7 @@ body.active-modal {
 
   .card-body-list {
     width: auto;
-    height: 925px;
+    height: 950px;
     border-radius: 30px;
     background: #F4F4F4;
   
