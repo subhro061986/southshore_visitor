@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import NavBarSouthsore from "../../components/NavBarSouthshore";
 import { Link } from "react-router-dom";
 import about_thomson_1 from "../../assets/images/about_thomson_1.png";
-import about_thomson_2 from "../../assets/images/about_thomson_2.png";
+import about_thomson_2 from "../../assets/images/thompson_books.png";
 import about_thomson_3 from "../../assets/images/about_thomson_3.png";
 
 
@@ -44,10 +44,10 @@ const ThomsonAbout = () => {
                     <div className="col-12 col-lg-5">
                         <div className="d-flex h-100 flex-column justify-content-between">
                             <div className="image-container">
-                                <img src={about_thomson_2} className="about-image"></img>
+                                <img src={about_thomson_2} className="about-image" style={{height:'250px'}}></img>
                             </div>
                             <div className="image-container">
-                                <img src={about_thomson_3} className="about-image"></img>
+                                <img src={about_thomson_3} className="about-image" style={{height:'250px'}}></img>
                             </div>
                         </div>
                     </div>

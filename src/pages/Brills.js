@@ -16,9 +16,9 @@ const Brills = () => {
                 <Header />
                 <NavBarSouthsore />
                 <div className>
-                    <div className="text-start">
+                    <div className="text-start" style={{marginTop:'3%'}}>
                         <div className="screen_head" style={{ textAlign: "left" }}>About Brill</div>
-                        <div className="screen_sub_head mt-1" style={{ textAlign: "left" }}>Established in 1683 in Leiden (The Netherlands), Brill is a renowned publishing house specializing in the Humanities and Social Sciences, Law, and selected areas in the Sciences. With offices in<span style={{ fontWeight: '700' }}> Leiden, Paderborn (Germany), Boston (USA), Singapore, and Beijing (China)</span>, Brill continues to expand its global reach</div>
+                        <div className="screen_sub_head mt-1" style={{ textAlign: "left" }}><span style={{fontWeight:'700'}}>Established in 1683 in Leiden (The Netherlands),</span> Brill is a renowned publishing house specializing in the Humanities and Social Sciences, Law, and selected areas in the Sciences. With offices in<span style={{ fontWeight: '700' }}> Leiden, Paderborn (Germany), Boston (USA), Singapore, and Beijing (China)</span>, Brill continues to expand its global reach</div>
                     </div>
                     <div className="mt-5">
                         <div className="screen_heading" style={{ textAlign: "left" }}>Our Products</div>
@@ -36,7 +36,7 @@ const Brills = () => {
                                         <div className="brill_title mt-1">Journals</div>
                                     </div>
                                     <ul className="ms-2">
-                                        <li className="marker">Over <span style={{ fontWeight: '700' }}>300+</span> journals published annually</li>
+                                        <li className="marker">Over <span style={{ fontWeight: '700', color:'#4D39F1' }}>300+ journals</span> published annually</li>
                                         <li className="marker">Backfiles Access: Available from 2000 onwards</li>
                                         <li className="marker">Perpetual access available for purchase</li>
                                         <li className="marker">Subscription-based e-journals</li>
@@ -51,7 +51,7 @@ const Brills = () => {
                         </div>
                         <div className="col-sm-6">
                             <div className="card heighgt:400">
-                                <div className="card-body-list p-5">
+                                <div className="card-body-list p-5 mt_10">
                                     <div className="d-flex ">
                                         <img className="me-3" src={book}
                                         // height={25}

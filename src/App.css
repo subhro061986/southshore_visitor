@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.mt_10 {
+  margin-top: 0%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -3365,6 +3369,27 @@ body.active-modal {
 
 @media screen and (max-width: 376px)and (min-width: 280px) {
 
+  .mt_10 {
+    margin-top: 10%;
+  }
+
+  .brill_title {
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+  
+  }
+
+  .card-body-list {
+    width: auto;
+    height: 925px;
+    border-radius: 30px;
+    background: #F4F4F4;
+  
+  }
+
   .continue_tn_empty_cart {
     width: 64%;
   }
@@ -4231,6 +4256,27 @@ body.active-modal {
 
 
 @media screen and (max-width: 436px)and (min-width: 377px) {
+
+  .mt_10 {
+    margin-top: 10%;
+  }
+
+  .brill_title {
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+  
+  }
+
+  .card-body-list {
+    width: auto;
+    height: 925px;
+    border-radius: 30px;
+    background: #F4F4F4;
+  
+  }
 
   .media_margin {
     margin-top: 8%;

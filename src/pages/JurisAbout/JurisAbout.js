@@ -45,10 +45,10 @@ const JurisAbout = () => {
                     <div className="col-12 col-lg-5">
                         <div className="d-flex h-100 flex-column justify-content-between">
                             <div className="image-container">
-                                <img src={about_juris_img_2} className="about-image"></img>
+                                <img src={about_juris_img_2} className="about-image" style={{height:'250px'}}></img>
                             </div>
                             <div className="image-container">
-                                <img src={about_juris_img_3} className="about-image"></img>
+                                <img src={about_juris_img_3} className="about-image" style={{height:'250px'}}></img>
                             </div>
                         </div>
                     </div>
