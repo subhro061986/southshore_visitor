@@ -40,7 +40,10 @@ const Banner = () => {
                                 <div className="col-sm-6 col-md-5 grey_div"></div>
                                 <div className="col-sm-6 col-md-7"></div>
                             </div>
-                            <Carousel.Caption style={{ right: '15%', left: '10%', bottom: '2.50rem' }}>
+                            <Carousel.Caption
+                                // style={{ right: '15%', left: '10%', bottom: '2.50rem' }}
+                                className="carousel_caption_style"
+                            >
                                 <div className="row">
                                     <div className="col-md-8">
                                         <div className="slide_img_div" >
@@ -80,7 +83,7 @@ const Banner = () => {
                 :
                 (
                     <Carousel controls={false}
-                        // interval={null}
+                    // interval={null}
                     // prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }}/>} // Custom Previous icon
                     // nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
                     >
@@ -104,7 +107,7 @@ const Banner = () => {
                                                     width: windowDimensions?.width - 20,
                                                     backgroundColor: "white",
                                                     borderRadius: "30px",
-                                                    border:'10px solid white'
+                                                    border: '10px solid white'
                                                 }}
                                             >
                                                 <img

@@ -76,7 +76,7 @@ const Brills = () => {
                         </div>
                         
                     </div>
-                    <div className="row my-5">
+                    <div className="row mt-5" style={{marginBottom:'10%'}}>
                             <div className="col-12 col-sm-6">
                                 <div className="card">
                                     <div className="card-body-list p-5">

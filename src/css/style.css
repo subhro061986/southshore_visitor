@@ -219,7 +219,7 @@
 
 .screen_heading {
   font-family: 'Ubuntu';
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 32px;
   text-align: center;
@@ -228,7 +228,7 @@
 
 .screen_sub_head {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 32px;
   text-align: center;
@@ -367,8 +367,8 @@
 }
 
 .pdf_btn_style {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   top: 12%;
   right: 5%;
 }
@@ -456,7 +456,22 @@ pr {
   padding-right: 10px !important;
 }
 
+.me_3 {
+  margin-right: 1rem !important;
+}
+
+.carousel_caption_style {
+  right: 15% !important;
+  left: 10% !important;
+  bottom: 2.50rem !important;
+}
+
 @media screen and (max-width: 436px)and (min-width: 377px) {
+
+  /* .me_3 {
+    margin-right: 2.6rem !important;
+  } */
+
   .rightarrow {
     height: 54px;
     width: 54px;
@@ -538,5 +553,17 @@ pr {
     border: 0.5px solid #B1BEC9 !important;
     border-radius: 36px !important;
     width: 66%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .me_3 {
+    margin-right: 2.6rem!important;
+  }
+
+  .carousel_caption_style {
+    right: 15% !important;
+    left: 17% !important;
+    bottom: 2.50rem !important;
   }
 }
