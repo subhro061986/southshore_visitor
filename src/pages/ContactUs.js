@@ -30,8 +30,8 @@ const ContactUs = () => {
         <div className="row mb-3">
           <div className="col-md-6">
             <div className="card_style_1 p-5">
-              <div className="d-flex justify-content-around align-items-center mb-5">
-                <h4 className=" contactUs_card_heading me-5">Address</h4>
+              <div className="d-flex justify-content-around align-items-center mb-2">
+                <h4 className=" contactUs_card_heading me-5" style={{marginBottom:'14%'}}>Address</h4>
                 <p className="contactUs_card_desc">
                   Southshore Innovations Private Limited Plot 13, Heritage Phase
                   II Telephone Nagar, Perungudi Chennai - 600096
@@ -54,7 +54,7 @@ const ContactUs = () => {
                   />
                   <p className="contactUs_card_desc"> sales@southshore.in</p>
                 </div>
-                <div className="d-flex justify-content-around align-items-center mb-1">
+                <div className="d-flex justify-content-between align-items-center mb-1">
                   <h4 className="contactUs_card_heading me-5">Phone</h4>
                   <img  src={call} style={{marginTop:'-4%'}} />
                   <p className="contactUs_card_desc"> +1 (650) 555-0111</p>
