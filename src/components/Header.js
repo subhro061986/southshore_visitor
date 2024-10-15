@@ -23,7 +23,8 @@ export const Header = (props) => {
                         <SearchBar />
                     </div> */}
                     <div>
-                        <button className="btn southshore-blue-1 border-radius-10 color-white ms-2 px-4" >
+                        <button className="btn southshore-blue-1 border-radius-10 color-white ms-2 px-4" 
+                            onClick={()=>navigate("/contactus")}>
                             Contact Us
                         </button>
                     </div>
