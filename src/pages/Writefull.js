@@ -61,7 +61,7 @@ const Writefulls = () => {
                         </div>
                         <div className="col-sm-6">
                             <div className="card heighgt:400">
-                                <div className="card-body-list p-5">
+                                <div className="card-body-list p-5 mt_10">
                                     <div className="d-flex ">
                                         <img className="me-3" src={book} 
                                         // height={25} width={25} 

@@ -3371,6 +3371,15 @@ body.active-modal {
 }
 
 @media screen and (max-width: 376px) and (min-width: 280px) {
+
+  .contactUs_card_desc {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #011539;
+  }
+
   .mt_10 {
     margin-top: 10%;
   }
@@ -4249,6 +4258,15 @@ body.active-modal {
 }
 
 @media screen and (max-width: 436px) and (min-width: 377px) {
+
+  .contactUs_card_desc {
+    font-family: Roboto;
+    font-size: 14px !important;
+    font-weight: 400;
+    text-align: left;
+    color: #011539;
+  }
+
   .mt_10 {
     margin-top: 10%;
   }

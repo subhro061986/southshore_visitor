@@ -13,6 +13,8 @@
     "GET_ALL_OPEN_ACCESS":"openaccess",
     "Open_Access_URL":"openaccess/covers",
     "Open_Access_PDF_URL":"openaccess/pdfs",
-    "MOBILE_SCREEN_MIN_WIDTH": 500
+    "MOBILE_SCREEN_MIN_WIDTH": 500,
+    "PUBLISH_WITH_US":"contact/publishwithus",
+    "ENQUIRY":"contact/enquiry"
 }
   

@@ -28,9 +28,9 @@ const ContactUs = () => {
 
       <div>
         <div className="row mb-3">
-          <div className="col-md-6">
+          <div className="col-md-6" style={{paddingRight:0}}>
             <div className="card_style_1 p-5">
-              <div className="d-flex justify-content-around align-items-center mb-2">
+              <div className="d-flex justify-content-around align-items-center">
                 <h4 className=" contactUs_card_heading me-5" style={{marginBottom:'14%'}}>Address</h4>
                 <p className="contactUs_card_desc">
                   Southshore Innovations Private Limited Plot 13, Heritage Phase
@@ -39,9 +39,9 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6" style={{paddingRight:0}}>
             <div
-              className="card_style_1 p-5 "
+              className="card_style_1 p-5 mt_4"
               style={{ justifyContent: "start" }}
             >
               <div>
@@ -64,24 +64,24 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="row mb-5">
-          <div className="col-md-6">
+          <div className="col-md-6" style={{paddingRight:0}}>
             <div
               className="card_style_1 p-5"
               style={{ justifyContent: "start" }}
             >
-              <div className="d-flex justify-content-around align-items-center mb-5">
+              <div className="d-flex justify-content-around align-items-center">
                 <h4 className="contactUs_card_heading me-5">Sales quarries</h4>
                 <img className="me-2" src={sms} style={{ marginTop: "-4%" }} />
                 <p className="contactUs_card_desc"> sales@southshore.in</p>
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6" style={{paddingRight:0}}>
             <div
-              className="card_style_1 p-5"
+              className="card_style_1 p-5 mt_4"
               style={{ justifyContent: "start" }}
             >
-              <div className="d-flex justify-content-around align-items-center mb-5">
+              <div className="d-flex justify-content-around align-items-center">
                 <h4 className="contactUs_card_heading me-5">VAT</h4>
                 <p className="contactUs_card_desc"> 123456789</p>
               </div>
