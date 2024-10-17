@@ -27,6 +27,7 @@ const Enquiry = () => {
 
         }
         const resp = await Enquiry(json)
+        alert("Enquiry sent successfully")
         console.log('publish resp', resp)
     }
 

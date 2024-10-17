@@ -44,6 +44,7 @@ const PublishWithUs = () => {
 
         }
         const resp = await PublishWithUs(json)
+        alert("Enquiry sent successfully")
         console.log('publish resp', resp)
     }
 
