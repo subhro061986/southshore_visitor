@@ -147,12 +147,18 @@ const ManageLeadership = () => {
         if (evt.target.checked === true) {
             //call restore
             let resp = await editLeader(id, { isActive: 1 });
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
         }
         else {
             //call delete
             if (window.confirm("Do you want to deactivate the leader?") == true) {
                 // console.log("You pressed OK!");
                 let resp = await editLeader(id, { isActive: 0 });
+                if (resp?.data?.message) {
+                    alert(resp?.data?.message);
+                }
             }
 
         }

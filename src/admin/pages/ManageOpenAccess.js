@@ -99,12 +99,18 @@ const ManageOpenAccess = () => {
         if (evt.target.checked === true) {
             //call restore
             let resp = await editOpenAccess(id, {isActive: 1 });
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
         }
         else {
             //call delete
             if (window.confirm("Do you want to deactivate the published title?") == true) {
                 // console.log("You pressed OK!");
                 let resp = await editOpenAccess(id, {isActive: 0 });
+                if (resp?.data?.message) {
+                    alert(resp?.data?.message);
+                }
             }
 
         }
