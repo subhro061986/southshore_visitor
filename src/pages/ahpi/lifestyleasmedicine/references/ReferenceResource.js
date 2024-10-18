@@ -322,13 +322,13 @@ const ReferenceResource = () => {
                     </div>
 
                 </div>
-                <div className="screen_sub_head mt-5">Chapter 6</div>
+                <div className="screen_sub_head mt-5">Chapter 7</div>
                 <div className="mt-3">
                     <h2>References</h2>
                     <div className="reference_lists">
                         <ol>
                             <li>
-                            Morris, J. N., Heady, J. A., Raffle, P. A. B., Roberts, C. G., & Parks, J. W. (1953). Coronary heart-disease and physical activity of work. The Lancet, 262(6796), 1111–1120. https://doi.org/10.1016/S0140-6736(53)91495-0
+                                Morris, J. N., Heady, J. A., Raffle, P. A. B., Roberts, C. G., & Parks, J. W. (1953). Coronary heart-disease and physical activity of work. The Lancet, 262(6796), 1111–1120. https://doi.org/10.1016/S0140-6736(53)91495-0
                             </li>
                             <li>Ruegsegger, G. N., & Booth, F. W. (2018). Health benefits of exercise. Cold Spring Harbor Perspectives in Medicine, 8(8), a029694. https://doi.org/10.1101/cshperspect.a029694</li>
                             <li>Noordsy, D. L. (Ed.). (2019). Lifestyle Psychiatry. American Psychiatric Association Publishing.</li>
@@ -365,8 +365,573 @@ const ReferenceResource = () => {
                             <li>Nguyen, X. M. T., Li, Y., Wang, D. D., Whitbourne, S. B., Houghton, S. C., Hu, F. B., ... & Wilson, P. W. (2024). Impact of 8 lifestyle factors on mortality and life expectancy among United States veterans: The million veteran program. The American Journal of Clinical Nutrition, 119(1), 127–135. https://doi.org.10.1016/j.ajcnut.2023.10.032</li>
                             <li>Bikomeye, J. C., Beyer, A. M., Kwarteng, J. L., & Beyer, K. M. (2022). Greenspace, inflammation, cardiovascular health, and cancer: A review and conceptual framework for greenspace in cardio-oncology research. International Journal of Environmental Research and Public Health, 19(4), 2426. https://doi.org/10.3390/ijerph19042426</li>
                         </ol>
-                        </div>
-                        </div>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Videoes</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>This is What Happens to Your Body When You Walk 5, 30 and 60 Minutes by the Body Hub [4.40]</li>
+                            <li>Sitting Disease by the Knowledge Center [6.35]</li>
+                            <li>23 ½ Hours by Doc Mike Evans [9.18]</li>
+                            <li>The Benefits of Exercise by Dr. Ashish Contractor at TEDxYouth@DAIS [16.32]</li>
+                            <li>What Happens When You Get Heat Stroke by TED-Ed [3.53]</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Articles</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Heat Stroke Prevention by the Korey Stringer Institute, University of Connecticut</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 8</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Singh, S., Yadav, N., & Jain, S. (2019). Sleep and health—An introduction. International Journal of Head and Neck Surgery, 10(1), 1–3. https://www.ijhns.com/doi/IJHNS/pdf/10.5005/jp-journals-10001-1361</li>
+                            <li>Patel, A.K., Reddy, V., Shumway, K.R., et al. (2024, January 26). Physiology, sleep stages. StatPearls. https://www.ncbi.nlm.nih.gov/books/NBK526132/</li>
+                            <li>Suri, T. M., Ghosh, T., Mittal, S., Hadda, V., Madan, K., & Mohan, A. (2023). Systematic review and meta-analysis of the prevalence of obstructive sleep apnea in Indian adults. Sleep Medicine Reviews, 71, 101829.  https://doi.org/10.1016/j.smrv.2023.101829</li>
+                            <li>Gildner, T., Liebert, M., Kowal, P., Chatterji, S., & Snodgrass, J. (2014). Associations between sleep duration, sleep quality, and cognitive test performance among older adults from six middle income countries: Results from the study on global ageing and adult heath (SAGE). Sleep, 10(2014), 613–621.</li>
+                            <li>Selvamani, Y., Perianayagam Arokiasamy, Mamta Chaudhary, & Himanshu. (2018). Association of sleep problems and sleep duration with self-rated health and grip strength among older adults in India and China: Results from the study on global aging and adult health (SAGE). Journal of Public Health, 26(2018), 697–707.</li>
+                            <li>Hafner, M., Stepanek, M., Taylor, J., Troxel, W. M., & van Stolk, C. (2016). Why sleep matters – the economic costs of insufficient sleep: A cross-country comparative analysis. RAND.https://www.rand.org/content/dam/rand/pubs/research_reports/RR1700/RR1791/RAND_RR1791.pdf</li>
+                            <li>Rayatdoost, E., Rahmanian, M., Sanie, M. S., Rahmanian, J., Matin, S., Kalani, N., Kenarkoohi, A., Falahi, S., & Abdoli, A. (2022). Sufficient sleep, time of vaccination, and vaccine efficacy: a systematic review of the current evidence and a proposal for covid-19 vaccination. The Yale Journal of Biology and Medicine, 95(2), 221–235.  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9235253/pdf/yjbm_95_2_221.pdf</li>
+                            <li>Lowrie, J., & Brownlow, H. (2020). The impact of sleep deprivation and alcohol on driving: A comparative study. BMC Public Health, 20, 980. https://doi.org/10.1186/s12889-020-09095-5; CDC. (2020). NIOSH training for nurses on shift work and long work hours. https://www.cdc.gov/niosh/work-hour-training-for-nurses/longhours/mod3/08.html</li>
+                            <li>Nagai, M., Hoshide, S., & Kario, K. (2010). Sleep duration as a risk factor for cardiovascular disease- a review of the recent literature. Current Cardiology Reviews, 6(1), 54–61. https://doi.org/10.2174/157340310790231635</li>
+                            <li>Gottlieb, D. J., Ellenbogen, J. M., Bianchi, M. T., & Czeisler, C. A. (2018). Sleep deficiency and motor vehicle crash risk in the general population: a prospective cohort study. BMC Medicine, 16(1), 44. https://doi.org/10.1186/s12916-018-1025-7</li>
+                            <li>(see ref. 9). Nagai et al. (2010). p54-55.</li>
+                            <li>Henríquez-Beltrán, M., Dreyse, J., Jorquera, et al. (2023). The U-shaped association between sleep duration, all-cause mortality and cardiovascular risk in a Hispanic/Latino clinically based cohort. Journal of Clinical Medicine, 12(15), 4961. https://doi.org/10.3390/jcm12154961</li>
+                            <li>Morin, C. M., Jarrin, D. C., Ivers, H., Mérette, C., LeBlanc, M., & Savard, J. (2020). Incidence, persistence, and remission rates of insomnia over 5 years. JAMA Network Open, 3(11), e2018782. https://doi.org/10.1001/jamanetworkopen.2020.18782</li>
+                            <li>Senaratna, C. V., Perret, J. L., Lodge, C. J., Lowe, A. J., Campbell, B. E., Matheson, M. C., Hamilton, G. S., & Dharmage, S. C. (2017). Prevalence of obstructive sleep apnea in the general population: A systematic review. Sleep Medicine Reviews, 34, 70–81. https://doi.org/10.1016/j.smrv.2016.07.002</li>
+                            <li>Trotti L. M. (2017). Idiopathic hypersomnia. Sleep Medicine Clinics, 12(3), 331–344. https://doi.org/10.1016/j.jsmc.2017.03.009</li>
+                            <li>Newsome, R. & Rehman, A. (2023). Music and sleep. Sleep Foundation. https://www.sleepfoundation.org/noise-and-sleep/music</li>
+                            <li>Pacheco, D., & Rosen, D. (2024). Best temperature for sleep. Sleep Foundation. https://www.sleepfoundation.org/bedroom-environment/best-temperature-for-sleep</li>
+                            <li>Manoogian, E. N. C., Chow, L. S., Taub, P. R., Laferrère, B., & Panda, S. (2022). Time-restricted eating for the prevention and management of metabolic diseases. Endocrine Reviews, 43(2), 405–436. https://doi.org/10.1210/endrev/bnab027</li>
+                            <li>Stutz, J., Eiholzer, R., & Spengler, C. M. (2019). Effects of evening exercise on sleep in healthy participants: A systematic review and meta-analysis. Sports Medicine (Auckland, N.Z.), 49(2), 269–287. https://doi.org/10.1007/s40279-018-1015-0</li>
+                            <li>Colrain, I. M., Nicholas, C. L., & Baker, F. C. (2014). Alcohol and the sleeping brain. In E. V. Sullivan & A. Pfefferbaum (Eds.), Handbook of Clinical Neurology (Vol. 125, pp. 415–431). Elsevier. https://doi.org/10.1016/B978-0-444-62619-6.00024-0</li>
+                            <li>Jaehne, A., Loessl, B., Bárkai, Z., Riemann, D., & Hornyak, M. (2009). Effects of nicotine on sleep during consumption, withdrawal and replacement therapy. Sleep Medicine Reviews, 13(5), 363–377. https://doi.org/10.1016/j.smrv.2008.12.003</li>
+                            <li>U.S. Department of Veterans Affairs. (n.d.). Sleep & tobacco use. Mental Health. https://www.mentalhealth.va.gov/quit-tobacco/docs/VAM_TH-094_Sleep_and_Tobacco_Use_One_Pager_508.pdf</li>
+                            <li>Gardiner, C., Weakley, J., Burke, L. M., Roach, G. D., Sargent, C., Maniar, N., Townshend, A., & Halson, S. L. (2023). The effect of caffeine on subsequent sleep: A systematic review and meta-analysis. Sleep Medicine Reviews, 69, 101764. https://doi.org/10.1016/j.smrv.2023.101764</li>
+                            <li>Cleveland Clinic. (2021). Should you take power naps? https://health.clevelandclinic.org/power-naps</li>
+                            <li>Khir, S. M., Yunus, W. M. A. W. M., Mahmud, N., Wang, R., Panatik, S. A., Sukor, M. S. M., & Nordin, N. A. (2024). Efficacy of progressive muscle relaxation in adults for stress, anxiety, and depression: A systematic review. Psychology Research and Behavior Management, 17, 345–365. https://doi.org/10.2147/PRBM.S437277</li>
+                            <li>AASM. (2020). Healthy sleep habits. [American Academy of Sleep Education]. https://sleepeducation.org/healthy-sleep/healthy-sleep-habits/</li>
+                            <li>UCLA Health. (n.d.). Overcoming sleep problems caused by a non-traditional work schedule. Sleep Disorders: Coping with Shift Work. https://www.uclahealth.org/medical-services/sleep-disorders/patient-resources/patient-education/coping-with-shift-work</li>
+                            <li>Karna, B., Sankari, A., & Tatikonda, G. (2023). Sleep Disorder. In StatPearls. https://www.ncbi.nlm.nih.gov/books/NBK560720/</li>
+                            <li>(see ref. 28). Karna, B. et al. (2023).</li>
+                            <li>Van Cauter, E., Holmback, U., Knutson, K., Leproult, R., Miller, A., Nedeltcheva, A., Pannain, S., Penev, P., Tasali, E., & Spiegel, K. (2007). Impact of sleep and sleep loss on neuroendocrine and metabolic function. Hormone Research, 67(Suppl 1), 2–9. https://pubmed.ncbi.nlm.nih.gov/17308390/</li>
+                            <li>Tasali, E., Leproult, R., Ehrmann, D. A., & Van Cauter, E. (2008). Slow-wave sleep and the risk of type 2 diabetes in humans. Proceedings of the National Academy of Sciences of the United States of America, 105(3), 1044–1049. https://doi.org/10.1073/pnas.0706446105</li>
+                            <li>Cummings, D. E., & Foster, K. E. (2003). Ghrelin-leptin tango in body-weight regulation. Gastroenterology, 124(5), 1532–1535. https://doi.org/10.1016/s0016-5085(03)00350-0</li>
+                            <li>Spiegel, K., Tasali, E., Penev, P., & Van Cauter, E. (2004). Brief communication: Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. Annals of Internal Medicine, 141(11), 846–850. https://doi.org/10.7326/0003-4819-141-11-200412070-00008</li>
+                            <li>Van Cauter, E., Spiegel, K., Tasali, E., & Leproult, R. (2008). Metabolic consequences of sleep and sleep loss. Sleep Medicine, 9 Suppl 1(0 1), S23–S28. https://doi.org/10.1016/S1389-9457(08)70013-3; Patel, S. R., & Hu, F. B. (2008). Short sleep duration and weight gain: a systematic review. Obesity (Silver Spring, Md.), 16(3), 643–653. https://doi.org/10.1038/oby.2007.118</li>
+                            <li>Cappuccio, F. P., Taggart, F. M., Kandala, N. B., Currie, A., Peile, E., Stranges, S., & Miller, M. A. (2008). Meta-analysis of short sleep duration and obesity in children and adults. Sleep, 31(5), 619–626. https://doi.org/10.1093/sleep/31.5.619</li>
+                            <li>CDC. (2024). About sleep. [CDC]. https://www.cdc.gov/sleep/about/</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Videoes</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Science of Sleep by Dr. Michelle Olaithe at TEDxMandurah [13.51]</li>
+                            <li>Stories from the Sleep Clinic by Dr. Kirstie Anderson at TEDxNewcastleCollege [15.01]</li>
+                            <li>Methods to Practice Good Sleep Hygiene by MEDSimplified [10.21]</li>
+                            <li>How Lack of Sleep Affects Health and Tips for a Good Night’s Rest by CBS Mornings [5.50]</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Additional Reading</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Ramar, K., Malhotra, R. K., Carden, K. A., & et al. (2021). Sleep is essential to health: An American Academy of Sleep Medicine position statement. Journal of Clinical Sleep Medicine, 17(10), 2115–2119.</li>
+                            <li>Mukherjee, S., Patel, S. R., Kales, S. N., Ayas, N. T., Strohl, K. P., Gozal, D., & Malhotra, A.(2015). The importance of healthy sleep. Recommendations and future priorities. American Journal of Respiratory and Critical Care Medicine, 191(12), 1450–1458.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 9</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Castaldelli-Maia, J. M., & Bhugra, D. (2022). Analysis of global prevalence of mental and substance use disorders within countries: focus on sociodemographic characteristics and income levels. International Review of Psychiatry, 34(1), 6–15. https://doi.org/10.1080/09540261.2022.2040450</li>
+                            <li>MSJE. (2019). Magnitude of substance use in India. Ministry of Social Justice and Empowerment, Govt. of India, NDDTC and AIMMS., p2. https://www.lgbrimh.gov.in/resources/Addiction_Medicine/elibrary/magnitude_substance_abuse_india.pdf</li>
+                            <li>(see ref. 2) MSJE. (2019). p14.</li>
+                            <li>WHO, TISS & MoHFW. (2016). Global Adult Tobacco Survey GATS 2 India 2016-17 [PDF]. WHO, Tata Institute of Social Sciences (TISS) and Ministry of Health and Family Welfare, Government of India. https://ntcp.mohfw.gov.in/assets/document/surveys-reports-publications/Global-Adult-Tobacco-Survey-Second-Round-India-2016-2017.pdf</li>
+                            <li>(see ref. 4) WHO, TISS & MoHFW. (2016). p37.</li>
+                            <li>WHO. (2017). Cannabis [Factsheet]. https://www.who.int/teams/mental-health-and-substance-use/alcohol-drugs-and-addictive-behaviours/drugs-psychoactive/cannabis</li>
+                            <li>(see ref. 2) MSJE. (2019). p20</li>
+                            <li>Balhara, Y.P., Mishra, A., Sethi, H., Singh, S., & Khandelwal, S.K. (2016). Time trends of cannabis use among treatment-seeking individuals at government de-addiction centers across India over a period of 7 years. Indian Journal of Psychological Medicine, 38(4), 331–335. https://doi.org/10.4103/0253-7176.185961</li>
+                            <li>(see ref. 2) MSJE. (2019). p20.</li>
+                            <li>(see refs. 2 and 4) MSJE. (2019); and WHO, TISS & MoHFW. (2016)</li>
+                            <li>Jain, S., Srivastava, A.S., Verma, R.P., & Maggu, G. (2019). Caffeine addiction: Need for awareness and research and regulatory measures. Asian Journal of Psychiatry, 41, 73–75. https://doi.org/10.1016/j.ajp.2017.01.008</li>
+                            <li>George, S., Kallivayalil, R. A., & Jaisoorya, T. S. (2014). Gambling addiction in India: Should psychiatrists care? Indian Journal of Psychiatry, 56(2), 111–112. https://doi.org/10.4103/0019-5545.130475</li>
+                            <li>Sharma, M.K., Benegal, V., Girish, N., & Thennarasu, K. (2013). Behavioral addiction in the community: an exploration. National Institute of Mental Health & Neurosciences (NIMHANS).  https://main.icmr.nic.in/sites/default/files/reports/Behavioral_addiction_in_the_community.pdf</li>
+                            <li>Fonseca, F., Robles-Martínez, M., Tirado-Muñoz, J., Alías-Ferri, M., Mestre-Pintó, J. I., Coratu, A. M., & Torrens, M. (2021). A gender perspective of addictive disorders. Current Addiction Reports, 8(1), 89–99. https://doi.org/10.1007/s40429-021-00357-9</li>
+                            <li>Kalo, Z. (2023). Woman aspects of behavior addiction, including gambling. European Psychiatry, 66(Suppl 1), S35. https://doi.org/10.1192/j.eurpsy.2023.133</li>
+                            <li>Administration (US) SA and MHS, General (US) O of the S. (2016). The neurobiology of substance use, misuse, and addiction. In: Facing addiction in America: The surgeon general’s report on Alcohol, Drugs, and Health. US Department of Health and Human Services. Retrieved from https://www.ncbi.nlm.nih.gov/books/NBK424849/</li>
+                            <li>Guo, J., Hawkins, J. D., Hill, K. G., & Abbott, R. D. (2001). Childhood and adolescent predictors of alcohol abuse and dependence in young adulthood. Journal of Studies on Alcohol, 62(6), 754–762. https://doi.org/10.15288/jsa.2001.62.754</li>
+                            <li>Le Foll, B., Gallo, A., Le Strat, Y., Lu, L., & Gorwood, P. (2009). Genetics of dopamine receptors and drug addiction: a comprehensive review. Behavioural Pharmacology, 20(1), 1–17. https://doi.org/10.1097/FBP.0b013e3283242f05</li>
+                            <li>Jedrzejczak M. (2005). Family and environmental factors of drug addiction among young recruits. Military Medicine, 170(8), 688–690. https://doi.org/10.7205/MILMED.170.8.688; Morales, A. M., Jones, S. A., Kliamovich, D., Harman, G., & Nagel, B. J. (2020). Identifying early risk factors for addiction later in life: A review of prospective longitudinal studies. Current Addiction Reports, 7(1), 89–98. https://doi.org/10.1007/s40429-019-00282-y; Whitesell, M., Bachand, A., Peel, J., & Brown, M. (2013). Familial, social, and individual factors contributing to risk for adolescent substance use. Journal of Addictions, 2013, 579310. https://doi.org/10.1155/2013/579310</li>
+                            <li>Department of Human Services. (n.d.). Risk and protective factors.  https://www.nj.gov/humanservices/dmhas/resources/services/prevention/risk_factors.html</li>
+                            <li>Cooper, C., Atkinson, E. J., Wahner, H. W., O’Fallon, W. M., Riggs, B. L., Judd, H. L., & Melton, L. J., 3rd. (1992). Is caffeine consumption a risk factor for osteoporosis? Journal of Bone and Mineral Research, 7(4), 465–471.  https://doi.org/10.1002/jbmr.5650070415</li>
+                            <li>Fauth-Bühler, M., Mann, K., & Potenza, M. N. (2017). Pathological gambling: A review of the neurobiological evidence relevant for its classification as an addictive disorder. Addiction Biology, 22(4), 885–897. https://doi.org/10.1111/adb.12378</li>
+                            <li>Kowalewska, E., & Lew-Starowicz, M. (2021). Compulsive Sexual Behavior Disorder – the evolution of a new diagnosis introduced to the ICD-11, current evidence and ongoing research challenges. Wiedza Medyczna, 3(1), 17–23. https://wiedzamedyczna.pl/index.php/wm/article/view/72</li>
+                            <li>Juwono, I.D., & Szabo, A. (2021). 100 cases of exercise addiction: More evidence for a widely researched but rarely identified dysfunction. International Journal of Mental Health and Addiction, 19(7), 1799–1811. https://doi.org/10.1007/s11469-020-00264-6</li>
+                            <li>Yang, H. A. (2008). Research on the influence of internet addiction on college students. Nanjing Normal University, Jiangsu.</li>
+                            <li>Zou, Z., Wang, H., d’Oleire Uquillas, F., Wang, X., Ding, J., & Chen, H. (2017). Definition of substance and non-substance addiction. In X. Zhang, J. Shi, & R. Tao (Eds.), Substance and Non-substance Addiction (Advances in Experimental Medicine and Biology, vol 1010). Springer, Singapore. https://doi.org/10.1007/978-981-10-5562-1_2</li>
+                            <li>Horvath, J., Mundinger, C., Schmitgen, M. M., Wolf, N. D., Sambataro, F., Hirjak, D., Kubera, K. M., Koenig, J., & Christian Wolf, R. (2020). Structural and functional correlates of smartphone addiction. Addictive Behaviors, 105, 106334.  https://doi.org/10.1016/j.addbeh.2020.106334</li>
+                            <li>Kim, H. S., Son, G., Roh, E. B., Ahn, W. Y., Kim, J., Shin, S. H., Chey, J., & Choi, K. H. (2022). Prevalence of gaming disorder: A meta-analysis. Addictive Behaviors, 126, 107183. https://doi.org/10.1016/j.addbeh.2021.107183</li>
+                            <li>Monteiro, C. A., & Cannon, G. (2023). The foods that are addictive. Addiction (Abingdon, England), 118(4), 603–604. https://doi.org/10.1111/add.16101</li>
+                            <li>Gearhardt, A. N., & DiFeliceantonio, A. G. (2023). Highly processed foods can be considered addictive substances based on established scientific criteria. Addiction (Abingdon, England), 118(4), 589–598. https://doi.org/10.1111/add.16065.</li>
+                            <li>Sutton, C. A., et al. (2024). Ultraprocessed, hyper-palatable, and high energy density foods: Prevalence and distinction across 30 years in the United States. Obesity, 32(1), 166–175. https://doi.org/10.1002/oby.23897</li>
+                            <li>Imperatori, C., Fabbricatore, M., Vumbaca, V., Innamorati, M., Contardi, A., & Farina, B. (2016). Food addiction: Definition, measurement and prevalence in healthy subjects and in patients with eating disorders. Rivista di Psichiatria, 51(2), 60–65. https://doi.org/10.1708/2246.24196</li>
+                            <li>Morkevičiūtė, M., & Endriulaitiene, A. (2022). Defining the border between workaholism and work addiction: A systematic review. International Journal of Mental Health and Addiction. https://doi.org/10.1007/s11469-022-00757-6</li>
+                            <li>Müller, A., Laskowski, N. M., Trotzke, P., Ali, K., Fassnacht, D. B., de Zwaan, M., Brand, M., Häder, M., & Kyrios, M. (2021). Proposed diagnostic criteria for compulsive buying-shopping disorder: A Delphi expert consensus study. Journal of Behavioral Addictions, 10(2), 208–222. https://doi.org/10.1556/2006.2021.00013</li>
+                            <li>SAMHSA. (2019). Enhancing motivation for change in substance use disorder treatment: Updated 2019. [SAMHSA/CSAT Treatment Improvement Protocols] Substance Abuse and Mental Health Services Administration (US). https://pubmed.ncbi.nlm.nih.gov/34106565/</li>
+                            <li>Coles, A. S., Kozak, K., & George, T. P. (2018). A review of brain stimulation methods to treat substance use disorders. The American Journal on Addictions, 27(2), 71–91. https://doi.org/10.1111/ajad.12674</li>
+                            <li>Gomis‐Vicent, E., Thoma, V., Turner, JJD., Hill, KP., & Pascual‐Leone, A. (2019). Review: non-invasive brain stimulation in behavioral addictions: insights from direct comparisons with substance use disorders. American Journal of Addictions, 28(6), 431–454. https://doi.org/10.1111/ajad.12945</li>
+                            <li>Naren, T., Cook, J., Armstrong, F., & Manger, S. (2022). Lifestyle interventions in the management of substance use disorder. Australian Journal of General Practice, 51(8), August 2022. https://doi.org/10.31128/AJGP-02-22-6331</li>
+                            <li>Ingram, I., Kelly, P.J., Deane, F. P., Baker, A. L., & Raftery, D. K. (2018). Loneliness in treatment-seeking substance-dependent populations: Validation of the social and emotional loneliness scale for adults - short version. Journal of Dual Diagnosis, 14(4), 211–219. https://doi.org/10.1080/15504263.2018.1498565</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Videoes</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Recognising Behavioural Addiction by NJ Spotlight News [2.57]</li>
+                            <li>Exploring the 5 Types of Behavioural Addictions: Symptoms and Treatment Options by Solace Asia [1.00]</li>
+                            <li>Mechanism of Drug Action in the Brain by Alila Medical Media [4.15]</li>
+                            <li>How Addiction Affects the Brain by the Dana Foundation [2.28]</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Websites</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Alcoholics Anonymous - India</li>
+                            <li>Narcotics Anonymous - India</li>
+                            <li>Understanding Drug Use and Addiction by the National Institute on Drug Abuse</li>
+                            <li>Substance Use Disorders: Types, Symptoms, and Treatments by Very Well Health</li>
+                            <li>Drug Addiction in India — A Rising Problem by Rehabs.in</li>
+                            <li>Substance Abuse in India by the National Centre for Drug Abuse Prevention</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Additional Reading</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Murthy R. S. (2017). National Mental Health Survey of India 2015-2016. Indian Journal of Psychiatry, 59(1), 21–26.</li>
+                            <li>Zou, Z., Wang, H., d’Oleire Uquillas, F., Wang, X., Ding, J., & Chen, H. (2017). Definition of substance and non-substance addiction. Advances in Experimental Medicine and Biology 1010, 21–41.</li>
+                            <li>
+                                Sarkar, S., Patra, B. N., & Kattimani, S. (2016). Substance use disorder and the family: An Indian perspective. Medical Journal of Dr. DY Patil University, 9(1), 7–14.
+
+                            </li>
+                            <li>
+                                Sarkar, S., Parmar, A., & Chatterjee, B. (2015). Substance use disorders in the elderly: A review. Journal of Geriatric Mental Health, 2(2), 74–82.
+
+                            </li>
+                            <li>
+                                Karim, R., & Chaudhri, P. (2012). Behavioural addictions: An overview. Journal of Psychoactive Drugs, 44(1), 5–17.
+
+                            </li>
+                            <li>
+                                Das, S., & Pandey, M. K. (2023). Behavioural addictions: An emerging public mental health crisis? Indian Journal of Social Psychiatry, 39(3), 230–235.
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 10</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>
+                                WHO. (2023). Factsheet on Air Pollution. https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health
+
+                            </li>
+                            <li>
+                                United Nations (UN). (2021). Summary progress update 2021 – SDG 6: Water and sanitation for all. https://www.unwater.org/publications/summary-progress-update-2021-sdg-6-water-and-sanitation-all
+
+                            </li>
+                            <li>
+                                UNICEF. (2023). Factsheet on clean drinking water. https://www.unicef.org/india/what-we-do/clean-drinking-water
+
+                            </li>
+                            <li>
+                                Haseena, M., Faheem Malik, M., Javed, A., Arshad, S., Asif, N., Zulfiqar, S., & Hanif, J. (2017). Water pollution and human health. Environmental Risk Assessment and Remediation, 01(03). https://doi.org/10.4066/2529-8046.100020
+
+                            </li>
+                            <li>
+                                Down to Earth. (2024). Silent famine: Has India weakened its own nutritional security. Down to Earth. https://www.downtoearth.org.in/news/food/silent-famine-has-india-weakened-its-own-nutritional-security--93956
+
+                            </li>
+                            <li>
+                                Debnath, S., Dey, A., Khanam, R. et al. (2023). Historical shifting in grain mineral density of landmark rice and wheat cultivars released over the past 50 years in India. Scientific Reports, 13, 21164. https://doi.org/10.1038/s41598-023-48488-5
+
+                            </li>
+                            <li>
+                                MOEFC. (1981). The air (prevention and control) act, 1981. https://www.indiacode.nic.in/bitstream/123456789/7781/1/air_act-1981.pdf
+
+                            </li>
+                            <li>WHO. (2010). Factsheet on noise. https://www.who.int/europe/news-room/fact-sheets/item/noise</li>
+                            <li>
+                                WHO. (2019). Biological mechanisms related to cardiovascular and metabolic effects by environmental noise. WHO document number: WHO/EURO:2018-3009-42767-59666. https://iris.who.int/bitstream/handle/10665/346548/WHO-EURO-2018-3009-42767-59666-eng.pdf?sequence=3&isAllowed=y
+
+                            </li>
+                            <li>
+                                WHO. (2018). Factsheet on Heat and Health. https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health
+
+                            </li>
+                            <li>
+                                Romanello, M., Di Napoli, C., Drummond… Costello, A. (2022). The 2022 report of the Lancet Countdown on health and climate change: Health at the mercy of fossil fuels. The Lancet, 400(10363), 1619–1654. https://doi.org/10.1016/S0140-6736(22)01540-9
+
+                            </li>
+                            <li>
+                                Müller, R., Reuss, F., Kendrovski, V., & Montag, D. (2019). Vector-borne diseases. In M. R. Marselle, J. Stadler, H. Korn, K. N. Irvine, & A. Bonn (Eds.), Biodiversity and Health in the Face of Climate Change (pp. 67–90). Springer International Publishing. https://doi.org/10.1007/978-3-030-02318-8_4
+
+                            </li>
+                            <li>
+                                WHO. (2020). Factsheet on vector-borne diseases. https://www.who.int/news-room/fact-sheets/detail/vector-borne-diseases
+
+                            </li>
+                            <li>
+                                Khan, A., Plana-Ripoll, O., Antonsen, S., Brandt, J., Geels, C., Landecker, H., Sullivan, P. F., Pedersen, C. B., & Rzhetsky, A. (2019). Environmental pollution is associated with increased risk of psychiatric disorders in the US and Denmark. PLOS Biology, 17(8), e3000353. https://doi.org/10.1371/journal.pbio.3000353
+
+                            </li>
+                            <li>
+                                Rajagopalan, S., Al-Kindi, S., & Brook, R. (2018). Air pollution and cardiovascular disease: JACC state-of-the-art review. Journal of the American College of Cardiology, 72(17), 2054–2070. https://doi.org/10.1016/j.jacc.2018.07.099
+
+                            </li>
+                            <li>
+                                Nyadanu, S. D., Dunne, J., Tessema, G. A., Mullins, B., Kumi-Boateng, B., Lee Bell, M., Duko, B., & Pereira, G. (2022). Prenatal exposure to ambient air pollution and adverse birth outcomes: An umbrella review of 36 systematic reviews and meta-analyses. Environmental Pollution, 306, 119465. https://doi.org/10.1016/j.envpol.2022.119465
+
+                            </li>
+                            <li>
+                                Deyssenroth, M. A., Rosa, M. J., Eliot, M. N., Kelsey, K. T., Kloog, I., Schwartz, J. D., Wellenius, G. A., Peng, S., Hao, K., Marsit, C. J., & Chen, J. (2021). Placental gene networks at the interface between maternal PM2.5 exposure early in gestation and reduced infant birthweight. Environmental Research, 199, 111342. https://doi.org/10.1016/j.envres.2021.111342
+
+                            </li>
+                            <li>
+                                WHO. (2022). Guidance on Health and Environment, Chapter 2: Air Pollution. https://cdn.who.int/media/docs/default-source/environmental-health-impact/who_compendium_air_pollution_01042022_eo_final.pdf?sfvrsn=1c4cecb5_3
+
+                            </li>
+                            <li>
+                                USEPA. (2023). Climate change and the health of pregnant, breastfeeding, and postpartum women [Overviews and Factsheets]. https://www.epa.gov/climateimpacts/climate-change-and-health-pregnant-breastfeeding-and-postpartum-women
+
+                            </li>
+                            <li>
+                                Bajželj, B., Laguzzi, F., & Röös, E. (2021). The role of fats in the transition to sustainable diets. The Lancet Planetary Health, 5(9), e644–e653. https://doi.org/10.1016/S2542-5196(21)00194-7
+
+                            </li>
+                            <li>
+                                Scarborough, P., Clark, M., Cobiac, L., Papier, K., Knuppel, A., Lynch, J., Harrington, R., Key, T., & Springmann, M. (2023). Vegans, vegetarians, fish-eaters and meat-eaters in the UK show discrepant environmental impacts. Nature Food, 4(7), 565–574. https://doi.org/10.1038/s43016-023-00795-w
+
+                            </li>
+                            <li>
+                                Ferrari, L., Panaite, S.-A., Bertazzo, A., & Visioli, F. (2022). Animal- and plant-based protein sources: A scoping review of human health outcomes and environmental impact. Nutrients, 14(23), 5115. https://doi.org/10.3390/nu14235115
+
+                            </li>
+                            <li>
+                                Rao, N. D., Min, J., DeFries, R., Ghosh-Jerath, S., Valin, H., & Fanzo, J. (2018). Healthy, affordable and climate-friendly diets in India. Global Environmental Change, 49, 154–165. https://doi.org/10.1016/j.gloenvcha.2018.02.013
+
+                            </li>
+                            <li>
+                                (see ref. 21) Scarborough, P., et al. (2023). p570.
+
+                            </li>
+                            <li>
+                                IISD. (2021). Brief #19 – The road to sustainable transport. https://www.iisd.org/system/files/2021-05/still-one-earth-sustainable-transport.pdf
+
+                            </li>
+                            <li>
+                                Singh, S. P., & Chauhan, S. S. (2021). Sustainable transport solutions in the health sector. In A. Thomas, K. S. Reddy, D. Alexander, & P. Prabhakaran (Eds.), Climate Change and the Health Sector: Healing the World (1st ed., pp. 173–182). Routledge India. https://doi.org/10.4324/9781003190516-21
+
+                            </li>
+                            <li>
+                                Alexander, D. & Manogaran, S. (2021). Healthcare and climate change: Implementing green practices in hospitals. In G. J. Gyani and A. Thomas (Eds.), Handbook of Health Care Quality and Patient Safety (3rd ed., Chapter 4). Jaypee Brothers.
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Websites</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Waqi.info and Aqicn.org for Real-Time Updates on Air Pollution</li>
+                            <li>MondayCampaigns.Org for Campaigns on Nutrition, Physical Activity, Stress Management and Addiction Cessation</li>
+                            <li>Environmental Impacts of Food by Our World in Data</li>
+                            <li>Mission LiFE by the Ministry of Environment, Forest and Climate Change, Govt. of India.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 11</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>
+                                WHO. (2023). Noncommunicable diseases [Factsheet]. https://www.who.int/health-topics/noncommunicable-diseases
+
+                            </li>
+                            <li>
+                                WHO. (2023). Climate change and noncommunicable diseases: Connections [Factsheet]. https://www.who.int/news/item/02-11-2023-climate-change-and-noncommunicable-diseases-connections
+
+                            </li>
+                            <li>
+                                Institute of Health Metrics and Evaluation. (2019). Global burden of disease study. https://www.healthdata.org/research-analysis/gbd
+
+                            </li>
+                            <li>
+                                Pradeepa, R., & Mohan, V. (2021). Epidemiology of type 2 diabetes in India. Indian Journal of Ophthalmology, 69(11), 2932–2938. https://doi.org/10.4103/ijo.IJO_1627_21
+
+                            </li>
+                            <li>
+                                ICMR, PHFI and IHME. (2017). India: Health of the nation’s states. Disease burden trends in the states of India, 1990-2016. Indian Council of Medical Research, Public Health Foundation of India, and the Institute of Health Metrics and Evaluation. https://www.healthdata.org/sites/default/files/files/policy_report/2017/India_Health_of_the_Nation’s_States_Report_2017.pdf
+
+                            </li>
+                            <li>
+                                Venkatrao, M., Nagarathna, R., Majumdar, V., Patil, S. S., Rathi, S., & Nagendra, H. (2020). Prevalence of obesity in India and its neurological implications: A multifactor analysis of a nationwide cross-sectional study. Annals of Neurosciences, 27(3-4), 153–161. https://doi.org/10.1177/0972753120987465
+
+                            </li>
+                            <li>
+                                Gupta, R.D., Tamanna, N., Siddika, N., Haider, S. S., Apu, E. H., & Haider, M. R. (2023). Obesity and abdominal obesity in Indian population: Findings from a nationally representative study of 698,286 participants. Epidemiologia, 4(2), 163–172. https://doi.org/10.3390/epidemiologia4020017
+
+                            </li>
+                            <li>
+                                International Institute for Population Sciences (IIPS) and ICF. (2017). National family health survey (NFHS-4), 2015–16: India. p333. https://dhsprogram.com/pubs/pdf/fr339/fr339.pdf
+
+                            </li>
+                            <li>
+                                Anjana, R. M., et al. (2023). Metabolic non-communicable disease health report of India: The ICMR-INDIAB national cross-sectional study (ICMR-INDIAB-17). The Lancet Diabetes & Endocrinology, 0(0). https://doi.org/10.1016/S2213-8587(23)00119-5
+
+                            </li>
+                            <li>
+                                (see ref. 9) Anjana, R.M. et al. (2023).
+
+                            </li>
+                            <li>
+                                Mathur, P., Leburu, S., & Kulothungan, V. (2022). Prevalence, awareness, treatment and control of diabetes in India from the countrywide national NCD monitoring survey. Frontiers in Public Health, 10, 748157. https://doi.org/10.3389/fpubh.2022.748157
+
+                            </li>
+                            <li>
+                                WHO. (2022). Noncommunicable diseases: Risk factors. [Factsheet]. https://www.who.int/data/gho/data/themes/topics/noncommunicable-diseases-risk-factors
+
+                            </li>
+                            <li>
+                                Alegría-Torres, J. A., Baccarelli, A., & Bollati, V. (2011). Epigenetics and Lifestyle. Epigenomics, 3(3), 267–277. https://doi.org/10.2217/epi.11.22
+
+                            </li>
+                            <li>
+                                Vel Szic, K. S., Declerck, K., Vidaković, M., & et al. (2015). From inflammaging to healthy aging by dietary lifestyle choices: Is epigenetics the key to personalized nutrition? Clinical Epigenetics, 7, 33. https://doi.org/10.1186/s13148-015-0068-2
+
+                            </li>
+                            <li>
+                                American Diabetes Association. (2023). Nutrition for life. Diabetes plate method. https://professional.diabetes.org/sites/dpro/files/2023-12/plan_your_plate.pdf
+
+                            </li>
+                            <li>
+                                Riddle, M.C., Cefalu, W.T., Evans, P.H., et al. (2021). Consensus report: definition and interpretation of remission in type 2 diabetes. Diabetologia, 64(10), 2359–2366. https://doi.org/10.1007/s00125-021-05542-z
+
+                            </li>
+                            <li>
+                                Lean, M. E. J., Leslie, W. S., Barnes, et al. (2019). Durability of a primary care-led weight-management intervention for remission of type 2 diabetes: 2-year results of the DiRECT open-label, cluster-randomised trial. The Lancet, Diabetes & Endocrinology, 7(5), 344–355. https://doi.org/10.1016/S2213-8587(19)30068-3
+
+                            </li>
+                            <li>
+                                Lean, M. E., Leslie, W. S., Barnes, et al. (2024). 5-year follow-up of the randomised Diabetes Remission Clinical Trial (DiRECT) of continued support for weight loss maintenance in the UK: an extension study. The Lancet Diabetes & Endocrinology, 12(4), 233–246. https://doi.org/10.1016/S2213-8587(23)00385-6
+
+                            </li>
+                            <li>
+                                Giromini, C., & Givens, D. I. (2022). Benefits and risks associated with meat consumption during key life processes and in relation to the risk of chronic diseases. Foods (Basel, Switzerland), 11(14), 2063. https://doi.org/10.3390/foods11142063
+
+                            </li>
+                            <li>
+                                WHO (IARC). (2015). IARC monographs evaluate consumption of red meat and processed meat. [Press Release, October 15, 2015]. https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf
+
+                            </li>
+                            <li>
+                                Anitha, S., Kane-Potaka, J., Tsusaka, et al. (2021). A systematic review and meta-analysis of the potential of millets for managing and reducing the risk of developing diabetes mellitus. Frontiers in Nutrition, 8, Article 687428. https://doi.org/10.3389/fnut.2021.687428
+
+                            </li>
+                            <li>
+                                SBRN. (2012). What is sedentary behaviour? Sedentary Behaviour Research Network. https://www.sedentarybehaviour.org/what-is-sedentary-behaviour/
+
+                            </li>
+                            <li>
+                                Chaudhary, M., & Sharma, P. (2023). Abdominal obesity in India: analysis of the national family health survey-5 (2019-2021) data. The Lancet Regional Health, Southeast Asia, 14, 100208. https://doi.org/10.1016/j.lansea.2023.100208
+
+                            </li>
+                            <li>
+                                GBD Obesity Collaborators. (2017). Health effects of overweight and obesity in 195 countries over 25 years. New England Journal of Medicine, 377, 13–27. https://doi.org/10.1056/NEJMoa1614362
+
+                            </li>
+                            <li>
+                                Varghese, J. S., Gupta, A., Mehta, R., Stein, A. D., & Patel, S. A. (2022). Changes in child undernutrition and overweight in India from 2006 to 2021: An ecological analysis of 36 states. Global Health, Science and Practice, 10(5), e2100569. https://doi.org/10.9745/GHSP-D-21-00569
+
+                            </li>
+                            <li>
+                                CDC. (Updated 2021). Smoking and tobacco use: Health effects of cigarette smoking. [Factsheet]. https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/index.htm
+
+                            </li>
+                            <li>
+                                Tolani, P. H., & Wadhva, S. K. (2021). Prevalence and pattern of tobacco consumption in urban community: A cross-sectional study in adults of Central India. International Journal of Community Medicine and Public Health, 8(8), 3976–3980. https://doi.org/10.18203/2394-6040.ijcmph20213031
+
+                            </li>
+                            <li>
+                                Tata Institute of Social Sciences (TISS), Mumbai & Ministry of Health and Family Welfare, Government of India. (2017). Global Adult Tobacco Survey (GATS 2 India 2016-17). https://ntcp.mohfw.gov.in/assets/document/surveys-reports-publications/Global-Adult-Tobacco-Survey-Second-Round-India-2016-2017.pdf
+
+                            </li>
+                            <li>
+                                World Health Organisation. (2018). India [Factsheet]. WHO Regional Office for South-EastAsia https://iris.who.int/bitstream/handle/10665/272672/wntd_2018_india_fs.pdf?sequence=1&isAllowed=y
+
+                            </li>
+                            <li>
+                                (see ref. 8) IIPS and ICF. (2017). p375.
+
+                            </li>
+                            <li>
+                                Kumar, P., Srivastava, S., Mishra, P. S., & Mooss, E. T. (2021). Prevalence of pre-diabetes/type 2 diabetes among adolescents (10–19 years) and its association with different measures of overweight/obesity in India: A gendered perspective. BMC Endocrine Disorders, 21(1), 146.  https://doi.org/10.1186/s12902-021-00802-w
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Websites</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Plant-Wise, a documentary on the impact of lifestyle on NCDs, with subtitles in multiple languages, including Hindi [48.00]</li>
+                            <li>Workout Routines by DanceWithDeepti [30.00], Lucy Windham [9.10] and Fit Tuber [20.24]</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Websites</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Stress Relief Breathing Techniques by WebMD</li>
+                            <li>Healthy Eating Tips by the CDC</li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 12</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>
+                                Bian, Z., Wang, L., Fan, R., et al. (2024). Genetic predisposition, modifiable lifestyles, and their joint effects on human lifespan: evidence from multiple cohort studies. BMJ Evidence-Based Medicine, 29, 255–263. https://doi.org/10.1136/bmjebm-2023-112583
+
+                            </li>
+                            <li>
+                                Definition from the American College of Lifestyle Medicine: https://lifestylemedicine.org/
+                            </li>
+                            <li>
+                                Kreouzi, M., Theodorakis, N., & Constantinou, C. (2022). Lessons learned from Blue Zones, lifestyle medicine pillars and beyond: An update on the contributions of behavior and genetics to wellbeing and longevity. American Journal of Lifestyle Medicine, 0(0). https://doi.org/10.1177/15598276221118494
+                            </li>
+                            <li>
+                                WHO (2023). Noncommunicable diseases [Factsheet]. https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases
+                            </li>
+                            <li>
+                                WHO. (2022). Invisible numbers: The true extent of noncommunicable diseases and what to do about them. [https://iris.who.int/bitstream/handle/10665/362800/9789240057661-eng.pdf?sequence=1] As explained in this document, the term ‘NCD’ can cover a range of diseases. In 2011, the first ever High-level Meeting of the United Nations General Assembly on the Prevention and Control of NCDs officially focused global action on four major diseases and four main risk factors. This became known as the 4x4 NCD Agenda. In 2018, a subsequent UN High-level Meeting broadened this scope to include mental health conditions and air pollution. This is now known as the 5x5 NCD Agenda.
+                            </li>
+                            <li>
+                                (see ref. 5) WHO. (2022). p8-11.
+                            </li>
+                            <li>
+                                Pan American Health Organization. (2019). Noncommunicable diseases in the region of the Americas: Facts and figures. https://iris.paho.org/handle/10665.2/51483 and Prüss-Ustün, A., van Deventer, E., Mudu, P., Campbell-Lendrum, D., Vickers, C., Ivanov, I., et al. (2019). Environmental risks and non-communicable diseases. BMJ, 364, l265. https://doi.org/10.1136/bmj.l265
+                            </li>
+                            <li>
+                                Murray, C. J. L., et al. (2020). Global burden of 87 risk factors in 204 countries and territories, 1990–2019: A systematic analysis for the Global Burden of Disease Study 2019. The Lancet, 396(10258), 1223–1249. https://doi.org/10.1016/S0140-6736(20)30752-2
+                            </li>
+                            <li>
+                                WHO. (n.d.). NCD Portal, India country profile. https://ncdportal.org/CountryProfile/GHE110/IND
+                            </li>
+                            <li>
+                                Threapleton, D. E., Greenwood, D. C., Evans, C. E., Cleghorn, C. L., Nykjaer, C., Woodhead, C., Cade, J. E., Gale, C. P., & Burley, V. J. (2013). Dietary fibre intake and risk of cardiovascular disease: Systematic review and meta-analysis. BMJ, 347, f6879.  https://doi.org/10.1136/bmj.f6879
+                            </li>
+                            <li>
+                                Isaksen, I. M., & Dankel, S. N. (2023). Ultra-processed food consumption and cancer risk: A systematic review and meta-analysis. Clinical Nutrition, 42(6), 919-928. https://doi.org/10.1016/j.clnu.2023.03.018
+                            </li>
+                            <li>
+                                Shi, W., Huang, X., Schooling, C. M., & Zhao, J. V. (2023). Red meat consumption, cardiovascular diseases, and diabetes: A systematic review and meta-analysis. European Heart Journal, 44(28), 2626–2635. https://doi.org/10.1093/eurheartj/ehad336
+                            </li>
+                            <li>
+                                Ma, X., Chen, Q., Pu, Y., Guo, M., Jiang, Z., Huang, W., Long, Y., & Xu, Y. (2020). Skipping breakfast is associated with overweight and obesity: A systematic review and meta-analysis. Obesity Research & Clinical Practice, 14(1), 1–8. https://doi.org/10.1016/j.orcp.2019.12.002
+                            </li>
+                            <li>
+                                Vujović, N., Piron, M. J., Qian, J., Chellappa, S. L., Nedeltcheva, A., Barr, D., Heng, S. W., Kerlin, K., Srivastav, S., Wang, W., Shoji, B., Garaulet, M., Brady, M. J., & Scheer, F. A. J. L. (2022). Late isocaloric eating increases hunger, decreases energy expenditure, and modifies metabolic pathways in adults with overweight and obesity. Cell Metabolism, 34(10), 1486–1498.e7. https://doi.org/10.1016/j.cmet.2022.09.007
+                            </li>
+                            <li>
+                                Wang, Y. J., Yeh, T. L., Shih, M. C., Tu, Y. K., & Chien, K. L. (2020). Dietary sodium intake and risk of cardiovascular disease: A systematic review and dose-response meta-analysis. Nutrients, 12(10), 2934. https://doi.org/10.3390/nu12102934
+                            </li>
+                            <li>
+                                Jun, S., Park, H., Kim, U. J., Choi, E. J., Lee, H. A., Park, B., Lee, S. Y., Jee, S. H., & Park, H. (2023). Cancer risk based on alcohol consumption levels: A comprehensive systematic review and meta-analysis. Epidemiology and Health, 45, e2023092.  https://doi.org/10.4178/epih.e2023092
+                            </li>
+                            <li>
+                                Kyu, H. H., Bachman, V. F., Alexander, L. T., Mumford, J. E., Afshin, A., Estep, K., Veerman, J. L., Delwiche, K., Iannarone, M. L., Moyer, M. L., Cercy, K., Vos, T., Murray, C. J., & Forouzanfar, M. H. (2016). Physical activity and risk of breast cancer, colon cancer, diabetes, ischemic heart disease, and ischemic stroke events: Systematic review and dose-response meta-analysis for the Global Burden of Disease Study 2013. BMJ, 354, i3857. https://doi.org/10.1136/bmj.i3857
+                            </li>
+                            <li>
+                                Irwin, M. R., Olmstead, R., & Carroll, J. E. (2016). Sleep disturbance, sleep duration, and inflammation: A systematic review and meta-analysis of cohort studies and experimental sleep deprivation. Biological Psychiatry, 80(1), 40–52. https://doi.org/10.1016/j.biopsych.2015.05.014
+                            </li>
+                            <li>
+                                Hughes, K., Bellis, M. A., Hardcastle, K. A., Sethi, D., Butchart, A., Mikton, C., Jones, L., & Dunne, M. P. (2017). The effect of multiple adverse childhood experiences on health: A systematic review and meta-analysis. The Lancet Public Health, 2(8), e356-e366. https://doi.org/10.1016/S2468-2667(17)30118-4
+                            </li>
+                            <li>
+                                Chellappa, S. L., Qian, J., Vujovic, N., Morris, C. J., Nedeltcheva, A., Nguyen, H., Rahman, N., Heng, S. W., Kelly, L., Kerlin-Monteiro, K., Srivastav, S., Wang, W., Aeschbach, D., Czeisler, C. A., Shea, S. A., Adler, G. K., Garaulet, M., & Scheer, F. A. J. L. (2021). Daytime eating prevents internal circadian misalignment and glucose intolerance in night work. Science Advances, 7(49), eabg9910. https://doi.org/10.1126/sciadv.abg9910
+                            </li>
+                            <li>
+                                Holt-Lunstad, J., Smith, T. B., Baker, M., Harris, T., & Stephenson, D. (2015). Loneliness and social isolation as risk factors for mortality: A meta-analytic review. Perspectives on Psychological Science, 10(2), 227–237. https://doi.org/10.1177/1745691614568352
+                            </li>
+                            <li>
+                                Duke Medical School Integrative Health. (n.d.). PHP manual [PDF].  https://dhw.learningcenter.com/static/scorm/11/content/documents/DukeIM_PHPManual_fullversion_FINALwithcopyright.pdf
+
+                            </li>
+                            <li>
+                                The Family Dinner Project. (n.d.). Benefits of family dinners. https://thefamilydinnerproject.org/about-us/benefits-of-family-dinners/
+                            </li>
+                            <li>
+                                JustBe Cafe in Bangalore offers such classes to members of household staff, and can serve as a model for such programs throughout the country. https://justbeyou.in/
+                            </li>
+                            <li>
+                                KindSpring. (n.d.). The 21-day challenge series [KindSpring]. https://www.kindspring.org/challenge/
+                            </li>
+                            <li>
+                                KindSpring. (n.d.). How to use a smile card [KindSpring]. https://www.kindspring.org/smilecards/
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div className="mt-5 mb-4">
+                    <h2>Resources</h2>
+                    <h3>Websites</h3>
+                    <div className="reference_lists">
+                        <ol>
+
+                            <li>
+                                Nutrition Facts with over 2000 videos by Dr. Michael Gregor
+                            </li>
+                            <li>
+                                Pubmed, a free database of over 36 million biomedical citations, maintained by the National Institutes of Health
+
+                            </li>
+                            <li>
+                                American College of Lifestyle Medicine (ACLM)
+
+                            </li>
+                            <li>
+                                Mayo Clinic Health System Primary Care History Form
+
+                            </li>
+                            <li>
+                                American College of Lifestyle Medicine (ACLM) and Loma Linda University Lifestyle Assessment Long Form
+
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
             <FooterSouthsore />
         </>
