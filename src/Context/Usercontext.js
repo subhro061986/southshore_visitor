@@ -182,6 +182,60 @@ const UserProvider = ({ children }) => {
     }
   }
 
+  // **------------publishwithus---------
+
+  const PublishWithUs = async (arg) => {
+    // console.log(arg)
+    try {
+      const response = await axios.post(Config.API_URL + Config.PUBLISH_WITH_US, arg,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+
+        })
+
+        console.log("Publish With Us Response :", response)
+
+      // if (response?.status === 200) {
+        return response
+      // }
+
+
+
+    } catch (error) {
+
+      console.log("registration context error : ", error);
+    }
+
+  }
+
+  const Enquiry = async (arg) => {
+    // console.log(arg)
+    try {
+      const response = await axios.post(Config.API_URL + Config.ENQUIRY, arg,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+
+        })
+
+        console.log("Enquiry Response :", response)
+
+      // if (response?.status === 200) {
+        return response
+      // }
+
+
+
+    } catch (error) {
+
+      console.log("Enquiry context error : ", error);
+    }
+
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -198,7 +252,9 @@ const UserProvider = ({ children }) => {
         getResourceById,
         Get_All_Open_Access,
         allOpenAccess,
-        getOpenAccessById
+        getOpenAccessById,
+        PublishWithUs,
+        Enquiry
       }}
     >
       {/* <LoadingOverlay

@@ -21,7 +21,7 @@ const Jove = () => {
                         display: "flex",
                         flexDirection: "column",
                         gap: "20px",
-                        marginTop: "30px",
+                        marginTop: "35px",
                         marginBottom: "30px"
                     }}
                 >
@@ -79,15 +79,20 @@ const Jove = () => {
                             </div>
                             <div className="col-12 col-md-2 d-flex justify-content-center">
                                 <div
+                                    className="card_border"
                                     style={{
                                         border: "0.1px solid #7B8890",
-                                        width: "0.1px",
+                                        // width: "0.1px",
                                         height: "100%",
                                         opacity: "30%"
                                     }}
                                 />
+                                {/* <div className="vr"></div>
+                                <div className="hr"></div> */}
+                                {/* <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-1 border-bottom"></div> */}
+                                
                             </div>
-                            <div className="col-5 col-md-5">
+                            <div className="col-12 col-md-5">
                                 <ul className="blue-bulleted-list ms-2"
                                     style={{
                                         fontSize: "24px",
@@ -113,7 +118,7 @@ const Jove = () => {
                         Accessing JoVE Videos
                     </h2>
                     <div className="row">
-                        <div className="col-12 col-md-5 col-lg">
+                        <div className="col-12 col-md-6 col-lg">
                             <div className="card"
                                 style={{
                                     background: '#F4F4F4',
@@ -144,11 +149,11 @@ const Jove = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-12 col-md-2">
+                        {/* <div className="col-12 col-md-2">
 
-                        </div>
-                        <div className="col-12 col-md-5">
-                            <div className="card"
+                        </div> */}
+                        <div className="col-12 col-md-6">
+                            <div className="card mt_10"
                                 style={{
                                     background: '#F4F4F4',
                                     borderRadius: "30px",
@@ -194,7 +199,8 @@ const Jove = () => {
                         style={{
                             background: '#F4F4F4',
                             borderRadius: "30px",
-                            padding: '40px'
+                            padding: '40px',
+                            marginBottom:'6%'
                         }}
                     >
                         <div className="row">
@@ -213,15 +219,16 @@ const Jove = () => {
                             </div>
                             <div className="col-12 col-md-2 d-flex justify-content-center">
                                 <div
+                                    className="card_border"
                                     style={{
                                         border: "0.1px solid #7B8890",
-                                        width: "0.1px",
+                                        // width: "0.1px",
                                         height: "100%",
                                         opacity: "30%"
                                     }}
                                 />
                             </div>
-                            <div className="col-5 col-md-5">
+                            <div className="col-12 col-md-5">
                                 <ul className="blue-bulleted-list ms-2"
                                     style={{
                                         fontSize: "24px",

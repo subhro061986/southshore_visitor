@@ -19,7 +19,7 @@ function NavbarSouthshore() {
     const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
 
     const isThisPageActive = (link) => {
-        console.log("window.location", window.location);
+        // console.log("window.location", window.location);
         if (window.location.href?.endsWith(link)) {
             return true;
         }
@@ -209,13 +209,15 @@ function NavbarSouthshore() {
                                                                     fontSize: "16px",
                                                                     color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                                     borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
-                                                                    paddingBottom: "10px"
+                                                                    paddingBottom: "10px",
+                                                                    
                                                                 }}>
-                                                                    {navItem?.text}<FaChevronDown style={{ marginLeft: '5px' }} />
+                                                                    {navItem?.text}<FaChevronDown style={{ marginLeft: '5px', marginRight:0 }} />
                                                                 </span>
                                                             </>
                                                         }
                                                         id={`offcanvasNavbarDropdown-expand-lg`}
+                                                        
                                                     >
                                                         <NavCard navItems={navItem?.children} />
                                                     </NavDropdown>
@@ -227,19 +229,19 @@ function NavbarSouthshore() {
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
-                    {/* <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
-                        <img src={iconCall} width={28} height={28} />
+                    <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
+                        <img src={iconCall} width={25} height={25} />
                         <Link className='ms-2' type='tel'
                             style={{
                                 fontFamily: "Roboto",
-                                fontSize: "16px",
+                                fontSize: "15px",
                                 fontWeight: 500,
                                 color: "#535861"
                             }}
                         >
                             +1 (650) 555-0111
                         </Link>
-                    </div> */}
+                    </div>
             </Container>
         </Navbar >
         </>

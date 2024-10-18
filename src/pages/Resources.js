@@ -8,6 +8,7 @@ import book3 from '../assets/images/book3.png';
 import book4 from '../assets/images/book4.png';
 import download from '../assets/images/download.png';
 import pdf from '../assets/images/pdf.png'
+import pdf_icon from '../assets/images/pdf_icon.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
 import { UserProfile } from "../Context/Usercontext";
 import Config from "../Config/Config.json"
@@ -31,7 +32,8 @@ const Resources = () => {
         // getDownLoadLinks();
     }, []);
 
-    const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
+    // const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
+    const [activePublisherId, setActivePublisherId] = useState(1);
 
     // Handle tab click to set the active publisher
     const handleTabClick = (publisherId) => {
@@ -43,7 +45,7 @@ const Resources = () => {
         (book) => book.publisherId === activePublisherId && book.isActive
     );
 
-    const getDownLoadLinks =async(id)=>{
+    const getDownLoadLinks = async (id) => {
         const resp = await getResourceById(id);
         const ResourceByIdResp = resp.data.output
         console.log("download resp", ResourceByIdResp);
@@ -58,17 +60,17 @@ const Resources = () => {
                 <Header />
                 <NavBarSouthsore />
 
-                <div className="mt-3">
+                <div className="mt-3 mb-4">
                     <div className="screen_head" style={{ textAlign: 'left' }}>Resources</div>
                     <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</div>
                 </div>
 
-                <nav className="navbar">
+                <nav className="navbar" style={{ overflowX: 'auto' }}>
                     <ul className="navbar-list nav_border">
                         {allPublisherResources.map((publisher, index) => (
                             <li
                                 key={publisher.id}
-                                className={`navbar-item ${activePublisherId === publisher.id ? "active" : ""}`}
+                                className={`navbar-item me_3 ${activePublisherId === publisher.id ? "active" : ""}`}
                                 // onClick={() => setActiveTab(tab.publisherName)}
                                 onClick={() => handleTabClick(publisher.id)}
                             >
@@ -78,21 +80,23 @@ const Resources = () => {
                     </ul>
                 </nav>
 
-                <div className="download_head mt-5">Download the listed <span> PDF Books</span></div>
+                <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
                 <div className="row d-flex justify-content-between" style={{ marginBottom: '15%' }}>
                     {
                         filteredBooks?.length > 0 ? (
                             filteredBooks.map((book) => (
-                                <div className="col-md-3 mt-5 d-flex justify-content-center" key={book.id}>
+                                <div className="col-md-3 mt-2 d-flex justify-content-center" key={book.id}>
                                     <div className="card card_style" style={{ width: '17rem' }}>
                                         <div className="d-flex justify-content-center img_div_style position-relative">
-                                            <button className="border border-white bg-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
-                                                <img src={pdf} height={20} width={20} />
+                                            <button
+                                                className="border border-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
+                                                {/* <img src={pdf} height={20} width={20} /> bg-white */}
+                                                <img src={pdf_icon} height={40} width={40}/>
                                             </button>
                                             <img
                                                 // src={data.image}
                                                 height={170}
-                                                width={150} 
+                                                width={150}
                                                 src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + book.coverImageLink + '?d=' + new Date()}
                                                 className="mt-4" />
                                         </div>
@@ -102,10 +106,10 @@ const Resources = () => {
                                             {/* <a  */}
                                             {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
                                             {/* > */}
-                                                <div className="d-flex justify-content-center mt-3 position-relative">
-                                                    <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%' }} onClick={()=>getDownLoadLinks(book.id)}>Download PDF</button>
-                                                    <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
-                                                </div>
+                                            <div className="d-flex justify-content-center mt-3 position-relative">
+                                                <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%', textAlign: 'center', paddingRight: '32%' }} onClick={() => getDownLoadLinks(book.id)}>Download</button>
+                                                <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
+                                            </div>
                                             {/* </a> */}
                                         </div>
                                     </div>

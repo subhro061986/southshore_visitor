@@ -3,10 +3,33 @@ import FooterSouthsore from "../components/FooterSouthsore";
 import { Header } from "../components/Header";
 import arrow_right from '../assets/images/arrow-right.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
-
+import { UserProfile } from "../Context/Usercontext";
+import Config from "../Config/Config.json";
 
 
 const Enquiry = () => {
+
+    const { Enquiry } = UserProfile()
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [contactNo, setContactNo] = useState('');
+    const [publisher, setPublisher] = useState('');
+    const [message, setMessage] = useState('');
+
+    const submit = async() => {
+        var json = {
+            name:name,
+            email:email,
+            publisherName:publisher,
+            contactNo:contactNo,
+            message:message
+
+        }
+        const resp = await Enquiry(json)
+        alert("Enquiry sent successfully")
+        console.log('publish resp', resp)
+    }
 
 
 
@@ -26,32 +49,32 @@ const Enquiry = () => {
                         <div className="col-md-6">
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Name</label>
-                                <input type="text" className="form-control input_style" placeholder="Your user name" />
+                                <input type="text" className="form-control input_style" placeholder="Your user name" value={name} onChange={(e) => { setName(e.target.value) }} />
                             </div>
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Contact No</label>
-                                <input type="text" className="form-control input_style" placeholder="+91 | Example input placeholder" />
+                                <input type="text" className="form-control input_style" placeholder="+91 | Example input placeholder" value={contactNo} onChange={(e) => { setContactNo(e.target.value) }} />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Email ID</label>
-                                <input type="email" className="form-control input_style" placeholder="Email ID" />
+                                <input type="email" className="form-control input_style" placeholder="Email ID" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                             </div>
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Publisher</label>
-                                <input type="text" className="form-control input_style" placeholder="Type here" />
+                                <input type="text" className="form-control input_style" placeholder="Type here" value={publisher} onChange={(e) => { setPublisher(e.target.value) }} />
                             </div>
                         </div>
 
                         <div className="col-12">
                             <label className="form-label label_font mb-2">Your Message</label>
-                            <textarea type="text" className="form-control textarea_style" rows="6" placeholder="" />
+                            <textarea type="text" className="form-control textarea_style" rows="6" placeholder="" value={message} onChange={(e) => { setMessage(e.target.value) }} />
                         </div>
 
 
                         <div className="d-flex justify-content-center mt-5 position-relative">
-                            <button className="explore_btn">Submit Now</button>
+                            <button className="explore_btn" onClick={()=>{submit()}}>Submit Now</button>
                             <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
                         </div>
                     </form>

@@ -16,7 +16,7 @@ const Writefulls = () => {
                 <Header />
                 <NavBarSouthsore />
                 <div className>
-                    <div className="text-start">
+                    <div className="text-start" style={{marginTop:'3%'}}>
                         <div className="screen_head" style={{ textAlign: "left" }}>About Writefull</div>
                         {/* <div className="screen_sub_head mt-1" style={{ textAlign: "left" }}>Established in 1683 in Leiden (The Netherlands), Brill is a renowned publishing house specializing in the Humanities and Social Sciences, Law, and selected areas in the Sciences. With offices in<span style={{ fontWeight: '700' }}> Leiden, Paderborn (Germany), Boston (USA), Singapore, and Beijing (China)</span>, Brill continues to expand its global reach</div> */}
                     </div>
@@ -37,7 +37,9 @@ const Writefulls = () => {
                             <div className="card">
                                 <div className="card-body-list p-5">
                                     <div className=" d-flex justify-content-between title_width">
-                                        <img className="me-3" src={newspaper} height={25} width={25} />
+                                        <img className="me-3" src={newspaper} 
+                                        // height={25} width={25} 
+                                        />
                                         <div className="brill_title">Products</div>
                                     </div>
                                     <ul className="ms-2">
@@ -59,9 +61,11 @@ const Writefulls = () => {
                         </div>
                         <div className="col-sm-6">
                             <div className="card heighgt:400">
-                                <div className="card-body-list p-5">
+                                <div className="card-body-list p-5 mt_10">
                                     <div className="d-flex ">
-                                        <img className="me-3" src={book} height={25} width={25} />
+                                        <img className="me-3" src={book} 
+                                        // height={25} width={25} 
+                                        />
                                         <div className="brill_title">Widgets</div>
                                     </div>
                                     <ul className="ms-2">
@@ -82,7 +86,7 @@ const Writefulls = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-4 ms-1">
+                    <div className="mt-4 ms-1" style={{marginBottom:'10%'}}>
                         <ul>
                             <li style={{fontFamily:"Roboto", fontWeight:'400', fontSize:'18px', color:'#535861'}}>Offers a free trial for 15 days</li>
                             <li style={{fontFamily:"Roboto", fontWeight:'400', fontSize:'18px', color:'#535861'}}>Institutional access is provided based on email domains</li>
