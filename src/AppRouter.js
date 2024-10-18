@@ -26,6 +26,7 @@ import SalesSupport from './pages/SalesSupport/SalesSupport';
 import Writefulls from './pages/Writefull';
 import ThomsonAbout from './pages/ThomsonAbout/ThomsonAbout';
 import ContactUs from './pages/ContactUs';
+import ReferenceResource from './pages/ahpi/lifestyleasmedicine/references/ReferenceResource';
 
 const AppRouter=()=> {
 
@@ -52,7 +53,7 @@ const AppRouter=()=> {
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
             <Route exact path="/contactus" Component={ContactUs} />
-            
+            <Route exact path="/referenceresource" Component={ReferenceResource} />
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>

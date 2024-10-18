@@ -129,7 +129,7 @@
   text-align: left;
 }
 
-.slide_txt_head > span {
+.slide_txt_head>span {
   font-size: 61px;
 }
 
@@ -274,7 +274,7 @@
   color: #4d39f1;
 }
 
-.card_btn > a {
+.card_btn>a {
   color: #4d39f1;
 }
 
@@ -291,7 +291,7 @@
   color: #191a1c;
 }
 
-.label_font > span {
+.label_font>span {
   font-family: "Roboto";
   font-size: 14px;
   font-weight: 500;
@@ -345,7 +345,7 @@
   border-color: white;
 }
 
-.radio_toolbar input[type="radio"]:checked + label {
+.radio_toolbar input[type="radio"]:checked+label {
   background-color: #363232;
   border-color: white;
   color: white;
@@ -360,7 +360,7 @@
   color: #011539;
 }
 
-.download_head > span {
+.download_head>span {
   font-weight: 700;
 }
 
@@ -435,12 +435,12 @@
   align-items: center;
 }
 
-.card_style_1 > div > ul > li::marker {
+.card_style_1>div>ul>li::marker {
   color: #4d39f194 !important;
   font-size: 30px !important;
 }
 
-.card_style_1 > div > ul > li {
+.card_style_1>div>ul>li {
   font-family: Ubuntu;
   font-size: 18px;
   font-weight: 500;
@@ -469,6 +469,15 @@ pr {
 
 .navbar-expand-lg .navbar-nav .nav-link {
   margin-right: 0;
+}
+
+.reference_lists>ol>li {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  color: #535861;
 }
 
 @media screen and (max-width: 436px)and (min-width: 377px) {
@@ -571,7 +580,7 @@ pr {
 
 @media screen and (min-width: 1920px) {
   .me_3 {
-    margin-right: 2.6rem!important;
+    margin-right: 2.6rem !important;
   }
 
   .carousel_caption_style {

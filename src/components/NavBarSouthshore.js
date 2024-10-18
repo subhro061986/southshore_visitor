@@ -183,7 +183,7 @@ function NavbarSouthshore() {
                                     navItems.map((navItem, index) => {
                                         if (!navItem?.children) {
                                             return (
-                                                <Nav.Link href={navItem?.link}>
+                                                <Nav.Link href={navItem?.link} key={index}>
                                                     <span style={{
                                                         fontFamily: 'Ubuntu',
                                                         fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,

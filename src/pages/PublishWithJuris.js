@@ -43,7 +43,7 @@ const PublishWithJuris = () => {
 
         }
         const resp = await PublishWithUs(json)
-        alert("Enquiry sent successfully")
+        alert(resp.data.message)
         console.log('publish resp', resp)
     }
 
@@ -59,7 +59,7 @@ const PublishWithJuris = () => {
                         <div className="screen_head">Publish with Juris Press</div>
                         <div className="screen_sub_head mt-1">Reach out to us if you have an idea for a book or if you have a manuscript ready for publishing. Please write to us at <span style={{ fontWeight: '700' }}>Email ID</span> with the following information and we will reach out to you at the earliest.</div>
                     </div>
-                    <form className="row g-3 my-5">
+                    <div className="row g-3 my-5">
                         <div className="col-12 col-md-6">
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Name<span style={{ color: 'red' }}>*</span></label>
@@ -117,7 +117,7 @@ const PublishWithJuris = () => {
                             <button className="explore_btn" onClick={()=>{submit()}}>Submit Now</button>
                             <div className="rightarrow"><img src={arrow_right} height={30} width={30} /></div>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
             </div>
