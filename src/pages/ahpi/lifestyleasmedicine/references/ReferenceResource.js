@@ -255,7 +255,118 @@ const ReferenceResource = () => {
                             <li>Adedeji, A., Olonisakin, T. T., Buchcik, J., & et al. (2023). The multicultural conceptualisation of well-being. BMC Public Health, 23, 2041.</li>
                         </ol>
                     </div>
+
                 </div>
+                <div className="screen_sub_head mt-5">Chapter 6</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>World Health Organization. (2018). Healthy diet. https://www.who.int/publications/m/item/healthy-diet-factsheet394</li>
+                            <li>ICMR-NIN. (2020). Nutrient Requirement for Indians: A Report of the Expert Group. Department of Health Research, Ministry of Health and Family Welfare, Government of India. https://www.nin.res.in/RDA_Full_Report_2024.html, p15.</li>
+                            <li>(see ref. 2) ICMR-NIN. (2020). p66.</li>
+                            <li>(see ref. 2) ICMR-NIN. (2020). p99.</li>
+                            <li>National Library of Medicine. (n.d.). Health Information – Vitamin C. [Medline Plus] https://medlineplus.gov/ency/article/002404.htm</li>
+                            <li>Singla, R., Garg, A., Surana, V., Aggarwal, S., Gupta, G., & Singla, S. (2019). Vitamin B12 deficiency is endemic in Indian population: A perspective from north India. Indian Journal of Endocrinology and Metabolism, 23(2), 211–214. https://doi.org/10.4103/ijem.IJEM_122_19</li>
+                            <li>Aparna, P., Muthathal, S., Nongkynrih, B., & Gupta, S. K. (2018). Vitamin D deficiency in India. Journal of Family Medicine and Primary Care, 7(2), 324–330. https://doi.org/10.4103/jfmpc.jfmpc_78_18</li>
+                            <li>Afzaal, M., Saeed, F., Shah, Y. A., Hussain, M., Rabail, R., Socol, C. T., Hassoun, A., Pateiro, M., Lorenzo, J. M., Rusu, A. V., & Aadil, R. M. (2022). Human gut microbiota in health and disease: Unveiling the relationship. Frontiers in Microbiology, 13, Article 999001. https://doi.org/10.3389/fmicb.2022.999001</li>
+                            <li>(see ref. 2) ICMR-NIN. (2020). p291. </li>
+                            <li>(see ref. 2) ICMR-NIN. (2020). p17, p284.</li>
+                            <li>Indian Academy of Pediatrics (IAP). (2021). Nutrition for children between 5–12 years: Guidelines for parents. https://iapindia.org/pdf/Ch-044-Nutrition-5-12-y-IAP-Parental-Guidelines-28112021.pdf</li>
+                            <li>(see ref. 2) ICMR-NIN. (2020). p5.</li>
+                            <li>Nelson, J. B. (2017). Mindful eating: The art of presence while you eat. Diabetes Spectrum, 30(3), 171–174. https://doi.org/10.2337/ds17-0015</li>
+                            <li>Markey, C. H., Strodl, E., Aimé, A., McCabe, M., Rodgers, R., Sicilia, A., ... Fuller-Tyszkiewicz, M. (2023). A survey of eating styles in eight countries: Examining restrained, emotional, intuitive eating and their correlates. British Journal of Health Psychology, 28(1), 136–155. https://doi.org/10.1111/bjhp.12616</li>
+                            <li>Food Safety and Standards Authority of India. (2022). The Gazette of India - Notification. New Delhi.
+                                p11. https://www.fssai.gov.in/upload/notifications/2022/10/6348f977d94a5Gazette_Notification_Labelling_14_10_2022.pdf
+                            </li>
+                            <li> liInstitute of Medicine (US) Committee on Military Nutrition Research. (1999). Military strategies for sustainment of nutrition and immune function in the field. In Nutrition and Immune Responses: What Do We Know? Washington (DC): National Academies Press (US). https://www.ncbi.nlm.nih.gov/books/NBK230970/</li>
+                            <li>Chawla, R., Madhu, S. V., Makkar, B. M., Ghosh, S., Saboo, B., Kalra, S., & RSSDI-ESI Consensus Group (2020). RSSDI-ESI clinical practice recommendations for the management of type 2 Diabetes Mellitus 2020. Indian Journal of Endocrinology and Metabolism, 24(1), 1–122. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7328526/</li>
+                            <li>Dawda, G. (n.d.) Unfolding science behind whole grains [PowerPoint slides]. Protein Foods and Nutrition Development Association of India.  https://www.pfndai.org/Document/Association_News/Curing_Present/Unfolding_Science_behind_Whole_Grains_-_Gayatri_Dawda.pdf</li>
+                            <li>(see ref. 17) Chawla, R. et al. (2020), p9.</li>
+                            <li>(see ref. 17) Chawla, R. et al. (2020), p9.</li>
+                            <li>Mattson, M.P. (2005). Energy intake, meal frequency, and health: a neurobiological perspective. Annual Review of Nutrition, 25, 237–260. https://doi.org/10.1146/annurev.nutr.25.050304.092526</li>
+                            <li>Sharma, M., Li, Y., Stoll, M. L., & Tollefsbol, T. O. (2019). The epigenetic connection between the gut microbiome in obesity and diabetes. Frontiers in Genetics, 10, 1329. https://doi.org/10.3389/fgene.2019.01329 </li>
+                            <li>Suganya, K., & Koo, B.-S. (2020). Gut–brain axis: Role of gut microbiota on neurological disorders and how probiotics/prebiotics beneficially modulate microbial and immune pathways to improve brain functions. International Journal of Molecular Sciences, 21, 7551. https://doi.org/10.3390/ijms21207551</li>
+                            <li>Firth, J., Gangwisch, J. E., Borisini, A., Wootton, R. E., & Mayer, E. A. (2020). Food and mood: how do diet and nutrition affect mental wellbeing? BMJ, 369, m2382. https://doi.org/10.1136/bmj.m2382</li>
+                            <li>Aucoin, M., LaChance, L., Naidoo, U., Remy, D., Shekdar, T., Sayar, N., Cardozo, V., Rawana, T., Chan, I., & Cooley, K. (2021). Diet and anxiety: A scoping review. Nutrients, 13(12), 4418. https://doi.org/10.3390/nu13124418</li>
+                            <li>Granero, R. (2022). Role of nutrition and diet on healthy mental state. Nutrients, 14(4), 750. https://doi.org/10.3390/nu14040750</li>
+                        </ol>
+
+                    </div>
+                </div>
+                <div className="mt-5">
+                    <h2>Resources</h2>
+                    <h3>Videoes</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>The Intermittent Fasting Revolution by Mark Mattson [59.44]</li>
+                            <li>\Health and Nutrition Videos by NutritionFacts.Org</li>
+                            <li>Forks Over Knives, a documentary on the benefits of whole food plant-based nutrition</li>
+
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Website</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Building a Healthful India: The Power of Nutrition by the Physicians Committee for Reponsible Medicine</li>
+                            <li>Whole Foods Plant-Based Menus and Recipes by the T. Colin Campbell Centre for Nutrition Studies</li>
+                            <li>Healthy and Wholesome Recipes by Sharan India</li>
+                        </ol>
+                    </div>
+                    <h3 className="mt-4">Additional Reading</h3>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>Cagigas, M. L., Twigg, S. M., & Fontana, L. (2024). Ten tips for promoting cardiometabolic health and slowing cardiovascular aging. European Heart Journal.</li>
+                            <li>Landry, M. J., Ward, C. P., Cunanan, K. M., Durand, L. R., Perelman, D., Robinson, J. L., ... Gardner, C. D. (2023). Cardiometabolic effects of omnivorous vs vegan diets in identical twins: A randomized clinical trial. JAMA Network Open, 6(11), e2344457.</li>
+                        </ol>
+                    </div>
+
+                </div>
+                <div className="screen_sub_head mt-5">Chapter 6</div>
+                <div className="mt-3">
+                    <h2>References</h2>
+                    <div className="reference_lists">
+                        <ol>
+                            <li>
+                            Morris, J. N., Heady, J. A., Raffle, P. A. B., Roberts, C. G., & Parks, J. W. (1953). Coronary heart-disease and physical activity of work. The Lancet, 262(6796), 1111–1120. https://doi.org/10.1016/S0140-6736(53)91495-0
+                            </li>
+                            <li>Ruegsegger, G. N., & Booth, F. W. (2018). Health benefits of exercise. Cold Spring Harbor Perspectives in Medicine, 8(8), a029694. https://doi.org/10.1101/cshperspect.a029694</li>
+                            <li>Noordsy, D. L. (Ed.). (2019). Lifestyle Psychiatry. American Psychiatric Association Publishing.</li>
+                            <li>Xie, F., You, Y., Guan, C. et al. (2022). Association between physical activity and infertility: A comprehensive systematic review and meta-analysis. Journal of Translational Medicine, 20(1), 237. https://doi.org/10.1186/s12967-022-03426-3</li>
+                            <li>Raisi, A., Boonpur, J., Breheny, M., et al. (2024). Association of stair use with risk of major chronic diseases. American Journal of Preventive Medicine, 66(2), 324–332. https://doi.org/10.1016/j.amepre.2023.10.007</li>
+                            <li>Castoldi, R. C., de Ângelo, J.C., Pereira, T.T., et al. (2023). Relationship between physical exercise and COVID-19 (SARS-CoV-2): Systematic review. Sport Sciences for Health, 19(1), 55–67. https://doi.org/10.1007/s11332-022-01028-6</li>
+                            <li>Ji, M., Li, R., & Xu, Y. (2024). Meta-analysis of the effect of different exercise modalities in the prevention and treatment of perinatal depression. Journal of Affective Disorders, 350, 442–451. https://doi.org/10.1016/j.jad.2024.01.076</li>
+                            <li>WHO. (2022). Physical activity India 2022 country profile. https://www.who.int/publications/m/item/physical-activity-ind-2022-country-profile</li>
+                            <li>Kokkinos, P., Myers, J., Faselis, et al. (2010). Exercise capacity and mortality in older men: A 20-year follow-up study. Circulation, 122, 790–797. https://doi.org/10.1161/CIRCULATIONAHA.110.938852</li>
+                            <li>Myers, J., Herbert, W., Ribisl, P., & Franklin, B. (2008). Is new science driving practice improvements and better patient outcomes? Applications for cardiac rehabilitation. Clinical and Investigative Medicine 31(6), E400–E407. https://utpjournals.press/doi/abs/10.25011/cim.v31i6.4928</li>
+                            <li>Katzmarzyk, P. T., Friedenreich, C., Shiroma, E. J., & Lee, I. M. (2022). Physical inactivity and non-communicable disease burden in low-income, middle-income and high-income countries. British Journal of Sports Medicine, 56(2), 101–106. https://doi.org/10.1136/bjsports-2020-103640</li>
+                            <li>Dey, K. C., Zakrzewski-Fruer, J. K., Smith, L. R., Jones, R. L., & Bailey, D. P. (2021). The prevalence of daily sedentary time in South Asian adults: A systematic review. International Journal of Environmental Research and Public Health, 18(17), 9275. https://doi.org/10.3390/ijerph18179275</li>
+                            <li>Zhu, P., et al. (2023). Replacing of sedentary behavior with physical activity and the risk of mortality in people with prediabetes and diabetes: A prospective cohort study. International Journal of Behavioral Nutrition and Physical Activity, 20(1), 81. https://doi.org/10.1186/s12966-023-01488-0</li>
+                            <li>Celis-Morales, C. A., et al. (2013). Should physical activity recommendations be ethnicity-specific? Evidence from a cross-sectional study of South Asian and European men. PloS One, 8(12), e82568. https://doi.org/10.1371/journal.pone.0082568</li>
+                            <li>Myers, J., Prakash, M., Froelicher, V., Do, D., Partington, S., & Atwood, J. E. (2002). Exercise capacity and mortality among men referred for exercise testing. The New England Journal of Medicine, 346(11), 793–801. https://doi.org/10.1056/NEJMoa011858</li>
+                            <li>Paluch, A. E., Bajpai, S., Bassett, D. R., et al. (2022). Daily steps and all-cause mortality: A meta-analysis of 15 international cohorts. The Lancet Public Health, 7(3), e219–e228. https://doi.org/10.1016/S2468-2667(21)00302-9</li>
+                            <li>Banach, M., Lewek, J., Surma, S., et al. (2023). The association between daily step count and all-cause and cardiovascular mortality: A meta-analysis. European Journal of Preventive Cardiology, 30(18), 1975–1985. https://doi.org/10.1093/eurjpc/zwad229</li>
+                            <li>Gao, W., Sanna, M., Chen, Y., et al. (2024). Occupational sitting time, leisure physical activity, and all-cause and cardiovascular disease mortality. JAMA Network Open, 7(1), e2350680–e2350680. https://doi.org/10.1001/jamanetworkopen.2023.50680</li>
+                            <li>(see ref. 5) Raisi, A., Boonpur, J., Breheny, M., et al. (2024). p326.</li>
+                            <li>Wen, C. P., Wai J.P., Tsai M.K., et al. (2011). Minimum amount of physical activity for reduced mortality and extended life expectancy: A prospective cohort study. The Lancet, 378(9798), 1244–1253. https://doi.org/10.1016/S0140-6736(11)60749-6</li>
+                            <li>Baptista, L., Machado-Rodrigues, A., & Martins, R. (2018). Back to basics with active lifestyles: Exercise is more effective than metformin to reduce cardiovascular risk in older adults with type 2 diabetes. Biology of Sport, 35(4), 363–372. https://doi.org/10.5114/biolsport.2018.78057</li>
+                            <li>Pilmark, N. S., Lyngbæk, M., Oberholzer, L., et al. (2021). The interaction between metformin and physical activity on postprandial glucose and glucose kinetics: Randomized clinical trial. Diabetologia, 64, 397–409. https://doi.org/10.1007/s00125-020-05282-6</li>
+                            <li>Kokkinos, P. F., Faselis, C., Myers, J., et al. (2013). Interactive effects of fitness and statin treatment on mortality risk in veterans with dyslipidaemia: A cohort study. The Lancet, 381(9864), 394–399. https://doi.org/10.1016/S0140-6736(12)61426-3</li>
+                            <li>Bosomworth, N. J. (2016). Statin therapy as primary prevention in exercising adults: Best evidence for avoiding myalgia. The Journal of the American Board of Family Medicine, 29(6), 727–740. https://doi.org/10.3122/jabfm.2016.06.160085</li>
+                            <li>Naci, H., Salcher-Konrad, M., Dias, S., et al. (2018). How does exercise treatment compare with antihypertensive medications? A network meta-analysis of 391 randomised controlled trials assessing exercise and medication effects on systolic blood pressure. British Journal of Sports Medicine. https://doi.org/10.1136/bjsports-2018-099921</li>
+                            <li>Noetel, M., Sanders, T., Gallardo-Gomez, D., et al. (2024). Effect of exercise for depression: Systematic review and network meta-analysis of randomised controlled trials. BMJ, 384, e075847. https://doi.org/10.1136/bmj-2023-075847</li>
+                            <li>Engeroff, T., Groneberg, D.A., Wilke, J., et al. (2023). After dinner rest a while, after supper walk a mile? A systematic review with meta-analysis on the acute postprandial glycemic response to exercise before and after meal ingestion in healthy subjects and patients with impaired glucose tolerance. Sports Medicine, 53(4), 849–869. https://doi.org/10.1007/s40279-022-01808-7</li>
+                            <li>Youngberg, W. (2012). Goodbye Diabetes: Preventing and Reversing Diabetes the Natural Way. Hart Books</li>
+                            <li>(see ref. 2) Ruegsegger, G. N., & Booth, F. W. (2018). p11.</li>
+                            <li>Ford, E. S., Bergmann, M. M., Kröger, J., Schienkiewitz, A., Weikert, C., & Boeing, H. (2009). Healthy living is the best revenge: Findings from the European prospective investigation into cancer and nutrition - Potsdam study. Archives of Internal Medicine, 169(15), 1355–1362. https://doi.org/10.1001/archinternmed.2009.237 </li>
+                            <li>Boere, K., Lloyd, K., Binsted, G., & Krigolson, O. E. (2023). Exercising is good for the brain but exercising outside is potentially better. Scientific Reports, 13(1), 1140. https://doi.org/10.1038/s41598-022-26093-2</li>
+                            <li>Hahad, O., Kuntic, M., Frenis, K., et al. (2021). Physical activity in polluted air—Net benefit or harm to cardiovascular health? A comprehensive review. Antioxidants, 10(11), 1787. https://doi.org/10.3390/antiox10111787</li>
+                            <li>Laeremans, M., Dons, E., Avila-Palencia, I., et al. (2018). Black carbon reduces the beneficial effect of physical activity on lung function. Medicine & Science in Sports & Exercise 50(9), 1875–1881. https://doi.org/10.1249/MSS.0000000000001632</li>
+                            <li>Nguyen, X. M. T., Li, Y., Wang, D. D., Whitbourne, S. B., Houghton, S. C., Hu, F. B., ... & Wilson, P. W. (2024). Impact of 8 lifestyle factors on mortality and life expectancy among United States veterans: The million veteran program. The American Journal of Clinical Nutrition, 119(1), 127–135. https://doi.org.10.1016/j.ajcnut.2023.10.032</li>
+                            <li>Bikomeye, J. C., Beyer, A. M., Kwarteng, J. L., & Beyer, K. M. (2022). Greenspace, inflammation, cardiovascular health, and cancer: A review and conceptual framework for greenspace in cardio-oncology research. International Journal of Environmental Research and Public Health, 19(4), 2426. https://doi.org/10.3390/ijerph19042426</li>
+                        </ol>
+                        </div>
+                        </div>
             </div>
             <FooterSouthsore />
         </>
