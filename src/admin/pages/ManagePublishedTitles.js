@@ -69,7 +69,12 @@ const ManagePublishedTitles = () => {
             // console.log("formData", formData.entries);
 
             const resp = await createPublishedTitle(formData)
-            // alert(resp.data.message);
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
 
          }
          else {
@@ -83,7 +88,12 @@ const ManagePublishedTitles = () => {
 
             const resp = await editPublishedTitle(existingId, formData)
 
-            // alert(resp.data.message);
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
 
          }
 
@@ -117,12 +127,24 @@ const ManagePublishedTitles = () => {
         if (evt.target.checked === true) {
             //call restore
             let resp = await editPublishedTitle(id, { title, author, buyLink, publisher, image, isActive: 1 });
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
         }
         else {
             //call delete
             if (window.confirm("Do you want to deactivate the published title?") == true) {
                 // console.log("You pressed OK!");
                 let resp = await editPublishedTitle(id, { title, author, buyLink, publisher, image, isActive: 0 });
+                if (resp?.data?.message) {
+                    alert(resp?.data?.message);
+                }
+                else if (resp?.message) {
+                    alert(resp?.message);
+                }
             }
 
         }

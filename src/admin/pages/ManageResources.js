@@ -33,19 +33,19 @@ const ManageResources = () => {
         setAddModal(true);
         if (id === 0) {
             setExistingId(0)
-        setModalTitle("Add Resource")
+            setModalTitle("Add Resource")
             setTitle('')
-        //     setBuyLink('')
+            //     setBuyLink('')
             setPublisher('')
             setDescription('')
             setCoverImage(null)
             setPdfFile(null)
-         }
-         else {
+        }
+        else {
             setExistingId(id);
             setModalTitle("Edit Resource");
             Get_Resource_By_Id(id);
-         }
+        }
     }
 
     const closeAddModal = () => {
@@ -54,19 +54,24 @@ const ManageResources = () => {
 
     const handleFormSubmission = async () => {
         if (existingId === 0) {
-        let formData = new FormData();
+            let formData = new FormData();
 
-        formData.append("bookTitle", title);
-        formData.append("coverImage", coverImage);
-        formData.append("pdfFile", pdffile);
-        formData.append("publisherId", publisher);
-        formData.append("description", description);
-        formData.append("publisherName", publisherName);
+            formData.append("bookTitle", title);
+            formData.append("coverImage", coverImage);
+            formData.append("pdfFile", pdffile);
+            formData.append("publisherId", publisher);
+            formData.append("description", description);
+            formData.append("publisherName", publisherName);
 
-        // console.log("formData", formData.entries);
+            // console.log("formData", formData.entries);
 
-        const resp = await createResource(formData)
-        alert(resp.data.message);
+            const resp = await createResource(formData)
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
 
         }
         else {
@@ -80,7 +85,12 @@ const ManageResources = () => {
 
             const resp = await editResource(existingId, formData)
 
-            alert(resp.data.message);
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
 
         }
 
@@ -115,7 +125,7 @@ const ManageResources = () => {
     const Get_Resource_By_Id = async (id) => {
         const response = await getResourceById(id);
         console.log("published title=", response);
-        const resouce_by_id = response.data.output 
+        const resouce_by_id = response.data.output
         setExistingId(resouce_by_id?.id);
         setTitle(resouce_by_id?.bookTitle);
         setPublisher(resouce_by_id?.publisherId);
@@ -127,13 +137,25 @@ const ManageResources = () => {
     const act_inact_pub_title = async (evt, id) => {
         if (evt.target.checked === true) {
             //call restore
-            let resp = await editResource(id, {isActive: 1 });
+            let resp = await editResource(id, { isActive: 1 });
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
         }
         else {
             //call delete
             if (window.confirm("Do you want to deactivate the published title?") == true) {
                 // console.log("You pressed OK!");
-                let resp = await editResource(id, {isActive: 0 });
+                let resp = await editResource(id, { isActive: 0 });
+                if (resp?.data?.message) {
+                    alert(resp?.data?.message);
+                }
+                else if (resp?.message) {
+                    alert(resp?.message);
+                }
             }
 
         }
@@ -180,7 +202,7 @@ const ManageResources = () => {
                                                                     <img
                                                                         src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + data.coverImageLink + '?d=' + new Date()}
                                                                         // src={face1}
-                                                                        style={{width:36}}
+                                                                        style={{ width: 36 }}
                                                                         height={36} width={56} className="me-2" alt="coverImage" />
                                                                 </td>
                                                                 <td>
@@ -200,13 +222,13 @@ const ManageResources = () => {
                                                                 <td>
                                                                     <div className="d-flex align-items-center">
                                                                         <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20}
-                                                                        onClick={() => {openAddModal(data?.id)}}
+                                                                            onClick={() => { openAddModal(data?.id) }}
                                                                         />
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                             <input style={{ cursor: 'pointer' }}
                                                                                 checked={data.isActive === 1 ? true : false}
                                                                                 className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                            onChange={(e) => act_inact_pub_title(e, data.id)}
+                                                                                onChange={(e) => act_inact_pub_title(e, data.id)}
                                                                             />
                                                                         </div>
                                                                         {/* <MdDeleteForever style={{ color: '#9a55ff' }} size={20} /> */}
@@ -252,7 +274,7 @@ const ManageResources = () => {
                                                     allPublisherResources?.map((data, index) => (
                                                         <option
                                                             value={data.id} key={index}
-                                                        selected={publisher === data.id ? true : false}
+                                                            selected={publisher === data.id ? true : false}
                                                         >
                                                             {data.publisherName}
                                                         </option>

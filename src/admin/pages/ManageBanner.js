@@ -57,8 +57,14 @@ const ManageBanner = () => {
             formData.append("redirectURL", addModalRedirectionURL);
             formData.append("image", addModalImage);
 
-            await createBanner(formData)
-            
+            let resp = await createBanner(formData);
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
+
         }
         else {
             let formData = new FormData();
@@ -68,13 +74,19 @@ const ManageBanner = () => {
             formData.append("redirectURL", addModalRedirectionURL);
             formData.append("image", addModalImage);
 
-            await editBanner(existingId, formData)
-            
+            let resp = await editBanner(existingId, formData);
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
+
         }
 
         closeAddModal();
 
-        
+
     }
 
     const handleImageUpload = (e) => {
@@ -97,19 +109,31 @@ const ManageBanner = () => {
 
     }
 
-    const act_inact_banner = async (evt,id) => {
+    const act_inact_banner = async (evt, id) => {
         if (evt.target.checked === true) {
             //call restore
-            let resp = await editBanner(id, {isActive:1});
-          }
-          else {
+            let resp = await editBanner(id, { isActive: 1 });
+            if (resp?.data?.message) {
+                alert(resp?.data?.message);
+            }
+            else if (resp?.message) {
+                alert(resp?.message);
+            }
+        }
+        else {
             //call delete
             if (window.confirm("Do you want to deactivate the banner?") == true) {
-              // console.log("You pressed OK!");
-              let resp = await editBanner(id, {isActive:0});
+                // console.log("You pressed OK!");
+                let resp = await editBanner(id, { isActive: 0 });
+                if (resp?.data?.message) {
+                    alert(resp?.data?.message);
+                }
+                else if (resp?.message) {
+                    alert(resp?.message);
+                }
             }
-      
-          }
+
+        }
 
     }
 
