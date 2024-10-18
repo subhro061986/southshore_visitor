@@ -1,7 +1,7 @@
 import React, { useEffect, useState, } from "react";
-import FooterSouthsore from "../../../../components/FooterSouthsore";
-import { Header } from "../../../../components/Header";
-import NavBarSouthsore from "../../../../components/NavBarSouthshore";
+import FooterSouthsore from "../../../components/FooterSouthsore";
+import { Header } from "../../../components/Header";
+import NavBarSouthsore from "../../../components/NavBarSouthshore";
 
 const ReferenceResource = () => {
 
