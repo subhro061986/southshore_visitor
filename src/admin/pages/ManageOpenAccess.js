@@ -42,8 +42,8 @@ const ManageOpenAccess = () => {
     }
 
     const handleImageUpload = (e) => {
-        console.log("uploaded coverImage", e.target.files[0]);
-        console.log("event", e);
+        // console.log("uploaded coverImage", e.target.files[0]);
+        // console.log("event", e);
         setCoverImage(e.target.files[0]);
         //  setImgFileExtension(e.target.files[0].title.split('.').pop());
     }
@@ -87,7 +87,7 @@ const ManageOpenAccess = () => {
 
     const Get_OpenAccess_By_Id = async (id) => {
         const response = await getOpenAccessById(id);
-        console.log("published title=", response);
+        // console.log("published title=", response);
         const resouce_by_id = response.data.output
         setExistingId(resouce_by_id?.id);
         setTitle(resouce_by_id?.title);

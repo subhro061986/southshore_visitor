@@ -23,7 +23,7 @@ const OpenAccess = () => {
     const getDownLoadLinks = async (id) => {
         const resp = await getOpenAccessById(id);
         const ResourceByIdResp = resp.data.output
-        console.log("download resp", ResourceByIdResp);
+        // console.log("download resp", ResourceByIdResp);
         window.open(Config.API_URL + Config.Open_Access_PDF_URL + "/" + ResourceByIdResp.downloadLink + '?d=' + new Date())
     }
 
@@ -39,7 +39,7 @@ const OpenAccess = () => {
                     <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</div>
                 </div>
                 <div className="download_head mt-5">Download the listed <span> PDF Books</span></div>
-                <div className="row d-flex justify-content-between" style={{ marginBottom: '15%' }}>
+                <div className="row d-flex" style={{ marginBottom: '15%' }}>
                     {allOpenAccess.map((data, index) => (
                         <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
                             <div className="card card_style" style={{ width: '17rem' }}>

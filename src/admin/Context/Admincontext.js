@@ -381,7 +381,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Open_Access response", response);
+      // console.log("Get All Open_Access response", response);
       setAllOpenAccess(response.data.output);
       return response;
     }
@@ -400,7 +400,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      console.log("Resource create response", response);
+      // console.log("Resource create response", response);
       Get_All_Open_Access();
       return response;
     }
@@ -421,7 +421,7 @@ const AdminProvider = ({ children }) => {
           },
         })
         Get_All_Open_Access();
-      console.log("EDIT Open Access RESPONSE : ", response);
+      // console.log("EDIT Open Access RESPONSE : ", response);
       return response;
     }
     catch (error) {
@@ -437,7 +437,7 @@ const AdminProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      console.log("GET Open Access  BY ID: ", response);
+      // console.log("GET Open Access  BY ID: ", response);
       return response;
     }
     catch (error) {

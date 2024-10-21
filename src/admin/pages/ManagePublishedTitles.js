@@ -103,8 +103,8 @@ const ManagePublishedTitles = () => {
     }
 
     const handleImageUpload = (e) => {
-        console.log("uploaded image", e.target.files[0]);
-        console.log("event", e);
+        // console.log("uploaded image", e.target.files[0]);
+        // console.log("event", e);
         setImage(e.target.files[0]);
         //  setImgFileExtension(e.target.files[0].title.split('.').pop());
     }
@@ -114,7 +114,7 @@ const ManagePublishedTitles = () => {
     const setPublishedTitleDetails = async (id) => {
         const response = await getPublishedTitleById(id);
         let publishedTitle = response?.data;
-        console.log("published title=", publishedTitle);
+        // console.log("published title=", publishedTitle);
         setExistingId(publishedTitle?.id);
         setTitle(publishedTitle?.title);
         setBuyLink(publishedTitle?.buyLink);

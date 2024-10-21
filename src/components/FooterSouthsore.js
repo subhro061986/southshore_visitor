@@ -99,21 +99,29 @@ const FooterSouthsore = () => {
                                     // hidden={data.isactive === 1 ? false : true}
                                     // onClick={(e) => { get_publisher_data(data.id) }}
                                     >
-                                        {/* {console.log("PUB DATA : ", data)} */}
-                                        {/* {data.name}  */}
-                                        Juris Press
+                                        <Link className="nav-link" to="/juris/about">
+                                            Juris Press
+                                        </Link>
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
-                                        Thomson Reuters
+                                        <Link className="nav-link" to="/thomson/about">
+                                            Thomson Reuters
+                                        </Link>
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
-                                        Brill
+                                        <Link className="nav-link" to="/representation/brill">
+                                            Brill
+                                        </Link>
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
-                                        MyJove
+                                        <Link className="nav-link" to="/representation/jove">
+                                            MyJove
+                                        </Link>
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
-                                        Writefull
+                                        <Link className="nav-link" to="/representation/writefull">
+                                            Writefull
+                                        </Link>
                                     </li>
                                     {/* ))} */}
 
@@ -133,12 +141,12 @@ const FooterSouthsore = () => {
                                     <div className="custom-footer-Header">Platforms</div>
 
                                     <li className="custom-footer-li">
-                                        <Link className="nav-link" to="/privacypolicy">
+                                        <Link className="nav-link" to="https://ebooksjunction.com/">
                                             E-Books Junction
                                         </Link>
                                     </li>
                                     <li className="custom-footer-li">
-                                        <Link className="nav-link" to="/terms">
+                                        <Link className="nav-link" to="https://bookscentral.in/">
                                             Books Central
                                         </Link>
                                     </li>
@@ -176,7 +184,7 @@ const FooterSouthsore = () => {
                                 {/* <h6>Social Media</h6> */}
                                 <div className="d-flex justify-content-between p-2" style={{ width: '180px' }}>
                                     <img src={sms} />
-                                    <div>sales@southshore.in</div>
+                                    <div onClick={() => window.location = 'mailto:sales@southshore.in'} style={{cursor:'pointer'}}>sales@southshore.in</div>
                                 </div>
                                 <div className="d-flex justify-content-between p-2" style={{ width: '163px' }}>
                                     <img src={call} height={20} />

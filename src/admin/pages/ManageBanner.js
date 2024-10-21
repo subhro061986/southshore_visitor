@@ -90,8 +90,8 @@ const ManageBanner = () => {
     }
 
     const handleImageUpload = (e) => {
-        console.log("uploaded image", e.target.files[0]);
-        console.log("event", e);
+        // console.log("uploaded image", e.target.files[0]);
+        // console.log("event", e);
         setAddModalImage(e.target.files[0]);
     }
 
@@ -100,7 +100,7 @@ const ManageBanner = () => {
     const getBannersById = async (id) => {
         const response = await getBannerById(id);
         let banner = response.data.output;
-        console.log("Banner by id : ", banner);
+        // console.log("Banner by id : ", banner);
         setAddModalTitle(banner.title)
         setAddModalSubTitle(banner.subTitle)
         setAddModalSequenceNumber(banner.sequenceNumber)

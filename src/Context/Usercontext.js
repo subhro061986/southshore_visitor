@@ -157,7 +157,7 @@ const UserProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Open_Access response", response);
+      // console.log("Get All Open_Access response", response);
       setAllOpenAccess(response.data.output);
       return response;
     }
@@ -174,7 +174,7 @@ const UserProvider = ({ children }) => {
             'Content-Type': 'application/json',
           },
         })
-      console.log("GET Open Access  BY ID: ", response);
+      // console.log("GET Open Access  BY ID: ", response);
       return response;
     }
     catch (error) {
@@ -195,7 +195,7 @@ const UserProvider = ({ children }) => {
 
         })
 
-        console.log("Publish With Us Response :", response)
+        // console.log("Publish With Us Response :", response)
 
       // if (response?.status === 200) {
         return response
@@ -221,7 +221,7 @@ const UserProvider = ({ children }) => {
 
         })
 
-        console.log("Enquiry Response :", response)
+        // console.log("Enquiry Response :", response)
 
       // if (response?.status === 200) {
         return response

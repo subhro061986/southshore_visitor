@@ -100,8 +100,8 @@ const ManageResources = () => {
     }
 
     const handleImageUpload = (e) => {
-        console.log("uploaded coverImage", e.target.files[0]);
-        console.log("event", e);
+        // console.log("uploaded coverImage", e.target.files[0]);
+        // console.log("event", e);
         setCoverImage(e.target.files[0]);
         //  setImgFileExtension(e.target.files[0].title.split('.').pop());
     }
@@ -115,7 +115,7 @@ const ManageResources = () => {
         // setPublisher(e.target.value)
         const selectedPublisherId = e.target.value;
         const selectedPublisherName = e.target.options[e.target.selectedIndex].text;
-        console.log("publisher name", selectedPublisherName)
+        // console.log("publisher name", selectedPublisherName)
         setPublisher(selectedPublisherId);
         setPublisherName(selectedPublisherName);
     }
@@ -124,7 +124,7 @@ const ManageResources = () => {
 
     const Get_Resource_By_Id = async (id) => {
         const response = await getResourceById(id);
-        console.log("published title=", response);
+        // console.log("published title=", response);
         const resouce_by_id = response.data.output
         setExistingId(resouce_by_id?.id);
         setTitle(resouce_by_id?.bookTitle);
@@ -298,7 +298,7 @@ const ManageResources = () => {
 
                                         <div className="form-group">
                                             <label for="exampleInputEmail3">Description</label>
-                                            <textarea rows="4" type="text" className="form-control" id="exampleInputEmail3" placeholder="Buy Link" value={description} onChange={(e) => { setDescription(e.target.value) }} />
+                                            <textarea rows="4" type="text" className="form-control" id="exampleInputEmail3" placeholder="Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                                         </div>
                                     </form>
                                 </div>

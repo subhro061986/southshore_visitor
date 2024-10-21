@@ -44,7 +44,7 @@ const ManageLeadership = () => {
 
     const handleSubDropdownChange = (e) => {
         const value = e.target.value;
-        console.log("handleSubDropdownChange", value);
+        // console.log("handleSubDropdownChange", value);
         setSelectedSubOption(value);
     };
 
@@ -116,8 +116,8 @@ const ManageLeadership = () => {
     }
 
     const handleImageUpload = (e) => {
-        console.log("uploaded image", e.target.files[0]);
-        console.log("event", e);
+        // console.log("uploaded image", e.target.files[0]);
+        // console.log("event", e);
         setImage(e.target.files[0]);
         setImgFileExtension(e.target.files[0].name.split('.').pop());
     }
@@ -127,7 +127,7 @@ const ManageLeadership = () => {
     const getLeadersById = async (id) => {
         const response = await getLeaderById(id);
         let banner = response.data.output;
-        console.log("Banner by id : ", banner);
+        // console.log("Banner by id : ", banner);
         setName(banner.personName)
         setLinkedinLink(banner.linkedin)
         setEmail(banner.email)

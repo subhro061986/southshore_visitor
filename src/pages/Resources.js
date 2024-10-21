@@ -81,7 +81,7 @@ const Resources = () => {
                 </nav>
 
                 <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
-                <div className="row d-flex justify-content-between" style={{ marginBottom: '15%' }}>
+                <div className="row d-flex" style={{ marginBottom: '15%' }}>
                     {
                         filteredBooks?.length > 0 ? (
                             filteredBooks.map((book) => (

@@ -44,7 +44,7 @@ const PublishWithJuris = () => {
         }
         const resp = await PublishWithUs(json)
         alert(resp.data.message)
-        console.log('publish resp', resp)
+        // console.log('publish resp', resp)
     }
 
 
