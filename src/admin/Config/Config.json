@@ -1,9 +1,9 @@
 {
     "API_URL_local" : "http://localhost:5000/",
-    "API_URL":"http://www.booksindia.in/",
+    "API_URL":"https://www.booksindia.in/api/",
     "CREATE_BANNER": "banner/create",
     "GET_ALL_BANNER":"banner",
-    "BANNER_URL" : "banners/",
+    "BANNER_URL" : "banners",
     "GET_BANNER_BY_ID": "banner",
     "EDIT_BANNER":"banner/update",
     "GET_ALL_LEADER":"leadership",

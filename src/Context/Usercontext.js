@@ -41,7 +41,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      // console.log("Get All Banner response", response);
+      console.log("Get All Banner response", response);
       setAllBanner(response.data.output);
       return response;
     }

@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
           },
         });
 
-      // console.log("Response frm login context: ", response);
+      console.log("Response frm login context: ", response);
       const token = response?.data?.token;
 
       if (response?.status === 200) {
