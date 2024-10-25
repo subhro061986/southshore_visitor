@@ -25,7 +25,8 @@
 
 .person-card-body {
     text-align: center;
-    min-height: 350px !important;
+    /* min-height: 350px !important; */
+    min-height: 472px !important;
 }
 
 .card-title {
