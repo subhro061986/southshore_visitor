@@ -16,7 +16,7 @@ const Services = () => {
                 <NavbarSouthshore />
 
                 <div className="mt-3 mb-4">
-                    <div className="screen_head" style={{ textAlign: 'left' }}>Services</div>
+                    <div className="screen_head" style={{ textAlign: 'left' }}>Our Services</div>
                 </div>
 
                 <div>
