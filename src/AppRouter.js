@@ -27,6 +27,7 @@ import Writefulls from './pages/Writefull';
 import ThomsonAbout from './pages/ThomsonAbout/ThomsonAbout';
 import ContactUs from './pages/ContactUs';
 import ReferenceResource from './pages/ahpi/lifestyleasmedicine/ReferenceResource';
+import Services from './pages/Services';
 
 const AppRouter=()=> {
 
@@ -53,6 +54,7 @@ const AppRouter=()=> {
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
             <Route exact path="/contactus" Component={ContactUs} />
+            <Route exact path="/sevices" Component={Services} />
             <Route exact path="/ahpi/lifestyleasmedicine/references" Component={ReferenceResource} />
 
             <Route exact path="/admin/*" Component={DefaultPage}/>
