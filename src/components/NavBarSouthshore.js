@@ -102,6 +102,10 @@ function NavbarSouthshore() {
             ]
         },
         {
+            text: "Services",
+            link: "/sevices"
+        },
+        {
             text: "Representation",
             children: [
                 {
@@ -187,7 +191,7 @@ function NavbarSouthshore() {
                                                     <span style={{
                                                         fontFamily: 'Ubuntu',
                                                         fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
-                                                        fontSize: "16px",
+                                                        fontSize: "14px",
                                                         color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                         borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                         paddingBottom: "10px"
@@ -206,7 +210,7 @@ function NavbarSouthshore() {
                                                                 <span style={{
                                                                     fontFamily: 'Ubuntu',
                                                                     fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
-                                                                    fontSize: "16px",
+                                                                    fontSize: "14px",
                                                                     color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                                     borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                                     paddingBottom: "10px",
