@@ -2,9 +2,14 @@ import React, { useEffect, useState, } from "react";
 import { useNavigate, Link } from 'react-router-dom';
 import { PiFlagBanner } from "react-icons/pi";
 
+import { AdminProfile } from "../Context/Admincontext";
+
 const SideMenuBar = () => {
 
-    const [activeTab, setActiveTab] = useState("mannagebanner");
+    // const [activeTab, setActiveTab] = useState("managebanner");
+    const { activeTab, setActiveTab } = AdminProfile();
+
+    
 
     return (
         <>
@@ -12,8 +17,8 @@ const SideMenuBar = () => {
                 <ul className="nav">
 
                     <li
-                        className={`nav-item ${activeTab === "mannagebanner" ? "active" : ""}`}
-                        onClick={() => setActiveTab("mannagebanner")}
+                        className={`nav-item ${activeTab === "managebanner" ? "active" : ""}`}
+                        onClick={() => setActiveTab("managebanner")}
                     >
                         <Link className="nav-link" to="/admin/managebanner">
                             <span className="menu-title">Mange Banner</span>
@@ -70,7 +75,8 @@ const SideMenuBar = () => {
 
                     <li
                         className={`nav-item ${activeTab === "manageleadership" ? "active" : ""}`}
-                        onClick={() => setActiveTab("manageleadership")}>
+                        onClick={() => setActiveTab("manageleadership")}
+                        >
                         <Link className="nav-link" 
                         to="/admin/manageleadership"
                         >
