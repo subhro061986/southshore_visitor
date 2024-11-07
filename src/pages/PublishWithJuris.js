@@ -99,7 +99,7 @@ const PublishWithJuris = () => {
                             </div>
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">Contact No</label>
-                                <input type="text" className="form-control input_style" placeholder="+91 | Example input placeholder" value={contactNo} onChange={(e) => { setContactNo(e.target.value) }} />
+                                <input type="text" className="form-control input_style" maxlength="10" placeholder="+91 | Example input placeholder" value={contactNo} onChange={(e) => { setContactNo(e.target.value) }} />
                             </div>
                             <div className="mb-4">
                                 <label className="form-label label_font mb-2">No. of words in the manuscript</label>

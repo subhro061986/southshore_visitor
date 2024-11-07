@@ -23,6 +23,8 @@ const AdminProvider = ({ children }) => {
   const [allPublisherResources, setAllPublisherResources] = useState([])
   const [allOpenAccess, setAllOpenAccess] = useState([])
 
+  const [activeTab, setActiveTab] = useState("managebanner");
+
   useEffect(() => {
     Get_All_Banner();
     Get_All_Leader();
@@ -476,7 +478,8 @@ const AdminProvider = ({ children }) => {
         allOpenAccess,
         createOpen_Access,
         editOpenAccess,
-        getOpenAccessById
+        getOpenAccessById,
+        activeTab, setActiveTab
       }}
     >
       {/* <LoadingOverlay
