@@ -246,7 +246,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
-      const response = await axios.put(Config.API_URL + Config.EDIT_PUBLISHED_TITLE + "/" + id, args,
+      const response = await axios.post(Config.API_URL + Config.EDIT_PUBLISHED_TITLE + "/" + id, args,
         {
           headers: {
             'Content-Type': 'multipart/form-data',
