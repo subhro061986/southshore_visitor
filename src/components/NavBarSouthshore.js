@@ -96,6 +96,10 @@ function NavbarSouthshore() {
                     link: "/thomson/about"
                 },
                 {
+                    text: "Titles published",
+                    link: "/thomson/publishedtitle"
+                },
+                {
                     text: "Publish with Us",
                     link: "/thomson/publishwithus"
                 }
