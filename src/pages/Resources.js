@@ -121,7 +121,18 @@ const Resources = () => {
                     }
 
                 </div>
-
+                <div className="col-12 col-sm-12">
+                   <div className="cards">
+                      <div className="screen_head" style={{ textAlign: 'left' }}>Exploring Boundless Worlds, One Page at a Time</div>
+                        <div className="ervice_card_details">Subscribe Our Newsletter, and get the latest updates</div> 
+                        <div className="mb-4">
+                                <label className="form-label label_font mb-2">Email ID</label>
+                                <input type="email" className="form-control input_style" placeholder="Email ID"   />
+                            </div>
+                    </div>
+                </div>
+                <div className="screen_head" style={{ textAlign: 'left' }}>Snippets from Southsore Innovations</div>
+              
             </div>
 
             <FooterSouthsore />

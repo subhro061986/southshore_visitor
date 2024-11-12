@@ -504,6 +504,25 @@ pr {
   color: #535861;
 }
 
+.cards{
+  display: 'flex';
+    
+    padding: 50px;
+    background: #F4F4F4;
+    border-radius: 12px;
+   
+    maxidth: '500px';
+    margin: '0 auto';
+    text-align: center;
+}
+.subhead{
+  font-family: Roboto;
+font-size: 24px;
+font-weight: 400;
+line-height: 34px;
+text-align: center;
+color: #424253;
+}
 .mb_12 {
   margin-bottom: 0;
 }
@@ -604,6 +623,7 @@ pr {
     border-radius: 36px !important;
     width: 66%;
   }
+
 
   .mt_4 {
     margin-top: 4%;
