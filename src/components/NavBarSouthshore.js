@@ -83,7 +83,7 @@ function NavbarSouthshore() {
                     link: "/juris/publishedtitle"
                 },
                 {
-                    text: "Publish with Juris",
+                    text: "Publish with Juris Press",
                     link: "/juris/publishwithjuris"
                 }
             ]
@@ -110,7 +110,7 @@ function NavbarSouthshore() {
             link: "/sevices"
         },
         {
-            text: "Representation",
+            text: "Representations",
             children: [
                 {
                     text: "Brill",
@@ -131,7 +131,7 @@ function NavbarSouthshore() {
             ]
         },
         {
-            text: "Platform",
+            text: "Platforms",
             children: [
                 {
                     text: "Ebooksjunction",
@@ -247,7 +247,7 @@ function NavbarSouthshore() {
                                 color: "#535861"
                             }}
                         >
-                            +1 (650) 555-0111
+                            +91-44-79624624
                         </Link>
                     </div>
             </Container>

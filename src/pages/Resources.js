@@ -155,7 +155,7 @@ const Resources = () => {
                             style={{borderRadius:'40px'}}
                             />
                             <div className="card-body">
-                                <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>Posted On: October 29, 2024</p>
+                                {/* <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>Posted On: October 29, 2024</p> */}
                                 <h5 className="card-title" style={{ fontFamily: 'Ubuntu', fontSize:'20px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data.title}</h5>
                                 <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>{data.subTitle}</p>
                             </div>

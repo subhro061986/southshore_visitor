@@ -57,7 +57,7 @@ const PublishedTitlesScreen = () => {
                 <NavBarSouthsore />
 
                 <div className="text-center mt-3">
-                    <div className="screen_head">Titles published</div>
+                    <div className="screen_head">Titles Published</div>
                     <div className="screen_sub_head mt-1">All Juris Press titles are available as print and e-book versions.</div>
                 </div>
 

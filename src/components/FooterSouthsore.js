@@ -34,7 +34,7 @@ const FooterSouthsore = () => {
                                 <ul className="remove-dots margin_l_footer" >
                                     {/* <div className="custom-footer-Header">Southshore Innovations Pvt. Ltd</div> */}
                                     <div className="follow mb-2">
-                                        Follow Us on
+                                        Follow us on
                                     </div>
 
                                     <div className="d-inline pe-2">
@@ -115,7 +115,7 @@ const FooterSouthsore = () => {
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
                                         <Link className="nav-link" to="/representation/jove">
-                                            MyJove
+                                            MyJoVE
                                         </Link>
                                     </li>
                                     <li className="custom-footer-li" style={{ cursor: 'pointer' }}>
@@ -142,12 +142,12 @@ const FooterSouthsore = () => {
 
                                     <li className="custom-footer-li">
                                         <Link className="nav-link" to="https://ebooksjunction.com/">
-                                            E-Books Junction
+                                            e-BooksJunction
                                         </Link>
                                     </li>
                                     <li className="custom-footer-li">
                                         <Link className="nav-link" to="https://bookscentral.in/">
-                                            Books Central
+                                            BooksCentral
                                         </Link>
                                     </li>
 
@@ -165,7 +165,11 @@ const FooterSouthsore = () => {
                             <div className="custom-footer-Header">Southshore Innovations Pvt. Ltd</div>
 
                             <li className="custom-footer-li">
-                                Southshore Innovations Private Limited Plot 13, Heritage Phase II Telephone Nagar, Perungudi Chennai - 600096
+                                {/* Southshore Innovations Private Limited */}
+                                Plot 13, Heritage Phase II
+                                Telephone Nagar, Perungudi
+                                Chennai - 600096
+
                                 {/* <p className="mt-2" style={{ cursor: 'pointer' }}
                                 // onClick={openMailto}
                                 ><b>Mail Us </b>: sales@southshore.in </p> */}
@@ -184,11 +188,11 @@ const FooterSouthsore = () => {
                                 {/* <h6>Social Media</h6> */}
                                 <div className="d-flex justify-content-between p-2" style={{ width: '180px' }}>
                                     <img src={sms} />
-                                    <div onClick={() => window.location = 'mailto:sales@southshore.in'} style={{cursor:'pointer'}}>sales@southshore.in</div>
+                                    <div onClick={() => window.location = 'mailto:sales@southshore.in'} style={{ cursor: 'pointer' }}>sales@southshore.in</div>
                                 </div>
                                 <div className="d-flex justify-content-between p-2" style={{ width: '163px' }}>
                                     <img src={call} height={20} />
-                                    <div>+1 (650) 555-0111</div>
+                                    <div>+91-44-79624624</div>
                                 </div>
                                 {/* <div className="d-inline p-2">
                                     <img src={linkedin_logo} />

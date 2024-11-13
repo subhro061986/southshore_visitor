@@ -22,7 +22,7 @@ const JurisAbout = () => {
                 <div className="d-flex justify-content-start mt-2">
                     <p className="about-juris-subtitle">
                         Juris Press is an imprint of<br />
-                        <span>Southshore Innovations Private Limited.</span>
+                        Southshore Innovations Private Limited.
                     </p>
                 </div>
                 <div className="d-flex justify-content-start flex-column">

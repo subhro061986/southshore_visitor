@@ -511,7 +511,7 @@ pr {
     background: #F4F4F4;
     border-radius: 12px;
    
-    maxidth: '500px';
+    max-width: '500px';
     margin: '0 auto';
     text-align: center;
 }
