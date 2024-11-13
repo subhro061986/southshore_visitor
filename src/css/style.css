@@ -527,11 +527,27 @@ color: #424253;
   margin-bottom: 0;
 }
 
+.mt_16 {
+  margin-top: 2.5%;
+}
+
+.mr_86 {
+  margin-right: 86%;
+}
+
 @media screen and (max-width: 436px)and (min-width: 377px) {
 
   /* .me_3 {
     margin-right: 2.6rem !important;
   } */
+
+  .mt_16 {
+    margin-top: 9%;
+  }
+
+  .mr_86 {
+    margin-right: 54%;
+  }
 
   .mb_12 {
     margin-bottom: 12%;
