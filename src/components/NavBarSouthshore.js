@@ -117,15 +117,15 @@ function NavbarSouthshore() {
                     link: "/representation/brill"
                 },
                 {
-                    text: "MyJove",
+                    text: "MyJoVE",
                     link: "/representation/jove"
                 },
                 {
-                    text: "Writeful",
+                    text: "Writefull",
                     link: "/representation/writefull"
                 },
                 {
-                    text: "enquiry",
+                    text: "Enquiry",
                     link: "/representation/enquiry"
                 }
             ]
