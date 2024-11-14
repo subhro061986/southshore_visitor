@@ -48,12 +48,12 @@ function NavbarSouthshore() {
                     text: "Team",
                     children: [
                         {
-                            text: "Editorial & Production",
-                            link: "/leadership/editorial"
-                        },
-                        {
                             text: "Acquisition & Commissioning",
                             link: "/leadership/acquisition"
+                        },
+                        {
+                            text: "Editorial & Production",
+                            link: "/leadership/editorial"
                         },
                         {
                             text: "Marketing",

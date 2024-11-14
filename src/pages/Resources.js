@@ -64,7 +64,7 @@ const Resources = () => {
 
                 <div className="mt-3 mb-4">
                     <div className="screen_head" style={{ textAlign: 'left' }}>Resources</div>
-                    <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</div>
+                    <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>Southshore Innovations, through its publishing activity and its representation of different publishers, has a wide range of books and other content both in the print and digital formats. Listed below are the catalogues of the different publishers as well as presentations of the two platforms that the company owns and operates. </div>
                 </div>
 
                 <nav className="navbar" style={{ overflowX: 'auto' }}>

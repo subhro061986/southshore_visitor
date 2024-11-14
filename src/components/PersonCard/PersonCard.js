@@ -14,20 +14,22 @@ export const PersonCard = (person) => {
                 <p class="card-text">{person?.about}</p>
             </div>
             <div className='d-flex justify-content-center align-items-center'>
-                <Link to={absolutelinkedinurl} target='_blank'
-                    style={{
-                        marginRight: person?.email? '10px': ""
-                    }}
-                >
-                    <img src={linkedin_icon_full} width={98} height={'auto'} />
-                </Link>
-                {person?.email?  "|" : "" }
+                {person.linkedin &&
+                    <Link to={absolutelinkedinurl} target='_blank'
+                        style={{
+                            marginRight: person?.email ? '10px' : ""
+                        }}
+                    >
+                        <img src={linkedin_icon_full} width={98} height={'auto'} />
+                    </Link>
+                }
+                {person?.email && person.linkedin  ? "|" : ""}
                 {person?.email &&
                     <span
                         className='person-email'
                         style={{
                             marginLeft: '10px',
-                            width:'150px',
+                            width: '150px',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap',
