@@ -103,7 +103,7 @@ const Resources = () => {
                                                 className="mt-4" />
                                         </div>
                                         <div className="card-body">
-                                            <div className="card_head">{book?.bookTitle?.length > 15 ? book?.bookTitle?.substring(0, 15) + ".." : book?.bookTitle}</div>
+                                            {/*<div className="card_head">{book?.bookTitle?.length > 15 ? book?.bookTitle?.substring(0, 15) + ".." : book?.bookTitle}</div>*/}
                                             {/* <div className="card_author my-3">Author: <span style={{ fontWeight: '500' }}>{data.author}</span></div> */}
                                             {/* <a  */}
                                             {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
@@ -159,9 +159,9 @@ const Resources = () => {
                                 <h5 className="card-title" style={{ fontFamily: 'Ubuntu', fontSize:'20px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data.title}</h5>
                                 <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>{data.subTitle}</p>
                             </div>
-                            <div className="card-body">
+                            {/* <div className="card-body">
                                 <button href="#" className="card-link" style={{ border: 'none', background: 'none', padding: 0 }}><img src={dwn_btn} /></button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
