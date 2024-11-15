@@ -12,7 +12,7 @@ import Config from "../Config/Config.json";
 
 
 
-const PublishedTitlesScreen = () => {
+const PublishedTitlesThompson = () => {
 
     const { allPublishedTitle } = UserProfile()
 
@@ -57,13 +57,13 @@ const PublishedTitlesScreen = () => {
                 <NavBarSouthsore />
 
                 <div className="text-center mt-3">
-                    <div className="screen_head">Titles Published</div>
-                    <div className="screen_sub_head mt-1">All Juris Press titles are available as print and e-book versions.</div>
+                    <div className="screen_head">Titles published</div>
+                    <div className="screen_sub_head mt-1">All Thomson Reuters titles are available as print and e-book versions.</div>
                 </div>
 
                 <div className="row d-flex justify-content-between" style={{ marginBottom: '8%' }}>
                     {allPublishedTitle?.map((data, index) => (
-                        data.isActive === 1 && data.publisherName === "JURIS PRESS" && (
+                        data.isActive === 1 && data.publisherName === "THOMSON REUTERS" && (
                             <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
                                 <div className="card card_style"
                                     // style={{ width: '100%' }}
@@ -95,4 +95,4 @@ const PublishedTitlesScreen = () => {
     )
 }
 
-export default PublishedTitlesScreen;
+export default PublishedTitlesThompson;

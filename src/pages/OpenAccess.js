@@ -35,10 +35,10 @@ const OpenAccess = () => {
                 <NavBarSouthsore />
 
                 <div className="mt-3">
-                    <div className="screen_head" style={{ textAlign: 'left' }}>Open access</div>
-                    <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</div>
+                    <div className="screen_head" style={{ textAlign: 'left' }}>Open Access</div>
+                    <div className="screen_sub_head mt-1" style={{ textAlign: 'left' }}>Southshore believes that content should be available to all. For this purpose we have started an initiative to present open access books which can be downloaded directly from this page. In the coming days, there will be an increasing number of open access titles including journals and articles. </div>
                 </div>
-                <div className="download_head mt-5">Download the listed <span> PDF Books</span></div>
+                {/* <div className="download_head mt-5">Download the listed <span> PDF Books</span></div> */}
                 <div className="row d-flex" style={{ marginBottom: '15%' }}>
                     {allOpenAccess.map((data, index) => (
                         <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>

@@ -22,7 +22,7 @@ const JurisAbout = () => {
                 <div className="d-flex justify-content-start mt-2">
                     <p className="about-juris-subtitle">
                         Juris Press is an imprint of<br />
-                        <span>Southshore Innovations Private Limited.</span>
+                        Southshore Innovations Private Limited.
                     </p>
                 </div>
                 <div className="d-flex justify-content-start flex-column">
@@ -33,7 +33,7 @@ const JurisAbout = () => {
                         Juris has published titles across the genres of spirituality, self-help, biographies, poetry, and health. The genres and the list of authors continue to grow.
                     </p>
                     <p className="about-juris-description">
-                        Juris markets its titles through a distribution channel and through online aggregators such as Amazon as well as through its own proprietary platform <Link className="link" to={`https://www.bookscentral.in`} target="_blank">Books Central</Link>. The digital versions of the published books are made available to customers to buy and read on the proprietary <Link className="link" to={`https://ebooksjunction.com/`} target="_blank">E-Books Junction</Link> platform. One of the several aims of Juris is to look at the way publishers handle author royalties. Our intent is to maximize the revenue potential for the authors as well as provide them with a transparent mechanism to understand how their book is doing in the market and get an estimate of their royalty month on month.
+                        Juris markets its titles through a distribution channel and through online aggregators such as Amazon as well as through its own proprietary platform <Link className="link" to={`https://www.bookscentral.in`} target="_blank">Books Central</Link>. The digital versions of the published books are made available to customers to buy and read on the proprietary <Link className="link" to={`https://ebooksjunction.com/`} target="_blank">e-BooksJunction</Link> platform. One of the several aims of Juris is to look at the way publishers handle author royalties. Our intent is to maximize the revenue potential for the authors as well as provide them with a transparent mechanism to understand how their book is doing in the market and get an estimate of their royalty month on month.
                     </p>
                 </div>
                 <div className="row mb-5 mt-3">

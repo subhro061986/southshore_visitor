@@ -44,7 +44,7 @@ const Jove = () => {
                             lineHeight: "36px"
                         }}
                     >
-                        JoVE is the leading producer and publisher of video resources for science education and research. With over <span style={{ fontWeight: '700' }}>19,000 videos</span> published across several <span style={{ fontWeight: '700' }}>STEM disciplines, the JoVE library provides clear</span>, detailed illustrations of a vast range of scientific techniques and concepts. JoVE offers content to support learners at all levels, from UG/PG students to lab technicians, academicians, research scientists, and beyond.
+                        JoVE is the leading producer and publisher of video resources for science education and research. With over 19,000 videos published across several STEM disciplines, the JoVE library provides clear, detailed illustrations of a vast range of scientific techniques and concepts. JoVE offers content to support learners at all levels, from UG/PG students to lab technicians, academicians, research scientists, and beyond.
                     </p>
                     <p
                         style={{
@@ -54,7 +54,7 @@ const Jove = () => {
                             lineHeight: "36px"
                         }}
                     >
-                        Today, <span style={{ fontWeight: '700' }}>1,200+ institutions and laboratories worldwide</span> use JoVE to meet their academic, research, and instruction needs, such as:
+                        Today, 1,200+ institutions and laboratories worldwide use JoVE to meet their academic, research, and instruction needs, such as:
                     </p>
                     <div className="card"
                         style={{
@@ -212,9 +212,9 @@ const Jove = () => {
                                         fontWeight: 400,
                                     }}
                                 >
-                                    <li className="marker">Full JoVE walk-through for faculty and assistance with troubleshooting</li>
-                                    <li className="marker">Free syllabus mapping for faculty and training programme mapping for lab managers</li>
-                                    <li className="marker">Seamless integration with online learning platforms</li>
+                                    <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Full JoVE walk-through</span> for faculty and assistance with troubleshooting</li>
+                                    <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Free syllabus mapping</span> for faculty and training programme mapping for lab managers</li>
+                                    <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Seamless integration</span> with online learning platforms</li>
                                 </ul>
                             </div>
                             <div className="col-12 col-md-2 d-flex justify-content-center">
@@ -236,8 +236,8 @@ const Jove = () => {
                                         fontWeight: 400
                                     }}
                                 >
-                                    <li className="marker">Subscription-supporting collateral at no cost to the library</li>
-                                    <li className="marker">Faculty-supporting webinars with a Curriculum Specialist</li>
+                                    <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Subscription-supporting collateral</span> at no cost to the library</li>
+                                    <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Faculty-supporting webinars</span> with a Curriculum Specialist</li>
                                 </ul>
                             </div>
                         </div>

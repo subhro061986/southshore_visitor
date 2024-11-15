@@ -43,15 +43,15 @@ const Writefulls = () => {
                                         <div className="brill_title">Products</div>
                                     </div>
                                     <ul className="ms-2">
-                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Write full for Word</li>
+                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Writefull for Word</li>
                                         <div style={{ color: '#191A1C', fontWeight: '400', fontSize: '18px' }}>Use the best academic language feedback and writing widgets in Word</div>
-                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Write full for Overleaf</li>
+                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Writefull for Overleaf</li>
                                         <div style={{ color: '#191A1C', fontWeight: '400', fontSize: '18px' }}>Get the best scientific language feedback and features within Overleaf</div>
-                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Write full Revise</li>
+                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Writefull Revise</li>
                                         <div style={{ color: '#191A1C', fontWeight: '400', fontSize: '18px' }}>Use Writefull Revise to quickly improve your text</div>
-                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Write full Cite</li>
+                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Writefull Cite</li>
                                         <div style={{ color: '#191A1C', fontWeight: '400', fontSize: '18px' }}>Use Write full Cite to make sure you’re not missing citations</div>
-                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Write full X</li>
+                                        <li className="marker" style={{ color: '#4D39F1', fontWeight: '600', fontSize: '20px' }}>Writefull X</li>
                                         <div style={{ color: '#191A1C', fontWeight: '400', fontSize: '18px' }}>It has multiple widgets that help with academic writing</div>
 
                                     </ul>
@@ -86,7 +86,7 @@ const Writefulls = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-4 ms-1" style={{marginBottom:'10%'}}>
+                    <div className="mt-4 ms-1" style={{marginBottom:'5%'}}>
                         <ul>
                             <li style={{fontFamily:"Roboto", fontWeight:'400', fontSize:'18px', color:'#535861'}}>Offers a free trial for 15 days</li>
                             <li style={{fontFamily:"Roboto", fontWeight:'400', fontSize:'18px', color:'#535861'}}>Institutional access is provided based on email domains</li>

@@ -28,6 +28,7 @@ import ThomsonAbout from './pages/ThomsonAbout/ThomsonAbout';
 import ContactUs from './pages/ContactUs';
 import ReferenceResource from './pages/ahpi/lifestyleasmedicine/ReferenceResource';
 import Services from './pages/Services';
+import PublishedTitlesThompson from './pages/PublishedTitlesThompson';
 
 const AppRouter=()=> {
 
@@ -46,6 +47,7 @@ const AppRouter=()=> {
             <Route exact path="/juris/publishedtitle" Component={PublishedTitlesScreen} />
             <Route exact path="/juris/publishwithjuris" Component={PublishWithJuris} />
             <Route exact path="/thomson/about" Component={ThomsonAbout} />
+            <Route exact path="/thomson/publishedtitle" Component={PublishedTitlesThompson} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
             <Route exact path="/representation/brill" Component={Brills} />
             <Route exact path="/representation/writefull" Component={Writefulls} />

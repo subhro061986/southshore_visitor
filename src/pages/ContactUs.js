@@ -24,7 +24,7 @@ const ContactUs = () => {
         </div>
         <h1 className=" contactUs_SouthShore d-flex justify-content-center align-items-center mb-5">
 
-          Southshore Innovations Pvt. Ltd
+          Southshore Innovations Private Limited
         </h1>
 
         <div>
@@ -34,8 +34,12 @@ const ContactUs = () => {
                 <div className="d-flex justify-content-around align-items-center">
                   <h4 className=" contactUs_card_heading me-5" style={{ marginBottom: '14%' }}>Address</h4>
                   <p className="contactUs_card_desc">
-                    Southshore Innovations Private Limited Plot 13, Heritage Phase
-                    II Telephone Nagar, Perungudi Chennai - 600096
+                    <b>Southshore Innovations Private Limited</b>
+                    <br/>
+                    Plot 13, Heritage Phase II
+                    Telephone Nagar, Perungudi
+                    Chennai – 600096
+
                   </p>
                 </div>
               </div>
@@ -47,7 +51,7 @@ const ContactUs = () => {
               >
                 <div>
                   <div className="d-flex justify-content-around align-items-center mb-1">
-                    <h4 className=" contactUs_card_heading me-5">Email Id</h4>
+                    <h4 className=" contactUs_card_heading me-5">Email ID</h4>
                     <img
                       className="me-2"
                       src={sms}
@@ -58,7 +62,7 @@ const ContactUs = () => {
                   <div className="d-flex justify-content-between align-items-center mb-1">
                     <h4 className="contactUs_card_heading me-5">Phone</h4>
                     <img src={call} style={{ marginTop: '-4%' }} />
-                    <p className="contactUs_card_desc"> +1 (650) 555-0111</p>
+                    <p className="contactUs_card_desc"> +91-44-79624624</p>
                   </div>
                 </div>
               </div>
@@ -71,7 +75,7 @@ const ContactUs = () => {
                 style={{ justifyContent: "start" }}
               >
                 <div className="d-flex justify-content-around align-items-center">
-                  <h4 className="contactUs_card_heading me-5">Sales quarries</h4>
+                  <h4 className="contactUs_card_heading me-5">Sales queries</h4>
                   <img className="me-2" src={sms} style={{ marginTop: "-4%" }} />
                   <p className="contactUs_card_desc"> sales@southshore.in</p>
                 </div>

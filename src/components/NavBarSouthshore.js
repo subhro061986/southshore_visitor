@@ -48,12 +48,12 @@ function NavbarSouthshore() {
                     text: "Team",
                     children: [
                         {
-                            text: "Editorial & Production",
-                            link: "/leadership/editorial"
-                        },
-                        {
                             text: "Acquisition & Commissioning",
                             link: "/leadership/acquisition"
+                        },
+                        {
+                            text: "Editorial & Production",
+                            link: "/leadership/editorial"
                         },
                         {
                             text: "Marketing",
@@ -83,7 +83,7 @@ function NavbarSouthshore() {
                     link: "/juris/publishedtitle"
                 },
                 {
-                    text: "Publish with Juris",
+                    text: "Publish with Juris Press",
                     link: "/juris/publishwithjuris"
                 }
             ]
@@ -96,6 +96,10 @@ function NavbarSouthshore() {
                     link: "/thomson/about"
                 },
                 {
+                    text: "Titles published",
+                    link: "/thomson/publishedtitle"
+                },
+                {
                     text: "Publish with Us",
                     link: "/thomson/publishwithus"
                 }
@@ -106,28 +110,28 @@ function NavbarSouthshore() {
             link: "/sevices"
         },
         {
-            text: "Representation",
+            text: "Representations",
             children: [
                 {
                     text: "Brill",
                     link: "/representation/brill"
                 },
                 {
-                    text: "MyJove",
+                    text: "MyJoVE",
                     link: "/representation/jove"
                 },
                 {
-                    text: "Writeful",
+                    text: "Writefull",
                     link: "/representation/writefull"
                 },
                 {
-                    text: "enquiry",
+                    text: "Enquiry",
                     link: "/representation/enquiry"
                 }
             ]
         },
         {
-            text: "Platform",
+            text: "Platforms",
             children: [
                 {
                     text: "Ebooksjunction",
@@ -243,7 +247,7 @@ function NavbarSouthshore() {
                                 color: "#535861"
                             }}
                         >
-                            +1 (650) 555-0111
+                            +91-44-79624624
                         </Link>
                     </div>
             </Container>

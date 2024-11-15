@@ -20,7 +20,7 @@ const ThomsonAbout = () => {
                     <h1 className="about-juris-title">About Thomson Reuters</h1>
                 </div>
                 <div className="d-flex justify-content-start mt-2">
-                    <p className="about-juris-subtitle">
+                    <p className="about-juris-description">
                     Thomson Reuters is a leading international publisher in the legal space. It has been a leading player in India for close to two decades.
                     </p>
                 </div>
