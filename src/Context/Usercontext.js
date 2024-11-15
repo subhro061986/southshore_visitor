@@ -61,7 +61,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      // console.log("Get All Leader response", response);
+      console.log("Get All Leader response", response);
       setAllLeader(response.data.output);
       return response;
     }

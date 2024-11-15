@@ -1,6 +1,7 @@
 .person-card {
     /* height: 800px !important; */
     /* height: max-content; */
+    min-height: 812px;
     min-width: 460px;
     border-radius: 36px !important;
     box-shadow: 0px 40px 60px 0px rgba(111, 122, 159, 0.29);

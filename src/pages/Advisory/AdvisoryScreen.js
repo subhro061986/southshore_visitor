@@ -69,6 +69,7 @@ const AdvisoryScreen = () => {
                                             imageLink={Config.API_URL + Config.LEADER_IMAGE_URL + "/" + person.imgLink + '?d=' + new Date()}
                                             // {person?.imageLink}
                                             linkedinLink={person?.linkedin}
+                                            email={person?.email}
                                         />
                                     </div>
                                 )

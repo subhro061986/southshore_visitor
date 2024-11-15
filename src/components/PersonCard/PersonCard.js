@@ -13,18 +13,26 @@ export const PersonCard = (person) => {
                 <h5 class="card-title">{person?.name}</h5>
                 <p class="card-text">{person?.about}</p>
             </div>
-            <div className='d-flex justify-content-center align-items-center'>
-                {person.linkedin &&
-                    <Link to={absolutelinkedinurl} target='_blank'
+            <div className={person?.linkedinLink !== "" ?'d-flex justify-content-center align-items-center': 'd-flex justify-content-center align-items-center mt-5'}>
+                {person?.linkedinLink !== "" &&
+                    // ? (
+                    <Link 
+                    // to={person?.linkedinLink}
+                    to={absolutelinkedinurl} 
+                    target='_blank'
                         style={{
                             marginRight: person?.email ? '10px' : ""
                         }}
                     >
                         <img src={linkedin_icon_full} width={98} height={'auto'} />
                     </Link>
+                    // ):(
+                    //     <span></span>
+
+                    // )
                 }
-                {person?.email && person.linkedin  ? "|" : ""}
-                {person?.email &&
+                {person?.email !== "" && person?.linkedinLink !== "" ? "|" : ""}
+                {person?.email !== "" &&
                     <span
                         className='person-email'
                         style={{
