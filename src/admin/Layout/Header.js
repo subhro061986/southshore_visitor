@@ -42,7 +42,8 @@ const Header = (props) => {
                         <li className="nav-item nav-logout d-none d-lg-block">
                             <a className="nav-link" href="#">
                                 {/* <i className="mdi mdi-power"></i> */}
-                                <MdLogout size={30} onClick={doLogOut} />
+                                {/* <MdLogout size={30} onClick={doLogOut} /> */}
+                                <button className="btn btn-outline-danger" onClick={doLogOut}>Log Out</button>
                             </a>
                         </li>
 

@@ -25813,7 +25813,7 @@ dl li {
   height: auto;
   border-top: 0;
 }
-.sidebar .nav.sub-menu .nav-item .nav-link:before {
+/* .sidebar .nav.sub-menu .nav-item .nav-link:before {
   content: "\f0054";
   font-family: "Material Design Icons";
   display: block;
@@ -25827,7 +25827,7 @@ dl li {
   transform: translateY(-50%);
   color: #a2a2a2;
   font-size: 0.75rem;
-}
+} */
 .rtl .sidebar .nav.sub-menu .nav-item .nav-link:before {
   content: "\f04d";
   left: auto;

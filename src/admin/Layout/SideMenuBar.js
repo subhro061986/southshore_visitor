@@ -36,7 +36,7 @@ const SideMenuBar = () => {
                         <div className="collapse" id="ui-basic">
                             <ul className="nav flex-column sub-menu">
                                 <li className="nav-item text-wrap">
-                                    <Link className="nav-link" to="/admin/managpublishedtitles">Manage Published Titles</Link>
+                                    <Link className="nav-link" to="/admin/managpublishedtitles">Manage Titles</Link>
                                 </li>
                                 {/* <li className="nav-item">
                                     <Link className="nav-link" to="">Dropdowns</Link>
@@ -86,7 +86,7 @@ const SideMenuBar = () => {
 
                     </li>
 
-                    <li
+                    {/* <li
                         className={`nav-item ${activeTab === "managerepresentation" ? "active" : ""}`}
                         onClick={() => setActiveTab("managerepresentation")}>
                         <Link className="nav-link" 
@@ -96,7 +96,7 @@ const SideMenuBar = () => {
                             <i className="mdi mdi-format-list-bulleted menu-icon"></i>
                         </Link>
 
-                    </li>
+                    </li> */}
 
                     <li
                         className={`nav-item ${activeTab === "manageopenaccess" ? "active" : ""}`}

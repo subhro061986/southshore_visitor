@@ -186,7 +186,7 @@ const ManageResources = () => {
                                                     <thead>
                                                         <tr>
                                                             <th> Book Cover </th>
-                                                            <th> Title </th>
+                                                            {/* <th> Title </th> */}
                                                             <th> Publisher </th>
                                                             <th> Description </th>
                                                             <th> Status </th>
@@ -205,9 +205,9 @@ const ManageResources = () => {
                                                                         style={{ width: 36 }}
                                                                         height={36} width={56} className="me-2" alt="coverImage" />
                                                                 </td>
-                                                                <td>
+                                                                {/* <td>
                                                                     {data?.bookTitle}
-                                                                </td>
+                                                                </td> */}
                                                                 <td>
                                                                     {data?.publisherName}
                                                                 </td>

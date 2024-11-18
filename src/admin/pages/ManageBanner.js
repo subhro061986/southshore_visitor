@@ -175,8 +175,8 @@ const ManageBanner = () => {
                                                                     <img src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
                                                                 </td>
                                                                 <td> {data.title} </td>
-                                                                <td>
-                                                                    {data.subTitle}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.subTitle}>
+                                                                    {data.subTitle!== "" ? data.subTitle.substring(0, 20)+ "..." : data.subTitle}
                                                                 </td>
                                                                 <td> {data.redirectURL} </td>
                                                                 <td> <label className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}>{data.isActive === 1 ? 'Active' : 'Inactive'}</label> </td>

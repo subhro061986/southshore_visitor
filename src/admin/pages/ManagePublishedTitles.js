@@ -154,7 +154,7 @@ const ManagePublishedTitles = () => {
     return (
         <>
             <div className="container-scroller">
-                <Header title="Manage Published Titles" />
+                <Header title="Manage Titles" />
                 <div className="container-fluid page-body-wrapper">
                     <SideMenuBar />
                     <div className="main-panel">
@@ -162,7 +162,7 @@ const ManagePublishedTitles = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddModal(0)}>Add Published Titles</button>
+                                    <button className="btn btn-primary" onClick={() => openAddModal(0)}>Add Titles</button>
                                 </div>
                             </div>
                             <div className="row">

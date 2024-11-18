@@ -176,7 +176,7 @@ const ManageLeadership = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddAddressModal(0)}>Add Leadership Member</button>
+                                    <button className="btn btn-primary" onClick={() => openAddAddressModal(0)}>Add Leadership</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -191,7 +191,7 @@ const ManageLeadership = () => {
                                                             <th> Image </th>
                                                             <th> Name </th>
                                                             <th> Email Id </th>
-                                                            <th> Desription </th>
+                                                            <th> Description </th>
                                                             <th> Leadership Category </th>
                                                             <th> Team Category </th>
                                                             <th> LinkedIn Link </th>
@@ -213,8 +213,8 @@ const ManageLeadership = () => {
                                                                     {data.personName}
                                                                 </td>
                                                                 <td>{data.email}</td>
-                                                                <td style={{textWrap:'wrap'}}>
-                                                                    {data?.description}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.description}>
+                                                                    {data?.description!==""?data.description.substring(0, 50)+"..." : data?.description}
                                                                 </td>
                                                                 <td>
                                                                     {data.leadershipCategoryName}
