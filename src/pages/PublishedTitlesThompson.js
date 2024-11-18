@@ -57,7 +57,7 @@ const PublishedTitlesThompson = () => {
                 <NavBarSouthsore />
 
                 <div className="text-center mt-3">
-                    <div className="screen_head">Titles published</div>
+                    <div className="screen_head">Titles Published</div>
                     <div className="screen_sub_head mt-1">All Thomson Reuters titles are available as print and e-book versions.</div>
                 </div>
 
