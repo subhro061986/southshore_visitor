@@ -79,7 +79,7 @@ function NavbarSouthshore() {
                     link: "/juris/about"
                 },
                 {
-                    text: "Titles published",
+                    text: "Titles Published",
                     link: "/juris/publishedtitle"
                 },
                 {
@@ -96,7 +96,7 @@ function NavbarSouthshore() {
                     link: "/thomson/about"
                 },
                 {
-                    text: "Titles published",
+                    text: "Titles Published",
                     link: "/thomson/publishedtitle"
                 },
                 {
