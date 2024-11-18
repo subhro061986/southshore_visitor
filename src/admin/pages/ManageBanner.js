@@ -233,7 +233,7 @@ const ManageBanner = () => {
                                         </div>
                                         <div className="form-group">
                                             <label for="subTitle">Sub Title</label>
-                                            <input type="text" className="form-control" id="subTitle" placeholder="Sub Title" value={addModalSubTitle} onChange={(e) => { setAddModalSubTitle(e.target.value) }} />
+                                            <textarea type="text" rows={4} className="form-control" id="subTitle" placeholder="Sub Title" value={addModalSubTitle} onChange={(e) => { setAddModalSubTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
                                             <label for="sequenceNumber">Sequence Number</label>
