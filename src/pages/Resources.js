@@ -32,10 +32,23 @@ const Resources = () => {
 
     useEffect(() => {
         // getDownLoadLinks();
+        
+        
     }, []);
+    
+    
 
     // const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
-    const [activePublisherId, setActivePublisherId] = useState(1);
+    const [activePublisherId, setActivePublisherId] = useState(2);
+    const modifiedOutput = allPublisherResources && allPublisherResources.length > 1
+    ? (() => {
+        const updatedOutput = [...allPublisherResources]; // Create a copy to avoid mutating the original
+        const secondItem = updatedOutput.splice(1, 1)[0]; // Extract the second item
+        updatedOutput.unshift(secondItem); // Add it to the start
+        return updatedOutput;
+    })(): allPublisherResources;
+    console.log("modified output", modifiedOutput);
+    
 
     // Handle tab click to set the active publisher
     const handleTabClick = (publisherId) => {
@@ -69,7 +82,7 @@ const Resources = () => {
 
                 <nav className="navbar" style={{ overflowX: 'auto' }}>
                     <ul className="navbar-list nav_border">
-                        {allPublisherResources.map((publisher, index) => (
+                        {modifiedOutput.map((publisher, index) => (
                             <li
                                 key={publisher.id}
                                 className={`navbar-item me_3 ${activePublisherId === publisher.id ? "active" : ""}`}
@@ -143,31 +156,31 @@ const Resources = () => {
                         </div>
                     </div>
                 </div>
-                <div className="screen_head mt-5" style={{ textAlign: 'left', fontSize:'38px' }}>Snippets from Southsore Innovations</div>
+                <div className="screen_head mt-5" style={{ textAlign: 'left', fontSize: '38px' }}>Snippets from Southsore Innovations</div>
                 <div className="row mt-4 mb-5">
-                {allBanner.slice(0,3)?.map((data, index) => (
-                    <div className="col-12 col-md-4 d-flex justify-content-center" style={{marginTop:"inherit"}} key={index}>
-                        <div className="card" style={{ width: '22rem', border: '1px solid #B1BEC9', borderRadius: '40px' }}>
-                            <img 
-                            // src={ban1}
-                            src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()}
-                            className="card-img-top" alt="..."
-                            style={{borderRadius:'40px'}}
-                            />
-                            <div className="card-body">
-                                {/* <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>Posted On: October 29, 2024</p> */}
-                                <h5 className="card-title" style={{ fontFamily: 'Ubuntu', fontSize:'20px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data.title}</h5>
-                                <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>{data.subTitle}</p>
-                            </div>
-                            {/* <div className="card-body">
+                    {allBanner.slice(0, 3)?.map((data, index) => (
+                        <div className="col-12 col-md-4 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
+                            <div className="card" style={{ width: '22rem', border: '1px solid #B1BEC9', borderRadius: '40px' }}>
+                                <img
+                                    // src={ban1}
+                                    src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()}
+                                    className="card-img-top" alt="..."
+                                    style={{ borderRadius: '40px' }}
+                                />
+                                <div className="card-body">
+                                    {/* <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>Posted On: October 29, 2024</p> */}
+                                    <h5 className="card-title" style={{ fontFamily: 'Ubuntu', fontSize: '20px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data.title}</h5>
+                                    <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize: '14px' }}>{data.subTitle}</p>
+                                </div>
+                                {/* <div className="card-body">
                                 <button href="#" className="card-link" style={{ border: 'none', background: 'none', padding: 0 }}><img src={dwn_btn} /></button>
                             </div> */}
+                            </div>
                         </div>
-                    </div>
 
-                ))}
+                    ))}
 
-                    
+
                 </div>
             </div>
 
