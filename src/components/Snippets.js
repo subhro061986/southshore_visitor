@@ -5,7 +5,7 @@ import ban3 from '../assets/images/Mask group (6).png';
 import ban2 from '../assets/images/mask4.png';
 import ban1 from '../assets/images/Mask group (5).png';
 import dwn_btn from '../assets/images/dwn_btn.png';
-import inv_pdf from '../assets/images/invoice_INV_24-25_002_02.pdf';
+import inv_pdf from '../assets/images/Southshore_Snippets_Issue_1.pdf';
 
 
 export const Snippets = () => {
@@ -22,14 +22,14 @@ export const Snippets = () => {
             title : 'Snippets Issue 2',
             image : ban2,
             postedOn : 'November 7, 2024',
-            downloadLink : inv_pdf
+            downloadLink : ''
         },
         {
             id: 3,
             title : 'Snippets Issue 3',
             image : ban3,
             postedOn : 'November 11, 2024',
-            downloadLink : inv_pdf
+            downloadLink : ''
         }
     ]
 
@@ -54,7 +54,11 @@ export const Snippets = () => {
                                 {/* <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize: '14px' }}>{data.subTitle}</p> */}
                             </div>
                             <div className="card-body">
-                                <button href="#" className="card-link" style={{ border: 'none', background: 'none', padding: 0 }} onClick={() => window.open(data.downloadLink, '_blank', 'noopener,noreferrer')}><img src={dwn_btn} /></button>
+                                <button href="#" 
+                                className="card-link" style={{ border: 'none', background: 'none', padding: 0 }} 
+                                onClick={() =>data.downloadLink &&  window.open(data.downloadLink, '_blank', 'noopener,noreferrer')}
+                                disabled={!data.downloadLink}
+                                ><img src={dwn_btn} /></button>
                             </div>
                         </div>
                     </div>
