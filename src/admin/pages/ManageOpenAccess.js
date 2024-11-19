@@ -210,7 +210,7 @@ const ManageOpenAccess = () => {
                                             <input type="text" className="form-control" id="exampleInputName1" placeholder="Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload epdf</label>
+                                            <label>Upload pdf</label>
                                             <input class="form-control" type="file" accept=".pdf" id="formFileMultiple" onChange={(e) => pdfHandler(e)} />
                                         </div>
 
