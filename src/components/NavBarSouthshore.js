@@ -48,17 +48,14 @@ function NavbarSouthshore() {
                     text: "Team",
                     children: [
                         {
-                            text: "Acquisition & Commissioning",
+                            text: "Acquisition",
                             link: "/leadership/acquisition"
                         },
                         {
                             text: "Editorial & Production",
                             link: "/leadership/editorial"
                         },
-                        {
-                            text: "Marketing",
-                            link: "/leadership/marketing"
-                        },
+                        
                         {
                             text: "Sales",
                             link: "/leadership/sales"
@@ -66,7 +63,11 @@ function NavbarSouthshore() {
                         {
                             text: "Sales support",
                             link: "/leadership/salessupport"
-                        }
+                        },
+                        {
+                            text: "Finance",
+                            link: "/leadership/marketing"
+                        },
                     ]
                 }
             ]
