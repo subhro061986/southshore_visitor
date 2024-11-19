@@ -12,6 +12,7 @@ import dwn_btn from '../assets/images/dwn_btn.png';
 import pdf from '../assets/images/pdf.png'
 import pdf_icon from '../assets/images/pdf_icon.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
+import Snippets from "../components/Snippets";
 import { UserProfile } from "../Context/Usercontext";
 import Config from "../Config/Config.json"
 
@@ -32,33 +33,48 @@ const Resources = () => {
 
     useEffect(() => {
         // getDownLoadLinks();
-        
-        
+        filterfnc(2)
+
     }, []);
-    
-    
+
+
 
     // const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
     const [activePublisherId, setActivePublisherId] = useState(2);
+    const [filteredArray, setFilteredArray] = useState([]);
     const modifiedOutput = allPublisherResources && allPublisherResources.length > 1
-    ? (() => {
-        const updatedOutput = [...allPublisherResources]; // Create a copy to avoid mutating the original
-        const secondItem = updatedOutput.splice(1, 1)[0]; // Extract the second item
-        updatedOutput.unshift(secondItem); // Add it to the start
-        return updatedOutput;
-    })(): allPublisherResources;
+        ? (() => {
+            const updatedOutput = [...allPublisherResources]; // Create a copy to avoid mutating the original
+            const secondItem = updatedOutput.splice(1, 1)[0]; // Extract the second item
+            updatedOutput.unshift(secondItem); // Add it to the start
+            return updatedOutput;
+        })() : allPublisherResources;
     console.log("modified output", modifiedOutput);
-    
+
 
     // Handle tab click to set the active publisher
     const handleTabClick = (publisherId) => {
         setActivePublisherId(publisherId);
+        if (publisherId !== 8) {
+            filterfnc(publisherId)
+        }
+        else {
+            setFilteredArray([])
+        }
     };
 
     // Filter books by active publisher
-    const filteredBooks = allResources.filter(
-        (book) => book.publisherId === activePublisherId && book.isActive
-    );
+    const filterfnc = async (val) => {
+        // if (activePublisherId !== 8) {
+        let filteredBooks = allResources.filter((book) => {
+            return (
+                book.publisherId === val && book.isActive
+            )
+        }
+        );
+        setFilteredArray(filteredBooks)
+        // }
+    }
 
     const getDownLoadLinks = async (id) => {
         const resp = await getResourceById(id);
@@ -92,14 +108,22 @@ const Resources = () => {
                                 {publisher.publisherName}
                             </li>
                         ))}
+                        <li
+                            className={`navbar-item me_3 ${activePublisherId === 8 ? "active" : ""}`}
+                            // onClick={() => setActiveTab(tab.publisherName)}
+                            onClick={() => handleTabClick(8)}
+                        >
+                            Newsletter
+                        </li>
                     </ul>
                 </nav>
-
-                <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
+                {activePublisherId !== 8 &&
+                    <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
+                }
                 <div className="row d-flex" style={{ marginBottom: '6%' }}>
-                    {
-                        filteredBooks?.length > 0 ? (
-                            filteredBooks.map((book) => (
+                    {activePublisherId !== 8 ? (
+                        filteredArray?.length > 0 ? (
+                            filteredArray.map((book) => (
                                 <div className="col-md-3 mt-2 d-flex justify-content-center" key={book.id}>
                                     <div className="card card_style" style={{ width: '17rem' }}>
                                         <div className="d-flex justify-content-center img_div_style position-relative">
@@ -133,55 +157,34 @@ const Resources = () => {
                         ) : (
                             <p style={{ textAlign: 'center' }}>No books available for this publisher.</p>
                         )
+                    ) : (
+                        <div className="row mt-4">
+                            <div className="col-12 col-sm-12">
+                                <div className="cards" style={{ borderRadius: '50px' }}>
+                                    <div className="screen_head" style={{ fontSize: '40px' }}>Exploring Boundless Worlds, One Page at a Time</div>
+                                    <div className="ervice_card_details mt-3">Subscribe Our Newsletter, and get the latest updates</div>
+                                    <div className="d-flex justify-content-center mt-5" style={{ width: '94%' }}>
+                                        <div className="mb-4" style={{ width: '58%' }}>
+                                            <label className="form-label label_font mb-2 mr_86">Email ID</label>
+                                            <input type="email" className="form-control input_style" placeholder="Enter Your Email" />
+                                        </div>
+                                        <div className="d-flex justify-content-center mt_16 position-relative">
+                                            <button className="explore_btn" style={{ fontSize: '14px', paddingLeft: '0%', textAlign: 'center', paddingRight: '44%', width: '120px', height: '47px' }}
+                                            // onClick={() => getDownLoadLinks(book.id)}
+                                            >Send</button>
+                                            <div className="rightarrow" style={{ right: '1%', height: '46px' }}><img src={arrow} height={20} width={20} /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
                     }
 
                 </div>
-                <div className="row">
-                    <div className="col-12 col-sm-12">
-                        <div className="cards" style={{ borderRadius: '50px' }}>
-                            <div className="screen_head" style={{ fontSize: '40px' }}>Exploring Boundless Worlds, One Page at a Time</div>
-                            <div className="ervice_card_details mt-3">Subscribe Our Newsletter, and get the latest updates</div>
-                            <div className="d-flex justify-content-center mt-5" style={{ width: '94%' }}>
-                                <div className="mb-4" style={{ width: '58%' }}>
-                                    <label className="form-label label_font mb-2 mr_86">Email ID</label>
-                                    <input type="email" className="form-control input_style" placeholder="Enter Your Email" />
-                                </div>
-                                <div className="d-flex justify-content-center mt_16 position-relative">
-                                    <button className="explore_btn" style={{ fontSize: '14px', paddingLeft: '0%', textAlign: 'center', paddingRight: '44%', width: '120px', height: '47px' }}
-                                    // onClick={() => getDownLoadLinks(book.id)}
-                                    >Send</button>
-                                    <div className="rightarrow" style={{ right: '1%', height: '46px' }}><img src={arrow} height={20} width={20} /></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="screen_head mt-5" style={{ textAlign: 'left', fontSize: '38px' }}>Snippets from Southsore Innovations</div>
-                <div className="row mt-4 mb-5">
-                    {allBanner.slice(0, 3)?.map((data, index) => (
-                        <div className="col-12 col-md-4 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
-                            <div className="card" style={{ width: '22rem', border: '1px solid #B1BEC9', borderRadius: '40px' }}>
-                                <img
-                                    // src={ban1}
-                                    src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()}
-                                    className="card-img-top" alt="..."
-                                    style={{ borderRadius: '40px' }}
-                                />
-                                <div className="card-body">
-                                    {/* <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize:'14px' }}>Posted On: October 29, 2024</p> */}
-                                    <h5 className="card-title" style={{ fontFamily: 'Ubuntu', fontSize: '20px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{data.title}</h5>
-                                    <p className="card-text" style={{ fontFamily: 'Ubuntu', fontSize: '14px' }}>{data.subTitle}</p>
-                                </div>
-                                {/* <div className="card-body">
-                                <button href="#" className="card-link" style={{ border: 'none', background: 'none', padding: 0 }}><img src={dwn_btn} /></button>
-                            </div> */}
-                            </div>
-                        </div>
+                <Snippets />
 
-                    ))}
-
-
-                </div>
+                
             </div>
 
             <FooterSouthsore />
