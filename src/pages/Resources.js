@@ -42,7 +42,7 @@ const Resources = () => {
     // const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
     const [activePublisherId, setActivePublisherId] = useState(2);
     const [filteredArray, setFilteredArray] = useState([]);
-    const modifiedOutput = allPublisherResources && allPublisherResources.length > 1
+    const modifiedOutput = allPublisherResources && allPublisherResources?.length > 1
         ? (() => {
             const updatedOutput = [...allPublisherResources]; // Create a copy to avoid mutating the original
             const secondItem = updatedOutput.splice(1, 1)[0]; // Extract the second item
@@ -123,8 +123,8 @@ const Resources = () => {
                 <div className="row d-flex" style={{ marginBottom: '6%' }}>
                     {activePublisherId !== 8 ? (
                         filteredArray?.length > 0 ? (
-                            filteredArray.map((book) => (
-                                <div className="col-md-3 mt-2 d-flex justify-content-center" key={book.id}>
+                            filteredArray?.map((book) => (
+                                <div className="col-md-3 mt-2 d-flex justify-content-center" key={book?.id}>
                                     <div className="card card_style" style={{ width: '17rem' }}>
                                         <div className="d-flex justify-content-center img_div_style position-relative">
                                             <button
@@ -134,9 +134,9 @@ const Resources = () => {
                                             </button>
                                             <img
                                                 // src={data.image}
-                                                height={170}
-                                                width={150}
-                                                src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + book.coverImageLink + '?d=' + new Date()}
+                                                height={160}
+                                                width={130}
+                                                src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + book?.coverImageLink + '?d=' + new Date()}
                                                 className="mt-4" />
                                         </div>
                                         <div className="card-body">
@@ -146,7 +146,7 @@ const Resources = () => {
                                             {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
                                             {/* > */}
                                             <div className="d-flex justify-content-center mt-3 position-relative">
-                                                <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%', textAlign: 'center', paddingRight: '32%' }} onClick={() => getDownLoadLinks(book.id)}>Download</button>
+                                                <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%', textAlign: 'center', paddingRight: '32%' }} onClick={() => getDownLoadLinks(book?.id)}>Download</button>
                                                 <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
                                             </div>
                                             {/* </a> */}
