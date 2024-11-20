@@ -41,7 +41,7 @@ const Marketing = () => {
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
-                    <h1>Marketing</h1>
+                    <h1>Finance</h1>
                 </div>
                 <div className="row">
                     {
