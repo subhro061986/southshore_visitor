@@ -72,7 +72,7 @@ const PublishedTitlesScreen = () => {
                                         <img
                                             // src={data.image} 
                                             src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()}
-                                            className="mt-4" width={160} height={200} />
+                                            className="mt-4" width={140} height={170} />
                                     </div>
                                     <div className="card-body">
                                         <div className="card_head">{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>

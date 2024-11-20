@@ -212,18 +212,18 @@ const ManageLeadership = () => {
                                                                 <td>
                                                                     {data.personName}
                                                                 </td>
-                                                                <td>{data.email}</td>
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.email}>{data?.email!==""?data.email.substring(0, 20)+"..." : data?.email}</td>
                                                                 <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.description}>
                                                                     {data?.description!==""?data.description.substring(0, 50)+"..." : data?.description}
                                                                 </td>
-                                                                <td>
-                                                                    {data.leadershipCategoryName}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.leadershipCategoryName}>
+                                                                    {data?.leadershipCategoryName!=="" && data.leadershipCategoryName.length>10?data.leadershipCategoryName.substring(0, 20)+"..." : data?.leadershipCategoryName}
                                                                 </td>
-                                                                <td>
-                                                                    {data.teamCategoryName}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.teamCategoryName}>
+                                                                    {data?.teamCategoryName!=="" && data.teamCategoryName.length>10?data.teamCategoryName.substring(0, 20)+"..." : data?.teamCategoryName}
                                                                 </td>
-                                                                <td>
-                                                                    {data.linkedin}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.linkedin}>
+                                                                    {data?.linkedin!==""?data.linkedin.substring(0, 20)+"..." : data?.linkedin}
                                                                 </td>
                                                                 <td> <label
                                                                     className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
@@ -303,7 +303,7 @@ const ManageLeadership = () => {
                                                     <option value="1">Editorial & Production</option>
                                                     <option value="2">Acquisition & Commissioning</option>
                                                     <option value="3">Sales</option>
-                                                    <option value="4">Marketing</option>
+                                                    <option value="4">Finance</option>
                                                     <option value="5">Sales Support</option>
                                                 </select>
                                             </div>

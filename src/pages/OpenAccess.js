@@ -51,8 +51,8 @@ const OpenAccess = () => {
                                     <img
                                         src={Config.API_URL + Config.Open_Access_URL + "/" + data?.imageLink + '?d=' + new Date()}
                                         className="mt-4"
-                                        height={170}
-                                        width={150}
+                                        height={160}
+                                        width={130}
                                     />
                                 </div>
                                 <div className="card-body">
