@@ -15,6 +15,7 @@ import NavBarSouthsore from "../components/NavBarSouthshore";
 import Snippets from "../components/Snippets";
 import { UserProfile } from "../Context/Usercontext";
 import Config from "../Config/Config.json"
+import Newsletter from "../components/Newsletter";
 
 
 
@@ -31,17 +32,26 @@ const Resources = () => {
     //     console.log('Tab changed to:', tab);
     // };
 
-    useEffect(() => {
-        // getDownLoadLinks();
-        filterfnc(2)
 
-    }, []);
 
 
 
     // const [activePublisherId, setActivePublisherId] = useState(allPublisherResources[0]?.id);
     const [activePublisherId, setActivePublisherId] = useState(2);
     const [filteredArray, setFilteredArray] = useState([]);
+
+    // useEffect(() => {
+    //     // getDownLoadLinks();
+    //     filterfnc(2)
+
+    // }, []);
+
+    useEffect(() => {
+        if (allResources?.length > 0 && allPublisherResources?.length > 0) {
+            filterfnc(activePublisherId); // Load books for activePublisherId
+        }
+    }, [allResources, allPublisherResources]);
+
     const modifiedOutput = allPublisherResources && allPublisherResources?.length > 1
         ? (() => {
             const updatedOutput = [...allPublisherResources]; // Create a copy to avoid mutating the original
@@ -120,7 +130,11 @@ const Resources = () => {
                 {activePublisherId !== 8 &&
                     <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
                 }
-                <div className="row d-flex" style={{ marginBottom: '6%' }}>
+                <div className="row d-flex" style={{ 
+                    marginBottom: '6%',
+                    justifyContent: activePublisherId !== 8 ? 'flex-start' : 'center'
+
+                 }}>
                     {activePublisherId !== 8 ? (
                         filteredArray?.length > 0 ? (
                             filteredArray?.map((book) => (
@@ -158,33 +172,14 @@ const Resources = () => {
                             <p style={{ textAlign: 'center' }}>No books available for this publisher.</p>
                         )
                     ) : (
-                        <div className="row mt-4">
-                            <div className="col-12 col-sm-12">
-                                <div className="cards" style={{ borderRadius: '50px' }}>
-                                    <div className="screen_head" style={{ fontSize: '40px' }}>Exploring Boundless Worlds, One Page at a Time</div>
-                                    <div className="ervice_card_details mt-3">Subscribe Our Newsletter, and get the latest updates</div>
-                                    <div className="d-flex justify-content-center mt-5" style={{ width: '94%' }}>
-                                        <div className="mb-4" style={{ width: '58%' }}>
-                                            <label className="form-label label_font mb-2 mr_86">Email ID</label>
-                                            <input type="email" className="form-control input_style" placeholder="Enter Your Email" />
-                                        </div>
-                                        <div className="d-flex justify-content-center mt_16 position-relative">
-                                            <button className="explore_btn" style={{ fontSize: '14px', paddingLeft: '0%', textAlign: 'center', paddingRight: '44%', width: '120px', height: '47px' }}
-                                            // onClick={() => getDownLoadLinks(book.id)}
-                                            >Send</button>
-                                            <div className="rightarrow" style={{ right: '1%', height: '46px' }}><img src={arrow} height={20} width={20} /></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Newsletter/>
                     )
                     }
 
                 </div>
                 <Snippets />
 
-                
+
             </div>
 
             <FooterSouthsore />
