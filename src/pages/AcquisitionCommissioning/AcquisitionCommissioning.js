@@ -41,7 +41,7 @@ const AcquisitionCommissioning = () => {
                 <NavBarSouthsore />
 
                 <div className="d-flex justify-content-center mt-3">
-                    <h1>Acquisition & Commissioning</h1>
+                    <h1>Acquisition</h1>
                 </div>
                 <div className="row">
                     {
