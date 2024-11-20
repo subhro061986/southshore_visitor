@@ -66,7 +66,7 @@ function NavbarSouthshore() {
                         },
                         {
                             text: "Finance",
-                            link: "/leadership/marketing"
+                            link: "/leadership/finance"
                         },
                     ]
                 }
