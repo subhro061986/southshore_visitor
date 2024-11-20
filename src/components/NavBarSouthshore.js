@@ -55,7 +55,7 @@ function NavbarSouthshore() {
                             text: "Editorial & Production",
                             link: "/leadership/editorial"
                         },
-                        
+
                         {
                             text: "Sales",
                             link: "/leadership/sales"
@@ -158,13 +158,13 @@ function NavbarSouthshore() {
     return (
         <>
             <Navbar key={"lg"} expand={"lg"} className="mb-3"
-                // style={{
-                //     overflowX: "scroll",
-                //     overflowY: "visible",
-                //     scrollBehavior: "smooth",
-                //     scrollbarWidth: "none",
-                //     whiteSpace: "nowrap"
-                // }}
+            // style={{
+            //     overflowX: "scroll",
+            //     overflowY: "visible",
+            //     scrollBehavior: "smooth",
+            //     scrollbarWidth: "none",
+            //     whiteSpace: "nowrap"
+            // }}
             >
                 <Container fluid className='p-0'
                     style={{
@@ -191,6 +191,30 @@ function NavbarSouthshore() {
                                 {
                                     navItems.map((navItem, index) => {
                                         if (!navItem?.children) {
+                                            // Handle absolute external links
+                                            if (navItem?.children?.absolute === true && navItem?.children?.absolute !== "") {
+                                                return (
+                                                    <Nav.Link
+                                                        key={index}
+                                                        onClick={() => window.open(navItem?.link, '_blank', 'noopener,noreferrer')}
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <span
+                                                            style={{
+                                                                fontFamily: 'Ubuntu',
+                                                                fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
+                                                                fontSize: "14px",
+                                                                color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
+                                                                borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
+                                                                paddingBottom: "10px",
+                                                            }}
+                                                        >
+                                                            {navItem.text}
+                                                        </span>
+                                                    </Nav.Link>
+                                                );
+                                            }
+
                                             return (
                                                 <Nav.Link href={navItem?.link} key={index}>
                                                     <span style={{
@@ -219,14 +243,14 @@ function NavbarSouthshore() {
                                                                     color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                                     borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                                     paddingBottom: "10px",
-                                                                    
+
                                                                 }}>
-                                                                    {navItem?.text}<FaChevronDown style={{ marginLeft: '5px', marginRight:0 }} />
+                                                                    {navItem?.text}<FaChevronDown style={{ marginLeft: '5px', marginRight: 0 }} />
                                                                 </span>
                                                             </>
                                                         }
                                                         id={`offcanvasNavbarDropdown-expand-lg`}
-                                                        
+
                                                     >
                                                         <NavCard navItems={navItem?.children} />
                                                     </NavDropdown>
@@ -251,8 +275,8 @@ function NavbarSouthshore() {
                             +91-44-79624624
                         </Link>
                     </div>
-            </Container>
-        </Navbar >
+                </Container>
+            </Navbar >
         </>
     );
 }

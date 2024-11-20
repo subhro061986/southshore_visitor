@@ -16,38 +16,12 @@ const PublishedTitlesScreen = () => {
 
     const { allPublishedTitle } = UserProfile()
 
-    const TitleArray = [
-        {
-            title: "Attitude Is Everything",
-            author: "Jeff Keller",
-            image: book1,
+    const handleBuyNow = (buyLink) => {
+        // Ensure the URL starts with https://
+        const validUrl = buyLink.startsWith('http://') || buyLink.startsWith('https://') ? buyLink : `https://${buyLink}`;
 
-        },
-        {
-            title: "Pride & Prejudice",
-            author: "Jeff Keller",
-            image: book2,
-
-        },
-        {
-            title: "Three Thousand Stitches",
-            author: "Jeff Keller",
-            image: book3,
-
-        },
-        {
-            title: "How to Talk to Anyone",
-            author: "Jeff Keller",
-            image: book4,
-
-        },
-        {
-            title: "How to Talk to Anyone",
-            author: "Jeff Keller",
-            image: book1,
-
-        }
-    ]
+        window.open(validUrl, '_blank'); // Opens the link in a new tab
+    };
 
 
     return (
@@ -66,7 +40,7 @@ const PublishedTitlesScreen = () => {
                         data.isActive === 1 && data.publisherName === "JURIS PRESS" && (
                             <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
                                 <div className="card card_style"
-                                    // style={{ width: '100%' }}
+                                // style={{ width: '100%' }}
                                 >
                                     <div className="d-flex justify-content-center img_div_style">
                                         <img
@@ -78,7 +52,13 @@ const PublishedTitlesScreen = () => {
                                         <div className="card_head">{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>
                                         <div className="card_author my-3">{data.authorName}</div>
                                         <div className="d-flex justify-content-center">
-                                            <button className="card_btn bg-white px-3 py-2 mt-2"><Link style={{ textDecoration: 'none' }} to={data.buyLink}>Buy on BookCentral</Link></button>
+                                            <button className="card_btn bg-white px-3 py-2 mt-2"
+                                                onClick={() => handleBuyNow(data.buyLink)}
+                                            >
+                                                {/* <Link style={{ textDecoration: 'none' }} to={data.buyLink}> */}
+                                                Buy on BookCentral
+                                                {/* </Link> */}
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
