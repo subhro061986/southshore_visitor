@@ -10,10 +10,11 @@ import { FaChevronDown } from 'react-icons/fa';
 import useWindowDimensions from '../hooks/windowDimensions';
 import Config from "../Config/Config.json";
 import iconCall from "../assets/images/icon-call.svg";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavbarSouthshore() {
     // const currentLocation = window.location;
+    const navigate = useNavigate();
     const windowDimensions = useWindowDimensions();
 
     const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
@@ -27,7 +28,9 @@ function NavbarSouthshore() {
             return false;
         }
     }
-
+    const gotoPages=(val)=>{
+        navigate(val)
+    }
     const navItems = [
         {
             text: "Home",
@@ -38,35 +41,42 @@ function NavbarSouthshore() {
             children: [
                 {
                     text: "Management",
-                    link: "/leadership/management"
+                    link: "/leadership/management",
+                    absolute: false
                 },
                 {
                     text: "Advisory Board",
-                    link: "/leadership/advisory"
+                    link: "/leadership/advisory",
+                    absolute: false
                 },
                 {
                     text: "Team",
                     children: [
                         {
                             text: "Acquisition",
-                            link: "/leadership/acquisition"
+                            link: "/leadership/acquisition",
+                            absolute: false
                         },
                         {
                             text: "Editorial & Production",
-                            link: "/leadership/editorial"
+                            link: "/leadership/editorial",
+                            absolute: false
                         },
 
                         {
                             text: "Sales",
-                            link: "/leadership/sales"
+                            link: "/leadership/sales",
+                            absolute: false
                         },
                         {
                             text: "Sales support",
-                            link: "/leadership/salessupport"
+                            link: "/leadership/salessupport",
+                            absolute: false
                         },
                         {
                             text: "Finance",
-                            link: "/leadership/finance"
+                            link: "/leadership/finance",
+                            absolute: false
                         },
                     ]
                 }
@@ -77,15 +87,18 @@ function NavbarSouthshore() {
             children: [
                 {
                     text: "About Juris Press",
-                    link: "/juris/about"
+                    link: "/juris/about",
+                    absolute: false
                 },
                 {
                     text: "Titles Published",
-                    link: "/juris/publishedtitle"
+                    link: "/juris/publishedtitle",
+                    absolute: false
                 },
                 {
                     text: "Publish with Juris Press",
-                    link: "/juris/publishwithjuris"
+                    link: "/juris/publishwithjuris",
+                    absolute: false
                 }
             ]
         },
@@ -94,15 +107,18 @@ function NavbarSouthshore() {
             children: [
                 {
                     text: "About Thomson Reuters",
-                    link: "/thomson/about"
+                    link: "/thomson/about",
+                    absolute: false
                 },
                 {
                     text: "Titles Published",
-                    link: "/thomson/publishedtitle"
+                    link: "/thomson/publishedtitle",
+                    absolute: false
                 },
                 {
                     text: "Publish with Us",
-                    link: "/thomson/publishwithus"
+                    link: "/thomson/publishwithus",
+                    absolute: false
                 }
             ]
         },
@@ -115,19 +131,23 @@ function NavbarSouthshore() {
             children: [
                 {
                     text: "Brill",
-                    link: "/representation/brill"
+                    link: "/representation/brill",
+                    absolute: false
                 },
                 {
                     text: "MyJoVE",
-                    link: "/representation/jove"
+                    link: "/representation/jove",
+                    absolute: false
                 },
                 {
                     text: "Writefull",
-                    link: "/representation/writefull"
+                    link: "/representation/writefull",
+                    absolute: false
                 },
                 {
                     text: "Enquiry",
-                    link: "/representation/enquiry"
+                    link: "/representation/enquiry",
+                    absolute: false
                 }
             ]
         },
@@ -192,7 +212,7 @@ function NavbarSouthshore() {
                                     navItems.map((navItem, index) => {
                                         if (!navItem?.children) {
                                             // Handle absolute external links
-                                            if (navItem?.children?.absolute === true && navItem?.children?.absolute !== "") {
+                                            if (navItem?.children?.absolute === true) {
                                                 return (
                                                     <Nav.Link
                                                         key={index}
@@ -216,7 +236,11 @@ function NavbarSouthshore() {
                                             }
 
                                             return (
-                                                <Nav.Link href={navItem?.link} key={index}>
+                                                <Nav.Link 
+                                                //href={navItem?.link} 
+                                                onClick={()=>gotoPages(navItem?.link)}
+                                                key={index}
+                                                >
                                                     <span style={{
                                                         fontFamily: 'Ubuntu',
                                                         fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,

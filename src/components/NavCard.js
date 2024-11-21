@@ -3,9 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import { FaChevronDown } from "react-icons/fa";
 import useWindowDimensions from "../hooks/windowDimensions";
 import Config from "../Config/Config.json"
+import { useNavigate } from "react-router-dom";
 
 const NavCard = (props) => {
     const navItems = props?.navItems;
+    const navigate = useNavigate();
     const [selectedNavItem, setSelectedNavItem] = useState(null);
 
     const windowDimensions = useWindowDimensions();
@@ -13,7 +15,7 @@ const NavCard = (props) => {
     const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
 
     const isThisPageActive = (link) => {
-        console.log("window.location", window.location);
+        
         if (window.location.href?.endsWith(link)) {
             return true;
         }
@@ -22,7 +24,16 @@ const NavCard = (props) => {
         }
     }
     // box-shadow: 0px 40px 60px 0px rgba(111, 122, 159, 0.25);
-
+    const gotoPage=(val)=>{
+        
+        if(val.absolute===true){
+            window.open(val.link, '_blank')
+        }
+        else{
+            navigate(val?.link)
+        }
+        
+    }
     return (
         <div style={{
             width: "max-content",
@@ -36,9 +47,14 @@ const NavCard = (props) => {
                 <div className={`col-6 ${isMobileScreen ? 'p-2': ''}`}>
                     <ul>
                         {navItems?.map((navElem, index) => {
+                            
                             return (
                                 <li style={{ listStyleType: "none", whiteSpace: "nowrap" }} key={index} onClick={(e) => { setSelectedNavItem(navElem) }}>
-                                    <Nav.Link href={navElem?.link}>
+                                    <Nav.Link 
+                                    //href={navElem.absolute===false?navElem.link:window.open(navElem.link, '_blank')}
+                                    //href={navElem?.link}
+                                    onClick={()=>gotoPage(navElem)}
+                                    >
                                         <span style={{
                                             fontFamily: 'Ubuntu',
                                             fontWeight: 500,
@@ -62,7 +78,9 @@ const NavCard = (props) => {
                         {selectedNavItem && selectedNavItem?.children && selectedNavItem?.children?.map((navElem, index) => {
                             return (
                                 <li style={{ listStyleType: "none" }} key={index}>
-                                    <Nav.Link href={navElem?.link}>
+                                    <Nav.Link 
+                                    href={navElem?.link}
+                                    >
                                         <span style={{
                                             fontFamily: 'Ubuntu',
                                             fontWeight: isThisPageActive(navElem?.link) ? 500 : 400,
