@@ -166,9 +166,9 @@ const FooterSouthsore = () => {
 
                             <li className="custom-footer-li">
                                 {/* Southshore Innovations Private Limited */}
-                                Plot 13, Heritage Phase II
-                                Telephone Nagar, Perungudi
-                                Chennai - 600096
+                                Plot 13, Heritage Phase II,
+                                Telephone Nagar, Perungudi,
+                                Chennai - 600096, Tamil Nadu, India
 
                                 {/* <p className="mt-2" style={{ cursor: 'pointer' }}
                                 // onClick={openMailto}

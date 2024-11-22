@@ -155,12 +155,12 @@ function NavbarSouthshore() {
             text: "Platforms",
             children: [
                 {
-                    text: "Ebooksjunction",
+                    text: "e-BooksJunction",
                     link: `https://ebooksjunction.com/`,
                     absolute: true
                 },
                 {
-                    text: "Bookscentral",
+                    text: "BooksCentral",
                     link: `https://bookscentral.in/`,
                     absolute: true
                 }

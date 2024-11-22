@@ -43,7 +43,7 @@ const PublishWithJuris = () => {
 
         }
         const resp = await PublishWithUs(json)
-        alert(resp.data.message)
+        alert("Thank you contact with us.Admin will answer shortly")
         // console.log('publish resp', resp)
     }
 
