@@ -130,11 +130,11 @@ const Resources = () => {
                 {activePublisherId !== 8 &&
                     <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
                 }
-                <div className="row d-flex" style={{ 
+                <div className="row d-flex" style={{
                     marginBottom: '6%',
                     justifyContent: activePublisherId !== 8 ? 'flex-start' : 'center'
 
-                 }}>
+                }}>
                     {activePublisherId !== 8 ? (
                         filteredArray?.length > 0 ? (
                             filteredArray?.map((book) => (
@@ -172,12 +172,15 @@ const Resources = () => {
                             <p style={{ textAlign: 'center' }}>No books available for this publisher.</p>
                         )
                     ) : (
-                        <Newsletter/>
+                        <>
+                            <Newsletter />
+                            <Snippets />
+                        </>
                     )
                     }
 
                 </div>
-                <Snippets />
+
 
 
             </div>

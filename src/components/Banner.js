@@ -22,6 +22,7 @@ const Banner = () => {
     const windowDimensions = useWindowDimensions();
 
     const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
 
 
@@ -30,7 +31,7 @@ const Banner = () => {
         <>
             {!isMobileScreen ? (
                 <Carousel
-                    // interval={null}
+                    interval={null}
                     prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }} />} // Custom Previous icon
                     nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
                 >
@@ -49,7 +50,7 @@ const Banner = () => {
                                         <div className="slide_img_div" >
                                             <img
                                                 src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()}
-                                                width={550}
+                                                width={isTabScreen!== true ? 550 : 374}
                                                 // height={410}
                                                 height={320}
                                                 style={{ borderRadius: '25px' }}

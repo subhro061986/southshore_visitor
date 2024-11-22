@@ -249,7 +249,7 @@
   font-family: "Ubuntu";
   font-size: 18px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 24px;
   text-align: center;
   color: #011539;
 }
@@ -655,5 +655,19 @@ color: #424253;
     right: 15% !important;
     left: 17% !important;
     bottom: 2.50rem !important;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .slide_img_div {
+    width: 400px;
+  }
+
+  .card_btn {
+    font-size: 9px;
+  }
+
+  .card_head {
+    line-height: 27px;
   }
 }

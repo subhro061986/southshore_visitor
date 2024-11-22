@@ -49,7 +49,11 @@ const PublishedTitlesScreen = () => {
                                             className="mt-4" width={140} height={170} />
                                     </div>
                                     <div className="card-body">
-                                        <div className="card_head">{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>
+                                        <div className="card_head" style={{
+                                            overflow: 'hidden',
+                                            textOverflow: 'ellipsis',
+                                            whiteSpace: 'nowrap'
+                                        }}>{data.title.length > 15 ? data.title.substring(0, 15) + ".." : data.title}</div>
                                         <div className="card_author my-3">{data.authorName}</div>
                                         <div className="d-flex justify-content-center">
                                             <button className="card_btn bg-white px-3 py-2 mt-2"

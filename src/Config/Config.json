@@ -15,6 +15,7 @@
     "Open_Access_URL":"uploads/openaccess/covers",
     "Open_Access_PDF_URL":"uploads/openaccess/pdfs",
     "MOBILE_SCREEN_MIN_WIDTH": 500,
+    "TAB_SCREEN_MAX_WIDTH":1024,
     "PUBLISH_WITH_US":"contact/publishwithus",
     "ENQUIRY":"contact/enquiry"
 }
