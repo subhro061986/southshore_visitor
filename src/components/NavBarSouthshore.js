@@ -18,6 +18,7 @@ function NavbarSouthshore() {
     const windowDimensions = useWindowDimensions();
 
     const isMobileScreen = windowDimensions?.width <= Config.MOBILE_SCREEN_MIN_WIDTH ? true : false;
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
     const isThisPageActive = (link) => {
         // console.log("window.location", window.location);
@@ -223,7 +224,7 @@ function NavbarSouthshore() {
                                                             style={{
                                                                 fontFamily: 'Ubuntu',
                                                                 fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
-                                                                fontSize: "14px",
+                                                                fontSize: isTabScreen !== true ? "14px" : "11px",
                                                                 color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                                 borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                                 paddingBottom: "10px",
@@ -244,7 +245,7 @@ function NavbarSouthshore() {
                                                     <span style={{
                                                         fontFamily: 'Ubuntu',
                                                         fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
-                                                        fontSize: "14px",
+                                                        fontSize: isTabScreen !== true ? "14px" : "11px",
                                                         color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                         borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                         paddingBottom: "10px"
@@ -263,7 +264,7 @@ function NavbarSouthshore() {
                                                                 <span style={{
                                                                     fontFamily: 'Ubuntu',
                                                                     fontWeight: isThisPageActive(navItem?.link) ? 700 : 500,
-                                                                    fontSize: "14px",
+                                                                    fontSize: isTabScreen !== true ? "14px" : "11px",
                                                                     color: isThisPageActive(navItem?.link) ? "#4D39F1" : "#535861",
                                                                     borderBottom: isThisPageActive(navItem?.link) ? "4px solid #4D39F1" : "",
                                                                     paddingBottom: "10px",
@@ -287,11 +288,11 @@ function NavbarSouthshore() {
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                     <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
-                        <img src={iconCall} width={25} height={25} />
+                        <img src={iconCall} width={isTabScreen !== true ? 25 : 20} height={isTabScreen !== true ? 25 : 20} />
                         <Link className='ms-2' type='tel'
                             style={{
                                 fontFamily: "Roboto",
-                                fontSize: "15px",
+                                fontSize: isTabScreen !== true ? "15px" : "11px",
                                 fontWeight: 500,
                                 color: "#535861"
                             }}

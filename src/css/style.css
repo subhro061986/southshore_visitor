@@ -670,4 +670,20 @@ color: #424253;
   .card_head {
     line-height: 27px;
   }
+
+  .mt_16 {
+    margin-top: 3.2%;
+  }
+
+  .mr_86 {
+    margin-right: 84%;
+  }
+
+  .navbar-item {
+    font-size: 11px;
+  }
+
+  .rightarrow {
+    right: 38%;
+  }
 }

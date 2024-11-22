@@ -6,9 +6,13 @@ import { Link } from "react-router-dom";
 import about_juris_img_1 from "../../assets/images/about_juris_img_1.png";
 import about_juris_img_2 from "../../assets/images/about_juris_img_2.png";
 import about_juris_img_3 from "../../assets/images/about_juris_img_3.svg";
+import Config from "../../Config/Config.json"
+import useWindowDimensions from "../../hooks/windowDimensions";
 
 
 const JurisAbout = () => {
+    const windowDimensions = useWindowDimensions();
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
     return (
         <>
@@ -45,10 +49,10 @@ const JurisAbout = () => {
                     <div className="col-12 col-lg-5">
                         <div className="d-flex h-100 flex-column justify-content-between">
                             <div className="image-container">
-                                <img src={about_juris_img_2} className="about-image" style={{height:'250px'}}></img>
+                                <img src={about_juris_img_2} className="about-image" style={isTabScreen !== true ? { height:'250px' } : { height:'204px' } }></img>
                             </div>
                             <div className="image-container">
-                                <img src={about_juris_img_3} className="about-image" style={{height:'250px'}}></img>
+                                <img src={about_juris_img_3} className="about-image" style={isTabScreen !== true ? { height:'250px' } : { height:'204px' } }></img>
                             </div>
                         </div>
                     </div>

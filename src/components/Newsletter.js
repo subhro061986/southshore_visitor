@@ -4,16 +4,20 @@ import logo from '../assets/images/southshore_logo_alt.svg';
 import dwn_btn from '../assets/images/dwn_btn.png';
 import inv_pdf from '../assets/images/Southshore_Snippets_Issue_1.pdf';
 import arrow from '../assets/images/arrow-right.png';
+import useWindowDimensions from '../hooks/windowDimensions';
+import Config from "../Config/Config.json";
 
 
 export const Newsletter = () => {
+    const windowDimensions = useWindowDimensions();
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
     return (
         <>
             <div className="row mt-4">
                 <div className="col-12 col-sm-12">
                     <div className="cards" style={{ borderRadius: '50px' }}>
-                        <div className="screen_head" style={{ fontSize: '40px' }}>Exploring Boundless Worlds, One Page at a Time</div>
+                        <div className="screen_head" style={ isTabScreen !== true ? { fontSize: '40px' } : { fontSize: '34px' }}>Exploring Boundless Worlds, One Page at a Time</div>
                         <div className="ervice_card_details mt-3">Subscribe Our Newsletter, and get the latest updates</div>
                         <div className="d-flex justify-content-center mt-5" style={{ width: '94%' }}>
                             <div className="mb-4" style={{ width: '58%' }}>

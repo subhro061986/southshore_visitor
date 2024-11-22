@@ -9,12 +9,15 @@ import instagram_logo from "../assets/images/Instagram-icon.png";
 import arrow_right from "../assets/images/arrow_right.png";
 import { Button } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import useWindowDimensions from '../hooks/windowDimensions';
+import Config from "../Config/Config.json";
 // import { UserProfile } from "../Context/Usercontext";
 
 
 const FooterSouthsore = () => {
 
-
+    const windowDimensions = useWindowDimensions();
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
 
 
@@ -88,7 +91,7 @@ const FooterSouthsore = () => {
 
                         </div>
                     </div> */}
-                    <div className="col-md-2 s_f_mar_bot">
+                    <div className={`${isTabScreen !== true ? 'col-md-2' : 'col-md-1'} s_f_mar_bot`}>
                         <div className="d-flex flex-row">
                             <div className="">
                                 <ul className="remove-dots" >

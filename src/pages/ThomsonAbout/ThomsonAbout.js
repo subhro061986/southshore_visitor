@@ -6,9 +6,14 @@ import { Link } from "react-router-dom";
 import about_thomson_1 from "../../assets/images/about_thomson_1.png";
 import about_thomson_2 from "../../assets/images/thompson_books.png";
 import about_thomson_3 from "../../assets/images/about_thomson_3.png";
+import Config from "../../Config/Config.json"
+import useWindowDimensions from "../../hooks/windowDimensions";
 
 
 const ThomsonAbout = () => {
+
+    const windowDimensions = useWindowDimensions();
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
 
     return (
         <>
@@ -44,10 +49,10 @@ const ThomsonAbout = () => {
                     <div className="col-12 col-lg-5">
                         <div className="d-flex h-100 flex-column justify-content-between">
                             <div className="image-container">
-                                <img src={about_thomson_2} className="about-image" style={{height:'250px'}}></img>
+                                <img src={about_thomson_2} className="about-image" style={isTabScreen !== true ? { height:'250px' } : { height:'204px' } }></img>
                             </div>
                             <div className="image-container">
-                                <img src={about_thomson_3} className="about-image" style={{height:'250px'}}></img>
+                                <img src={about_thomson_3} className="about-image" style={isTabScreen !== true ? { height:'250px' } : { height:'204px' } }></img>
                             </div>
                         </div>
                     </div>
