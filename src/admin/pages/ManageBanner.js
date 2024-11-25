@@ -169,7 +169,7 @@ const ManageBanner = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allBanner?.map((data, index) => (
+                                                        {allBanner.sort((a, b) => b.isActive - a.isActive)?.map((data, index) => (
                                                             <tr key={index}>
                                                                 <td>
                                                                     <img src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
