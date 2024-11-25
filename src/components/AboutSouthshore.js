@@ -145,7 +145,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Representing international publishers such as Brill and MyJove, and application providers like Writefull</li>
+                                <li>Representing international publishers such as Brill and MyJoVE, and application providers like Writefull</li>
                             </ul>
                         </div>
                     </div>

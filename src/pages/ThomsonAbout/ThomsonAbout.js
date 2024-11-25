@@ -2,7 +2,7 @@ import React from "react";
 import FooterSouthsore from "../../components/FooterSouthsore";
 import { Header } from "../../components/Header";
 import NavBarSouthsore from "../../components/NavBarSouthshore";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import about_thomson_1 from "../../assets/images/about_thomson_1.png";
 import about_thomson_2 from "../../assets/images/thompson_books.png";
 import about_thomson_3 from "../../assets/images/about_thomson_3.png";
@@ -11,10 +11,12 @@ import useWindowDimensions from "../../hooks/windowDimensions";
 
 
 const ThomsonAbout = () => {
-
+    const navigate=useNavigate()
     const windowDimensions = useWindowDimensions();
     const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
-
+    const gotoForm=()=>{
+        navigate('/thomson/publishwithus')
+    }
     return (
         <>
             <div class="container">
@@ -37,7 +39,7 @@ const ThomsonAbout = () => {
                     In addition, as Thomson Reuters’ in-country partner, Southshore reprints specific titles from Sweet and Maxwell UK for the SAARC region, and imports titles from Sweet and Maxwell UK and sells them to customers in India.
                     </p>
                     <p className="about-juris-description">
-                    Southshore also manages Thomson Reuters’ digital content sales of titles from Sweet and Maxwell UK and from within India. All sales are meant exclusively for the SAARC region. With over 350 Indian titles, 250 reprint titles and 1,000 titles from Sweet and Maxwell UK, Southshore brings to its customers a large repository of legal content. The titles are listed on our proprietary platform <Link className="link" to={`https://www.bookscentral.in`} target="_blank">Books Central</Link>. With a view to increasing the availability of good legal content, Southshore is constantly on the lookout for new authors and ideas. We invite aspiring and established authors to publish with us. Click here (link to form) to reach out to us about your book.
+                    Southshore also manages Thomson Reuters’ digital content sales of titles from Sweet and Maxwell UK and from within India. All sales are meant exclusively for the SAARC region. With over 350 Indian titles, 250 reprint titles and 1,000 titles from Sweet and Maxwell UK, Southshore brings to its customers a large repository of legal content. The titles are listed on our proprietary platform <Link className="link" to={`https://www.bookscentral.in`} target="_blank">Books Central</Link>. With a view to increasing the availability of good legal content, Southshore is constantly on the lookout for new authors and ideas. We invite aspiring and established authors to publish with us. <span style={{cursor:'pointer'}} onClick={gotoForm}>Click here</span> to reach out to us about your book.
                     </p>
                 </div>
                 <div className="row mb-5 mt-3">
