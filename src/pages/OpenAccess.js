@@ -11,14 +11,18 @@ import pdf_icon from '../assets/images/pdf_icon.png'
 import NavBarSouthsore from "../components/NavBarSouthshore";
 import { UserProfile } from "../Context/Usercontext";
 import Config from "../Config/Config.json"
+import useWindowDimensions from '../hooks/windowDimensions';
 
 
 
 const OpenAccess = () => {
 
     const { allOpenAccess, getOpenAccessById } = UserProfile()
+    const windowDimensions = useWindowDimensions();
 
-    
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH && windowDimensions?.width >= Config.TAB_SCREEN_MIN_WIDTH ? true : false;
+
+
 
     const getDownLoadLinks = async (id) => {
         const resp = await getOpenAccessById(id);
@@ -46,20 +50,25 @@ const OpenAccess = () => {
                                 <div className="d-flex justify-content-center img_div_style position-relative">
                                     <button className="border border-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
                                         {/* <img src={pdf} height={20} width={20}  bg-white/> */}
-                                        <img src={pdf_icon} height={40} width={40}/>
+                                        <img src={pdf_icon} height={isTabScreen !== true ? 40 : 30} width={isTabScreen !== true ? 40 : 30} />
                                     </button>
                                     <img
                                         src={Config.API_URL + Config.Open_Access_URL + "/" + data?.imageLink + '?d=' + new Date()}
                                         className="mt-4"
                                         height={160}
-                                        width={130}
+                                        width={isTabScreen !== true ? 130 : 110}
                                     />
                                 </div>
                                 <div className="card-body">
                                     <div className="card_head">{data?.title?.length > 15 ? data?.title?.substring(0, 15) + ".." : data?.title}</div>
                                     {/* <div className="card_author my-3">Author: <span style={{ fontWeight: '500' }}>{data.author}</span></div> */}
                                     <div className="d-flex justify-content-center mt-3 position-relative">
-                                        <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%', textAlign:'center', paddingRight:'32%' }} onClick={()=>getDownLoadLinks(data.id)}>Download</button>
+                                        <button className="explore_btn" style={{
+                                            fontSize: isTabScreen !== true ? '12px' : '11px',
+                                            paddingLeft: isTabScreen !== true ? '10%' : '8%',
+                                            textAlign: 'center',
+                                            paddingRight: isTabScreen !== true ? '32%' : '48%'
+                                        }} onClick={() => getDownLoadLinks(data.id)}>Download</button>
                                         <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
                                     </div>
                                 </div>

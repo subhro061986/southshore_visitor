@@ -408,7 +408,7 @@
 .navbar-item.active {
   color: #4d39f1;
   font-family: Ubuntu;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 32px;
   text-align: left;
@@ -680,10 +680,17 @@ color: #424253;
   }
 
   .navbar-item {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .rightarrow {
     right: 38%;
+  }
+
+  .pdf_btn_style {
+    height: 30px;
+    width: 30px;
+    top: 10%;
+    right: 5%;
   }
 }

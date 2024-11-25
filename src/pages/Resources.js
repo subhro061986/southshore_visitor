@@ -16,12 +16,14 @@ import Snippets from "../components/Snippets";
 import { UserProfile } from "../Context/Usercontext";
 import Config from "../Config/Config.json"
 import Newsletter from "../components/Newsletter";
+import useWindowDimensions from '../hooks/windowDimensions';
 
 
 
 const Resources = () => {
 
     const { allPublisherResources, allResources, getResourceById, allBanner } = UserProfile()
+    const windowDimensions = useWindowDimensions();
 
     // const [resourceByIdResp, setResourceByIdResp] = useState(null);
 
@@ -51,6 +53,8 @@ const Resources = () => {
             filterfnc(activePublisherId); // Load books for activePublisherId
         }
     }, [allResources, allPublisherResources]);
+
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH && windowDimensions?.width >= Config.TAB_SCREEN_MIN_WIDTH ? true : false;
 
     const modifiedOutput = allPublisherResources && allPublisherResources?.length > 1
         ? (() => {
@@ -144,12 +148,12 @@ const Resources = () => {
                                             <button
                                                 className="border border-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">
                                                 {/* <img src={pdf} height={20} width={20} /> bg-white */}
-                                                <img src={pdf_icon} height={40} width={40} />
+                                                <img src={pdf_icon} height={isTabScreen !== true ? 40 : 30} width={isTabScreen !== true ? 40 : 30} />
                                             </button>
                                             <img
                                                 // src={data.image}
                                                 height={160}
-                                                width={130}
+                                                width={isTabScreen !== true ? 130 : 110}
                                                 src={Config.API_URL + Config.RESOURCE_IMAGE_URL + "/" + book?.coverImageLink + '?d=' + new Date()}
                                                 className="mt-4" />
                                         </div>
@@ -160,7 +164,12 @@ const Resources = () => {
                                             {/* href={book.downloadLink} target="_blank" rel="noopener noreferrer" style={{textDecoration:'none'}} download={Config.API_URL + "resources/pdfs" + "/" + book.downloadLink + '?d=' + new Date()} */}
                                             {/* > */}
                                             <div className="d-flex justify-content-center mt-3 position-relative">
-                                                <button className="explore_btn" style={{ fontSize: '12px', paddingLeft: '10%', textAlign: 'center', paddingRight: '32%' }} onClick={() => getDownLoadLinks(book?.id)}>Download</button>
+                                                <button className="explore_btn" style={{
+                                                    fontSize: isTabScreen !== true ? '12px' : '11px',
+                                                    paddingLeft: isTabScreen !== true ? '10%' : '8%',
+                                                    textAlign: 'center',
+                                                    paddingRight: isTabScreen !== true ? '32%' : '48%'
+                                                }} onClick={() => getDownLoadLinks(book?.id)}>Download</button>
                                                 <div className="rightarrow" style={{ right: '0%' }}><img src={download} height={20} width={20} /></div>
                                             </div>
                                             {/* </a> */}
