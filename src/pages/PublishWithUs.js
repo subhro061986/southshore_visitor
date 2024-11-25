@@ -59,7 +59,7 @@ const PublishWithUs = () => {
                 <div className="margin-x">
                     <div className="text-center mt-3">
                         <div className="screen_head">Publish with Us</div>
-                        <div className="screen_sub_head mt-1">Reach out to us if you have an idea for a book or if you have a manuscript ready for publishing. Please write to us at <span style={{ fontWeight: '700' }}>trindia@southshore.in.</span> with the following information and we will reach out to you at the earliest.</div>
+                        <div className="screen_sub_head mt-1">Reach out to us if you have an idea for a book or if you have a manuscript ready for publishing. Please write to us at <span style={{ fontWeight: '700' }}>trindia@southshore.in</span> with the following information and we will reach out to you at the earliest.</div>
                     </div>
                     <div className="row g-3 my-5">
                         <div className="col-md-6">
