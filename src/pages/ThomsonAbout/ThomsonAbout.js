@@ -13,7 +13,7 @@ import useWindowDimensions from "../../hooks/windowDimensions";
 const ThomsonAbout = () => {
 
     const windowDimensions = useWindowDimensions();
-    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH ? true : false;
+    const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH && windowDimensions?.width >= Config.TAB_SCREEN_MIN_WIDTH ? true : false;
 
     return (
         <>
