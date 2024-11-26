@@ -142,7 +142,7 @@ const Resources = () => {
                     {activePublisherId !== 8 ? (
                         filteredArray?.length > 0 ? (
                             filteredArray?.map((book) => (
-                                <div className="col-md-3 mt-2 d-flex justify-content-center" key={book?.id}>
+                                <div className="col-12 col-md-4 col-lg-3 mt-2 d-flex justify-content-center" key={book?.id}>
                                     <div className="card card_style" style={{ width: '17rem' }}>
                                         <div className="d-flex justify-content-center img_div_style position-relative">
                                             <button

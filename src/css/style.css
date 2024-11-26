@@ -484,6 +484,7 @@ pr {
   border-radius: 30px !important;
   background: #F4F4F4 !important;
   min-height: 420px !important;
+  max-height: 420px !important;
 }
 
 .service_card_head {
@@ -658,9 +659,10 @@ color: #424253;
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 991px) and (min-width: 768px) {
   .slide_img_div {
-    width: 400px;
+    width: 340px;
+    height: 280px !important;
   }
 
   .card_btn {
@@ -672,7 +674,7 @@ color: #424253;
   }
 
   .mt_16 {
-    margin-top: 3.2%;
+    margin-top: 5%;
   }
 
   .mr_86 {
@@ -692,5 +694,87 @@ color: #424253;
     width: 30px;
     top: 10%;
     right: 5%;
+  }
+
+  .label_font {
+    font-family: "Ubuntu";
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #191a1c;
+  }
+
+  .service_card_details {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #535861;
+  }
+
+  .mb_12 {
+    margin-bottom: 12%;
+  }
+
+  .carousel_caption_style {
+    right: 15% !important;
+    left: 10% !important;
+    bottom: 0rem !important;
+    top: 6rem !important;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+  .slide_img_div {
+    width: 400px;
+  }
+
+  .card_btn {
+    font-size: 9px;
+  }
+
+  .card_head {
+    line-height: 27px;
+  }
+
+  .mt_16 {
+    margin-top: 3.5%;
+  }
+
+  .mr_86 {
+    margin-right: 84%;
+  }
+
+  .navbar-item {
+    font-size: 10px;
+  }
+
+  .rightarrow {
+    right: 38%;
+  }
+
+  .pdf_btn_style {
+    height: 30px;
+    width: 30px;
+    top: 10%;
+    right: 5%;
+  }
+
+  .label_font {
+    font-family: "Ubuntu";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #191a1c;
+  }
+
+  .service_card_details {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #535861;
   }
 }

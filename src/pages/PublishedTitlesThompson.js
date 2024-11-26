@@ -40,7 +40,7 @@ const PublishedTitlesThompson = () => {
                 <div className="row d-flex justify-content-between" style={{ marginBottom: '8%' }}>
                     {allPublishedTitle?.map((data, index) => (
                         data.isActive === 1 && data.publisherName === "THOMSON REUTERS" && (
-                            <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
+                            <div className="col-12 col-md-4 col-lg-3 mt-5 d-flex justify-content-center" key={index}>
                                 <div className="card card_style"
                                 // style={{ width: '100%' }}
                                 >
