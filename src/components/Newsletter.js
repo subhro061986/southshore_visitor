@@ -18,7 +18,7 @@ export const Newsletter = () => {
                 <div className="col-12 col-sm-12">
                     <div className="cards" style={{ borderRadius: '50px' }}>
                         <div className="screen_head" style={ isTabScreen !== true ? { fontSize: '40px' } : { fontSize: '34px' }}>Exploring Boundless Worlds, One Page at a Time</div>
-                        <div className="ervice_card_details mt-3">Subscribe Our Newsletter, and get the latest updates</div>
+                        <div className="ervice_card_details mt-3">Subscribe to our Newsletter, and get the latest updates</div>
                         <div className="d-flex justify-content-center mt-5" style={{ width: '94%' }}>
                             <div className="mb-4" style={{ width: '58%' }}>
                                 <label className="form-label label_font mb-2 mr_86">Email ID</label>
