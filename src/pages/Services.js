@@ -21,7 +21,7 @@ const Services = () => {
 
                 <div>
                     <div className="row mb-3">
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card service_card mb_12">
                                 <div class="card-body">
                                     <div className="d-flex">
@@ -34,7 +34,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card service_card mb_12">
                                 <div class="card-body">
                                     <div className="d-flex">
@@ -47,7 +47,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card service_card mb_12">
                                 <div class="card-body">
                                     <div className="d-flex">
@@ -62,7 +62,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="row mb-5 mt-5">
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card service_card mb_12">
                                 <div class="card-body">
                                     <div className="d-flex">
@@ -75,7 +75,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4">
+                        <div className="col-12 col-sm-6 col-md-6 col-lg-4">
                             <div class="card service_card mb_12">
                                 <div class="card-body">
                                     <div className="d-flex">

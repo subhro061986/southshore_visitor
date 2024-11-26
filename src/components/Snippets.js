@@ -40,7 +40,7 @@ export const Snippets = () => {
             <div className="screen_head mt-5" style={{ textAlign: 'left', fontSize: '38px' }}>Snippets from Southshore Innovations</div>
             <div className="row mt-4 mb-5">
                 {SnippetArray?.map((data, index) => (
-                    <div className="col-12 col-md-4 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
                         <div className="card" style={{ width: '22rem', border: '1px solid #B1BEC9', borderRadius: '40px' }}>
                             <img
                                 src={data.image}
