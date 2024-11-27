@@ -60,7 +60,7 @@ const Brills = () => {
                                         <div className="brill_title mt-1">Books and E-Books</div>
                                     </div>
                                     <ul className="ms-2">
-                                        <li className="marker">Publishing approximately<span style={{ fontWeight: '700', color: '#4D39F1' }}> 1,200 new monograph/series titles </span> annually</li>
+                                        <li className="marker" >Publishing approximately<span style={{ fontWeight: '700', color: '#4D39F1' }}> 1,200 new monograph/series titles </span> annually</li>
                                         <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Pick and Choose</span> a model(s) for purchasing</li>
                                         <li className="marker"><span style={{ fontWeight: '700', color: '#4D39F1' }}>Perpetual access rights </span>with one-off purchases</li>
                                         <li className="marker">No platform fees</li>
