@@ -18,7 +18,7 @@ const FooterSouthsore = () => {
 
     const windowDimensions = useWindowDimensions();
     const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH && windowDimensions?.width >= Config.TAB_SCREEN_MIN_WIDTH ? true : false;
-
+    const isSmallTabScreen = windowDimensions?.width <= 991 && windowDimensions?.width >= 768 ? true : false;
 
 
 
@@ -40,13 +40,13 @@ const FooterSouthsore = () => {
                                         Follow us on
                                     </div>
 
-                                    <div className="d-inline pe-2">
+                                    <div className={`d-inline ${isSmallTabScreen !== true ? 'pe-2' : 'pe-0'} `}>
                                         <img src={facebook_logo} width={20} />
                                     </div>
-                                    <div className="d-inline pe-2">
+                                    <div className={`d-inline ${isSmallTabScreen !== true ? 'pe-2' : 'pe-0'} `}>
                                         <img src={instagram_logo} width={23} />
                                     </div>
-                                    <div className="d-inline pe-2">
+                                    <div className={`d-inline ${isSmallTabScreen !== true ? 'pe-2' : 'pe-1'} `}>
                                         <img src={x} width={20} />
                                     </div>
                                     <div className="d-inline">

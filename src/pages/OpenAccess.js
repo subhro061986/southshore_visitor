@@ -45,7 +45,7 @@ const OpenAccess = () => {
                 {/* <div className="download_head mt-5">Download the listed <span> PDF Books</span></div> */}
                 <div className="row d-flex" style={{ marginBottom: '15%' }}>
                     {allOpenAccess.map((data, index) => (
-                        <div className="col-md-3 mt-5 d-flex justify-content-center" key={index}>
+                        <div className="col-12 col-md-4 col-lg-3 mt-5 d-flex justify-content-center" key={index}>
                             <div className="card card_style" style={{ width: '17rem' }}>
                                 <div className="d-flex justify-content-center img_div_style position-relative">
                                     <button className="border border-white rounded-circle d-flex justify-content-center align-items-center position-absolute pdf_btn_style">

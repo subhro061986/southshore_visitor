@@ -6,6 +6,7 @@
 @import url("../components/PersonCard/PersonCard.css");
 @import url("../pages/Management/ManagementScreen.css");
 @import url("../pages/JurisAbout/JurisAbout.css");
+@import url("../pages/ThomsonAbout/ThomsonAbout.css");
 @import url("../pages/AcquisitionCommissioning/AcquisitionCommissioning.css");
 @import url("../pages/Marketing/Marketing.css");
 @import url("../pages/Advisory/AdvisoryScreen.css");
@@ -505,25 +506,27 @@ pr {
   color: #535861;
 }
 
-.cards{
+.cards {
   display: 'flex';
-    
-    padding: 50px;
-    background: #F4F4F4;
-    border-radius: 12px;
-   
-    max-width: '500px';
-    margin: '0 auto';
-    text-align: center;
+
+  padding: 50px;
+  background: #F4F4F4;
+  border-radius: 12px;
+
+  max-width: '500px';
+  margin: '0 auto';
+  text-align: center;
 }
-.subhead{
+
+.subhead {
   font-family: Roboto;
-font-size: 24px;
-font-weight: 400;
-line-height: 34px;
-text-align: center;
-color: #424253;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: center;
+  color: #424253;
 }
+
 .mb_12 {
   margin-bottom: 0;
 }
@@ -686,7 +689,7 @@ color: #424253;
   }
 
   .rightarrow {
-    right: 38%;
+    right: 34%;
   }
 
   .pdf_btn_style {
@@ -722,7 +725,34 @@ color: #424253;
     left: 10% !important;
     bottom: 0rem !important;
     top: 6rem !important;
-}
+  }
+
+  .slide_txt_head {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #011539;
+    text-align: left;
+  }
+
+  .slide_txt_description {
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #535861;
+    text-align: left;
+  }
+
+  .card_style_1>div>ul>li {
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: #191a1c;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 992px) {
@@ -776,5 +806,23 @@ color: #424253;
     line-height: 32px;
     text-align: left;
     color: #535861;
+  }
+
+  .slide_txt_head {
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    color: #011539;
+    text-align: left;
+  }
+
+  .slide_txt_description {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #535861;
+    text-align: left;
   }
 }

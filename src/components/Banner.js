@@ -61,12 +61,12 @@ const Banner = () => {
 
                                     </div>
                                     <div className="col-md-4" style={{ paddingLeft: '0px' }}>
-                                        <div className="slide_txt_head mt-5">
+                                        <div className={`slide_txt_head ${isTabScreen!== true ? 'mt-5' : 'mt-0'} `}>
                                             {/* <span>Transparency</span>  */}
                                             {/* is Our Priority */}
                                             {data.title}
                                         </div>
-                                        <div className="slide_txt_description mt-4">
+                                        <div className={`slide_txt_description ${isTabScreen!== true ? 'mt-4' : 'mt-3'}`}>
                                             {/* <span style={{ fontWeight: '600' }}>We operate with full transparency</span>, */}
                                             {/* ensuring that your experience is secure, straightforward,
                                     and in compliance with industry best practices. Your trust is our top concern */}

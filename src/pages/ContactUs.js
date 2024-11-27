@@ -4,8 +4,15 @@ import NavbarSouthshore from "../components/NavBarSouthshore";
 import FooterSouthsore from "../components/FooterSouthsore";
 import sms from "../assets/images/sms.png";
 import call from "../assets/images/call.png";
+import Config from "../Config/Config.json"
+import useWindowDimensions from '../hooks/windowDimensions';
 
 const ContactUs = () => {
+
+  const windowDimensions = useWindowDimensions();
+
+  const isTabScreen = windowDimensions?.width <= 991 && windowDimensions?.width >= 768 ? true : false;
+
   return (
     <>
       <div className="container">
@@ -32,10 +39,12 @@ const ContactUs = () => {
             <div className="col-md-6" style={{ paddingRight: 0 }}>
               <div className="card_style_1 p-5">
                 <div className="d-flex justify-content-around align-items-center">
-                  <h4 className=" contactUs_card_heading me-5" style={{ marginBottom: '14%' }}>Address</h4>
+                  <h4 className=" contactUs_card_heading me-5 contact_mb_14"
+                  // style={isTabScreen !== true ? { marginBottom: '14%' } : { marginBottom: '32%' }}
+                  >Address</h4>
                   <p className="contactUs_card_desc">
                     <b>Southshore Innovations Private Limited</b>
-                    <br/>
+                    <br />
                     Plot 13, Heritage Phase II
                     Telephone Nagar, Perungudi
                     Chennai – 600096
