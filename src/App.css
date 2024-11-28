@@ -5250,6 +5250,14 @@ body.active-modal {
   .contact_mb_14 {
     margin-bottom: 32%;
   }
+
+  .brill_title {
+    font-family: Ubuntu;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 992px) {
