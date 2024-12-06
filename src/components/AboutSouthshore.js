@@ -127,7 +127,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Traditional publishing through its imprint, <Link style={{ color: '#4D39F1' }}>Juris Press</Link></li>
+                                <li>Traditional publishing through its imprint, <Link style={{ color: '#4D39F1' }} to="juris/about">Juris Press</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -156,7 +156,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Owning and operating <Link style={{ color: '#4D39F1' }}>ebooksjunction.com</Link>, a marketplace for publishers to display and sell their digital content</li>
+                                <li>Owning and operating <Link style={{ color: '#4D39F1' }} onClick={() => window.open('https://ebooksjunction.com/', '_blank')}>ebooksjunction.com</Link>, a marketplace for publishers to display and sell their digital content</li>
                             </ul>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ const AboutSouthshore = () => {
                     <div className="card card_style_1 px-4">
                         <div className="">
                             <ul>
-                                <li>Owning and operating <Link style={{ color: '#4D39F1' }}>Books Central</Link>, an e-commerce platform to display and sell print books for Thomson Reuters and Juris Press</li>
+                                <li>Owning and operating <Link style={{ color: '#4D39F1' }} onClick={() => window.open('https://bookscentral.in/', '_blank')}>Books Central</Link>, an e-commerce platform to display and sell print books for Thomson Reuters and Juris Press</li>
                             </ul>
                         </div>
                     </div>

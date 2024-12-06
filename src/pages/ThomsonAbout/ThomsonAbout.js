@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, } from "react";
 import FooterSouthsore from "../../components/FooterSouthsore";
 import { Header } from "../../components/Header";
 import NavBarSouthsore from "../../components/NavBarSouthshore";
@@ -14,7 +14,9 @@ const ThomsonAbout = () => {
     const navigate=useNavigate()
     const windowDimensions = useWindowDimensions();
     const isTabScreen = windowDimensions?.width <= Config.TAB_SCREEN_MAX_WIDTH && windowDimensions?.width >= Config.TAB_SCREEN_MIN_WIDTH ? true : false;
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     
     const gotoForm=()=>{
         navigate('/thomson/publishwithus')

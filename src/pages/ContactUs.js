@@ -24,9 +24,9 @@ const ContactUs = () => {
             Contact Us
           </h1>
           <p className=" contactUs_desc d-flex justify-content-center align-items-center">
-            Contact us about anything related to our company or services.
+            Reach out to us regarding our products and services and
             <br />
-            We'll do our best to get back to you as soon as possible.
+            we will get back to you immediately
           </p>
         </div>
         <h1 className=" contactUs_SouthShore d-flex justify-content-center align-items-center mb-5">
@@ -38,11 +38,11 @@ const ContactUs = () => {
           <div className="row mb-3">
             <div className="col-md-6" style={{ paddingRight: 0 }}>
               <div className="card_style_1 p-5">
-                <div className="d-flex justify-content-around align-items-center">
-                  <h4 className=" contactUs_card_heading me-5 contact_mb_14"
+                <div className="d-flex justify-content-around">
+                  <h4 className=" contactUs_card_heading me-5 contact_mb_14 mb-0"
                   // style={isTabScreen !== true ? { marginBottom: '14%' } : { marginBottom: '32%' }}
                   >Address</h4>
-                  <p className="contactUs_card_desc">
+                  <p className="contactUs_card_desc mb-0">
                     <b>Southshore Innovations Private Limited</b>
                     <br />
                     Plot 13, Heritage Phase II
@@ -60,18 +60,18 @@ const ContactUs = () => {
               >
                 <div>
                   <div className="d-flex justify-content-around align-items-center mb-1">
-                    <h4 className=" contactUs_card_heading me-5">Email ID</h4>
+                    <h4 className=" contactUs_card_heading me-5 mb-0">Email ID</h4>
                     <img
                       className="me-2"
                       src={sms}
-                      style={{ marginTop: "-4%" }}
+                      
                     />
-                    <p className="contactUs_card_desc"> sales@southshore.in</p>
+                    <p className="contactUs_card_desc mb-0"> sales@southshore.in</p>
                   </div>
                   <div className="d-flex justify-content-between align-items-center mb-1">
-                    <h4 className="contactUs_card_heading me-5">Phone</h4>
-                    <img src={call} style={{ marginTop: '-4%' }} />
-                    <p className="contactUs_card_desc"> +91-44-79624624</p>
+                    <h4 className="contactUs_card_heading me-5 mb-0">Phone</h4>
+                    <img src={call} />
+                    <p className="contactUs_card_desc mb-0"> +91-44-79624624</p>
                   </div>
                 </div>
               </div>
@@ -84,9 +84,9 @@ const ContactUs = () => {
                 style={{ justifyContent: "start" }}
               >
                 <div className="d-flex justify-content-around align-items-center">
-                  <h4 className="contactUs_card_heading me-5">Sales queries</h4>
-                  <img className="me-2" src={sms} style={{ marginTop: "-4%" }} />
-                  <p className="contactUs_card_desc"> sales@southshore.in</p>
+                  <h4 className="contactUs_card_heading me-5 mb-0">Sales queries</h4>
+                  <img className="me-2" src={sms} />
+                  <p className="contactUs_card_desc mb-0"> sales@southshore.in</p>
                 </div>
               </div>
             </div>
@@ -96,8 +96,8 @@ const ContactUs = () => {
                 style={{ justifyContent: "start" }}
               >
                 <div className="d-flex justify-content-around align-items-center">
-                  <h4 className="contactUs_card_heading me-5">VAT</h4>
-                  <p className="contactUs_card_desc"> 123456789</p>
+                  <h4 className="contactUs_card_heading me-5 mb-0">GSTIN</h4>
+                  <p className="contactUs_card_desc mb-0"> 33ABICS2457D1ZI</p>
                 </div>
               </div>
             </div>

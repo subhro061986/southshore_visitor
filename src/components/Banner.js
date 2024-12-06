@@ -33,7 +33,7 @@ const Banner = () => {
         <>
             {!isMobileScreen ? (
                 <Carousel
-                    interval={null}
+                    interval={3000}
                     prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }} />} // Custom Previous icon
                     nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
                 >
@@ -86,7 +86,7 @@ const Banner = () => {
                 :
                 (
                     <Carousel controls={false}
-                    // interval={null}
+                    interval={3000}
                     // prevIcon={<CiCircleChevLeft size={40} style={{ color: '#878990F0' }}/>} // Custom Previous icon
                     // nextIcon={<CiCircleChevRight size={40} style={{ color: '#878990F0' }} />} // Custom Next icon
                     >

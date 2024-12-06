@@ -131,10 +131,10 @@ const Resources = () => {
                         </li>
                     </ul>
                 </nav>
-                {activePublisherId !== 8 &&
+                {/* {activePublisherId !== 8 &&
                     <div className="download_head mt-4">Download the listed <span> PDF Books</span></div>
-                }
-                <div className="row d-flex" style={{
+                } */}
+                <div className="row d-flex mt-4" style={{
                     marginBottom: '6%',
                     justifyContent: activePublisherId !== 8 ? 'flex-start' : 'center'
 
