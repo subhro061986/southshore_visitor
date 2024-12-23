@@ -77,7 +77,7 @@ const ManageResources = () => {
         else {
             let formData = new FormData();
             formData.append("bookTitle", title);
-            formData.append("authorName", description);
+            formData.append("description", description);
             formData.append("buyLink", buyLink);
             formData.append("publisherId", publisher);
             formData.append("coverImage", coverImage);
@@ -211,8 +211,9 @@ const ManageResources = () => {
                                                                 <td>
                                                                     {data?.publisherName}
                                                                 </td>
-                                                                <td>
-                                                                    {data?.description}
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.description}>
+                                                                    {/* {data?.description} */}
+                                                                    {data?.description!==""?data?.description.substring(0, 20)+"..." : data?.description}
                                                                 </td>
                                                                 <td> <label
                                                                     className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}

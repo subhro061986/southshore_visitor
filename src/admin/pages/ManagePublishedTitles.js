@@ -25,7 +25,7 @@ const ManagePublishedTitles = () => {
     const [existingId, setExistingId] = useState(0)
     const [modalTitle, setModalTitle] = useState('')
 
-    
+
 
     const openAddModal = (id) => {
         // setAddModal(true);
@@ -38,8 +38,8 @@ const ManagePublishedTitles = () => {
             setAuthor('')
             setImage(null)
             setAddModal(true);
-         }
-         else {
+        }
+        else {
             setExistingId(id);
             setModalTitle("Edit Banner");
             setPublishedTitleDetails(id);
@@ -49,7 +49,7 @@ const ManagePublishedTitles = () => {
             // setAuthor(response?.authorName);
             // setImage(response?.imgLink);
             setAddModal(true);
-         }
+        }
     }
 
     const closeAddModal = () => {
@@ -76,8 +76,8 @@ const ManagePublishedTitles = () => {
                 alert(resp?.message);
             }
 
-         }
-         else {
+        }
+        else {
             let formData = new FormData();
             formData.append("title", title);
             formData.append("authorName", author);
@@ -95,7 +95,7 @@ const ManagePublishedTitles = () => {
                 alert(resp?.message);
             }
 
-         }
+        }
 
         closeAddModal();
 
@@ -187,10 +187,13 @@ const ManagePublishedTitles = () => {
                                                         {allPublishedTitle?.map((data, index) => (
                                                             <tr key={index}>
                                                                 <td>
-                                                                <img src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
+                                                                    <img src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
                                                                 </td>
-                                                                <td> {data?.title} </td>
-                                                                <td>
+                                                                <td style={{ textWrap: 'wrap', cursor: 'pointer' }} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.title}>
+                                                                    {data?.title !== "" ? data?.title.substring(0, 15) + "..." : data?.title}
+                                                                </td>
+                                                                <td style={{ textWrap: 'wrap', cursor: 'pointer' }} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.authorName}>
+                                                                    {/* {data?.authorName !== "" ? data?.authorName.substring(0, 15) + "..." : data?.authorName} */}
                                                                     {data?.authorName}
                                                                 </td>
                                                                 <td> {data?.publisherName} </td>
@@ -202,9 +205,9 @@ const ManagePublishedTitles = () => {
                                                                 </label> </td>
                                                                 <td>
                                                                     <div className="d-flex align-items-center">
-                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20} onClick={() => {openAddModal(data?.id)}}/> 
+                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20} onClick={() => { openAddModal(data?.id) }} />
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
-                                                                            <input style={{cursor: 'pointer'}}
+                                                                            <input style={{ cursor: 'pointer' }}
                                                                                 checked={data.isActive === 1 ? true : false}
                                                                                 className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
                                                                                 onChange={(e) => act_inact_pub_title(e, data.id)}
@@ -248,13 +251,13 @@ const ManagePublishedTitles = () => {
                                         <div className="form-group">
                                             <label>Select Publisher</label>
                                             <select className="form-select" aria-label="Default select example" onChange={(e) => setPublisher(e.target.value)}>
-                                            <option disabled selected>--Select--</option>
+                                                <option disabled selected>--Select--</option>
                                                 {
                                                     allPublisher?.map((data, index) => (
-                                                            <option value={data.id} key={index} 
+                                                        <option value={data.id} key={index}
                                                             selected={publisher === data.id ? true : false}
-                                                            >{data.publisherName}</option>
-                                                        
+                                                        >{data.publisherName}</option>
+
                                                     ))
                                                 }
                                             </select>
@@ -285,7 +288,7 @@ const ManagePublishedTitles = () => {
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
                     <button className="btn btn-gradient-primary"
-                    onClick={handleFormSubmission}
+                        onClick={handleFormSubmission}
                     // style={{ width: '20%' }}
                     >
                         Save

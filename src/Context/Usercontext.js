@@ -13,6 +13,7 @@ const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
 
+  // const [isActive, setActive] = useState(false)
   const [allBanner, setAllBanner] = useState([])
   const [allLeader, setAllLeader] = useState([])
   const [allPublisherResources, setAllPublisherResources] = useState([])

@@ -15,6 +15,7 @@ const AdminProvider = ({ children }) => {
 
   const { authData } = useAuth();
 
+  const [isActive, setActive] = useState(false)
   const [allBanner, setAllBanner] = useState([])
   const [allLeader, setAllLeader] = useState([])
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
@@ -39,6 +40,7 @@ const AdminProvider = ({ children }) => {
 
   const createBanner = async (formData) => {
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.CREATE_BANNER, formData,
         {
           headers: {
@@ -49,9 +51,11 @@ const AdminProvider = ({ children }) => {
 
       // console.log("Banner create response", response);
       Get_All_Banner();
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("PUBLISHER CONTEXT ERROR: ", error);
     }
   }
@@ -94,6 +98,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.EDIT_BANNER + "/" + id, args,
         {
           headers: {
@@ -102,10 +107,12 @@ const AdminProvider = ({ children }) => {
           },
         })
       Get_All_Banner();
+      setActive(false)
       // console.log("EDIT Banner RESPONSE : ", response);
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("EDIT_Banner_Error : ", error)
     }
   }
@@ -132,6 +139,7 @@ const AdminProvider = ({ children }) => {
 
   const createLeader = async (formData) => {
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.CREATE_LEADER, formData,
         {
           headers: {
@@ -142,9 +150,11 @@ const AdminProvider = ({ children }) => {
 
       // console.log("Leader create response", response);
       Get_All_Leader();
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("Leader CONTEXT ERROR: ", error);
     }
   }
@@ -169,6 +179,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.EDIT_LEADER + "/" + id, args,
         {
           headers: {
@@ -178,9 +189,11 @@ const AdminProvider = ({ children }) => {
         })
       Get_All_Leader();
       // console.log("EDIT Leader RESPONSE : ", response);
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("EDIT_Leader_Error : ", error)
     }
   }
@@ -225,6 +238,7 @@ const AdminProvider = ({ children }) => {
 
   const createPublishedTitle = async (formData) => {
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.CREATE_PUBLISHED_TITLE, formData,
         {
           headers: {
@@ -235,9 +249,11 @@ const AdminProvider = ({ children }) => {
 
       // console.log("Published Title create response", response);
       Get_All_Published_Title();
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("Published Title CONTEXT ERROR: ", error);
     }
   }
@@ -246,6 +262,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.EDIT_PUBLISHED_TITLE + "/" + id, args,
         {
           headers: {
@@ -255,9 +272,11 @@ const AdminProvider = ({ children }) => {
         })
       Get_All_Published_Title();
       // console.log("EDIT Published Title RESPONSE : ", response);
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("EDIT_Published_Title_Error : ", error)
     }
   }
@@ -319,6 +338,7 @@ const AdminProvider = ({ children }) => {
 
   const createResource = async (formData) => {
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.CREATE_RESOURCE, formData,
         {
           headers: {
@@ -329,9 +349,11 @@ const AdminProvider = ({ children }) => {
 
       // console.log("Resource create response", response);
       Get_All_Resources();
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("Resource CONTEXT ERROR: ", error);
     }
   }
@@ -340,6 +362,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.EDIT_RESOURCE + "/" + id, args,
         {
           headers: {
@@ -349,9 +372,11 @@ const AdminProvider = ({ children }) => {
         })
       Get_All_Resources();
       // console.log("EDIT Resource RESPONSE : ", response);
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("EDIT_Resource_Error : ", error)
     }
   }
@@ -394,6 +419,7 @@ const AdminProvider = ({ children }) => {
 
   const createOpen_Access = async (formData) => {
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.CREATE_OPEN_ACCESS, formData,
         {
           headers: {
@@ -404,9 +430,11 @@ const AdminProvider = ({ children }) => {
 
       // console.log("Resource create response", response);
       Get_All_Open_Access();
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("Resource CONTEXT ERROR: ", error);
     }
   }
@@ -415,6 +443,7 @@ const AdminProvider = ({ children }) => {
     // console.log("Args :", args);
     // console.log("Id :", id);
     try {
+      setActive(true)
       const response = await axios.post(Config.API_URL + Config.EDIT_OPEN_ACCESS + "/" + id, args,
         {
           headers: {
@@ -424,9 +453,11 @@ const AdminProvider = ({ children }) => {
         })
         Get_All_Open_Access();
       // console.log("EDIT Open Access RESPONSE : ", response);
+      setActive(false)
       return response;
     }
     catch (error) {
+      setActive(false)
       console.log("EDIT_Open_Access_Error : ", error)
     }
   }
@@ -482,14 +513,20 @@ const AdminProvider = ({ children }) => {
         activeTab, setActiveTab
       }}
     >
-      {/* <LoadingOverlay
+      <LoadingOverlay
         active={isActive}
         spinner
         text='Loading your content...'
+        styles={{
+          overlay: (base) => ({
+            ...base,
+            zIndex: 9999, // Ensure it appears above other elements like modals
+          }),
+        }}
       >
         {children}
-      </LoadingOverlay> */}
-      {children}
+      </LoadingOverlay>
+      {/* {children} */}
     </AdminContext.Provider>
   )
 }

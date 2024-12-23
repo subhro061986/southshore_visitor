@@ -212,9 +212,9 @@ const ManageLeadership = () => {
                                                                 <td>
                                                                     {data.personName}
                                                                 </td>
-                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.email}>{data?.email!==""?data.email.substring(0, 20)+"..." : data?.email}</td>
+                                                                <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.email}>{data?.email!==""?data.email.substring(0, 15)+"..." : data?.email}</td>
                                                                 <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.description}>
-                                                                    {data?.description!==""?data.description.substring(0, 50)+"..." : data?.description}
+                                                                    {data?.description!==""?data?.description.substring(0, 20)+"..." : data?.description}
                                                                 </td>
                                                                 <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.leadershipCategoryName}>
                                                                     {data?.leadershipCategoryName!=="" && data.leadershipCategoryName.length>10?data.leadershipCategoryName.substring(0, 20)+"..." : data?.leadershipCategoryName}
@@ -223,7 +223,7 @@ const ManageLeadership = () => {
                                                                     {data?.teamCategoryName!=="" && data.teamCategoryName.length>10?data.teamCategoryName.substring(0, 20)+"..." : data?.teamCategoryName}
                                                                 </td>
                                                                 <td style={{textWrap:'wrap', cursor:'pointer'}} data-bs-toggle="tooltip" data-bs-placement="bottom" title={data?.linkedin}>
-                                                                    {data?.linkedin!==""?data.linkedin.substring(0, 20)+"..." : data?.linkedin}
+                                                                    {data?.linkedin!==""?data.linkedin.substring(0, 10)+"..." : data?.linkedin}
                                                                 </td>
                                                                 <td> <label
                                                                     className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}

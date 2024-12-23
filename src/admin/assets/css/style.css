@@ -26319,6 +26319,13 @@ dl li {
 .sidebar_submenu_fonts > ul > li > .collapse > ul > li > .nav-link {
   font-size: 13px !important;
 }
+
+/* ._loading_overlay_content {
+  top: 75%;
+  left: 35%;
+  position: fixed;
+  z-index: 1;
+} */
 /*# sourceMappingURL=maps/style.css.map */
 
 /*-----Slider-----*/
