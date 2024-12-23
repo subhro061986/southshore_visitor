@@ -209,7 +209,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      // console.log("Get All Published Title response", response);
+      console.log("Get All Published Title response", response);
       setAllPublishedTitle(response.data);
       return response;
     }

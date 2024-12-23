@@ -24,6 +24,9 @@ const ManageBanner = () => {
 
     const [existingId, setExistingId] = useState(0)
     const [modalTitle, setModalTitle] = useState('')
+    const [minPageNo, setMinPageNo] = useState(0)
+    const [maxPageNo, setMaxPageNo] = useState(10)
+    const [pageNumber, setPageNumber] = useState(1)
 
     const openAddAddressModal = (id) => {
         setAddModal(true);
@@ -137,6 +140,29 @@ const ManageBanner = () => {
 
     }
 
+    const nextPage=()=>{
+        window.scrollTo(0, 0)
+        if(maxPageNo>=allBanner.length){
+            alert("You are in last page")
+        }
+        else{
+            setMaxPageNo(maxPageNo+10)
+            setMinPageNo(minPageNo+10)
+            setPageNumber(pageNumber+1)
+        }
+    }
+    const prevPage=()=>{
+        window.scrollTo(0, 0)
+        if(pageNumber===1){
+            alert("You are in first page")
+        }
+        else{
+            setMaxPageNo(maxPageNo-10)
+            setMinPageNo(minPageNo-10)
+            setPageNumber(pageNumber-1)
+        }
+    }
+
     return (
         <>
             <div className="container-scroller">
@@ -169,7 +195,7 @@ const ManageBanner = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allBanner.sort((a, b) => b.isActive - a.isActive)?.map((data, index) => (
+                                                        {allBanner.sort((a, b) => b.isActive - a.isActive)?.slice(minPageNo,maxPageNo).map((data, index) => (
                                                             <tr key={index}>
                                                                 <td>
                                                                     <img src={Config.API_URL + Config.BANNER_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
@@ -199,6 +225,28 @@ const ManageBanner = () => {
                                                         ))}
                                                     </tbody>
                                                 </table>
+                                                {allBanner.length>10 &&
+                                                <div 
+                                                    className="mt-2"
+                                                    style={{
+                                                        display:'flex',
+                                                        flexDirection:'row',
+                                                        justifyContent:'space-between',
+                                                        alignItems:'center'
+                                                    }}
+                                                >
+                                                    <button 
+                                                        className="btn btn-outline-info"
+                                                        onClick={prevPage}
+                                                        >Previous</button>
+                                                        <div>Page : {pageNumber}</div>
+                                                    <button 
+                                                    className="btn btn-outline-info"
+                                                    onClick={nextPage}
+                                                    >Next</button>
+                                                </div>
+                                            }
+                                           
                                             </div>
                                         </div>
                                     </div>

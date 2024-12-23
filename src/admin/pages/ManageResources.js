@@ -27,7 +27,9 @@ const ManageResources = () => {
     const [existingId, setExistingId] = useState(0)
     const [modalTitle, setModalTitle] = useState('')
 
-
+     const [minPageNo, setMinPageNo] = useState(0)
+    const [maxPageNo, setMaxPageNo] = useState(10)
+    const [pageNumber, setPageNumber] = useState(1)
 
     const openAddModal = (id) => {
         setAddModal(true);
@@ -162,6 +164,29 @@ const ManageResources = () => {
 
     }
 
+    const nextPage=()=>{
+        window.scrollTo(0, 0)
+        if(maxPageNo>=allResources.length){
+            alert("You are in last page")
+        }
+        else{
+            setMaxPageNo(maxPageNo+10)
+            setMinPageNo(minPageNo+10)
+            setPageNumber(pageNumber+1)
+        }
+    }
+    const prevPage=()=>{
+        window.scrollTo(0, 0)
+        if(pageNumber===1){
+            alert("You are in first page")
+        }
+        else{
+            setMaxPageNo(maxPageNo-10)
+            setMinPageNo(minPageNo-10)
+            setPageNumber(pageNumber-1)
+        }
+    }
+
     return (
         <>
             <div className="container-scroller">
@@ -194,7 +219,7 @@ const ManageResources = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allResources?.map((data, index) => (
+                                                        {allResources.sort((a, b) => b.isActive - a.isActive)?.slice(minPageNo,maxPageNo).map((data, index) => (
                                                             <tr
                                                                 key={index}
                                                             >
@@ -239,6 +264,27 @@ const ManageResources = () => {
                                                         ))}
                                                     </tbody>
                                                 </table>
+                                                {allResources.length>10 &&
+                                                <div 
+                                                    className="mt-2"
+                                                    style={{
+                                                        display:'flex',
+                                                        flexDirection:'row',
+                                                        justifyContent:'space-between',
+                                                        alignItems:'center'
+                                                    }}
+                                                >
+                                                    <button 
+                                                        className="btn btn-outline-info"
+                                                        onClick={prevPage}
+                                                        >Previous</button>
+                                                        <div>Page : {pageNumber}</div>
+                                                    <button 
+                                                    className="btn btn-outline-info"
+                                                    onClick={nextPage}
+                                                    >Next</button>
+                                                </div>
+                                            }
                                             </div>
                                         </div>
                                     </div>

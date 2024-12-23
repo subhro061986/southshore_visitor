@@ -24,6 +24,9 @@ const ManagePublishedTitles = () => {
 
     const [existingId, setExistingId] = useState(0)
     const [modalTitle, setModalTitle] = useState('')
+    const [minPageNo, setMinPageNo] = useState(0)
+    const [maxPageNo, setMaxPageNo] = useState(10)
+    const [pageNumber, setPageNumber] = useState(1)
 
 
 
@@ -34,7 +37,7 @@ const ManagePublishedTitles = () => {
             setModalTitle("Add Leadership")
             setTitle('')
             setBuyLink('')
-            setPublisher('')
+            setPublisher(0)
             setAuthor('')
             setImage(null)
             setAddModal(true);
@@ -150,7 +153,28 @@ const ManagePublishedTitles = () => {
         }
 
     }
-
+    const nextPage=()=>{
+        window.scrollTo(0, 0)
+        if(maxPageNo>=allPublishedTitle.length){
+            alert("You are in last page")
+        }
+        else{
+            setMaxPageNo(maxPageNo+10)
+            setMinPageNo(minPageNo+10)
+            setPageNumber(pageNumber+1)
+        }
+    }
+    const prevPage=()=>{
+        window.scrollTo(0, 0)
+        if(pageNumber===1){
+            alert("You are in first page")
+        }
+        else{
+            setMaxPageNo(maxPageNo-10)
+            setMinPageNo(minPageNo-10)
+            setPageNumber(pageNumber-1)
+        }
+    }
     return (
         <>
             <div className="container-scroller">
@@ -184,7 +208,7 @@ const ManagePublishedTitles = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {allPublishedTitle?.map((data, index) => (
+                                                        {allPublishedTitle.sort((a, b) => b.isActive - a.isActive)?.slice(minPageNo,maxPageNo).map((data, index) => (
                                                             <tr key={index}>
                                                                 <td>
                                                                     <img src={Config.API_URL + Config.PUBLISHED_TITLES_URL + "/" + data.imgLink + '?d=' + new Date()} height={36} width={56} className="me-2" alt="image" />
@@ -220,6 +244,27 @@ const ManagePublishedTitles = () => {
                                                         ))}
                                                     </tbody>
                                                 </table>
+                                                {allPublishedTitle.length>10 &&
+                                                <div 
+                                                    className="mt-2"
+                                                    style={{
+                                                        display:'flex',
+                                                        flexDirection:'row',
+                                                        justifyContent:'space-between',
+                                                        alignItems:'center'
+                                                    }}
+                                                >
+                                                    <button 
+                                                        className="btn btn-outline-info"
+                                                        onClick={prevPage}
+                                                        >Previous</button>
+                                                        <div>Page : {pageNumber}</div>
+                                                    <button 
+                                                    className="btn btn-outline-info"
+                                                    onClick={nextPage}
+                                                    >Next</button>
+                                                </div>
+                                            }
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +295,11 @@ const ManagePublishedTitles = () => {
                                     <form className="forms-sample">
                                         <div className="form-group">
                                             <label>Select Publisher</label>
-                                            <select className="form-select" aria-label="Default select example" onChange={(e) => setPublisher(e.target.value)}>
+                                            <select 
+                                                className="form-select"  
+                                                onChange={(e) => setPublisher(e.target.value)}
+                                                //defaultValue={publisher}
+                                            >
                                                 <option disabled selected>--Select--</option>
                                                 {
                                                     allPublisher?.map((data, index) => (

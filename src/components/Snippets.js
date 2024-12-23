@@ -6,6 +6,7 @@ import ban2 from '../assets/images/mask4.png';
 import ban1 from '../assets/images/Mask group (5).png';
 import dwn_btn from '../assets/images/dwn_btn.png';
 import inv_pdf from '../assets/images/Southshore_Snippets_Issue_1.pdf';
+import inv_pdf2 from '../assets/images/Southshore_Snippets_Issue_2.pdf';
 
 
 export const Snippets = () => {
@@ -22,7 +23,7 @@ export const Snippets = () => {
             title : 'Snippets Issue 2',
             image : ban2,
             postedOn : 'November 7, 2024',
-            downloadLink : ''
+            downloadLink : inv_pdf2
         },
         {
             id: 3,
