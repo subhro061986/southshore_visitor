@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import logo from '../assets/images/southshore_logo_alt.svg';
-import ban3 from '../assets/images/Mask group (6).png';
-import ban2 from '../assets/images/mask4.png';
-import ban1 from '../assets/images/Mask group (5).png';
+import ban3 from '../assets/images/issue_3.jpeg';
+import ban2 from '../assets/images/issue_2.jpeg';
+import ban1 from '../assets/images/issue_1.jpeg';
 import dwn_btn from '../assets/images/dwn_btn.png';
 import inv_pdf from '../assets/images/Southshore_Snippets_Issue_1.pdf';
 import inv_pdf2 from '../assets/images/Southshore_Snippets_Issue_2.pdf';
+import inv_pdf3 from '../assets/images/SouthShore_snippets_issue_3.pdf';
 
 
 export const Snippets = () => {
@@ -30,7 +31,7 @@ export const Snippets = () => {
             title : 'Snippets Issue 3',
             image : ban3,
             postedOn : 'November 11, 2024',
-            downloadLink : ''
+            downloadLink : inv_pdf3
         }
     ]
 
