@@ -80,7 +80,7 @@ const ManageResources = () => {
             let formData = new FormData();
             formData.append("bookTitle", title);
             formData.append("description", description);
-            formData.append("buyLink", buyLink);
+            formData.append("pdfFile", pdffile);
             formData.append("publisherId", publisher);
             formData.append("coverImage", coverImage);
 
