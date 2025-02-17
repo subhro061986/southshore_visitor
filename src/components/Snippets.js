@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { SearchBar } from "./SearchBar";
 import logo from '../assets/images/southshore_logo_alt.svg';
+import ban4 from '../assets/images/ban4.jpeg';
 import ban3 from '../assets/images/issue_3.jpeg';
 import ban2 from '../assets/images/issue_2.jpeg';
 import ban1 from '../assets/images/issue_1.jpeg';
@@ -8,6 +9,7 @@ import dwn_btn from '../assets/images/dwn_btn.png';
 import inv_pdf from '../assets/images/Southshore_Snippets_Issue_1.pdf';
 import inv_pdf2 from '../assets/images/Southshore_Snippets_Issue_2.pdf';
 import inv_pdf3 from '../assets/images/SouthShore_snippets_issue_3.pdf';
+import inv_pdf4 from '../assets/images/Southshore_Snippets_Issue_4_Final_150225.pdf';
 
 
 export const Snippets = () => {
@@ -32,6 +34,13 @@ export const Snippets = () => {
             image : ban3,
             postedOn : 'November 11, 2024',
             downloadLink : inv_pdf3
+        },
+        {
+            id: 4,
+            title : 'Snippets Issue 4',
+            image : ban4,
+            postedOn : 'February 17, 2025',
+            downloadLink : inv_pdf4
         }
     ]
 
@@ -42,7 +51,7 @@ export const Snippets = () => {
             <div className="screen_head mt-5" style={{ textAlign: 'left', fontSize: '38px' }}>Snippets from Southshore Innovations</div>
             <div className="row mt-4 mb-5">
                 {SnippetArray?.map((data, index) => (
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-3 d-flex justify-content-center" style={{ marginTop: "inherit" }} key={index}>
                         <div className="card" style={{ width: '22rem', border: '1px solid #B1BEC9', borderRadius: '40px' }}>
                             <img
                                 src={data.image}
