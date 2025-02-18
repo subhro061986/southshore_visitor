@@ -338,6 +338,7 @@ const ManageLeadership = () => {
                                                 <option value="1">Management</option>
                                                 <option value="2">Advisory Board</option>
                                                 <option value="3">Team</option>
+                                                <option value="4">Marketing</option>
                                             </select>
                                         </div>
                                         {/* Submenu (only shown when "Team" is selected) */}

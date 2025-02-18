@@ -51,6 +51,11 @@ function NavbarSouthshore() {
                     absolute: false
                 },
                 {
+                    text: "Marketing",
+                    link: "/leadership/marketing",
+                    absolute: false
+                },
+                {
                     text: "Team",
                     children: [
                         {

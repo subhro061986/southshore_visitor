@@ -30,6 +30,7 @@ import ReferenceResource from './pages/ahpi/lifestyleasmedicine/ReferenceResourc
 import Services from './pages/Services';
 import PublishedTitlesThompson from './pages/PublishedTitlesThompson';
 import Contentcheck from './pages/TRI/reprints/Contentcheck';
+import MarketingPage from './pages/MarketingPage/MarketingPage';
 
 const AppRouter=()=> {
 
@@ -43,6 +44,7 @@ const AppRouter=()=> {
             <Route exact path="/leadership/editorial" Component={EditorialProduction} />
             <Route exact path="/leadership/sales" Component={Sales} />
             <Route exact path="/leadership/finance" Component={Marketing} />
+            <Route exact path="/leadership/marketing" Component={MarketingPage} />
             <Route exact path="/leadership/salessupport" Component={SalesSupport} />
             <Route exact path="/juris/about" Component={JurisAbout} />
             <Route exact path="/juris/publishedtitle" Component={PublishedTitlesScreen} />
