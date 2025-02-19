@@ -338,7 +338,6 @@ const ManageLeadership = () => {
                                                 <option value="1">Management</option>
                                                 <option value="2">Advisory Board</option>
                                                 <option value="3">Team</option>
-                                                <option value="4">Marketing</option>
                                             </select>
                                         </div>
                                         {/* Submenu (only shown when "Team" is selected) */}
@@ -354,6 +353,7 @@ const ManageLeadership = () => {
                                                     <option value="3">Sales</option>
                                                     <option value="4">Finance</option>
                                                     <option value="5">Sales Support</option>
+                                                    <option value="6">Marketing</option>
                                                 </select>
                                             </div>
                                         )}

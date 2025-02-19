@@ -47,7 +47,7 @@ const MarketingPage = () => {
                     {
                         allLeader.map((person, index) => {
                             return (
-                                person.leadershipCategoryId === 4  && person.teamCategoryId === -1 && (
+                                person.leadershipCategoryId === 3  && person.teamCategoryId === 6 && (
                                 <div key={index} className="col-12 col-md-6 col-xl-4 mt-2 mb-2">
                                     <PersonCard
                                         name={person?.personName}
