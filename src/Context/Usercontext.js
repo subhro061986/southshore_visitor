@@ -20,6 +20,7 @@ const UserProvider = ({ children }) => {
   const [allResources, setAllResources] = useState([])
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
   const [allOpenAccess, setAllOpenAccess] = useState([])
+  const [allSnippets, setAllSnippets] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
@@ -28,6 +29,7 @@ const UserProvider = ({ children }) => {
     Get_All_Resources();
     Get_All_Published_Title();
     Get_All_Open_Access();
+    Get_All_Snippets();
   }, []);
 
   // Banner
@@ -237,6 +239,42 @@ const UserProvider = ({ children }) => {
 
   }
 
+  // Snippets
+
+  const Get_All_Snippets = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_SNIPPETS,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      console.log("Get All Snippets response", response);
+      setAllSnippets(response?.data?.data);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Snippets CONTEXT ERROR: ", error);
+    }
+  }
+
+  const getSnippetById = async (id) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_SNIPPETS + "/" + id,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      console.log("GET Snippet  BY ID: ", response);
+      return response;
+    }
+    catch (error) {
+      console.log("Get_Snippet_by_id_error : ", error);
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -255,7 +293,10 @@ const UserProvider = ({ children }) => {
         allOpenAccess,
         getOpenAccessById,
         PublishWithUs,
-        Enquiry
+        Enquiry,
+        Get_All_Snippets,
+        allSnippets,
+        getSnippetById
       }}
     >
       {/* <LoadingOverlay

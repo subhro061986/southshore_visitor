@@ -23,6 +23,7 @@ const AdminProvider = ({ children }) => {
   const [allResources, setAllResources] = useState([])
   const [allPublisherResources, setAllPublisherResources] = useState([])
   const [allOpenAccess, setAllOpenAccess] = useState([])
+  const [allSnippets, setAllSnippets] = useState([])
 
   const [activeTab, setActiveTab] = useState("managebanner");
 
@@ -34,6 +35,7 @@ const AdminProvider = ({ children }) => {
     Get_All_Resources();
     Get_All_Publishers_Resources();
     Get_All_Open_Access();
+    Get_All_Snippets();
   }, []);
 
   // Banner
@@ -451,7 +453,7 @@ const AdminProvider = ({ children }) => {
             'Authorization': 'Bearer ' + authData
           },
         })
-        Get_All_Open_Access();
+      Get_All_Open_Access();
       // console.log("EDIT Open Access RESPONSE : ", response);
       setActive(false)
       return response;
@@ -475,6 +477,74 @@ const AdminProvider = ({ children }) => {
     }
     catch (error) {
       console.log("Get_Open_Access_by_id_error : ", error);
+    }
+  }
+
+  // Snippets
+
+  const Get_All_Snippets = async (onlyActive) => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_SNIPPETS,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
+      console.log("Get All Snippets response", response);
+      setAllSnippets(response?.data?.data);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Snippets CONTEXT ERROR: ", error);
+    }
+  }
+
+  const createSnippet = async (formData) => {
+    try {
+      setActive(true)
+      const response = await axios.post(Config.API_URL + Config.CREATE_SNIPPETS, formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            'Authorization': 'Bearer ' + authData
+          },
+        })
+
+      console.log("Snippet create response", response);
+      Get_All_Snippets();
+      setActive(false)
+      return response;
+    }
+    catch (error) {
+      setActive(false)
+      console.log("Snippet CONTEXT ERROR: ", error);
+    }
+  }
+
+  const editActiveInactiveSnippet = async (id) => {
+    try {
+      const confirmChange = window.confirm("Are you sure you want to change the status?");
+        if (!confirmChange) return; // Stop execution if the user cancels
+      setActive(true)
+      const response = await axios.post(Config.API_URL + Config.EDIT_SNIPPET + "/" + id,
+        {
+          headers: {
+            // 'Content-Type': 'multipart/form-data',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authData
+          },
+        })
+      Get_All_Snippets();
+      setActive(false)
+      console.log("EDIT Snippet RESPONSE : ", response);
+      alert(response.data.message); // Show success alert
+      return response;
+    }
+    catch (error) {
+      setActive(false)
+      alert("Failed to update status. Please try again."); // Show error alert
+      console.log("EDIT_Snippet_Error : ", error)
     }
   }
 
@@ -510,6 +580,10 @@ const AdminProvider = ({ children }) => {
         createOpen_Access,
         editOpenAccess,
         getOpenAccessById,
+        Get_All_Snippets,
+        allSnippets,
+        createSnippet,
+        editActiveInactiveSnippet,
         activeTab, setActiveTab
       }}
     >

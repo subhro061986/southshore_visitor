@@ -11,6 +11,7 @@ import ManageOpenAccess from './pages/ManageOpenAccess';
 import ManagePublishedTitles from './pages/ManagePublishedTitles';
 import ManageLeadership from './pages/ManageLeadership';
 import ManageResources from './pages/ManageResources';
+import ManageSnippets from './pages/ManageSnippets';
 
 const NavigationPage=()=> {
 
@@ -23,6 +24,7 @@ const NavigationPage=()=> {
             <Route exact path="/managpublishedtitles" Component={ManagePublishedTitles}/>
             <Route exact path="/manageleadership" Component={ManageLeadership}/>
             <Route exact path="/manageresources" Component={ManageResources}/>
+            <Route exact path="/managesnippets" Component={ManageSnippets}/>
         </Routes>
     
   );

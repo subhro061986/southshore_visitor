@@ -26,6 +26,11 @@
     "Open_Access_URL":"uploads/openaccess/covers",
     "CREATE_OPEN_ACCESS":"openaccess/create",
     "EDIT_OPEN_ACCESS":"openaccess/update",
+    "GET_ALL_SNIPPETS":"snippet",
+    "SNIPPET_IMAGE_URL" : "uploads/snippets/covers",
+    "SNIPPET_PDF_URL" : "uploads/snippets/pdfs",
+    "CREATE_SNIPPETS":"snippet/create",
+    "EDIT_SNIPPET" : "snippet/update",
     "LOGIN_API": "account/login"
 }
   
