@@ -294,11 +294,11 @@ const ManageSnippets = () => {
                                             <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                                         </div> */}
                                         <div className="form-group">
-                                            <label>Upload Snippet Cover</label>
+                                            <label>Upload Snippet Cover<span style={{color:'red'}}>(*)</span></label>
                                             <input className="form-control" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label>Upload PDF</label>
+                                            <label>Upload PDF<span style={{color:'red'}}>(*)</span></label>
                                             <input className="form-control" type="file" accept=".pdf" id="formFile" onChange={(e) => pdfHandler(e)} />
                                         </div>
 
