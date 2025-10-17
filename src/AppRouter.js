@@ -31,6 +31,7 @@ import Services from './pages/Services';
 import PublishedTitlesThompson from './pages/PublishedTitlesThompson';
 import Contentcheck from './pages/TRI/reprints/Contentcheck';
 import MarketingPage from './pages/MarketingPage/MarketingPage';
+import References from './pages/References';
 
 const AppRouter=()=> {
 
@@ -61,6 +62,7 @@ const AppRouter=()=> {
             <Route exact path="/contactus" Component={ContactUs} />
             <Route exact path="/sevices" Component={Services} />
             <Route exact path="/ahpi/lifestyleasmedicine/references" Component={ReferenceResource} />
+            <Route exact path="/communicatecare/references" Component={References} />
             <Route exact path="/TRI/reprints/contentcheck" Component={Contentcheck} />
             <Route exact path="/admin/*" Component={DefaultPage}/>
         </Routes>
