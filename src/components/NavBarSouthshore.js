@@ -133,26 +133,32 @@ function NavbarSouthshore() {
             link: "/sevices"
         },
         {
-            text: "Representations",
+            // text: "Representations",
+            text: "KnowledgePath",
             children: [
                 {
-                    text: "Brill",
-                    link: "/representation/brill",
+                    text: "Seasoned Insights",
+                    // link: "/representation/brill",
+                    link: "/knowledgepath/seasoned_insights",
                     absolute: false
                 },
                 {
-                    text: "MyJoVE",
-                    link: "/representation/jove",
+                    // text: "MyJoVE",
+                    text: "KnowledgePath",
+                    // link: "/representation/jove",
+                    link: "/knowledgepath/knowledgepath",
                     absolute: false
                 },
-                {
-                    text: "Writefull",
-                    link: "/representation/writefull",
-                    absolute: false
-                },
+                // {
+                //     text: "Writefull",
+                //     // link: "/representation/writefull",
+                //     link: "/knowledgepath/writefull",
+                //     absolute: false
+                // },
                 {
                     text: "Enquiry",
-                    link: "/representation/enquiry",
+                    // link: "/representation/enquiry",
+                    link: "/knowledgepath/enquiry",
                     absolute: false
                 }
             ]
@@ -179,6 +185,10 @@ function NavbarSouthshore() {
         {
             text: "Resources",
             link: "/resources"
+        },
+        {
+            text: "Podcasts",
+            link: "/podcasts"
         }
     ];
     return (
@@ -292,7 +302,7 @@ function NavbarSouthshore() {
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
-                    <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
+                    {/* <div className='d-flex align-items-center ms-auto' hidden={isMobileScreen}>
                         <img src={iconCall} width={isTabScreen !== true ? 25 : 20} height={isTabScreen !== true ? 25 : 20} />
                         <Link className='ms-2' type='tel'
                             style={{
@@ -304,7 +314,7 @@ function NavbarSouthshore() {
                         >
                             +91-44-79624624
                         </Link>
-                    </div>
+                    </div> */}
                 </Container>
             </Navbar >
         </>

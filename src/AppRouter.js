@@ -32,6 +32,8 @@ import PublishedTitlesThompson from './pages/PublishedTitlesThompson';
 import Contentcheck from './pages/TRI/reprints/Contentcheck';
 import MarketingPage from './pages/MarketingPage/MarketingPage';
 import References from './pages/References';
+import SeasonedInsights from './pages/SeasonedInsights';
+import KnowledgePath from './pages/KnowledgePath';
 
 const AppRouter=()=> {
 
@@ -53,10 +55,14 @@ const AppRouter=()=> {
             <Route exact path="/thomson/about" Component={ThomsonAbout} />
             <Route exact path="/thomson/publishedtitle" Component={PublishedTitlesThompson} />
             <Route exact path="/thomson/publishwithus" Component={PublishWithUs} />
-            <Route exact path="/representation/brill" Component={Brills} />
+            {/* <Route exact path="/representation/brill" Component={Brills} />
             <Route exact path="/representation/writefull" Component={Writefulls} />
             <Route exact path="/representation/jove" Component={Jove} />
-            <Route exact path="/representation/enquiry" Component={Enquiry} />
+            <Route exact path="/representation/enquiry" Component={Enquiry} /> */}
+            <Route exact path="/knowledgepath/seasoned_insights" Component={SeasonedInsights} />
+            <Route exact path="/knowledgepath/writefull" Component={Writefulls} />
+            <Route exact path="/knowledgepath/knowledgepath" Component={KnowledgePath} />
+            <Route exact path="/knowledgepath/enquiry" Component={Enquiry} />
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
             <Route exact path="/contactus" Component={ContactUs} />
