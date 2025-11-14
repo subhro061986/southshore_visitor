@@ -34,20 +34,20 @@ const SeasonedInsights = () => {
                             <div className="col-md-4 col-12 mb-3">
                                 <div className="video-container">
 
-                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/xeXV1KoX034?si=hNsuQvHd2QVTCfnK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/7P5KEsgHaA0?si=hRFOTytiSfyDFx41" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                                 </div>
                             </div>
 
                             <div className="col-md-4 col-12 mb-3">
                                 <div className="video-container">
-                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/KLuTLF3x9sA?si=UCEtc6ALknDdzc18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/--sbE68RqYo?si=90srHR0gtmFAR4d-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
 
                             <div className="col-md-4 col-12 mb-3">
                                 <div className="video-container">
-                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/sRWcJrMTtMI?si=mPhmuFEnWv10eSfG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/XErTYa3fIr0?si=8v1Mi8jejBBKNPDy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
