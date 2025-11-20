@@ -12,6 +12,7 @@ import ManagePublishedTitles from './pages/ManagePublishedTitles';
 import ManageLeadership from './pages/ManageLeadership';
 import ManageResources from './pages/ManageResources';
 import ManageSnippets from './pages/ManageSnippets';
+import ManagePodcast from './pages/ManagePodcast';
 
 const NavigationPage=()=> {
 
@@ -25,6 +26,7 @@ const NavigationPage=()=> {
             <Route exact path="/manageleadership" Component={ManageLeadership}/>
             <Route exact path="/manageresources" Component={ManageResources}/>
             <Route exact path="/managesnippets" Component={ManageSnippets}/>
+            <Route exact path="/managepodcasts" Component={ManagePodcast}/>
         </Routes>
     
   );

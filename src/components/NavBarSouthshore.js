@@ -186,10 +186,10 @@ function NavbarSouthshore() {
             text: "Resources",
             link: "/resources"
         },
-        {
-            text: "Podcasts",
-            link: "/podcasts"
-        }
+        // {
+        //     text: "Podcasts",
+        //     link: "/podcasts"
+        // }
     ];
     return (
         <>

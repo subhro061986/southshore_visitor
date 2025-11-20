@@ -121,6 +121,18 @@ const SideMenuBar = () => {
                         </Link>
 
                     </li>
+
+                    <li
+                        className={`nav-item ${activeTab === "managepodcasts" ? "active" : ""}`}
+                        onClick={() => setActiveTab("managepodcasts")}>
+                        <Link className="nav-link" 
+                        to="/admin/managepodcasts"
+                        >
+                            <span className="menu-title">Manage Podcasts</span>
+                            <i className="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </Link>
+
+                    </li>
                     
                 </ul>
             </nav>
