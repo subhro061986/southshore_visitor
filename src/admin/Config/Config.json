@@ -1,7 +1,7 @@
 {
-    "API_URL" : "http://localhost:5000/",
+    "API_URL_LOCAL" : "http://localhost:5000/",
     "API_URL_MAP":"https://www.booksindia.in/api/",
-    "API_URL_local":"https://southshore.in/api/",
+    "API_URL":"https://southshore.in/api/",
     "CREATE_BANNER": "banner/create",
     "GET_ALL_BANNER":"banner",
     "BANNER_URL" : "uploads/banners",
