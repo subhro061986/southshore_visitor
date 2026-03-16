@@ -12,156 +12,44 @@ import Config from "../Config/Config.json";
 
 const ManagePodcast = () => {
     // From context
-    const { createBanner, allBanner, getBannerById, editBanner } = AdminProfile();
+    const { allPodcasts,createPodcast } = AdminProfile();
     // State for modal close/open
     const [addModal, setAddModal] = useState(false);
     // States for modal inputs
-    const [addModalTitle, setAddModalTitle] = useState("");
-    const [addModalSubTitle, setAddModalSubTitle] = useState("");
-    const [addModalSequenceNumber, setAddModalSequenceNumber] = useState(-1);
-    const [addModalRedirectionURL, setAddModalRedirectionURL] = useState("#");
-    const [addModalImage, setAddModalImage] = useState(null);
-
-    const [existingId, setExistingId] = useState(0)
+    const [urlLink, setUrlLink] = useState("");
     const [modalTitle, setModalTitle] = useState('')
-    const [minPageNo, setMinPageNo] = useState(0)
-    const [maxPageNo, setMaxPageNo] = useState(10)
-    const [pageNumber, setPageNumber] = useState(1)
 
-    const openAddAddressModal = (id) => {
+   
+    const openAddAddressModal = () => {
+        setUrlLink("");
         setAddModal(true);
-        if (id === 0) {
-            setExistingId(0)
-            setModalTitle("Add Podcast")
-            setAddModalTitle('')
-            setAddModalSubTitle('')
-            setAddModalSequenceNumber(-1)
-            setAddModalRedirectionURL('#')
-            setAddModalImage(null)
-        }
-        else {
-            setExistingId(id)
-            setModalTitle("Edit Podcast")
-            getBannersById(id)
-        }
     }
-
     const closeAddModal = () => {
         setAddModal(false);
     }
 
-    const handleFormSubmission = async () => {
-        if (existingId === 0) {
-            let formData = new FormData();
-
-            formData.append("title", addModalTitle);
-            formData.append("subTitle", addModalSubTitle);
-            formData.append("sequenceNumber", addModalSequenceNumber);
-            formData.append("redirectURL", addModalRedirectionURL);
-            formData.append("image", addModalImage);
-
-            let resp = await createBanner(formData);
-            if (resp?.data?.message) {
-                alert(resp?.data?.message);
-            }
-            else if (resp?.message) {
-                alert(resp?.message);
-            }
-
+    const handleFormSubmission = async() => {
+        if(urlLink === ""){
+            alert("Please enter the URL");
+            return;
         }
-        else {
-            let formData = new FormData();
-            formData.append("title", addModalTitle);
-            formData.append("subTitle", addModalSubTitle);
-            formData.append("sequenceNumber", addModalSequenceNumber);
-            formData.append("redirectURL", addModalRedirectionURL);
-            formData.append("image", addModalImage);
-
-            let resp = await editBanner(existingId, formData);
-            if (resp?.data?.message) {
-                alert(resp?.data?.message);
-            }
-            else if (resp?.message) {
-                alert(resp?.message);
-            }
-
+        else{
+            let senData={
+                url: urlLink,
+             }
+            const resp=await createPodcast(senData);
+            alert(resp.data.message)
+            closeAddModal();
         }
-
-        closeAddModal();
-
-
-    }
-
-    const handleImageUpload = (e) => {
-        // console.log("uploaded image", e.target.files[0]);
-        // console.log("event", e);
-        setAddModalImage(e.target.files[0]);
+           
     }
 
     // get banner by id
 
-    const getBannersById = async (id) => {
-        const response = await getBannerById(id);
-        let banner = response.data.output;
-        // console.log("Banner by id : ", banner);
-        setAddModalTitle(banner.title)
-        setAddModalSubTitle(banner.subTitle)
-        setAddModalSequenceNumber(banner.sequenceNumber)
-        setAddModalRedirectionURL(banner.redirectURL)
-        setAddModalImage(banner.imgLink)
+    
+    
 
-    }
-
-    const act_inact_banner = async (evt, id) => {
-        if (evt.target.checked === true) {
-            //call restore
-            let resp = await editBanner(id, { isActive: 1 });
-            if (resp?.data?.message) {
-                alert(resp?.data?.message);
-            }
-            else if (resp?.message) {
-                alert(resp?.message);
-            }
-        }
-        else {
-            //call delete
-            if (window.confirm("Do you want to deactivate the podcast?") == true) {
-                // console.log("You pressed OK!");
-                let resp = await editBanner(id, { isActive: 0 });
-                if (resp?.data?.message) {
-                    alert(resp?.data?.message);
-                }
-                else if (resp?.message) {
-                    alert(resp?.message);
-                }
-            }
-
-        }
-
-    }
-
-    const nextPage = () => {
-        window.scrollTo(0, 0)
-        if (maxPageNo >= allBanner.length) {
-            alert("You are in last page")
-        }
-        else {
-            setMaxPageNo(maxPageNo + 10)
-            setMinPageNo(minPageNo + 10)
-            setPageNumber(pageNumber + 1)
-        }
-    }
-    const prevPage = () => {
-        window.scrollTo(0, 0)
-        if (pageNumber === 1) {
-            alert("You are in first page")
-        }
-        else {
-            setMaxPageNo(maxPageNo - 10)
-            setMinPageNo(minPageNo - 10)
-            setPageNumber(pageNumber - 1)
-        }
-    }
+    
 
     return (
         <>
@@ -174,7 +62,7 @@ const ManagePodcast = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddAddressModal(0)}>Add Podcast</button>
+                                    <button className="btn btn-primary" onClick={() => openAddAddressModal()}>Add Podcast</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -192,12 +80,12 @@ const ManagePodcast = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {/* {allBanner.sort((a, b) => b.isActive - a.isActive)?.slice(minPageNo,maxPageNo).map((data, index) => ( */}
+                                                        {allPodcasts.map((podcast, index) => (
                                                         <tr
-                                                        // key={index}
+                                                            key={index}
                                                         >
-                                                            <td> https://www.youtube.com/embed/3PK5nM2C15Q?si=rvup4qqRvvcT5hiO </td>
-                                                            
+                                                            <td>{podcast.url} </td>
+
                                                             <td>
                                                                 <label 
                                                                 // className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
@@ -208,9 +96,7 @@ const ManagePodcast = () => {
                                                             </td>
                                                             <td>
                                                                 <div className="d-flex align-items-center">
-                                                                    <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20}
-                                                                        // onClick={() => openAddAddressModal(data.id)}
-                                                                    />
+                                                                    
                                                                     <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                         <input
                                                                             // checked={data.isActive === 1 ? true : false}
@@ -218,34 +104,14 @@ const ManagePodcast = () => {
                                                                             // onChange={(e) => act_inact_banner(e, data.id)}
                                                                         />
                                                                     </div>
-                                                                    {/* <MdDeleteForever style={{ color: '#9a55ff' }} size={20} /> */}
+                                                                    
                                                                 </div>
                                                             </td>
                                                         </tr>
-                                                        {/* ))} */}
+                                                        ))}
                                                     </tbody>
                                                 </table>
-                                                {allBanner.length > 10 &&
-                                                    <div
-                                                        className="mt-2"
-                                                        style={{
-                                                            display: 'flex',
-                                                            flexDirection: 'row',
-                                                            justifyContent: 'space-between',
-                                                            alignItems: 'center'
-                                                        }}
-                                                    >
-                                                        <button
-                                                            className="btn btn-outline-info"
-                                                            onClick={prevPage}
-                                                        >Previous</button>
-                                                        <div>Page : {pageNumber}</div>
-                                                        <button
-                                                            className="btn btn-outline-info"
-                                                            onClick={nextPage}
-                                                        >Next</button>
-                                                    </div>
-                                                }
+                                                
 
                                             </div>
                                         </div>
@@ -277,7 +143,12 @@ const ManagePodcast = () => {
                                     <form className="forms-sample">
                                         <div className="form-group">
                                             <label for="title">Url</label>
-                                            <input type="text" className="form-control" id="title" placeholder="Name" value={addModalTitle} onChange={(e) => { setAddModalTitle(e.target.value) }} />
+                                            <input type="text" 
+                                            className="form-control" 
+                                            id="title" 
+                                            placeholder="Name" 
+                                            value={urlLink} 
+                                            onChange={(e) => { setUrlLink(e.target.value) }} />
                                         </div>
                                         
                                     </form>

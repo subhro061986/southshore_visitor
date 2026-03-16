@@ -24,6 +24,7 @@ const AdminProvider = ({ children }) => {
   const [allPublisherResources, setAllPublisherResources] = useState([])
   const [allOpenAccess, setAllOpenAccess] = useState([])
   const [allSnippets, setAllSnippets] = useState([])
+  const [allPodcasts, setAllPodcasts] = useState([])
 
   const [activeTab, setActiveTab] = useState("managebanner");
 
@@ -36,7 +37,10 @@ const AdminProvider = ({ children }) => {
     Get_All_Publishers_Resources();
     Get_All_Open_Access();
     Get_All_Snippets();
-  }, []);
+    if(authData!==null || authData!==undefined || authData!==""){
+      Get_All_Podcasts();
+    }
+  }, [authData]);
 
   // Banner
 
@@ -548,6 +552,46 @@ const AdminProvider = ({ children }) => {
     }
   }
 
+  const Get_All_Podcasts = async () => {
+    console.log("Auth Data in Get All Podcasts: ", authData);
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PODCAST,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authData
+          },
+        })
+
+      // console.log("Get All Podcast response", response);
+      setAllPodcasts(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All Podcast CONTEXT ERROR: ", error);
+    }
+  }
+  const createPodcast = async (data) => {
+    try {
+      setActive(true)
+      const response = await axios.post(Config.API_URL + Config.CREATE_PODCAST, data,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authData
+          },
+        })
+
+      console.log("Podcast create response", response);
+      Get_All_Podcasts();
+      setActive(false)
+      return response;
+    }
+    catch (error) {
+      setActive(false)
+      console.log("Podcast CONTEXT ERROR: ", error);
+    }
+  }
   return (
     <AdminContext.Provider
       value={{
@@ -584,7 +628,10 @@ const AdminProvider = ({ children }) => {
         allSnippets,
         createSnippet,
         editActiveInactiveSnippet,
-        activeTab, setActiveTab
+        activeTab, setActiveTab,
+        Get_All_Podcasts,
+        allPodcasts,
+        createPodcast
       }}
     >
       <LoadingOverlay

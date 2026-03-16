@@ -31,6 +31,8 @@
     "SNIPPET_PDF_URL" : "uploads/snippets/pdfs",
     "CREATE_SNIPPETS":"snippet/create",
     "EDIT_SNIPPET" : "snippet/update",
-    "LOGIN_API": "account/login"
+    "LOGIN_API": "account/login",
+    "GET_ALL_PODCAST":"podcast/get-all",
+    "CREATE_PODCAST":"podcast/create"
 }
   
