@@ -186,8 +186,8 @@ const ManagePodcast = () => {
                                                 <table className="table">
                                                     <thead>
                                                         <tr>
-                                                            <th> Podcast Url </th>
-                                                            <th> Status </th>
+                                                            <th> Url </th>
+                                                            
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -196,7 +196,8 @@ const ManagePodcast = () => {
                                                         <tr
                                                         // key={index}
                                                         >
-                                                            <td> url </td>
+                                                            <td> https://www.youtube.com/embed/3PK5nM2C15Q?si=rvup4qqRvvcT5hiO </td>
+                                                            
                                                             <td>
                                                                 <label 
                                                                 // className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
@@ -275,25 +276,10 @@ const ManagePodcast = () => {
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
-                                            <label for="title">Title</label>
+                                            <label for="title">Url</label>
                                             <input type="text" className="form-control" id="title" placeholder="Name" value={addModalTitle} onChange={(e) => { setAddModalTitle(e.target.value) }} />
                                         </div>
-                                        <div className="form-group">
-                                            <label for="subTitle">Sub Title</label>
-                                            <textarea type="text" rows={4} className="form-control" id="subTitle" placeholder="Sub Title" value={addModalSubTitle} onChange={(e) => { setAddModalSubTitle(e.target.value) }} />
-                                        </div>
-                                        <div className="form-group">
-                                            <label for="sequenceNumber">Sequence Number</label>
-                                            <input type="number" className="form-control" id="sequenceNumber" placeholder="Sequence Number" value={addModalSequenceNumber} onChange={(e) => { setAddModalSequenceNumber(e.target.value) }} />
-                                        </div>
-                                        <div className="form-group">
-                                            <label for="redirectionURL">Redirection Url</label>
-                                            <input type="text" className="form-control" id="redirectionURL" placeholder="Redirect Link" value={addModalRedirectionURL} onChange={(e) => { setAddModalRedirectionURL(e.target.value) }} />
-                                        </div>
-                                        <div className="form-group">
-                                            <label for="formFileMutiple">Upload Banner</label>
-                                            <input class="form-control" accept=".jpg, .png, .jpeg, .svg" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
-                                        </div>
+                                        
                                     </form>
                                 </div>
                             </div>

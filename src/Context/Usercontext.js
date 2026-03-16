@@ -21,6 +21,7 @@ const UserProvider = ({ children }) => {
   const [allPublishedTitle, setAllPublishedTitle] = useState([])
   const [allOpenAccess, setAllOpenAccess] = useState([])
   const [allSnippets, setAllSnippets] = useState([])
+  const [allPodcast, setAllPodcast] = useState([])
   
   useEffect(() => {
     Get_All_Banner();
@@ -30,6 +31,7 @@ const UserProvider = ({ children }) => {
     Get_All_Published_Title();
     Get_All_Open_Access();
     Get_All_Snippets();
+    Get_All_Podcast();
   }, []);
 
   // Banner
@@ -275,6 +277,24 @@ const UserProvider = ({ children }) => {
     }
   }
 
+  const Get_All_Podcast = async () => {
+    try {
+      const response = await axios.get(Config.API_URL + Config.GET_ALL_PODCAST,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+      
+      console.log("Get All podcast response", response);
+      setAllPodcast(response.data.output);
+      return response;
+    }
+    catch (error) {
+      console.log("Get All podcast CONTEXT ERROR: ", error);
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -296,7 +316,9 @@ const UserProvider = ({ children }) => {
         Enquiry,
         Get_All_Snippets,
         allSnippets,
-        getSnippetById
+        getSnippetById,
+        Get_All_Podcast,
+        allPodcast
       }}
     >
       {/* <LoadingOverlay

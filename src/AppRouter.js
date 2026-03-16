@@ -34,6 +34,7 @@ import MarketingPage from './pages/MarketingPage/MarketingPage';
 import References from './pages/References';
 import SeasonedInsights from './pages/SeasonedInsights';
 import KnowledgePath from './pages/KnowledgePath';
+import Podcast from './pages/Podcast';
 
 const AppRouter=()=> {
 
@@ -66,6 +67,7 @@ const AppRouter=()=> {
             <Route exact path="/openaccess" Component={OpenAccess} />
             <Route exact path="/resources" Component={Resources} />
             <Route exact path="/contactus" Component={ContactUs} />
+            <Route exact path="/podcasts" Component={Podcast} />
             <Route exact path="/sevices" Component={Services} />
             <Route exact path="/ahpi/lifestyleasmedicine/references" Component={ReferenceResource} />
             <Route exact path="/communicatecare/references" Component={References} />
