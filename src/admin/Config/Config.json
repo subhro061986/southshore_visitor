@@ -33,6 +33,7 @@
     "EDIT_SNIPPET" : "snippet/update",
     "LOGIN_API": "account/login",
     "GET_ALL_PODCAST":"podcast/get-all",
-    "CREATE_PODCAST":"podcast/create"
+    "CREATE_PODCAST":"podcast/create",
+    "TOGGLE_PODCAST":"podcast/toggle-podcast"
 }
   

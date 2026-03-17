@@ -159,7 +159,7 @@ const ManageSnippets = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddModal()}>Add Snippets</button>
+                                    <button className="btn btn-dark" onClick={() => openAddModal()}>Add Snippets</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -201,7 +201,7 @@ const ManageSnippets = () => {
                                                                     {data.pdf_file_name}
                                                                 </td>
                                                                 <td> <label
-                                                                    className={`badge ${data.is_active === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
+                                                                    className={`badge ${data.is_active === 1 ? 'badge-success' : 'badge-danger'}`}
                                                                 >
                                                                     {data?.is_active === 1 ? 'Active' : 'Inactive'}
                                                                 </label> </td>
@@ -314,7 +314,7 @@ const ManageSnippets = () => {
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
-                    <button className="btn btn-gradient-primary"
+                    <button className="btn btn-info"
                         onClick={handleFormSubmission}
                     // style={{ width: '20%' }}
                     >

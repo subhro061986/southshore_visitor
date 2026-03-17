@@ -154,7 +154,7 @@ const ManageOpenAccess = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddAddressModal(0)}>Add Open Access</button>
+                                    <button className="btn btn-dark" onClick={() => openAddAddressModal(0)}>Add Open Access</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -183,10 +183,10 @@ const ManageOpenAccess = () => {
                                                                 <td>
                                                                     {data.downloadLink}
                                                                 </td>
-                                                                <td> <label className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}>{data.isActive === 1 ? 'Active' : 'Inactive'}</label> </td>
+                                                                <td> <label className={`badge ${data.isActive === 1 ? 'badge-success' : 'badge-danger'}`}>{data.isActive === 1 ? 'Active' : 'Inactive'}</label> </td>
                                                                 <td>
                                                                     <div className="d-flex align-items-center">
-                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20}
+                                                                        <MdOutlineEdit style={{cursor: 'pointer' }} size={20}
                                                                             onClick={() => { openAddAddressModal(data?.id) }}
                                                                         />
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
@@ -273,7 +273,7 @@ const ManageOpenAccess = () => {
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
-                    <button className="btn btn-gradient-primary"
+                    <button className="btn btn-info"
                         onClick={handleFormSubmission}
                     // style={{ width: '20%' }}
                     >

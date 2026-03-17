@@ -107,6 +107,37 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #003399;
+}
+.table-bordered tbody tr td,
+.table-bordered tbody tr th {
+  border: 1px solid #80aaff;
+}
+.table thead th{
+  /* background-color: #bbb5fc; */
+  background-color: #007bff;
+  color:#ffffff
+}
+.card {
+  /* border: 1px solid #80aaff !important;  */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.auth .auth-form-light{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+input[type="password"],
+select,
+textarea {
+  border: 1px solid #999999 !important;
+  border-radius: 4px;
+}
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -21808,9 +21839,9 @@ code {
 }
 
 .badge-success, .preview-list .preview-item .preview-thumbnail .badge.badge-online {
-  border: 1px solid #1bcfb4;
+  border: 1px solid #28a745;
   color: #ffffff;
-  background: #1bcfb4;
+  background: #28a745;
 }
 
 .badge-info, .preview-list .preview-item .preview-thumbnail .badge.badge-offline {
@@ -26312,8 +26343,12 @@ dl li {
 } */
 
 .form-check-input:checked {
-    background-color: #9a55ff !important;
-    border-color: #9a55ff !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+.form-check-input{
+  background-color: #f5f5f5 !important;
+  border-color: #9a55ff !important;
 }
 
 .sidebar_submenu_fonts > ul > li > .collapse > ul > li > .nav-link {

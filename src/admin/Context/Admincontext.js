@@ -592,6 +592,28 @@ const AdminProvider = ({ children }) => {
       console.log("Podcast CONTEXT ERROR: ", error);
     }
   }
+
+  const togglePodcast = async (id) => {
+    try {
+      setActive(true)
+      const response = await axios.post(Config.API_URL + Config.TOGGLE_PODCAST + "/" + id, {},
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + authData
+          },
+        })
+
+      console.log("Podcast create response", response);
+      Get_All_Podcasts();
+      setActive(false)
+      return response;
+    }
+    catch (error) {
+      setActive(false)
+      console.log("Podcast CONTEXT ERROR: ", error);
+    }
+  }
   return (
     <AdminContext.Provider
       value={{
@@ -631,7 +653,8 @@ const AdminProvider = ({ children }) => {
         activeTab, setActiveTab,
         Get_All_Podcasts,
         allPodcasts,
-        createPodcast
+        createPodcast,
+        togglePodcast
       }}
     >
       <LoadingOverlay

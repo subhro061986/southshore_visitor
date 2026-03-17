@@ -186,7 +186,7 @@ const ManagePublishedTitles = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddModal(0)}>Add Titles</button>
+                                    <button className="btn btn-dark" onClick={() => openAddModal(0)}>Add Titles</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -223,13 +223,13 @@ const ManagePublishedTitles = () => {
                                                                 <td> {data?.publisherName} </td>
                                                                 <td> {data?.buyLink} </td>
                                                                 <td> <label
-                                                                    className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
+                                                                    className={`badge ${data.isActive === 1 ? 'badge-success' : 'badge-danger'}`}
                                                                 >
                                                                     {data?.isActive === 1 ? 'Active' : 'Inactive'}
                                                                 </label> </td>
                                                                 <td>
                                                                     <div className="d-flex align-items-center">
-                                                                        <MdOutlineEdit style={{ color: '#9a55ff', cursor: 'pointer' }} size={20} onClick={() => { openAddModal(data?.id) }} />
+                                                                        <MdOutlineEdit style={{  cursor: 'pointer' }} size={20} onClick={() => { openAddModal(data?.id) }} />
                                                                         <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                             <input style={{ cursor: 'pointer' }}
                                                                                 checked={data.isActive === 1 ? true : false}
@@ -336,7 +336,7 @@ const ManagePublishedTitles = () => {
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
-                    <button className="btn btn-gradient-primary"
+                    <button className="btn btn-info"
                         onClick={handleFormSubmission}
                     // style={{ width: '20%' }}
                     >

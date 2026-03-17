@@ -103,7 +103,7 @@ const LoginPage = () => {
                   </div>
                   <div className="mt-3 d-grid gap-2">
                     <button
-                      className="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
+                      className="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn"
                       onClick={() => { doLogin() }}
                     >SIGN IN</button>
                   </div>

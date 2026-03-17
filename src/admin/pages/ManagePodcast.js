@@ -12,7 +12,7 @@ import Config from "../Config/Config.json";
 
 const ManagePodcast = () => {
     // From context
-    const { allPodcasts,createPodcast } = AdminProfile();
+    const { allPodcasts,createPodcast,togglePodcast } = AdminProfile();
     // State for modal close/open
     const [addModal, setAddModal] = useState(false);
     // States for modal inputs
@@ -44,7 +44,11 @@ const ManagePodcast = () => {
            
     }
 
-    // get banner by id
+    const act_inact_podcast=async(e,id)=>{
+       const resp=await togglePodcast(id);
+       alert(resp.data.message);
+    }
+    // get podcast by id
 
     
     
@@ -62,7 +66,7 @@ const ManagePodcast = () => {
 
                             <div className="card mb-4">
                                 <div className="card-body card_body_height">
-                                    <button className="btn btn-primary" onClick={() => openAddAddressModal()}>Add Podcast</button>
+                                    <button className="btn btn-dark" onClick={() => openAddAddressModal()}>Add Podcast</button>
                                 </div>
                             </div>
                             <div className="row">
@@ -71,11 +75,12 @@ const ManagePodcast = () => {
                                         <div className="card-body">
                                             <h4 className="card-title">Podcast Details</h4>
                                             <div className="table-responsive">
-                                                <table className="table">
+                                                <table className="table table-striped">
                                                     <thead>
                                                         <tr>
                                                             <th> Url </th>
                                                             
+                                                            <th>Status</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
@@ -88,10 +93,10 @@ const ManagePodcast = () => {
 
                                                             <td>
                                                                 <label 
-                                                                // className={`badge ${data.isActive === 1 ? 'badge-gradient-success' : 'badge-gradient-danger'}`}
+                                                                    className={`badge ${podcast.isActive === 1 ? 'badge-success' : 'badge-danger'}`}
                                                                 >
-                                                                    {/* {data.isActive === 1 ? 'Active' : 'Inactive'} */}
-                                                                    Active
+                                                                    {podcast.isActive === 1 ? 'Active' : 'Inactive'}
+
                                                                 </label>
                                                             </td>
                                                             <td>
@@ -99,9 +104,9 @@ const ManagePodcast = () => {
                                                                     
                                                                     <div className="form-check form-switch" style={{ marginRight: 5, marginLeft: 45 }} >
                                                                         <input
-                                                                            // checked={data.isActive === 1 ? true : false}
+                                                                            checked={podcast.isActive === 1 ? true : false}
                                                                             className="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                                                                            // onChange={(e) => act_inact_banner(e, data.id)}
+                                                                            onChange={(e) => act_inact_podcast(e, podcast.id)}
                                                                         />
                                                                     </div>
                                                                     
@@ -133,7 +138,7 @@ const ManagePodcast = () => {
                 backdrop="static"
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>{modalTitle}</Modal.Title>
+                    <Modal.Title>Add Podcast</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row admin_modal">
@@ -159,7 +164,7 @@ const ManagePodcast = () => {
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-between">
                     {/* <div className="text-danger">Star marked fields are mandatory</div> */}
-                    <button className="btn btn-gradient-primary"
+                    <button className="btn btn-info"
                         onClick={() => { handleFormSubmission() }}
                     // style={{ width: '20%' }}
                     >
