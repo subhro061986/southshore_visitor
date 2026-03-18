@@ -8,7 +8,9 @@ const SideMenuBar = () => {
 
     // const [activeTab, setActiveTab] = useState("managebanner");
     const { activeTab, setActiveTab } = AdminProfile();
-
+    useEffect(() => {
+        
+      }, [])
     
 
     return (

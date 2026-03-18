@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../assets/images/southshore_logo_alt.svg'
 import { MdLogout } from "react-icons/md";
 import { useAuth } from "../Context/Authcontext";
+import { AdminProfile } from "../Context/Admincontext";
 const Header = (props) => {
 
     const navigate = useNavigate();
     const { logOut, authDeatils } = useAuth()
+    const { activeTab, setActiveTab } = AdminProfile();
     useEffect(() => {
 
     }, [authDeatils])
@@ -14,6 +16,7 @@ const Header = (props) => {
     const doLogOut = async () => {
         const resp = await logOut();
         if (resp === 'success') {
+            setActiveTab("managebanner");
             navigate("/admin");
         }
 
@@ -43,7 +46,7 @@ const Header = (props) => {
                             <a className="nav-link" href="#">
                                 {/* <i className="mdi mdi-power"></i> */}
                                 {/* <MdLogout size={30} onClick={doLogOut} /> */}
-                                <button className="btn btn-outline-danger" onClick={doLogOut}>Log Out</button>
+                                <button className="btn btn-danger" onClick={doLogOut}>Log Out</button>
                             </a>
                         </li>
 
