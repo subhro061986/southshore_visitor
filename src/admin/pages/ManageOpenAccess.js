@@ -253,7 +253,7 @@ const ManageOpenAccess = () => {
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
-                                            <label for="exampleInputName1">Title</label>
+                                            <label htmlFor="exampleInputName1">Title</label>
                                             <input type="text" className="form-control" id="exampleInputName1" placeholder="Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">

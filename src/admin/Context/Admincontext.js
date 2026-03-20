@@ -134,7 +134,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Leader response", response);
+      
       setAllLeader(response.data.output);
       return response;
     }
@@ -215,7 +215,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Published Title response", response);
+      
       setAllPublishedTitle(response.data);
       return response;
     }
@@ -495,7 +495,7 @@ const AdminProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Snippets response", response);
+      
       setAllSnippets(response?.data?.data);
       return response;
     }
@@ -553,7 +553,7 @@ const AdminProvider = ({ children }) => {
   }
 
   const Get_All_Podcasts = async () => {
-    console.log("Auth Data in Get All Podcasts: ", authData);
+    
     try {
       const response = await axios.get(Config.API_URL + Config.GET_ALL_PODCAST,
         {

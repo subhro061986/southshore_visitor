@@ -312,11 +312,11 @@ const ManagePublishedTitles = () => {
                                             </select>
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputName1">Title</label>
+                                            <label htmlFor="exampleInputName1">Title</label>
                                             <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputEmail3">Author Name</label>
+                                            <label htmlFor="exampleInputEmail3">Author Name</label>
                                             <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Author Name" value={author} onChange={(e) => { setAuthor(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
@@ -325,7 +325,7 @@ const ManagePublishedTitles = () => {
                                         </div>
 
                                         <div className="form-group">
-                                            <label for="exampleInputEmail3">Buy Link</label>
+                                            <label htmlFor="exampleInputEmail3">Buy Link</label>
                                             <input type="text" className="form-control" id="exampleInputEmail3" placeholder="Buy Link" value={buyLink} onChange={(e) => { setBuyLink(e.target.value) }} />
                                         </div>
                                     </form>

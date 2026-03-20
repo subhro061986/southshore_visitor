@@ -147,7 +147,7 @@ const ManagePodcast = () => {
                                 <div className="card-body">
                                     <form className="forms-sample">
                                         <div className="form-group">
-                                            <label for="title">Url</label>
+                                            <label htmlFor="title">Url</label>
                                             <input type="text" 
                                             className="form-control" 
                                             id="title" 

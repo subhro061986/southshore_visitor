@@ -331,7 +331,7 @@ const ManageResources = () => {
                                             </select>
                                         </div>
                                         <div className="form-group">
-                                            <label for="exampleInputName1">Title</label>
+                                            <label htmlFor="exampleInputName1">Title</label>
                                             <input type="text" className="form-control" id="exampleInputName1" placeholder="Book Title" value={title} onChange={(e) => { setTitle(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
@@ -344,7 +344,7 @@ const ManageResources = () => {
                                         </div>
 
                                         <div className="form-group">
-                                            <label for="exampleInputEmail3">Description</label>
+                                            <label htmlFor="exampleInputEmail3">Description</label>
                                             <textarea rows="4" type="text" className="form-control" id="exampleInputEmail3" placeholder="Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                                         </div>
                                     </form>

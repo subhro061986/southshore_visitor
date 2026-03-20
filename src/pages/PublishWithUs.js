@@ -79,9 +79,9 @@ const PublishWithUs = () => {
                                 <label className="form-label label_font mb-2">Is the manuscript ready for publication?</label>
                                 <div className="d-flex radio_toolbar">
                                     <input id="Yes" value="Yes" name="ready" type="radio" checked={isManuscriptReady === "Yes"} onChange={handleChange} />
-                                    <label for="Yes" style={{ marginRight: '3%' }}>Yes</label>
+                                    <label htmlFor="Yes" style={{ marginRight: '3%' }}>Yes</label>
                                     <input id="No" value="No" name="ready" type="radio" checked={isManuscriptReady === "No"} onChange={handleChange} />
-                                    <label for="No">No</label>
+                                    <label htmlFor="No">No</label>
                                 </div>
                             </div>
                             <div className="mb-4">

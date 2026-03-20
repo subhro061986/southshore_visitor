@@ -46,7 +46,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      console.log("Get All Banner response", response);
+      
       setAllBanner(response.data.output);
       return response;
     }
@@ -66,7 +66,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      console.log("Get All Leader response", response);
+      
       setAllLeader(response.data.output);
       return response;
     }
@@ -252,7 +252,7 @@ const UserProvider = ({ children }) => {
           },
         })
 
-      console.log("Get All Snippets response", response);
+      
       setAllSnippets(response?.data?.data);
       return response;
     }
@@ -286,7 +286,7 @@ const UserProvider = ({ children }) => {
           },
         })
       
-      console.log("Get All podcast response", response);
+      
       setAllPodcast(response.data.output);
       return response;
     }

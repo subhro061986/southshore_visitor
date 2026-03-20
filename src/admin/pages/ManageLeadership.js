@@ -358,24 +358,24 @@ const ManageLeadership = () => {
                                             </div>
                                         )}
                                         <div className="form-group">
-                                            <label for="title">Name</label>
+                                            <label htmlFor="title">Name</label>
                                             <input type="text" className="form-control" id="name" placeholder="Name" value={name} onChange={(e) => { setName(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="title">Email</label>
+                                            <label htmlFor="title">Email</label>
                                             <input type="text" className="form-control" id="name" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="subTitle">LinkedIn Link</label>
+                                            <label htmlFor="subTitle">LinkedIn Link</label>
                                             <input type="text" className="form-control" id="linkedinlink" placeholder="LinkedIn Link" value={linkedinLink} onChange={(e) => { setLinkedinLink(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="redirectionURL">Description</label>
+                                            <label htmlFor="redirectionURL">Description</label>
                                             <textarea rows="4" type="text" className="form-control" id="description" placeholder="Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
                                         </div>
                                         <div className="form-group">
-                                            <label for="formFileMutiple">Upload Image</label>
-                                            <input class="form-control" accept=".jpg, .png, .jpeg, .svg" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
+                                            <label htmlFor="formFileMutiple">Upload Image</label>
+                                            <input className="form-control" accept=".jpg, .png, .jpeg, .svg" type="file" id="formFileMultiple" onChange={(e) => { handleImageUpload(e) }} />
                                         </div>
                                     </form>
                                 </div>
