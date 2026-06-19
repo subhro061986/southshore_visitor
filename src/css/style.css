@@ -388,7 +388,11 @@
   margin: 0;
   padding: 0;
 }
-
+.link_href{
+  color:#160982;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .navbar-item {
   padding: 10px 19px;
   cursor: pointer;
