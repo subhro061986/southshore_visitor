@@ -94,12 +94,18 @@ const ReferenceResource = () => {
                     <h3>Videos</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Why Lifestyle is the BEST Medicine by Meagan L. Grega at TEDxLehighRiver [18.52]</li>
-                            <li>A Healthy Diet, A Healthier World by the World Health Organisation [1.39]</li>
-                            <li>Sleep is Your Superpower by Matt Walker at TED2019 [19:18]</li>
-                            <li>Why Social Connections Matter to Your Health by the Texas A&M College of Education and Human Development [5:10]</li>
-                            <li>What Happens Inside Your Body When You Exercise? by the British Heart Foundation [2:33]</li>
-                            <li>Make Health Last by the Canadian Heart and Stroke Foundation [1:00]</li>
+                            <li>
+                                <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=efGa8QD8pU4')}>Why Lifestyle is the BEST Medicine</span> by Meagan L. Grega at TEDxLehighRiver [18.52]
+                            </li>
+                            <li>
+                                <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=XMcab1MFaLc')}>A Healthy Diet, A Healthier World</span> by the World Health Organisation [1.39]</li>
+                            <li>
+                                <span className="link_href" onClick={()=>gotoLink('https://www.ted.com/talks/matt_walker_sleep_is_your_superpower?subtitle=en')}>Sleep is Your Superpower</span> by Matt Walker at TED2019 [19:18]</li>
+                            <li>
+                                <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=4p_yc-66b-M')}>Why Social Connections Matter to Your Health</span> by the Texas A&M College of Education and Human Development [5:10]</li>
+                            <li>
+                                <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=wWGulLAa0O0')}>What Happens Inside Your Body When You Exercise?</span> by the British Heart Foundation [2:33]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=qNkzVz5Aljk')}>Make Health Last</span> by the Canadian Heart and Stroke Foundation [1:00]</li>
                         </ol>
                     </div>
                 </div>
@@ -132,10 +138,10 @@ const ReferenceResource = () => {
                     <h3>Videos</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>What Makes a Good Life? Lessons from the Longest Study on Happiness by Robert Waldinger at TEDxBeaconStreet [12:37]</li>
-                            <li>The Power of Forgiveness by Immaculee Ilibagiza @LEAD [29:02]</li>
-                            <li>The Gift and Power of Emotional Courage by Susan David at TEDWomen2017 [16.38]</li>
-                            <li>The Mathematics of Love by Hannah Fry at TEDxBinghamtonUniversity [16.52]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.ted.com/talks/robert_waldinger_what_makes_a_good_life_lessons_from_the_longest_study_on_happiness?subtitle=en')}>What Makes a Good Life? Lessons from the Longest Study on Happiness</span> by Robert Waldinger at TEDxBeaconStreet [12:37]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=g3v7gyK2NkE')}>The Power of Forgiveness</span> by Immaculee Ilibagiza @LEAD [29:02]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.ted.com/talks/susan_david_the_gift_and_power_of_emotional_courage?subtitle=en')}>The Gift and Power of Emotional Courage</span> by Susan David at TEDWomen2017 [16.38]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.ted.com/talks/hannah_fry_the_mathematics_of_love?subtitle=en')}>The Mathematics of Love</span> by Hannah Fry at TEDxBinghamtonUniversity [16.52]</li>
                         </ol>
                     </div>
                 </div>
@@ -184,16 +190,16 @@ const ReferenceResource = () => {
                     <h3>Articles and Websites</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Mental Health Myths and Facts from the Substance Abuse and Mental Health Services Administration (SAMHSA.gov)</li>
-                            <li>Information about Mental Health (available in different Indian languages) by the White Swan Foundation</li>
-                            <li>Educational Leaflets on Different Mental Health Concerns by NIMHANS, Bengaluru</li>
-                            <li>Preventing Harmful Drinking and Alcohol Addiction by NIMHANS, Bengaluru</li>
-                            <li>UNICEF Report: The Mental Health Impact of COVID-19 on Children and Young People</li>
-                            <li>Mental Health Issues in Adolescents: Guidelines for Parents by the Indian Academy of Pediatrics</li>
-                            <li>Normal Psychosocial Development in Adolescents: Guidelines for Parents by the Indian Academy of Pediatrics</li>
-                            <li>Screen Time Guidelines for Parents by the Indian Academy of Pediatrics</li>
-                            <li>All About Positive Parenting by UNICEF India</li>
-                            <li>What Does Too Much Screen Time Do to Kids’ Brains? By Health Matters</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.samhsa.gov/mental-health/myths-and-facts')}>Mental Health Myths and Facts</span> from the Substance Abuse and Mental Health Services Administration (SAMHSA.gov)</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.whiteswanfoundation.org/')}>Information about Mental Health (available in different Indian languages)</span> by the White Swan Foundation</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://nimhans.ac.in/nimhans-centre-for-well-being/information-education-communication-leaflets-nimhans-centre-for-well-being/')}>Educational Leaflets on Different Mental Health Concerns</span> by NIMHANS, Bengaluru</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://nimhans.ac.in/wp-content/uploads/2021/03/1.-PREVENTING-HARMFUL-DRINKING-AND-ALCOHOL-ADDICTION-.pdf')}>Preventing Harmful Drinking and Alcohol Addiction</span> by NIMHANS, Bengaluru</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.unicef.org/india/press-releases/unicef-report-spotlights-mental-health-impact-covid-19-children-and-young-people')}>UNICEF Report: The Mental Health Impact of COVID-19 on Children and Young People</span></li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://iapindia.org/pdf/guideline-Mental-Health-Issues-in-Adolescents.pdf')}>Mental Health Issues in Adolescents: Guidelines for Parents</span> by the Indian Academy of Pediatrics</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://iapindia.org/pdf/Ch-026-Normal-Psychosocial-Development-in-Adolescents.pdf')}>Normal Psychosocial Development in Adolescents: Guidelines for Parents</span> by the Indian Academy of Pediatrics</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://iapindia.org/pdf/Screentime-Guidelines-for-Parents-Ch-005.pdf')}>Screen Time Guidelines for Parents</span> by the Indian Academy of Pediatrics</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.unicef.org/india/stories/all-about-positive-parenting')}>All About Positive Parenting</span> by UNICEF India</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://healthmatters.nyp.org/what-does-too-much-screen-time-do-to-childrens-brains/')}>What Does Too Much Screen Time Do to Kids’ Brains?</span> By Health Matters</li>
                         </ol>
                     </div>
                 </div>
@@ -240,12 +246,12 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>The Need for Human Connection and Why it Starts with Ourselves by Molly Carroll TEDxManhattanBeach [10.27]</li>
-                            <li>How do Social Relationships Evolve? by Science Animated [3.31]</li>
-                            <li>Daniel Goleman Introduces Emotional Intelligence by Big Think [5.31]</li>
-                            <li>How Culture Drives Behaviours by Julien S. Bourrelle at TEDxTrondheim [12.07]</li>
-                            <li>Social Media is Making Us Unsocial by Kristin Gallucci at TEDxBocaRaton[8.48]</li>
-                            <li>Everything You Think You Know about Addiction is Wrong by Johann Hari at TED2015[14.42]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/WKUgVpCqvfY?si=nfiF-B-H4n1ajXWh')}>The Need for Human Connection and Why it Starts with Ourselves</span> by Molly Carroll TEDxManhattanBeach [10.27]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/de3MxQK3yzc?si=LNV22Slm2JLz3gVb')}>How do Social Relationships Evolve?</span> by Science Animated [3.31]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/Y7m9eNoB3NU?si=YwemVyBbFwcvDxrc')}>Daniel Goleman Introduces Emotional Intelligence</span> by Big Think [5.31]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/l-Yy6poJ2zs?si=whADCarneEyjsCSy')}>How Culture Drives Behaviours</span> by Julien S. Bourrelle at TEDxTrondheim [12.07]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/66cD5En8Vfg?si=6KlGNhkJYIjZ62zZ')}>Social Media is Making Us Unsocial</span> by Kristin Gallucci at TEDxBocaRaton[8.48]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/PY9DcIMGxMs?si=fJ8rDPi5p0euFsCe')}>Everything You Think You Know about Addiction is Wrong</span> by Johann Hari at TED2015[14.42]</li>
                         </ol>
                     </div>
                 </div>
@@ -282,11 +288,11 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Individuals Must Change Habits for Better Health by BJ Fogg at the Standford GSB Healthcare Summit [24.26]</li>
-                            <li>Behaviour Change by Design by TARG Bristol [2.38]</li>
-                            <li>The Science of Making & Breaking Habits by Andrew Huberman [1.50.38]</li>
-                            <li>Three Myths of Behavior Change – What You Think You Know That You Don’t by Jeni Cross at TEDxCSU [18.30]</li>
-                            <li>SMART Goals in Behavioural Health by the National Council for Mental Wellbeing [7.08]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/5WaToiunuWY?si=qDrerhfHrVEYrdHO')}>Individuals Must Change Habits for Better Health</span> by BJ Fogg at the Standford GSB Healthcare Summit [24.26]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/Wfp2nkk3zeU?si=TMpNjV4pRY4Gz-BC')}>Behaviour Change</span> by Design by TARG Bristol [2.38]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/Wcs2PFz5q6g?si=s-iDCkr0hKl0fTmE')}>The Science of Making & Breaking Habits</span> by Andrew Huberman [1.50.38]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://youtu.be/l5d8GW6GdR0?si=5hebIGRriDk1o8J')}>Three Myths of Behavior Change – What You Think You Know That You Don’t by</span> Jeni Cross at TEDxCSU [18.30]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=QyxiEpIOXyI')}>SMART Goals in Behavioural Health</span> by the National Council for Mental Wellbeing [7.08]</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Additional Reading</h3>
