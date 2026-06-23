@@ -298,11 +298,11 @@ const ReferenceResource = () => {
                     <h3 className="mt-4">Additional Reading</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Schwarzer, R., & Luszczynska, A. (2008). How to overcome health-compromising behaviors: The health action process approach. European Psychologist, 13(2), 141–151.</li>
-                            <li>Verplanken, B., & Aarts, H. (2011). Habit, attitude, and planned behaviour: Is habit an empty construct or an interesting case of automaticity? European Review of Social Psychology, 22(1), 101–134.</li>
-                            <li>Phillips, W. (2018). Past to future: Self-compassion can change our vision. Journal of Positive Psychology and Wellbeing, 2(1), 1-10.</li>
-                            <li>Fergie, L., Campbell, K. A., Coleman-Haynes, T., Ussher, M., Cooper, S., & Coleman, T. (2019). Identifying effective behavior change techniques for alcohol and illicit substance use during pregnancy: A systematic review. Annals of Behavioral Medicine, 53(8), 769–781.</li>
-                            <li>Adedeji, A., Olonisakin, T. T., Buchcik, J., & et al. (2023). The multicultural conceptualisation of well-being. BMC Public Health, 23, 2041.</li>
+                            <li>Schwarzer, R., & Luszczynska, A. (2008). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1027/1016-9040.13.2.141')}>How to overcome health-compromising behaviors: The health action process approach.</span> European Psychologist, 13(2), 141–151.</li>
+                            <li>Verplanken, B., & Aarts, H. (2011). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1080/14792779943000035')}>Habit, attitude, and planned behaviour: Is habit an empty construct or an interesting case of automaticity?</span> European Review of Social Psychology, 22(1), 101–134.</li>
+                            <li>Phillips, W. (2018). <span className="link_href" onClick={()=>gotoLink('http://journalppw.com/index.php/JPPW/article/view/63')}>Past to future: Self-compassion can change our vision.</span> Journal of Positive Psychology and Wellbeing, 2(1), 1-10.</li>
+                            <li>Fergie, L., Campbell, K. A., Coleman-Haynes, T., Ussher, M., Cooper, S., & Coleman, T. (2019). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1093/abm/kay085')}>Identifying effective behavior change techniques for alcohol and illicit substance use during pregnancy: A systematic review.</span> Annals of Behavioral Medicine, 53(8), 769–781.</li>
+                            <li>Adedeji, A., Olonisakin, T. T., Buchcik, J., & et al. (2023). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1186/s12889-023-16966-0')}>The multicultural conceptualisation of well-being.</span> BMC Public Health, 23, 2041.</li>
                         </ol>
                     </div>
 
@@ -349,25 +349,25 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>The Intermittent Fasting Revolution by Mark Mattson [59.44]</li>
-                            <li>\Health and Nutrition Videos by NutritionFacts.Org</li>
-                            <li>Forks Over Knives, a documentary on the benefits of whole food plant-based nutrition</li>
+                            <li>T<span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=OdB_-iUUtZs')}>he Intermittent Fasting Revolution</span> by Mark Mattson [59.44]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://nutritionfacts.org/videos/')}>Health and Nutrition Videos</span> by NutritionFacts.Org</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https:/www.forksoverknives.com/the-film/')}>Forks Over Knives,</span> a documentary on the benefits of whole food plant-based nutrition</li>
 
                         </ol>
                     </div>
                     <h3 className="mt-4">Website</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Building a Healthful India: The Power of Nutrition by the Physicians Committee for Reponsible Medicine</li>
-                            <li>Whole Foods Plant-Based Menus and Recipes by the T. Colin Campbell Centre for Nutrition Studies</li>
-                            <li>Healthy and Wholesome Recipes by Sharan India</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.pcrm.org/good-nutrition/healthy-communities/building-a-healthy-india')}>Building a Healthful India: The Power of Nutrition</span> by the Physicians Committee for Reponsible Medicine</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://nutritionstudies.org/whole-food-plant-based-diet-guide/')}>Whole Foods Plant-Based Menus and Recipes</span> by the T. Colin Campbell Centre for Nutrition Studies</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://sharan-india.org/recipe/')}>Healthy and Wholesome Recipes</span> by Sharan India</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Additional Reading</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Cagigas, M. L., Twigg, S. M., & Fontana, L. (2024). Ten tips for promoting cardiometabolic health and slowing cardiovascular aging. European Heart Journal.</li>
-                            <li>Landry, M. J., Ward, C. P., Cunanan, K. M., Durand, L. R., Perelman, D., Robinson, J. L., ... Gardner, C. D. (2023). Cardiometabolic effects of omnivorous vs vegan diets in identical twins: A randomized clinical trial. JAMA Network Open, 6(11), e2344457.</li>
+                            <li>Cagigas, M. L., Twigg, S. M., & Fontana, L. (2024). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1093/eurheartj/ehad853')}>Ten tips for promoting cardiometabolic health and slowing cardiovascular aging.</span> European Heart Journal.</li>
+                            <li>Landry, M. J., Ward, C. P., Cunanan, K. M., Durand, L. R., Perelman, D., Robinson, J. L., ... Gardner, C. D. (2023). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1001/jamanetworkopen.2023.44457')}>Cardiometabolic effects of omnivorous vs vegan diets in identical twins: A randomized clinical trial.</span> JAMA Network Open, 6(11), e2344457.</li>
                         </ol>
                     </div>
 
@@ -422,17 +422,17 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>This is What Happens to Your Body When You Walk 5, 30 and 60 Minutes by the Body Hub [4.40]</li>
-                            <li>Sitting Disease by the Knowledge Center [6.35]</li>
-                            <li>23 ½ Hours by Doc Mike Evans [9.18]</li>
-                            <li>The Benefits of Exercise by Dr. Ashish Contractor at TEDxYouth@DAIS [16.32]</li>
-                            <li>What Happens When You Get Heat Stroke by TED-Ed [3.53]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=A7vk13pOn4s')}>This is What Happens to Your Body When You Walk 5, 30 and 60 Minutes</span> by the Body Hub [4.40]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=DpgcuKGgJDQ')}>Sitting Disease</span> by the Knowledge Center [6.35]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=aUaInS6HIGo')}>23 ½ Hours</span> by Doc Mike Evans [9.18]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=bQeZnyQnlSM')}>The Benefits of Exercise</span> by Dr. Ashish Contractor at TEDxYouth@DAIS [16.32]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=PpHM4DfPZQU')}>What Happens When You Get Heat Stroke</span> by TED-Ed [3.53]</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Articles</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Heat Stroke Prevention by the Korey Stringer Institute, University of Connecticut</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://koreystringer.institute.uconn.edu/heat-stroke/')}>Heat Stroke Prevention</span> by the Korey Stringer Institute, University of Connecticut</li>
                         </ol>
                     </div>
                 </div>
@@ -485,17 +485,17 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Science of Sleep by Dr. Michelle Olaithe at TEDxMandurah [13.51]</li>
-                            <li>Stories from the Sleep Clinic by Dr. Kirstie Anderson at TEDxNewcastleCollege [15.01]</li>
-                            <li>Methods to Practice Good Sleep Hygiene by MEDSimplified [10.21]</li>
-                            <li>How Lack of Sleep Affects Health and Tips for a Good Night’s Rest by CBS Mornings [5.50]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=DCWB0zv_MNA')}>Science of Sleep</span> by Dr. Michelle Olaithe at TEDxMandurah [13.51]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=Mr_N-lbg4Rw')}>Stories from the Sleep Clinic</span> by Dr. Kirstie Anderson at TEDxNewcastleCollege [15.01]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=OdRM9chZHaY')}>Methods to Practice Good Sleep Hygiene</span> by MEDSimplified [10.21]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=KpyoDML2eUI')}>How Lack of Sleep Affects Health and Tips for a Good Night’s Rest</span> by CBS Mornings [5.50]</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Additional Reading</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Ramar, K., Malhotra, R. K., Carden, K. A., & et al. (2021). Sleep is essential to health: An American Academy of Sleep Medicine position statement. Journal of Clinical Sleep Medicine, 17(10), 2115–2119.</li>
-                            <li>Mukherjee, S., Patel, S. R., Kales, S. N., Ayas, N. T., Strohl, K. P., Gozal, D., & Malhotra, A.(2015). The importance of healthy sleep. Recommendations and future priorities. American Journal of Respiratory and Critical Care Medicine, 191(12), 1450–1458.</li>
+                            <li>Ramar, K., Malhotra, R. K., Carden, K. A., & et al. (2021).<span className="link_href" onClick={()=>gotoLink('https://jcsm.aasm.org/doi/pdf/10.5664/jcsm.9476')}>Sleep is essential to health: An American Academy of Sleep Medicine position statement.</span>  Journal of Clinical Sleep Medicine, 17(10), 2115–2119.</li>
+                            <li>Mukherjee, S., Patel, S. R., Kales, S. N., Ayas, N. T., Strohl, K. P., Gozal, D., & Malhotra, A.(2015). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1164/rccm.201504-0767ST')}>The importance of healthy sleep. Recommendations and future priorities.</span> American Journal of Respiratory and Critical Care Medicine, 191(12), 1450–1458.</li>
                         </ol>
                     </div>
                 </div>
@@ -551,42 +551,42 @@ const ReferenceResource = () => {
                     <h3>Videoes</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Recognising Behavioural Addiction by NJ Spotlight News [2.57]</li>
-                            <li>Exploring the 5 Types of Behavioural Addictions: Symptoms and Treatment Options by Solace Asia [1.00]</li>
-                            <li>Mechanism of Drug Action in the Brain by Alila Medical Media [4.15]</li>
-                            <li>How Addiction Affects the Brain by the Dana Foundation [2.28]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=9bDO_P3N1C0')}>Recognising Behavioural Addiction</span> by NJ Spotlight News [2.57]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/shorts/bbubQwTo0qg')}>Exploring the 5 Types of Behavioural Addictions: Symptoms and Treatment Options</span> by Solace Asia [1.00]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=NxHNxmJv2bQ')}>Mechanism of Drug Action in the Brain</span> by Alila Medical Media [4.15]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=eVLpnMHHEPU')}>How Addiction Affects the Brain</span> by the Dana Foundation [2.28]</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Websites</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Alcoholics Anonymous - India</li>
-                            <li>Narcotics Anonymous - India</li>
-                            <li>Understanding Drug Use and Addiction by the National Institute on Drug Abuse</li>
-                            <li>Substance Use Disorders: Types, Symptoms, and Treatments by Very Well Health</li>
-                            <li>Drug Addiction in India — A Rising Problem by Rehabs.in</li>
-                            <li>Substance Abuse in India by the National Centre for Drug Abuse Prevention</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('http://www.aagsoindia.org/')}>Alcoholics Anonymous - India</span></li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://naindia.in/')}>Narcotics Anonymous - India</span></li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://nida.nih.gov/publications/drugfacts/understanding-drug-use-addiction')}>Understanding Drug Use and Addiction</span> by the National Institute on Drug Abuse</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.verywellhealth.com/substance-abuse-disorder-5105009')}>Substance Use Disorders: Types, Symptoms, and Treatments</span> by Very Well Health</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://rehabs.in/news/drug-addiction-in-india/')}>Drug Addiction in India — A Rising Problem</span> by Rehabs.in</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.nisd.gov.in/drug_abuse_prevention.html')}>Substance Abuse in India</span> by the National Centre for Drug Abuse Prevention</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Additional Reading</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Murthy R. S. (2017). National Mental Health Survey of India 2015-2016. Indian Journal of Psychiatry, 59(1), 21–26.</li>
-                            <li>Zou, Z., Wang, H., d’Oleire Uquillas, F., Wang, X., Ding, J., & Chen, H. (2017). Definition of substance and non-substance addiction. Advances in Experimental Medicine and Biology 1010, 21–41.</li>
+                            <li>Murthy R. S. (2017). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.4103/psychiatry.IndianJPsychiatry_102_17')}>National Mental Health Survey of India 2015-2016.</span> Indian Journal of Psychiatry, 59(1), 21–26.</li>
+                            <li>Zou, Z., Wang, H., d’Oleire Uquillas, F., Wang, X., Ding, J., & Chen, H. (2017).<span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1007/978-981-10-5562-1_2')}>Definition of substance and non-substance addiction.</span>  Advances in Experimental Medicine and Biology 1010, 21–41.</li>
                             <li>
-                                Sarkar, S., Patra, B. N., & Kattimani, S. (2016). Substance use disorder and the family: An Indian perspective. Medical Journal of Dr. DY Patil University, 9(1), 7–14.
+                                Sarkar, S., Patra, B. N., & Kattimani, S. (2016).<span className="link_href" onClick={()=>gotoLink('https://www.researchgate.net/publication/287974966_Substance_use_disorder_and_the_family_An_Indian_perspective')}>Substance use disorder and the family: An Indian perspective.</span>  Medical Journal of Dr. DY Patil University, 9(1), 7–14.
 
                             </li>
                             <li>
-                                Sarkar, S., Parmar, A., & Chatterjee, B. (2015). Substance use disorders in the elderly: A review. Journal of Geriatric Mental Health, 2(2), 74–82.
+                                Sarkar, S., Parmar, A., & Chatterjee, B. (2015). <span className="link_href" onClick={()=>gotoLink('https://www.researchgate.net/publication/290994911_Substance_use_disorders_in_the_elderly_A_review')}>Substance use disorders in the elderly: A review.</span> Journal of Geriatric Mental Health, 2(2), 74–82.
 
                             </li>
                             <li>
-                                Karim, R., & Chaudhri, P. (2012). Behavioural addictions: An overview. Journal of Psychoactive Drugs, 44(1), 5–17.
+                                Karim, R., & Chaudhri, P. (2012). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.1080/02791072.2012.662859')}>Behavioural addictions: An overview.</span> Journal of Psychoactive Drugs, 44(1), 5–17.
 
                             </li>
                             <li>
-                                Das, S., & Pandey, M. K. (2023). Behavioural addictions: An emerging public mental health crisis? Indian Journal of Social Psychiatry, 39(3), 230–235.
+                                Das, S., & Pandey, M. K. (2023). <span className="link_href" onClick={()=>gotoLink('https://doi.org/10.4103/ijsp.ijsp_227_23')}>Behavioural addictions: An emerging public mental health crisis?</span> Indian Journal of Social Psychiatry, 39(3), 230–235.
 
                             </li>
                         </ol>
@@ -710,10 +710,10 @@ const ReferenceResource = () => {
                     <h3>Websites</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Waqi.info and Aqicn.org for Real-Time Updates on Air Pollution</li>
-                            <li>MondayCampaigns.Org for Campaigns on Nutrition, Physical Activity, Stress Management and Addiction Cessation</li>
-                            <li>Environmental Impacts of Food by Our World in Data</li>
-                            <li>Mission LiFE by the Ministry of Environment, Forest and Climate Change, Govt. of India.</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('http://waqi.info')}>Waqi.info</span> and <span className="link_href" onClick={()=>gotoLink('http://www.aqicn.org')}>Aqicn.org</span> for Real-Time Updates on Air Pollution</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.mondaycampaigns.org/')}>MondayCampaigns.Org</span> for Campaigns on Nutrition, Physical Activity, Stress Management and Addiction Cessation</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://ourworldindata.org/environmental-impacts-of-food')}>Environmental Impacts of Food</span> by Our World in Data</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://missionlife-moefcc.nic.in/index.php')}>Mission LiFE</span> by the Ministry of Environment, Forest and Climate Change, Govt. of India.</li>
                         </ol>
                     </div>
                 </div>
@@ -854,15 +854,15 @@ const ReferenceResource = () => {
                     <h3>Websites</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Plant-Wise, a documentary on the impact of lifestyle on NCDs, with subtitles in multiple languages, including Hindi [48.00]</li>
-                            <li>Workout Routines by DanceWithDeepti [30.00], Lucy Windham [9.10] and Fit Tuber [20.24]</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.adventhealth.com/plantwise-documentary/watch-plantwise-documentary')}>Plant-Wise</span>, a documentary on the impact of lifestyle on NCDs, with subtitles in multiple languages, including Hindi [48.00]</li>
+                            <li>Workout Routines by <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=-UqOkg4NBd4')}>DanceWithDeepti</span> [30.00],<span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?app=desktop&amp;v=pSiGcMs9zw8')}>Lucy Windham</span>  [9.10] and <span className="link_href" onClick={()=>gotoLink('https://www.youtube.com/watch?v=AzV3EA-1-yM')}>Fit Tuber</span> [20.24]</li>
                         </ol>
                     </div>
                     <h3 className="mt-4">Websites</h3>
                     <div className="reference_lists">
                         <ol>
-                            <li>Stress Relief Breathing Techniques by WebMD</li>
-                            <li>Healthy Eating Tips by the CDC</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.webmd.com/balance/stress-management/stress-relief-breathing-techniques')}>Stress Relief Breathing Techniques</span> by WebMD</li>
+                            <li><span className="link_href" onClick={()=>gotoLink('https://www.cdc.gov/nccdphp/dnpao/features/healthy-eating-tips/index.html')}>Healthy Eating Tips</span> by the CDC</li>
                         </ol>
                     </div>
                 </div>
@@ -961,22 +961,22 @@ const ReferenceResource = () => {
                         <ol>
 
                             <li>
-                                Nutrition Facts with over 2000 videos by Dr. Michael Gregor
+                                <span className="link_href" onClick={()=>gotoLink('https://nutritionfacts.org/')}>Nutrition Facts</span> with over 2000 videos by Dr. Michael Gregor
                             </li>
                             <li>
-                                Pubmed, a free database of over 36 million biomedical citations, maintained by the National Institutes of Health
+                                <span className="link_href" onClick={()=>gotoLink('https://pubmed.ncbi.nlm.nih.gov/')}>Pubmed</span>, a free database of over 36 million biomedical citations, maintained by the National Institutes of Health
 
                             </li>
                             <li>
-                                American College of Lifestyle Medicine (ACLM)
+                                <span className="link_href" onClick={()=>gotoLink('https://lifestylemedicine.org/')}>American College of Lifestyle Medicine (ACLM)</span>
 
                             </li>
                             <li>
-                                Mayo Clinic Health System Primary Care History Form
+                               <span className="link_href" onClick={()=>gotoLink('https://www.mayoclinichealthsystem.org/-/media/local-files/eau-claire/documents/medical-services/family-medicine/primary-care-history-form.pdf')}>Mayo Clinic Health System Primary Care History Form</span> 
 
                             </li>
                             <li>
-                                American College of Lifestyle Medicine (ACLM) and Loma Linda University Lifestyle Assessment Long Form
+                                <span className="link_href" onClick={()=>gotoLink('https://ihacares.com/assets/pdfs/Lifestyle%20Medicine/ACLM%20LLU%20Long%20Form.pdf')}>American College of Lifestyle Medicine (ACLM) and Loma Linda University Lifestyle Assessment Long Form</span>
 
                             </li>
                         </ol>
